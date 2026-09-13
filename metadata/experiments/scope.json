@@ -1,0 +1,18 @@
+{
+  "historical_model": "Qwen3-1.7B",
+  "fixed_samples": 6500,
+  "dynamic_samples": 6000,
+  "searched_samples": 1435,
+  "improved_samples": 173,
+  "reset_eligible_samples": 167,
+  "scaleup_models": [
+    "Qwen3-4B",
+    "Llama-3.1-8B"
+  ],
+  "scaleup_paper_results_claimed": false,
+  "reset_v2_paper_frozen": false,
+  "deletion_variants": [
+    "historical_accumulated_component",
+    "engineering_single_update_omission"
+  ]
+}

@@ -1,0 +1,4 @@
+Experiment,Cohort_N,Native,Counterfactual,Effect,CI,Outcome_count,Selection_condition
+exact_reverse,173,0.9325626204238922,0.4170520231213873,0.5155105973025048,"[0.4651252408477842, 0.5657032755298652]",native_gt/eq/lt=163/10/0,All formal Dynamic-improved samples; no matched-negative comparison
+state_reset,167,0.9301397205588823,0.49151696606786427,0.43862275449101795,"[0.38612524950099797, 0.4931137724550898]",native_gt/eq/lt=135/32/0,Frozen early-steady and replayable subset of formal improved
+selective_deletion,151,0.9293598233995585,0.5176600441501104,0.4116997792494481,"[0.36410485651214125, 0.46006677704194254]",native_gt/eq/lt=134/17/0,Frozen prefix-written component subset of Reset eligible; mean over predefined layer deletions

@@ -1,0 +1,73 @@
+stage: stage2
+train_data: ${DATA_ROOT}/stage2_train_descriptor.json
+context_length: 32768
+micro_batch_size: 1
+gradient_accumulation: 1
+precision: bf16
+gradient_checkpointing: true
+seed: 42
+ttt_lr: 1.0
+ttt_chunk_size: 4096
+ttt_layers:
+- 0
+- 6
+- 12
+- 18
+- 24
+- 30
+optimizer: AdamW
+outer_lr: 5.0e-06
+betas:
+- 0.9
+- 0.95
+eps: 1.0e-08
+weight_decay: 0.1
+outer_grad_clip: 1.0
+scheduler: constant
+fast_weight: mlp.down_proj.weight
+loader:
+  num_workers: 0
+  prefetch: null
+  pin_memory: false
+  buffering: standard Python file buffering
+  order: frozen shard manifest order; canonical record order; no shuffle
+gradient_checkpointing_use_reentrant: false
+DEBUG_ONLY: false
+PAPER_RESULT: false
+FORMAL: true
+formal_training: true
+config_class: LLAMA31_8B_FORMAL_V1
+physical_gpu_allowlist: ${CUDA_VISIBLE_DEVICES}
+physical_gpus:
+- 0
+- 1
+- 2
+- 3
+world_size: 4
+global_batch_size: 4
+model_base: ${MODEL_ROOT}/Llama-3.1-8B
+record_cursor_final: 457
+save_steps:
+- 25
+- 75
+- 115
+debug_validation_records: 0
+expected_parameter_count: 8131072000
+expected_num_hidden_layers: 32
+input_identity:
+  worker_sha256: 6799accdd629c776d736e48c58d0d5b49da0cd6f6c749665fd573f895ca85588
+  dataset_authority_sha256: 49b373aab6a276fd1d9630a37c5c472dd48ae18e47a42b1d2256e78649a3c678
+  data_manifest_sha256: 6e4d7a950d5c9b4e9f91dc0b5fe0567015d864cc9ed5b3fe920fb279df06d9ea
+  model_identity_sha256: 4955fcb1e90d069e8968100827f626203b4f0e2c3e42279da4997f47d35fb0d8
+  cross_data_authority_sha256: c8ee10b8df71ee70839ebc35d0394a703e84899c32a8d1c56b8a26a207addd49
+  llama_port_sha256: 3f1ca6c6cee8f8601fd5bfca396a067fe1876cbba3fbabecb273e75e19fd54bc
+train_tokens: 14390540
+expected_optimizer_steps: 115
+dataset_file_bindings:
+  ${DATA_ROOT}/DATASET_AUTHORITY.json: 49b373aab6a276fd1d9630a37c5c472dd48ae18e47a42b1d2256e78649a3c678
+  ${DATA_ROOT}/stage2_train_descriptor.json: 6e4d7a950d5c9b4e9f91dc0b5fe0567015d864cc9ed5b3fe920fb279df06d9ea
+answer_mask_sidecar: ${DATA_ROOT}/stage2_train_descriptor.json
+context_group_weight: 0.1
+qa_targets: 19397
+supervised_answer_tokens: 97619
+parent_authority_required: ${OUTPUT_ROOT}/STAGE1_FINAL_AUTHORITY.json

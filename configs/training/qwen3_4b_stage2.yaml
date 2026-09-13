@@ -1,0 +1,61 @@
+DEBUG_ONLY: false
+answer_group_weight: 1.0
+answer_mask_sidecar: ${DATA_ROOT}/masks.jsonl
+betas:
+- 0.9
+- 0.95
+capacity_status: PASS_REAL_FORWARD_13_STEPS_RESUME_AND_FINAL_RECORD_GPU23
+checkpoint_cadence_basis: Historical Stage2 record cursors50,500,1000 mapped to global
+  batch2; dataset ends925 so save updates25,250 and final463.
+context_group_weight: 0.1
+context_length: 32768
+data_file_sha256:
+  ${DATA_ROOT}/masks.jsonl: 2401540303d49e369c277038be01251fd0202c6ffd414e41786da95573181787
+  ${DATA_ROOT}/train.jsonl: c502a2c5ef7184bdde9163ac3bb6ee32f753d12ae128689e035bbdb1e57c4f43
+eps: 1e-08
+formal_training: true
+global_batch_size: 2
+gradient_accumulation: 1
+gradient_checkpointing: non_reentrant
+input_identity:
+  content_order_sha256: 8ecf2aa5a6ba1fe8c6a6654c588d6d8810dcd9c38d8f12989d4ee44fc319ca43
+  data_manifest_sha256: 4b9a4610effaba35a616c7622c248ee79db18bbd50f1a82a0e5c0d0326c13898
+  dataset_authority_sha256: e423c322602c5124acc839470079cfe23559b43c0a29eb9042cf1a3a4ee6ddd0
+  gpu45_resource_loader_sha256: 68ac927ae7afc0eaf339a11390bf6467abd91eb33d5c1625e1b33029f029f3d5
+  scientific_contract_sha256: 6ba9d6c87a80c6f7c084511ff42a8241ac37edd5a0638100d8ba852db712739c
+  stage2_checkpoint_adapter_sha256: 65b7a4bae39411c3dba5a54e9d68d979467973d2c277a50991689b714ebdbdfb
+  stage2_entry_sha256: a6e8e8cbc9f6545200858e7572f732df26aaae1ca1734c79e7c7f6abfbb9db6e
+  worker_sha256: 38edb50f2d1b98e34994bf53660756a3fcb88227f45f218b8ac95c9e0f536d2a
+loss_reduction: separate_global_group_means
+micro_batch_size: 1
+minimum_free_memory_mib_per_gpu: 48000
+model_base: ${MODEL_ROOT}/Qwen3-4B-Base
+optimizer: AdamW
+outer_grad_clip: 1.0
+outer_lr: 5e-06
+parent_policy: explicit_STAGE1_FINAL_authority_required
+physical_gpu_allowlist: ${CUDA_VISIBLE_DEVICES}
+precision: bf16
+record_cursor_final: 925
+save_steps:
+- 25
+- 250
+- 463
+scheduler: constant
+seed: 42
+sequence_tokens: 30000000
+stage: stage2_formal_candidate
+train_data: ${DATA_ROOT}/train.jsonl
+train_tokens: 30000000
+training_inner_clip: null
+ttt_chunk_size: 4096
+ttt_layers:
+- 0
+- 6
+- 12
+- 18
+- 24
+- 30
+ttt_lr: 1.0
+weight_decay: 0.1
+world_size: 2

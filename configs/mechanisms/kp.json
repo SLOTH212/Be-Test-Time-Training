@@ -1,0 +1,31 @@
+{
+  "classification": "FORMAL_HISTORICAL_REFERENCE",
+  "model_family": "qwen3",
+  "mechanism": "kp",
+  "context_length": 16384,
+  "chunk_size": 1024,
+  "configured_ttt_layers": [
+    0,
+    6,
+    12,
+    18,
+    24
+  ],
+  "actions": [
+    "OFF",
+    "L0",
+    "L6",
+    "L12",
+    "L18",
+    "L24",
+    "ALL"
+  ],
+  "model_path": "${MODEL_ROOT}/qwen3_1p7b_stage2",
+  "benchmark_root": "${DATA_ROOT}/ruler_16384",
+  "model_identity": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+  "benchmark_identity": "5d16e3a6963d4c21450f0530af743730b91bf7b2442699e288e10754f77ad0c5",
+  "statistics": {
+    "resamples": 20000,
+    "paired": 20260827
+  }
+}

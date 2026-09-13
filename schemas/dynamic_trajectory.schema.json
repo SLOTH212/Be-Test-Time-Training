@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dynamic LB trajectory",
+  "type": "object",
+  "required": [
+    "sample_id",
+    "task",
+    "num_complete_chunks",
+    "actions",
+    "action_space",
+    "score",
+    "model_identity",
+    "config_identity"
+  ],
+  "properties": {
+    "sample_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task": {
+      "type": "string",
+      "minLength": 1
+    },
+    "num_complete_chunks": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "action_space": {
+      "type": "array",
+      "minItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "model_identity": {
+      "type": "string"
+    },
+    "config_identity": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

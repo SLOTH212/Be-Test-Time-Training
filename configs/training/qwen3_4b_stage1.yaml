@@ -1,0 +1,176 @@
+stage: stage1
+config_class: FORMAL_STAGE1_V3_GPU23_ORIGINAL_MODE_FROZEN_NOT_CLEARED_V1
+capacity_parameters_frozen: true
+formal_training: true
+synthetic_data_only: false
+physical_gpu_allowlist: ${CUDA_VISIBLE_DEVICES}
+world_size: 2
+model_base: ${MODEL_ROOT}/Qwen3-4B-Base
+train_data: ${DATA_ROOT}/train
+validation_data: ${DATA_ROOT}/validation
+validation_records: 395
+record_cursor_final: 38335
+train_tokens: 989996971
+context_length: 32768
+global_batch_size: 2
+micro_batch_size: 1
+gradient_accumulation: 1
+precision: bf16
+gradient_checkpointing: true
+seed: 42
+ttt_lr: 1.0
+ttt_chunk_size: 4096
+ttt_layers:
+- 0
+- 6
+- 12
+- 18
+- 24
+- 30
+optimizer: AdamW
+outer_lr: 5.0e-06
+betas:
+- 0.9
+- 0.95
+eps: 1.0e-08
+weight_decay: 0.1
+outer_grad_clip: 1.0
+scheduler: constant
+save_steps:
+- 25
+- 250
+- 500
+- 750
+- 1000
+- 1250
+- 1500
+- 1750
+- 2000
+- 2250
+- 2500
+- 2750
+- 3000
+- 3250
+- 3500
+- 3750
+- 4000
+- 4250
+- 4500
+- 4750
+- 5000
+- 5250
+- 5500
+- 5750
+- 6000
+- 6250
+- 6500
+- 6750
+- 7000
+- 7250
+- 7500
+- 7750
+- 8000
+- 8250
+- 8500
+- 8750
+- 9000
+- 9250
+- 9500
+- 9750
+- 10000
+- 10250
+- 10500
+- 10750
+- 11000
+- 11250
+- 11500
+- 11750
+- 12000
+- 12250
+- 12500
+- 12750
+- 13000
+- 13250
+- 13500
+- 13750
+- 14000
+- 14250
+- 14500
+- 14750
+- 15000
+- 15250
+- 15500
+- 15750
+- 16000
+- 16250
+- 16500
+- 16750
+- 17000
+- 17250
+- 17500
+- 17750
+- 18000
+- 18250
+- 18500
+- 18750
+- 19000
+stage1_model_only_artifact: ${MODEL_ROOT}/qwen3_4b_stage1_1b_32k_gpu45_formal_v1_model_only
+input_identity:
+  model_identity_sha256: 2397f0674d7d016aba0110b62e859e95566189cb35a5dac37256ab32155b6f6c
+  dataset_authority_sha256: 3f74e0fc501bb6dedd0912b35eb9142d73b0ee1888a9b3412fb111930948208f
+  data_manifest_sha256: 542f501069c54ec7702152fa341898afb4964043c8b5f8721612767ac5008f6d
+  worker_sha256: 69946bd05b99da72c244c9a1b91f0f7b6979a2ca140e99a6e580a4d47aff8577
+  cache_policy_sha256: fdecd856e2e03859cde4e374736f67fc7a1144724034eca2813d4c1289e85852
+  checkpoint_module_sha256: 48fd2a39d06619422d20fda97e79a538725e334e1d405a24f5033759d6ffc608
+  gpu45_resource_loader_sha256: 68ac927ae7afc0eaf339a11390bf6467abd91eb33d5c1625e1b33029f029f3d5
+debug_validation_records: 0
+train_logical_budget_tokens: 990000000
+validation_tokens: 9999975
+validation_logical_budget_tokens: 10000000
+dataset_logical_tokens: 1000000000
+output_root: ${OUTPUT_ROOT}/qwen3_4b_stage1_1b_32k_gpu45_formal_v1
+runtime_source_manifest: ${DATA_ROOT}/RUNTIME_SOURCE_SHA256.json
+model_identity_receipt: ${MODEL_ROOT}/MODEL_IDENTITY.json
+checkpoint_retention_policy: ${MODEL_ROOT}/CHECKPOINT_RETENTION_POLICY.json
+fast_weight: mlp.down_proj.weight
+loader:
+  num_workers: 0
+  prefetch: null
+  pin_memory: false
+  buffering: standard Python file buffering
+  order: frozen shard manifest order; canonical record order; no shuffle
+gpu_uuids:
+  4: USER_SELECTED_DEVICE
+  5: USER_SELECTED_DEVICE
+minimum_free_memory_mib:
+  4: 43000
+  5: 43000
+authorized_existing_gpu_processes: []
+target_interpretation_status: PASS_SINGLE_FROZEN_TRAIN_PASS_990M_PLUS_10M_VALIDATION_DATASET_PROTOCOL
+historical_batch_audit_status: PASS_IMPLEMENTED_SEMANTICS_COMPLETED_1P7B_RUN_LOG_NOT_VERIFIED
+formal_gpu_policy_frozen: true
+formal_batch_semantics_frozen: true
+distributed_backend: nccl
+sharding: FSDP2 composable fully_shard on all36decoder blocks and root
+gradient_checkpointing_use_reentrant: false
+stage1_objective: frozen gated NTP apply-then-update plus current Stage1 causal LM
+  loss
+projection: learned linear ttt_proj
+gate: per-channel ttt_ntp_gate initialized zero
+ttt_inner_clip: null
+shuffle: false
+logical_tokens_per_update: No exact per-record source-budget mapping is asserted.
+  Runtime counts actual input tokens; nominal1B allocation=990M train+10M validation.
+  Stop at exact frozen train cursor38335/input989996971.
+stop_semantics_receipt: ${OUTPUT_ROOT}/STAGE1_STOP_SEMANTICS_AUDIT.json
+batch_semantics_receipt: ${OUTPUT_ROOT}/BATCH_SEMANTICS_AUDIT.json
+input_tokens_per_update: variable sum of canonical record token_count across both
+  ranks; maximum65536 input tokens; supervised positions=sum(n-1)
+environment_identity_receipt: ${OUTPUT_ROOT}/FULL_ENVIRONMENT_IDENTITY.json
+runtime_mode: original_non_deterministic_user_requested
+prelaunch_readiness: FAIL_NOT_CLEARED
+prelaunch_blockers:
+- Original-mode model/optimizer numerical resume parity FAIL
+- Controlled software failure/recovery test not completed
+- Real one-token and odd-final-rank GPU edge tests not completed
+gpu_tests_stopped_by_user: true

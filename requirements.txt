@@ -1,0 +1,10 @@
+numpy>=1.26
+PyYAML>=6
+# Model runtime (CPU or CUDA PyTorch installed separately)
+torch>=2.8
+transformers==4.57.3
+tokenizers>=0.22,<0.23
+safetensors>=0.7
+einops>=0.8
+opt_einsum>=3.4
+filelock>=3.13

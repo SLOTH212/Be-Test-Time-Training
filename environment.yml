@@ -1,0 +1,8 @@
+name: dynamic-ttt
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -e .[models,test]
+# Distributed training additionally needs a compatible CUDA PyTorch and liger-kernel 0.8.0.
