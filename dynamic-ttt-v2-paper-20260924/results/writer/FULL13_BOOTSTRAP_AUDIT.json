@@ -1,0 +1,37 @@
+{
+  "authority_script": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/audit_merge.py",
+  "authority_script_sha256": "1bb21abb4f9d5a9ee8316552f7bf814af649dfe18f732eba6d2b87b276225b25",
+  "pure_function_extraction": "AST ci function only; no execution of file-writing or historical comparison code",
+  "seed": 20260921,
+  "RNG": "numpy.default_rng / PCG64",
+  "numpy": "2.4.4",
+  "draw_count": 20000,
+  "batch_size": 1000,
+  "quantile": "numpy.quantile([.025,.975]), linear",
+  "task_order": [
+    "ruler_cwe_16k",
+    "ruler_fwe_16k",
+    "ruler_niah_multikey_1_16k",
+    "ruler_niah_multikey_2_16k",
+    "ruler_niah_multikey_3_16k",
+    "ruler_niah_multiquery_16k",
+    "ruler_niah_multivalue_16k",
+    "ruler_niah_single_1_16k",
+    "ruler_niah_single_2_16k",
+    "ruler_niah_single_3_16k",
+    "ruler_qa_hotpotqa_16k",
+    "ruler_qa_squad_16k",
+    "ruler_vt_16k"
+  ],
+  "sample_order_source": "/home/zonghan/ttt/transfer/dynamic_old1k_v2_noncwe_half_20260918/data/fixed_all6500.jsonl",
+  "sample_order_sha256": "077638200ca432f77bcb7026246e949719d130317c29e9d4db7d2bc43ec5af6c",
+  "pairing": "per-sample sequential_score minus current V2 fixed maximum",
+  "cwe": "500 zero deltas assigned by fallback; RNG draws retained",
+  "DYN12_CI_REPRODUCED_EXACT": true,
+  "SEARCHED_CI_REPRODUCED_EXACT": true,
+  "FULL13_GAIN_CI": [
+    1.1548717948717948,
+    1.6369294871794868
+  ],
+  "full13_status": "NEW_CPU_CASE_B_COMPOSITE_USING_EXISTING_AUTHORITY_METHOD"
+}

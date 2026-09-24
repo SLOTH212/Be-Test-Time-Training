@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "checks": {
+    "r2_sample_verified": 170
+  },
+  "CPU_only": true,
+  "setwise_rows": 324,
+  "weighting": "uniform candidates within sample, equal samples within scope",
+  "bootstrap": "4000 sample bootstrap within task; seed20260923",
+  "expected_transition": "per-sample Native occupancy product conditioned on unequal actions",
+  "no_new_model_execution": true
+}

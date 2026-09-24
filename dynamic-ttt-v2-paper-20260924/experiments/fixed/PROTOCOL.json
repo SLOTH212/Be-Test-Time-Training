@@ -1,0 +1,92 @@
+{
+  "model_path": "/dev/shm/ttt_cross_chunk_old_model_20260918",
+  "model_sha256": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+  "training_chunk": 1024,
+  "chunk": 1024,
+  "seed": 20260915,
+  "benchmark": "/home/zonghan/ttt/benchmarks/ruler_16k_standard_13task500_v1/sample_manifest.jsonl",
+  "benchmark_sha256": "8000dfccd5199ff83bf0cb0ede51e91991083a5dc6a90ac27397b8b24988dfdc",
+  "reused_sha256": "5b3c4ba25bf62513e628b70991f18fa94587880e8d9ba2298e303527c2ef0d48",
+  "reused_source": "/home/zonghan/ttt/audits/reference_executor_v2_stage2_1435_20260915/V2_FIXED7_1435.csv",
+  "actions": [
+    "OFF",
+    "L0",
+    "L6",
+    "L12",
+    "L18",
+    "L24",
+    "ALL"
+  ],
+  "total_samples": 6500,
+  "reused_samples": 1435,
+  "missing_samples": 5065,
+  "total_cells": 45500,
+  "reused_cells": 10045,
+  "missing_cells": 35455,
+  "workers": 2,
+  "cpu": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "threads": 8,
+  "automatic_monitoring": false,
+  "automatic_dynamic_launch": false,
+  "bridge_ids": [
+    "ruler_vt_16k:0270",
+    "ruler_niah_multiquery_16k:0082",
+    "ruler_vt_16k:0240",
+    "ruler_niah_multikey_3_16k:0253",
+    "ruler_qa_squad_16k:0458",
+    "ruler_vt_16k:0352",
+    "ruler_qa_hotpotqa_16k:0142"
+  ],
+  "source_hashes": {
+    "source/scorer.py": "cee3f5cb3cad1709f81abe3dc32b364ca97322e7ebd91747a8b119aecb0ce556",
+    "source/executor.py": "37411ae15cdfbffbc9852839092c2715cd36e45085aee3569549576b5221eb69",
+    "source/code/hf_models/__init__.py": "479f0a38e97848e93a031b6e61a8f7b0aecd490874bbc2be87c4a2d2589d0f3d",
+    "source/code/inference_model/__init__.py": "01fa3318f3f3fc02dd38565672940700f289d7cce790d6f05e04471944b4903f",
+    "source/code/inference_model/hf_qwen3/modeling_qwen3.py": "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43",
+    "source/code/inference_model/hf_qwen3/configuration_qwen3.py": "ebed0379af1075b97222dc4ffdaf0cca2de86311e0715a704c7e148b8365c444",
+    "source/code/inference_model/hf_qwen3/__init__.py": "a38d76873e560e9c034258408e1c67fdfc08f2be846da1937cea1434f6e10e80",
+    "source/code/hf_models/hf_qwen3/__init__.py": "479f0a38e97848e93a031b6e61a8f7b0aecd490874bbc2be87c4a2d2589d0f3d",
+    "source/code/hf_models/hf_qwen3/ttt_state_core.py": "9cf4444d14dab49c158ffb4b7983dad4921fd1f9e3ca176d277484456c3c7a52"
+  },
+  "old_model_restore_archive": "/home/zonghan/ttt_migration/ttt_phase_c_migration_20260813.tar.gz",
+  "cpu_sets": [
+    [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ]
+  ],
+  "runner_sha256": "05544c259b10b73d7582b2e1c669057bfcf5888765a9405f98034bb4b37198ff"
+}

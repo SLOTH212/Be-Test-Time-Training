@@ -1,0 +1,20 @@
+{
+  "scope": "All metrics outcome-conditioned on 170 current V2 improvements unless explicitly subset",
+  "match": "score equality within 1e-12; prediction equality separately measured",
+  "recovery": "(R2-SB)/(Native-SB), unclipped; ratio-of-sums differs from mean per-sample recovery",
+  "multiplicity_scope": "62 matched multi-switch samples, not all78",
+  "adjacent": "number of samples with at least one adjacent successful tau within the SAME ordered action pair; isolated is remaining matched-multi samples",
+  "reversal": "A^tau B^(T-tau) compared to B^(T-tau) A^tau; all matched candidates, sample-equal mean; selected-set contrast subject to selection bias",
+  "global_weighting": "48678 unordered pairs; first mean within sample then across170; not pooled candidate weighting",
+  "bootstrap": {
+    "seed": 20260923,
+    "mean_draws": 4000,
+    "correlation_draws": 2000,
+    "method": "task-stratified paired sample bootstrap",
+    "sources": [
+      "/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923/audit.py",
+      "/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923/completion/numerics.py"
+    ]
+  },
+  "prediction_hash": "equality of recorded decoded prediction only, not state equivalence"
+}

@@ -1,0 +1,637 @@
+{
+  "improved170": {
+    "n": 170,
+    "r2_match_n": 154,
+    "revisit_n": 61,
+    "aba_n": 51,
+    "metrics": {
+      "gain": {
+        "n": 170,
+        "mean": 0.5311764705882354,
+        "q25": 0.25,
+        "median": 0.4,
+        "q75": 1.0
+      },
+      "switch_count": {
+        "n": 170,
+        "mean": 2.2058823529411766,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 3.0
+      },
+      "distinct_actions": {
+        "n": 170,
+        "mean": 2.5294117647058822,
+        "q25": 2.0,
+        "median": 2.0,
+        "q75": 3.0
+      },
+      "return_count": {
+        "n": 170,
+        "mean": 0.6764705882352942,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 1.0
+      },
+      "entropy": {
+        "n": 170,
+        "mean": 0.6041476089913177,
+        "q25": 0.35335933502142136,
+        "median": 0.37123232664087563,
+        "q75": 0.805823903367495
+      },
+      "max_run_fraction": {
+        "n": 170,
+        "mean": 0.8155763843999139,
+        "q25": 0.7374999999999999,
+        "median": 0.8666666666666667,
+        "q75": 0.9333333333333333
+      },
+      "r2_recovery": {
+        "n": 170,
+        "mean": 0.9058823529411765,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0
+      },
+      "at_most_one_switch_recovery": {
+        "n": 170,
+        "mean": 0.9058823529411765,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0
+      },
+      "r2_match_n": {
+        "n": 170,
+        "mean": 24.194117647058825,
+        "q25": 3.0,
+        "median": 10.0,
+        "q75": 28.75
+      },
+      "r2_max_plateau_n": {
+        "n": 170,
+        "mean": 1.9941176470588236,
+        "q25": 1.0,
+        "median": 2.0,
+        "q75": 2.0
+      },
+      "r2_coverage": {
+        "n": 170,
+        "mean": 1.0,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0
+      },
+      "best_tau_norm": {
+        "n": 170,
+        "mean": 0.15387631975867266,
+        "q25": 0.06666666666666667,
+        "median": 0.06666666666666667,
+        "q75": 0.14285714285714285
+      },
+      "best_mean_distance_first_norm": {
+        "n": 170,
+        "mean": 0.3777249623867595,
+        "q25": 0.31261904761904763,
+        "median": 0.3867857142857143,
+        "q75": 0.4411190476190477
+      },
+      "best_mean_distance_last_norm": {
+        "n": 170,
+        "mean": 0.30686610467755954,
+        "q25": 0.23333333333333336,
+        "median": 0.32333333333333336,
+        "q75": 0.40509330759330764
+      }
+    },
+    "recovery_ci95": [
+      0.8588235294117647,
+      0.9470588235294117
+    ],
+    "single_r2_match_n": 15,
+    "multiple_r2_match_n": 139,
+    "adjacent_matching_tau_n": 90,
+    "selected_prediction_match_n": 144,
+    "any_matching_prediction_match_n": 152,
+    "alignment_sample_n": 154,
+    "alignment": {
+      "early_alignment": 0.15426638893627956,
+      "late_alignment": 0.22618858073698808,
+      "joint_alignment": 0.0019841269841269845,
+      "joint_any": 0.01948051948051948,
+      "joint_all": 0.0,
+      "all_observed_joint_baseline": 0.0006184291898577612
+    },
+    "reverse_sample_n": 170,
+    "available_reverse_mean_abs_delta": 0.0465787550451416,
+    "available_reverse_mean_unequal_fraction": 0.09920998702511308
+  },
+  "native_one_switch": {
+    "n": 92,
+    "r2_match_n": 92,
+    "revisit_n": 0,
+    "aba_n": 0,
+    "metrics": {
+      "gain": {
+        "n": 92,
+        "mean": 0.5010869565217392,
+        "q25": 0.25,
+        "median": 0.4,
+        "q75": 1.0
+      },
+      "switch_count": {
+        "n": 92,
+        "mean": 1.0,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0
+      },
+      "distinct_actions": {
+        "n": 92,
+        "mean": 2.0,
+        "q25": 2.0,
+        "median": 2.0,
+        "q75": 2.0
+      },
+      "return_count": {
+        "n": 92,
+        "mean": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0
+      },
+      "entropy": {
+        "n": 92,
+        "mean": 0.3854052544859069,
+        "q25": 0.35335933502142136,
+        "median": 0.35335933502142136,
+        "q75": 0.35335933502142136
+      },
+      "max_run_fraction": {
+        "n": 92,
+        "mean": 0.9220198279980892,
+        "q25": 0.9333333333333333,
+        "median": 0.9333333333333333,
+        "q75": 0.9333333333333333
+      },
+      "r2_recovery": {
+        "n": 92,
+        "mean": 1.0,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0
+      },
+      "at_most_one_switch_recovery": {
+        "n": 92,
+        "mean": 1.0,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0
+      },
+      "r2_match_n": {
+        "n": 92,
+        "mean": 38.891304347826086,
+        "q25": 8.0,
+        "median": 24.5,
+        "q75": 54.0
+      },
+      "r2_max_plateau_n": {
+        "n": 92,
+        "mean": 2.6956521739130435,
+        "q25": 1.0,
+        "median": 2.0,
+        "q75": 4.0
+      },
+      "r2_coverage": {
+        "n": 92,
+        "mean": 1.0,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0
+      },
+      "best_tau_norm": {
+        "n": 92,
+        "mean": 0.068683309444179,
+        "q25": 0.06666666666666667,
+        "median": 0.06666666666666667,
+        "q75": 0.06666666666666667
+      },
+      "best_mean_distance_first_norm": {
+        "n": 92,
+        "mean": 0.33750933520894244,
+        "q25": 0.2837301587301587,
+        "median": 0.35074074074074074,
+        "q75": 0.42686274509803923
+      },
+      "best_mean_distance_last_norm": {
+        "n": 92,
+        "mean": 0.33750933520894244,
+        "q25": 0.2837301587301587,
+        "median": 0.35074074074074074,
+        "q75": 0.42686274509803923
+      }
+    },
+    "recovery_ci95": [
+      1.0,
+      1.0
+    ],
+    "single_r2_match_n": 3,
+    "multiple_r2_match_n": 89,
+    "adjacent_matching_tau_n": 68,
+    "selected_prediction_match_n": 85,
+    "any_matching_prediction_match_n": 92,
+    "alignment_sample_n": 92,
+    "alignment": {
+      "early_alignment": 0.15505926569818554,
+      "late_alignment": 0.24866150744836546,
+      "joint_alignment": 0.0015096618357487923,
+      "joint_any": 0.010869565217391304,
+      "joint_all": 0.0,
+      "all_observed_joint_baseline": 0.00025879917184265007
+    },
+    "reverse_sample_n": 92,
+    "available_reverse_mean_abs_delta": 0.06400515461074467,
+    "available_reverse_mean_unequal_fraction": 0.13241990066524226
+  },
+  "native_multi_switch": {
+    "n": 78,
+    "r2_match_n": 62,
+    "revisit_n": 61,
+    "aba_n": 51,
+    "metrics": {
+      "gain": {
+        "n": 78,
+        "mean": 0.566666666666667,
+        "q25": 0.25,
+        "median": 0.4,
+        "q75": 1.0
+      },
+      "switch_count": {
+        "n": 78,
+        "mean": 3.628205128205128,
+        "q25": 2.0,
+        "median": 3.0,
+        "q75": 4.75
+      },
+      "distinct_actions": {
+        "n": 78,
+        "mean": 3.1538461538461537,
+        "q25": 3.0,
+        "median": 3.0,
+        "q75": 3.0
+      },
+      "return_count": {
+        "n": 78,
+        "mean": 1.4743589743589745,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 2.0
+      },
+      "entropy": {
+        "n": 78,
+        "mean": 0.8621514117412897,
+        "q25": 0.6998428398862386,
+        "median": 0.8611381750066406,
+        "q75": 1.0389205950315936
+      },
+      "max_run_fraction": {
+        "n": 78,
+        "mean": 0.6900277073353996,
+        "q25": 0.5333333333333333,
+        "median": 0.7333333333333333,
+        "q75": 0.8543956043956044
+      },
+      "r2_recovery": {
+        "n": 78,
+        "mean": 0.7948717948717948,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0
+      },
+      "at_most_one_switch_recovery": {
+        "n": 78,
+        "mean": 0.7948717948717948,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0
+      },
+      "r2_match_n": {
+        "n": 78,
+        "mean": 6.858974358974359,
+        "q25": 1.0,
+        "median": 3.0,
+        "q75": 9.0
+      },
+      "r2_max_plateau_n": {
+        "n": 78,
+        "mean": 1.1666666666666667,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 2.0
+      },
+      "r2_coverage": {
+        "n": 78,
+        "mean": 1.0,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0
+      },
+      "best_tau_norm": {
+        "n": 78,
+        "mean": 0.254360383206537,
+        "q25": 0.13333333333333333,
+        "median": 0.15476190476190477,
+        "q75": 0.4
+      },
+      "best_mean_distance_first_norm": {
+        "n": 78,
+        "mean": 0.42515877905803084,
+        "q25": 0.3333333333333333,
+        "median": 0.42307692307692313,
+        "q75": 0.4877777777777778
+      },
+      "best_mean_distance_last_norm": {
+        "n": 78,
+        "mean": 0.2707228071277233,
+        "q25": 0.17532467532467533,
+        "median": 0.2642857142857143,
+        "q75": 0.3436781609195402
+      }
+    },
+    "recovery_ci95": [
+      0.7051282051282052,
+      0.8846153846153846
+    ],
+    "single_r2_match_n": 12,
+    "multiple_r2_match_n": 50,
+    "adjacent_matching_tau_n": 22,
+    "selected_prediction_match_n": 59,
+    "any_matching_prediction_match_n": 60,
+    "alignment_sample_n": 62,
+    "alignment": {
+      "early_alignment": 0.15308986212828996,
+      "late_alignment": 0.1928416572297827,
+      "joint_alignment": 0.0026881720430107525,
+      "joint_any": 0.03225806451612903,
+      "joint_all": 0.0,
+      "all_observed_joint_baseline": 0.001152073732718894
+    },
+    "reverse_sample_n": 78,
+    "available_reverse_mean_abs_delta": 0.02602454017289182,
+    "available_reverse_mean_unequal_fraction": 0.06003931965470427
+  },
+  "multi_matched": {
+    "n": 62,
+    "r2_match_n": 62,
+    "revisit_n": 47,
+    "aba_n": 40,
+    "metrics": {
+      "gain": {
+        "n": 62,
+        "mean": 0.538978494623656,
+        "q25": 0.25,
+        "median": 0.3666666666666667,
+        "q75": 1.0
+      },
+      "switch_count": {
+        "n": 62,
+        "mean": 3.4193548387096775,
+        "q25": 2.0,
+        "median": 3.0,
+        "q75": 4.0
+      },
+      "distinct_actions": {
+        "n": 62,
+        "mean": 3.1129032258064515,
+        "q25": 3.0,
+        "median": 3.0,
+        "q75": 3.0
+      },
+      "return_count": {
+        "n": 62,
+        "mean": 1.3064516129032258,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 2.0
+      },
+      "entropy": {
+        "n": 62,
+        "mean": 0.8367436364240125,
+        "q25": 0.6998428398862386,
+        "median": 0.7949587184199692,
+        "q75": 1.0389205950315936
+      },
+      "max_run_fraction": {
+        "n": 62,
+        "mean": 0.7086937256292095,
+        "q25": 0.6,
+        "median": 0.7857142857142857,
+        "q75": 0.8571428571428571
+      },
+      "r2_recovery": {
+        "n": 62,
+        "mean": 1.0,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0
+      },
+      "at_most_one_switch_recovery": {
+        "n": 62,
+        "mean": 1.0,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0
+      },
+      "r2_match_n": {
+        "n": 62,
+        "mean": 8.629032258064516,
+        "q25": 2.0,
+        "median": 4.0,
+        "q75": 11.75
+      },
+      "r2_max_plateau_n": {
+        "n": 62,
+        "mean": 1.467741935483871,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 2.0
+      },
+      "r2_coverage": {
+        "n": 62,
+        "mean": 1.0,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0
+      },
+      "best_tau_norm": {
+        "n": 62,
+        "mean": 0.30214758359919647,
+        "q25": 0.13333333333333333,
+        "median": 0.20714285714285713,
+        "q75": 0.4
+      },
+      "best_mean_distance_first_norm": {
+        "n": 62,
+        "mean": 0.42512311621294036,
+        "q25": 0.3208333333333333,
+        "median": 0.4,
+        "q75": 0.525
+      },
+      "best_mean_distance_last_norm": {
+        "n": 62,
+        "mean": 0.2672231197040729,
+        "q25": 0.14088541666666665,
+        "median": 0.26666666666666666,
+        "q75": 0.35344827586206895
+      }
+    },
+    "recovery_ci95": [
+      1.0,
+      1.0
+    ],
+    "single_r2_match_n": 12,
+    "multiple_r2_match_n": 50,
+    "adjacent_matching_tau_n": 22,
+    "selected_prediction_match_n": 59,
+    "any_matching_prediction_match_n": 60,
+    "alignment_sample_n": 62,
+    "alignment": {
+      "early_alignment": 0.15308986212828996,
+      "late_alignment": 0.1928416572297827,
+      "joint_alignment": 0.0026881720430107525,
+      "joint_any": 0.03225806451612903,
+      "joint_all": 0.0,
+      "all_observed_joint_baseline": 0.001152073732718894
+    },
+    "reverse_sample_n": 62,
+    "available_reverse_mean_abs_delta": 0.029218496557206233,
+    "available_reverse_mean_unequal_fraction": 0.06379315768716691
+  },
+  "multi_unmatched": {
+    "n": 16,
+    "r2_match_n": 0,
+    "revisit_n": 14,
+    "aba_n": 11,
+    "metrics": {
+      "gain": {
+        "n": 16,
+        "mean": 0.6739583333333333,
+        "q25": 0.38333333333333336,
+        "median": 0.8,
+        "q75": 1.0
+      },
+      "switch_count": {
+        "n": 16,
+        "mean": 4.4375,
+        "q25": 4.0,
+        "median": 4.0,
+        "q75": 6.0
+      },
+      "distinct_actions": {
+        "n": 16,
+        "mean": 3.3125,
+        "q25": 3.0,
+        "median": 3.0,
+        "q75": 4.0
+      },
+      "return_count": {
+        "n": 16,
+        "mean": 2.125,
+        "q25": 1.0,
+        "median": 2.0,
+        "q75": 3.0
+      },
+      "entropy": {
+        "n": 16,
+        "mean": 0.9606065410957374,
+        "q25": 0.7732283485249176,
+        "median": 0.9484257611168445,
+        "q75": 1.0424358400562626
+      },
+      "max_run_fraction": {
+        "n": 16,
+        "mean": 0.6176968864468864,
+        "q25": 0.5166666666666666,
+        "median": 0.641025641025641,
+        "q75": 0.7333333333333333
+      },
+      "r2_recovery": {
+        "n": 16,
+        "mean": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0
+      },
+      "at_most_one_switch_recovery": {
+        "n": 16,
+        "mean": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0
+      },
+      "r2_match_n": {
+        "n": 16,
+        "mean": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0
+      },
+      "r2_max_plateau_n": {
+        "n": 16,
+        "mean": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0
+      },
+      "r2_coverage": {
+        "n": 16,
+        "mean": 1.0,
+        "q25": 1.0,
+        "median": 1.0,
+        "q75": 1.0
+      },
+      "best_tau_norm": {
+        "n": 16,
+        "mean": 0.06918498168498169,
+        "q25": 0.06666666666666667,
+        "median": 0.06666666666666667,
+        "q75": 0.07142857142857142
+      },
+      "best_mean_distance_first_norm": {
+        "n": 16,
+        "mean": 0.42529697258275645,
+        "q25": 0.42307692307692313,
+        "median": 0.4333333333333333,
+        "q75": 0.4333333333333333
+      },
+      "best_mean_distance_last_norm": {
+        "n": 16,
+        "mean": 0.28428409589436854,
+        "q25": 0.23553113553113553,
+        "median": 0.25694394213381555,
+        "q75": 0.31232741617357
+      }
+    },
+    "recovery_ci95": [
+      0.0,
+      0.0
+    ],
+    "single_r2_match_n": 0,
+    "multiple_r2_match_n": 0,
+    "adjacent_matching_tau_n": 0,
+    "selected_prediction_match_n": 0,
+    "any_matching_prediction_match_n": 0,
+    "alignment_sample_n": 0,
+    "alignment": {
+      "early_alignment": null,
+      "late_alignment": null,
+      "joint_alignment": null,
+      "joint_any": null,
+      "joint_all": null,
+      "all_observed_joint_baseline": null
+    },
+    "reverse_sample_n": 16,
+    "available_reverse_mean_abs_delta": 0.013647959183673466,
+    "available_reverse_mean_unequal_fraction": 0.04549319727891157
+  }
+}

@@ -1,0 +1,7833 @@
+[
+  {
+    "sample_id": "ruler_fwe_16k:0010",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L18",
+      "L0",
+      "L12",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 3,
+    "tau": 3,
+    "boundary": 4,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0,
+      12,
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "7a99e74d582ba3b4d02ad664e0cc9db6cfaed8293ab93b2b2ea6b483bfe21768",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/f61d51bbefd57dfdadcae96e251f529d91dd8ad4242a6d9acbd377d390fc449c.json",
+      "sha256": "21eafcf05bd624927346b357402924e5f403eb482126f4c670fd19ea0c89e984"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0088",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "OFF",
+      "L6",
+      "OFF",
+      "L6",
+      "L6",
+      "L18",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 15,
+    "switch_count": 5,
+    "tau": 6,
+    "boundary": 7,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6,
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "5ec45171daa6d5010c5d6b5177039cf487c5e0653dbe2a7b38f94a6d7495c58f",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/e08dcc78832608351d887a18f352c19397763d7fc9af99748942f0cd959d8c02.json",
+      "sha256": "50f830182a9505a900f2edf955fa06ee51fba7147d2e824a12c8325361a0ed1e"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0108",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L18",
+      "L0",
+      "L18",
+      "L18",
+      "ALL",
+      "L18",
+      "L6",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 6,
+    "tau": 7,
+    "boundary": 8,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "3a04e94e95db6830903af531e53417c43f80f45179e524cbc26f63e5ad0aabb0",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/b50163d52852f0b313de98be1f2db6be23d1a7b87d27138f2ef48c4070f0a59e.json",
+      "sha256": "30286543f352248331d58a562a29da5c6353fd86b260828253bb22e8ac14c1dc"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0227",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L24",
+      "L18",
+      "ALL",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 3,
+    "tau": 3,
+    "boundary": 4,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "dc738308131a0196a3cc1a3de4716b91f0a51d2683c754ffeea789e473e0cb05",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/493f8c7797fdd0392f5f6ee26a5cdaae52f4fecbdd27935e6419ceb0cc9e8ed3.json",
+      "sha256": "02ccfd79964f6f197d95345b5b15153d47ae19a88a1eb180fae46bd16daa0ace"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0242",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L24",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "b8cb83351f59222dffcd3d7ce2501e03d149fae7c9976371d17f7373d0586317",
+    "sample_best": 0.6666666666666666,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/5550d17ac96c5f245e50d87397ab8d5839299930d1ef999910f6dbdf4bb697b6.json",
+      "sha256": "326cd8c70cb6f77e4b1b3bea285229e2977d3e598895e6af1bc5917aee285a17"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0254",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "ALL",
+      "L6",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 14,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.6666666666666666,
+    "native_prediction_hash": "1fe15c6ae20d7cfed0c9fae99e2d6e8490b86ccd95740a65b63cf1da82392e16",
+    "sample_best": 0.3333333333333333,
+    "off": 0.3333333333333333,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/6171deefa7c2dee5e68c1c694563421f08ed5536766e7a509cbdabdcb3828211.json",
+      "sha256": "6811dbc17fced5dbf2e7f2398a9c31eac7e7d6c6d41d7c8bdb35e09cf41c669f"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0256",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L18",
+      "L0",
+      "L18",
+      "L18",
+      "L24",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 4,
+    "tau": 5,
+    "boundary": 6,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0,
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 0.6666666666666666,
+    "native_prediction_hash": "67790b04fc769046a08f9ea52592f25f7c6a0d022f083c409800787f6b5ea641",
+    "sample_best": 0.3333333333333333,
+    "off": 0.3333333333333333,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/f910589711922aeab1958ec311d4c1c5b08061bd236c67ee1ca765a9e034666c.json",
+      "sha256": "408c0572bc68dcc1c2d1dcf4ae0a7be0764a98e87791d70b50ce4a4aa3b8acf3"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0260",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L6",
+      "L12",
+      "L12",
+      "L0",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 3,
+    "tau": 4,
+    "boundary": 5,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 18,
+    "prefix_written_layers": [
+      0,
+      6,
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "95a95a1a5a37a72a8f7777c9f9011e3d554c973c582773ae3601462d2cf6e666",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/ee4ec7ea13a0a8a299f61253273f8107d2cc6bbd6cb7423f3ef5273a17959a67.json",
+      "sha256": "208488ea68aedbada1d3eca7620c0caf4fb3a00bb18241e85cb869c2c1808cae"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0293",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L18",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 14,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "b6bfbaba0d4d5a6a0211543dffe797202a108fd8b35e96e32c894c2910a9379c",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/ef7add3c67709815ee1446d1f480dbf20b704e92c4cbab4eabdbf226ae70e72d.json",
+      "sha256": "f953af0270c73e9b70317905acce222f3a0fe19a87c400f2852e97b5124ee2eb"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0298",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "OFF",
+      "L12",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "e39b7b960cf1630bf38d09d533816cd3a6f5dc05ac14a712a4bf603ae0878183",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/e414cf792bf6787113384bd15c4c5754ddd06ce36c3766d16828e8f6236671a8.json",
+      "sha256": "c7b4fc604d41e64dfa78310fd28dbb0d5038422eded2433cdf04c0b896263485"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0321",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L18",
+      "L6",
+      "OFF",
+      "ALL",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "OFF",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 14,
+    "switch_count": 6,
+    "tau": 10,
+    "boundary": 11,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "e9b6fe1afd988546d4fd3fb515fe61b79fb517f5cc130d44922f5e9e7af75a26",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/df1c6895123a00c9a47318108b72fa7be0d515b9e76eecb1d7c1f98736fee3a8.json",
+      "sha256": "0e3ce33e8d6a10c6df2e267b0ef0a6f8e41140a4cd1adc1791be80164e0c45c7"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0324",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L6",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "9365edf472c6948b7ae86ca239cda9d4659112c12336eaeee6c08b99330942e1",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/cf205c9a3179968116706488d3710dd97b9797ab686166ac40866a18b1fe5e27.json",
+      "sha256": "58049d6b7430628f3a0cc0a59017e9272b4b7e992df5e1b1c00c4590131dddb4"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0351",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L6",
+      "L12",
+      "L12",
+      "ALL",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L0",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 5,
+    "tau": 13,
+    "boundary": 14,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "2563a7654d65d578919b4c0cea656cb4df5db894e1f0f90ce0cafe92a6112967",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/4e84444efa0a6b543bcd18058310a2d574abf37ce6aa685de8137fc518dfddc4.json",
+      "sha256": "ddce702b3ef6bef0111b10f07507870537d2b00ff8c2a67e494b47203aa43a98"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0372",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L0",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 0.6666666666666666,
+    "native_prediction_hash": "39768e65e5d14adbeca53b56d860b7ea2e5c34f1af1462f4c924c537ec225199",
+    "sample_best": 0.3333333333333333,
+    "off": 0.3333333333333333,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/8d6e906d2bd7855cdfa5c7af0c3fec4a482762603301e3361aa7af676497c730.json",
+      "sha256": "e2787dc2de864eee56df3ec4f80b3ed9e7434e37bf0bda6a6d0750b4af2e59fb"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0373",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L6",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "499894d4e6f5879e00d5fc3954d5f5a084c65b7d19a001a9e4f8b33912ea98ec",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/1e44c98a1050343d3f4eeaed9fcee1d83f3ee8c840fa9dad30b785b8945865fb.json",
+      "sha256": "ddf9355ca30428e78a9d4add595996c7dd8a084d3d5ab1ed7d8d6abbd8b0ff59"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0386",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L12",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "d330173bb94b560d27af16ce16cda3e6360b6288094e163250e335ab903e662a",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/8f6d8c27c64890e122c654e6be409e424342d7827304665b9c1030d736931ea0.json",
+      "sha256": "da0300982f84cae05b5afbcaa02ddcc0685cf9e31914144318a69059e0791786"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0402",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L12",
+      "L24",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L18",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 14,
+    "switch_count": 4,
+    "tau": 8,
+    "boundary": 9,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12,
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "59ecf68740ec1ca28077d8c29c58d2e60835638a6b8d3be5d9de49d65be38317",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/c219e7537914fcedbc1c9be0974eeec3625984098c83fc14f6368e5773661f0a.json",
+      "sha256": "3e2b51a989460d1c49614d921b4c6f997229a38da651988e03d87f0ec195bc99"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0472",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L18",
+      "L6",
+      "OFF",
+      "ALL",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "ALL"
+    ],
+    "T": 14,
+    "switch_count": 5,
+    "tau": 13,
+    "boundary": 14,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "e3d956ebccaa2d0cf30865f535d85f489feef4e5e5f47a756be946237ab200c1",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/4bc279f078af77963dbf014423e7212894378518c0d006226e4f1b7616403535.json",
+      "sha256": "849584c449076bad9dcb468a812ceb1dcf00a472b0cd7253fccfb9e73929e63a"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0478",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "OFF",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": false,
+    "deletion_targets": [],
+    "sham_layer": null,
+    "prefix_written_layers": [],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "58ca1c0c02a858020ea022bfe89b2e911c85173dda14c1b8bb43417aaa0b129c",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/c453e1c754dcfd8678847dad2c2d0b5d88bb00ac23a4cd9c205f910aa59c6e41.json",
+      "sha256": "8f72d082833393e0cd9d519e4dc3977d8481282bf81e70f6cd3e9c18ed2c930b"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0488",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L24",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "d281995a9b5f2a5270a82369cc4b61db2338453233e55ae4a064c07f3bef82d6",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/2d12e69b984dea77254f1aba4f6f79a8156bc28ab344cfacf08fcb6c622c558f.json",
+      "sha256": "70b3acf218b7c7f24766a8a6899412d2ed8f0deb92b7aaac8b7ddc6006f4143a"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_fwe_16k:0498",
+    "task": "ruler_fwe_16k",
+    "sequence": [
+      "L6",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "eb5c4da6473d38cf1d20128dcd57e511eb084b65a9e72e276419f46016367b60",
+    "sample_best": 0.6666666666666666,
+    "off": 0.6666666666666666,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/e2b390a0b81ad955b236bec475f0c08cc6cb1c1410369c647ad56ca824f74144.json",
+      "sha256": "f6ff341a16bf6f0e97c1ee91c4a6969defa09a52332abaee9d1684db6610d99f"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_1_16k:0432",
+    "task": "ruler_niah_multikey_1_16k",
+    "sequence": [
+      "L6",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "d21f705bb2f4b9c05adfbbaeb9a50260f49cd9e4dfc8239c36168a87ab470381",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/a947bd9b9e8c360f439ff7ae21e036ab0413df4cf300cb91555fd344651154ed.json",
+      "sha256": "2295e01a9021309b73db36d5cd2f83187914676ffd2b283905b7aeaede59811c"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_2_16k:0045",
+    "task": "ruler_niah_multikey_2_16k",
+    "sequence": [
+      "L24",
+      "ALL",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "4ec93e2d147ec85ffdc720dd4d02d3d83c7bd2e49b0c26d76261330b2d380430",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/fd64765639fc6ea0690337914f9a217dd40bafb9b13619c091523781f144326d.json",
+      "sha256": "b977f6a994a63711113ab3efd18caa85d1ce80b6e327707c2af951ab199612fd"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_2_16k:0116",
+    "task": "ruler_niah_multikey_2_16k",
+    "sequence": [
+      "L12",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "e7926225e8c622a8fc524dfe30868d025f6aa88dae3ff561bff409a4a2342048",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/11da2f0d33072ca38f84e3395732cbd1410617a5c8b54180e0ec2ee073b0cbc1.json",
+      "sha256": "1671ae0dab4430faff8e04f40a1076338db35c7f6f24465ace322f5a07c7b7bc"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_2_16k:0331",
+    "task": "ruler_niah_multikey_2_16k",
+    "sequence": [
+      "L0",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "348f9275e3c9adbb4b6c591711f6a5d0b3cfe6f5c2af6e532f8a72cd5ba07e99",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/127fc6b7d4af53b352e6609847d94b1744087e03ca85d32775e8df12032c94be.json",
+      "sha256": "6d8ecfb1ae0dd5efce914bb00e98a9dc14f567f934f4bff87f2ffd6486551e09"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_2_16k:0482",
+    "task": "ruler_niah_multikey_2_16k",
+    "sequence": [
+      "L24",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "74ce2069530278d524abf72b65a01fa22699de443556d87952cf748db8ca236f",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/1785c1a35918e2e488e06aca543d02fa03271b824e8dfb63fe9163e171e0f82d.json",
+      "sha256": "4ab81b30adb0b70eb95e61ee5b6e893761e027506025da5e67bd68f2cdea6569"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0071",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "ALL",
+      "L18",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 14,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "b4bcc730199c109be95f95a979a7af307bb3ccdb5423bc05ebe322b75eac9d63",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/71c0151c08c682aff243da071b593813b9e6a3b557de176bd1836efbc7988625.json",
+      "sha256": "97a9107f97df0715021d39ef8f7fb27a25cfa4be1abf44b2d038f2a1c70285a8"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0074",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "L0",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "7032e40020d83196079078885b85dab06a6f0b7678466945945ae2f1a92920b6",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/79dfefac383a9dbed017f5b61df3bbd7aeba4c1b7e2e8378312b9d06f4ab8c95.json",
+      "sha256": "73e1760dd26b6d15897d0e6ae87f82a268ea65db7115119e31a9327b2b69c517"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0108",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "L6",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "a650cffe4c32cfbfc50dbbe5035e054d79a526f1ca202802df22e646f93cbd9c",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/92ec05d93b2b4f34b2c9505c06f819d339a2a3ffbd982503720bebd399884c4e.json",
+      "sha256": "ba946205e7724fea7892500882ae2bfd693e8676594b46b252451e8d672529aa"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0138",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "OFF",
+      "OFF",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": false,
+    "deletion_targets": [],
+    "sham_layer": null,
+    "prefix_written_layers": [],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "6053b26bb3e935f7c48171bcb36b60ade00b8df7251e582d49605d1d9423baa6",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/2c25971e08472c4d13e6a8b462c076f1237f0d662dbc3901899e8183858a239a.json",
+      "sha256": "280dcf1e282546ab816e6759e62e86f6596e356a6b556ca4382b8adcbf0bd8ac"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0145",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "OFF",
+      "L0",
+      "L24",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 14,
+    "switch_count": 3,
+    "tau": 3,
+    "boundary": 4,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "dd285af1e614e78dd1180e0d8aecee74e89043b762c9e686e52620c3d318b3c1",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/8b7b2ad8a8d67acc6ef0f0cdec2ddee390744a5572263f144c87a7897bbc1ef3.json",
+      "sha256": "4b809395dc99f34d3930db44eb44ec73d640570d9a29b3ce4f0b24f2ee785d8e"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0202",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "OFF",
+      "ALL",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "659c757c938f3c0addfcfb4ef7f0082ddf80bbc743ff43e44af10af1619149a6",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/0257d1a20260311269662fceda60137f68ea5a60c5eb5d2596138d470ef09953.json",
+      "sha256": "d735f5cb73f170256b7a7e296004aa54b908e669b0a05ff8af4f929184f56188"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0208",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "L18",
+      "L0",
+      "L18",
+      "L18",
+      "ALL",
+      "L18",
+      "L6",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 6,
+    "tau": 7,
+    "boundary": 8,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "cedc29cdd06d09c6fdac477b1d785f4e26a06aa9eab32b875fbad6683a4afa27",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/f6ad0375140741cebdca14ccbce81df4bb88ccb7576004f04032628192a78fd5.json",
+      "sha256": "d3a64f60ce600ddce563c3bdc112da135208e60b165fb70f36edca170131b584"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0212",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "L18",
+      "L18",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 14,
+    "switch_count": 1,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "aebfa50b68af41d24df7ea89e64d1e6cf6f953dce1d02174c4ef672c8cce18b2",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/27710615ee878786b649b37e948b3f5a1318750fab7fe86d6270c41cfdf07470.json",
+      "sha256": "20b73cf2ec9ab72f943b9c920b6c4751f1a6996a50ab86717c755cc259cdc6cf"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0217",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "L6",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "4ae48aaf1d41c516af0047cf2ac93dcfc3c1d633310170f59f2471c02e7db942",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/6ebac043b1031a225a4fb1b1a4507a7c6ceb7f716205133116d7a8c558c971be.json",
+      "sha256": "b77e24d69b97934be67b0fd4b55c2fd3603cdd3bbd767d906f1d561736d5f7b7"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0220",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "L6",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "08956c338fb2b829153bb3062bdec5ec566d6e32d597d40ef4a20f9ac60a1bae",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/44c987a31f6cc05d981470ab0a280c04fcfee3822af8f8b74ef3e8c3cfe5ec39.json",
+      "sha256": "c9cb65260c9a6b1cd2fa65a63f886684d08a72d945d83c7eb82e3da5efa17205"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0251",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "L24",
+      "L18",
+      "L0",
+      "L12",
+      "L0",
+      "L0",
+      "L12",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 6,
+    "tau": 7,
+    "boundary": 8,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "79453cf1f773957787b656a04bdd5a32957d858ddde966477582ce73e49c598c",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/77bf5f499f5cd5289b410d829320d588d0e3417c85a2e35d837fe55bed173905.json",
+      "sha256": "291c57097878a6fbbce3294d03ea05819fdbd3820c72564d6bd9f24702107c17"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0253",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "L12",
+      "L24",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "ALL",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 14,
+    "switch_count": 4,
+    "tau": 7,
+    "boundary": 8,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "e29e7ec0cfc6a089f3a3a9d6e06ce56684cf60769bcce2341f0eb4683400b4b3",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/4a6efd80a501c6705513d7b5cd07c5f18146030271f8a53c75a6915a0f03b92d.json",
+      "sha256": "085f6abe095e9a451d8dd56b0aef867abb177e91c00c9062cde32733f5ae859c"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0362",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "L24",
+      "L6",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "95ab8704c4d7a96f6034606b5022cf26b225831e343c2c98bae266fd196ef548",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/6e893965988d3953e7f7d7ed551128d5ca12ae8e6313bc295d2716f25e5b5685.json",
+      "sha256": "48624a16ea1aafb73358233a18a36041271f3e9aa2d1c8f9a564ec56a5a1465a"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0394",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "L24",
+      "L18",
+      "L0",
+      "L12",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "OFF",
+      "L24",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 7,
+    "tau": 11,
+    "boundary": 12,
+    "reset_eligible": false,
+    "nontrivial_reset": false,
+    "deletion_targets": [],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "20c493dffdffcf3b444730facf1a05b22f50116690957c6f243001ea8d23e4b6",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/a804ac87b90df1a8aef556cc38cafc82bcce292262e56f1626740bc33ddf86b8.json",
+      "sha256": "0cba09b254197be7a0ea34d84c3f3c9f6cfe6f8fbc8d65528de10dc6e4f6f192"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0429",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "ALL",
+      "ALL",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 14,
+    "switch_count": 1,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "59e641ec79c0a051527d8b459b9130194b198f2a6001fb7b2841e476ada60ca1",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/eced7d35696354044531e1a0daba6a1a19893d82b577cc1ed079fb5b13c28013.json",
+      "sha256": "7e5d3e9566b6bb8bc631fbd2a747ad4455fd5431f545181c4c2efb735fae409a"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_niah_multikey_3_16k:0464",
+    "task": "ruler_niah_multikey_3_16k",
+    "sequence": [
+      "OFF",
+      "L6",
+      "OFF",
+      "L6",
+      "L6",
+      "OFF",
+      "L0",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 15,
+    "switch_count": 6,
+    "tau": 7,
+    "boundary": 8,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 12,
+    "prefix_written_layers": [
+      0,
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "a0fd4f75383d5f1606eaad4853d7b2c77038bdfe8b818f8c4c78fb48a41386ae",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/032f6e582fcc12d8da317c3c3a58fa9abbc88f5e47fd3f43e374263839ccfe89.json",
+      "sha256": "cef47f937f7739f9dacaced735049ce7f113750e76fc0663f75b6d83aec764fc"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multiquery_16k:0001",
+    "task": "ruler_niah_multiquery_16k",
+    "sequence": [
+      "L24",
+      "L18",
+      "L24",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 3,
+    "tau": 3,
+    "boundary": 4,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "59fd6d6cfd8c944feaa07459b79bf7acb22772c54c1e10deddf78fd84fd95be8",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/624f9fec8e2a25ad63aa731748248f461f9c750fdfae838c3f5743d490ead2c6.json",
+      "sha256": "690780d98004e4f0b847666b1f4e46fa459b80400aa89e419ecf09d9ed289181"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multiquery_16k:0063",
+    "task": "ruler_niah_multiquery_16k",
+    "sequence": [
+      "ALL",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "f61e0dc46d4032e15129fc15f863abf1be3b1e1274b3a2eecbe8f5ec2518627f",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/f1f15569a4f494aec9054f9268acf415f52f9f3f0b695d8efb0e2608eff44e81.json",
+      "sha256": "7c65ff8049b00575f5a7eb89d42305215d06f328b229b198a3047ca830c19e2b"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multiquery_16k:0068",
+    "task": "ruler_niah_multiquery_16k",
+    "sequence": [
+      "L24",
+      "L18",
+      "L0",
+      "L18",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 4,
+    "tau": 4,
+    "boundary": 5,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0,
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "f53a60b71a62d2d925b700428cd11ceae69d3a08732d26274a7b774bb65ab63c",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/9f7f0ba2e3c0db2d94f1800d08c29eb03d67b01fb3f1816626e8cfa777b918fb.json",
+      "sha256": "6c75c71cf802b43ce062a44983f05518a78a545766b20345a3de8200b75bce5a"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multiquery_16k:0082",
+    "task": "ruler_niah_multiquery_16k",
+    "sequence": [
+      "L24",
+      "L18",
+      "L0",
+      "L12",
+      "L18",
+      "L18",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 5,
+    "tau": 6,
+    "boundary": 7,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "786750b0e9be42bac92470813ab24c6c69c4c5ee820a25a817b1a78f7e1bf55a",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/04cb1a4237d7633a5c3883e2f0538a9a699645123c1b6629f78e8b7cfcaedf9f.json",
+      "sha256": "2b9f4ca2a91280e2f68f17488bb3ef8cded20d8cb3f02238875c4b55f9aee196"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multiquery_16k:0100",
+    "task": "ruler_niah_multiquery_16k",
+    "sequence": [
+      "L6",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "5eb9196d4f5f77756dcbd67923faa028d4c09a3e9373de7ed94fa43381117ff8",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/1ade0a4f960ac09eaf8a19d1937f0bd32dc6548bf5421dcb7d3bd273cfb3d10a.json",
+      "sha256": "ca703a91c38b2972b538e7d9c5f143293d3fa60e05b0d6fd41f607b115df3302"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multiquery_16k:0129",
+    "task": "ruler_niah_multiquery_16k",
+    "sequence": [
+      "L6",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "5b16f63474fde5cb3f003dfd42c59d1bd80563c673c431d2c228b0bd101217fb",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/1153b8191cba2aa65ca3f4e73764248a9e0d3937075da9c3a44ff54151513334.json",
+      "sha256": "0e62e6f85bd2e5a4840ce1db8b5e62cfe22f80a9077b6929194157bd9455cce2"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multiquery_16k:0131",
+    "task": "ruler_niah_multiquery_16k",
+    "sequence": [
+      "L6",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "24d952843a608f923928548ed705efc683537e5431eac3f60ca02e80273e8c0b",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/114f68f63d1cbb8e7717edd8a3679519fde968ce9b7d7d2bc467384ba49c9d53.json",
+      "sha256": "877b665bc1765d1ae8fdb73a8d7599c0ebbe0467355d304ff590b377745095a3"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multiquery_16k:0147",
+    "task": "ruler_niah_multiquery_16k",
+    "sequence": [
+      "L12",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "1781dcec89cd95e344aeba08481b90e43cf8379188c329eddd002fd24fac381c",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/1d6c3b42f1d467ad3e07686fe31e0dbf845e1cf62c8aa04c3a1a05b392498a93.json",
+      "sha256": "b575cb19bbb7422a5759582fbb4d97050d4c8053226a1faa8ea86a816bb2de2d"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multiquery_16k:0201",
+    "task": "ruler_niah_multiquery_16k",
+    "sequence": [
+      "ALL",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "35a38d5499a8772418194b55a0487ca0eba248d30ee388a45b4211b66b9cebef",
+    "sample_best": 0.75,
+    "off": 0.5,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/61dc7e88a5bec6e49ed641760c76ba11e211b029fb0635524379c17289aa4ebd.json",
+      "sha256": "ebc4f4ba09f6ce21d9ca17a0835bf17bd98b91c35fd7cc8d95f2e5c9d8788ead"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multiquery_16k:0381",
+    "task": "ruler_niah_multiquery_16k",
+    "sequence": [
+      "L18",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "df3f80aad31da6eed4e91e56c4d0f8a15e0cd95986c6649d3f1c302386b8292b",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/17b74f20fd7e78edd631b58fa5b70c9b7d4502ffb4aeb9487b05fb6b548382af.json",
+      "sha256": "5cf19be89c7a23e62db2b95f39dc6273c803d98497405d44d2ce5a2833915742"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multiquery_16k:0404",
+    "task": "ruler_niah_multiquery_16k",
+    "sequence": [
+      "L24",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "de3353cb079dd1b5bcb77ff3f55656da1378f9bb20e8ddce4eebc01b09d5660c",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/69e198b160c704d2b96e05e8d3cb5f9a0edd32481f572186ae24e2ca14d307e3.json",
+      "sha256": "11943f41785d2906c53a710d6076902a97ca8902e0b742b2453f8f2a7e8db735"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multiquery_16k:0454",
+    "task": "ruler_niah_multiquery_16k",
+    "sequence": [
+      "L0",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "50c01701a35ed7e84fe0572df94ed8981e60617f752eae6b91b8382bebf89b6f",
+    "sample_best": 0.5,
+    "off": 0.5,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/e2359dfbbf3f90d06f99ac5da1c7c87659e8325127b793e125b9d65ce53b067c.json",
+      "sha256": "511514ccfa04e0318ad773664aa4aafe75f1934469111242f85fec292e9263f3"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multivalue_16k:0060",
+    "task": "ruler_niah_multivalue_16k",
+    "sequence": [
+      "L18",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "d62f96f85a0788351c357d05d29ae21517ee99400e80b9a8e03c84f3ff7b15e0",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/08c2d2b5924143cb6f8f2d2bd491ea28c8c2134872aefbd98c18c60bf270e826.json",
+      "sha256": "d757acac769d6d1bc118e1f6f57850b6ca55f07142b29271368e9d66fca30114"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multivalue_16k:0144",
+    "task": "ruler_niah_multivalue_16k",
+    "sequence": [
+      "L18",
+      "L6",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6,
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "3b8322568daa8d5aa145787dd709e23765869e8572aba13a8483f7791787bc46",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/c38028b905cb6f7902135ca62f307d715058d8b3710430787914d6f42d597eee.json",
+      "sha256": "be87c190afbb58d14dc1d69173bd9664c78e39b66ad4c05570a792dacea78f7d"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multivalue_16k:0192",
+    "task": "ruler_niah_multivalue_16k",
+    "sequence": [
+      "L24",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "d0dcfc8d64efeeb12fcf60ad605edbfd268c3a968eb7fc6c8f8b749066a6541f",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/5809553d34c41f166bfa5e5c9bbadd8dedd1f439266bf7f575e70b947c551d55.json",
+      "sha256": "28e71a54529a228b3fdc493dac0b80a992edc8b08615794efdf97aa0c876c2e3"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multivalue_16k:0245",
+    "task": "ruler_niah_multivalue_16k",
+    "sequence": [
+      "L6",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "ccdee6fa4be9089047c2246917bfc263caac0cd10d6cd53a645c203a5fa0a2fd",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/0a7c2c4323825cf31c41e08e0edd6dab7ebf489946d9a224db0c48d34b36ad62.json",
+      "sha256": "5a16345f53cc5eb72bfbc1ceb060d04c3509591d5989aecbb65c709ee95e1df1"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multivalue_16k:0266",
+    "task": "ruler_niah_multivalue_16k",
+    "sequence": [
+      "L24",
+      "L18",
+      "L24",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 3,
+    "tau": 3,
+    "boundary": 4,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "e88f53fca3c8d0d74435f4428890aa11a128548acf9faa4a918c1ab6a4ea7b0c",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/8a5163618708e7e9232f2c6223aa75f0e498bce2c226e16a7e4e90720d9168ca.json",
+      "sha256": "024d4e0685a5e661709a53a59f693a8e46c36c44d3d47b2120691549af8a6d00"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multivalue_16k:0288",
+    "task": "ruler_niah_multivalue_16k",
+    "sequence": [
+      "L0",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "7df4f409bd0c2f8459b7d375f746abd67e2d8fa130b22eceee5158b9398e0a5f",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/bb13d2a18c96a17e64234364a25092542131a690a0005ec7ab08de6e9c8215c6.json",
+      "sha256": "f3fcd609233a07c5ad9fad54bc779e669fca7780602bc18e2ad60eccd85caa20"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multivalue_16k:0496",
+    "task": "ruler_niah_multivalue_16k",
+    "sequence": [
+      "L6",
+      "L0",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 12,
+    "prefix_written_layers": [
+      0,
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "bd0963a7f5563e27efcd11fd1ce16aca7bc18fd04e3f2136b340e328c17a1ab4",
+    "sample_best": 0.75,
+    "off": 0.75,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/fa07c54a55d164e4dfcdb6dddfb084558b4e04f41cad8cd28e6b675b1aefa9f5.json",
+      "sha256": "e6aa34b32bb1576a549597a5bdef060c6803b15924e8f14c1ed2eefe99fb562c"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_niah_multivalue_16k:0498",
+    "task": "ruler_niah_multivalue_16k",
+    "sequence": [
+      "L6",
+      "L12",
+      "ALL",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 3,
+    "tau": 3,
+    "boundary": 4,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "68b237e46379cf73eee821ce9d2013747829a9ef45eedf32a238b9843035a7b4",
+    "sample_best": 0.5,
+    "off": 0.5,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/d68a42a4549c728f8af8cbedfbcf4623051899dad0c129087d672c3f216ec845.json",
+      "sha256": "5ce2de4b6a0e9b0b3e8480d7d875edc29016ea504e180751f8723fff4a166063"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_qa_hotpotqa_16k:0006",
+    "task": "ruler_qa_hotpotqa_16k",
+    "sequence": [
+      "ALL",
+      "ALL",
+      "ALL",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L6",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "OFF"
+    ],
+    "T": 14,
+    "switch_count": 4,
+    "tau": 13,
+    "boundary": 14,
+    "reset_eligible": false,
+    "nontrivial_reset": false,
+    "deletion_targets": [],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "c507f5581dfd6fa8e9b11ac75a62ba62d85f1cbeff727cfb3d78543d32548b63",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/fb93338f9b955da369c8751e7f5284ae16f75a182cb37044dca31e09629ecc52.json",
+      "sha256": "24f333b3ac2751106e740c7d6761f167c1eba5d1f1053ced4df8e7846800558b"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_qa_hotpotqa_16k:0023",
+    "task": "ruler_qa_hotpotqa_16k",
+    "sequence": [
+      "L12",
+      "L0",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 14,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0,
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "f6690e3f4164a387d9845f960f04243c4d4637823e0e90072ee7bb9bdc689ae8",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/d3d3a8db9f2aa50187d75c2dd99e1e679368a90ea5fb8328f95283150e862943.json",
+      "sha256": "9e3ebb647289fded58a49fe1c807864af56a50aeaf84896d4d2fd1ca202a7ba1"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_qa_hotpotqa_16k:0031",
+    "task": "ruler_qa_hotpotqa_16k",
+    "sequence": [
+      "L12",
+      "L24",
+      "ALL",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 14,
+    "switch_count": 3,
+    "tau": 3,
+    "boundary": 4,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "9b52fddc5a583fcb7ccad726879bd052b66b6f1dd287c36275d0e42d2dfb3308",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/6e1f0337ff514c084e1503156fe837b3a0ff7ba67530aca4b3662923a488ccef.json",
+      "sha256": "3bc64c4e97b7fc45ce32584575217a60fb0ca71177ed7a40887ece5c006e85be"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_qa_hotpotqa_16k:0059",
+    "task": "ruler_qa_hotpotqa_16k",
+    "sequence": [
+      "L18",
+      "OFF",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 14,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "796b29c7e406e8a4507afc892128d512f3ecf1b97dcf6343e75aa801e11cfccc",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/e2fa8db21604572ed61158f064d70cf5964578981da5581e6494879d3971974c.json",
+      "sha256": "7a1d7bc786ea3d4ad77fee9e6d4aee2e96bc2a185a14deefbb3d3d08dd88507a"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_qa_hotpotqa_16k:0085",
+    "task": "ruler_qa_hotpotqa_16k",
+    "sequence": [
+      "ALL",
+      "ALL",
+      "ALL",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L6",
+      "OFF",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 14,
+    "switch_count": 4,
+    "tau": 9,
+    "boundary": 10,
+    "reset_eligible": false,
+    "nontrivial_reset": false,
+    "deletion_targets": [],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "7605c484c2dad237713170da4674a650ef6cf71d55601c159208b15844dbb362",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/ab10b22317c8a6f6f2ee8b3c2827c4de86bf3d48b914b240607a4e29a37ffb20.json",
+      "sha256": "ce35365871a211a9a64446fffac235d906bb04a58b4f7c511f2c69dd8b206a45"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_qa_hotpotqa_16k:0118",
+    "task": "ruler_qa_hotpotqa_16k",
+    "sequence": [
+      "L6",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 14,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "5e4766139cb7f73fd887378a9cc33236f3ffb53c2461da7a6352e04d92bb0c74",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/a5b90521bf4bf7510cc44de78ee481920fc67c44802cb3e797a6f6efd7165a62.json",
+      "sha256": "22f000513b91c6f499e812238ef9d1d94a73368c77901b466420a04382f3599d"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_qa_hotpotqa_16k:0140",
+    "task": "ruler_qa_hotpotqa_16k",
+    "sequence": [
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 13,
+    "switch_count": 1,
+    "tau": 5,
+    "boundary": 6,
+    "reset_eligible": false,
+    "nontrivial_reset": false,
+    "deletion_targets": [],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "e4a66ab8a3bcc20349a1a5d81bc8e2dd9d36dae37746217440cbda29f7bc43cb",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/af7fe87c227395580f57ade1556b052758e775b950434575df8b0a256e207cea.json",
+      "sha256": "8a30121f3221369734b6aa91c30618711dcd55e62f0252ebca20b7bf26b84ac9"
+    },
+    "r2_candidates": 504
+  },
+  {
+    "sample_id": "ruler_qa_hotpotqa_16k:0191",
+    "task": "ruler_qa_hotpotqa_16k",
+    "sequence": [
+      "L0",
+      "L24",
+      "L18",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 13,
+    "switch_count": 3,
+    "tau": 3,
+    "boundary": 4,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0,
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "f7713fcef813dd261b4e54fe065b7a9c7b6bb294a4280599fe93af2f4a183508",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/06f0c2ced44f1be8886379d62ac8ce7a88d6f677513ce8aed4e7161b92833200.json",
+      "sha256": "b3d0c00a1aa877f0f515d65daf336aa3a741ef6c9fe7ec130e7a582f701c3f92"
+    },
+    "r2_candidates": 504
+  },
+  {
+    "sample_id": "ruler_qa_hotpotqa_16k:0312",
+    "task": "ruler_qa_hotpotqa_16k",
+    "sequence": [
+      "L18",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 14,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "ed1db31a3a5fdac32221d6158631e70b6bb151efc60b25d50bcb5fc4ec872af2",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/8341aa98d760eaa452a5628c52a11b84f6860b59437660fecbc64a5c155de2b7.json",
+      "sha256": "eb291ec7edef45f361140d792435e3a4355c2dc30dedd416a009d03774138abe"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_qa_hotpotqa_16k:0337",
+    "task": "ruler_qa_hotpotqa_16k",
+    "sequence": [
+      "L6",
+      "L6",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF"
+    ],
+    "T": 14,
+    "switch_count": 1,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "5eea3180e8359440a49ccc82afb110b05d158400c00a937e10369a6a0787e60b",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/9fa741130981bfd68338368179bd7a4fcf0f2810330df7c957943e8638aabad3.json",
+      "sha256": "e053e6adba85c4045d98517fbb21144e670be5c0d8c9262028e6c359b6c002cc"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_qa_hotpotqa_16k:0348",
+    "task": "ruler_qa_hotpotqa_16k",
+    "sequence": [
+      "ALL",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 14,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "f0a522df64cd0878ff5539813f936af2987aae723fc704e0509e079e4ac4b874",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/42b57de524dabaa72f51f5353f482ecc6b81fd5a95da88dad0c658fad355fc28.json",
+      "sha256": "8486eec5a5c37c34ef1ba838f10288a5b26ad8a98fc893f33a95fc4658e6cae3"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_qa_hotpotqa_16k:0364",
+    "task": "ruler_qa_hotpotqa_16k",
+    "sequence": [
+      "L18",
+      "L6",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6,
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "fa0cab233a0b6075c0d5d07ef1f6451fa7b5d76106f06981b33db02914197751",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/8bf8da88b6fb054f62ec0fb6c8bab0c3d6d76dfbee9f4b9a57bfcc96224f00ae.json",
+      "sha256": "4950a4b5a6647e0df717827314fc8ec6ddb1ac3e5f974272cf60b40c059d45c7"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_qa_hotpotqa_16k:0454",
+    "task": "ruler_qa_hotpotqa_16k",
+    "sequence": [
+      "L18",
+      "L24",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "b3fc3e6b95771dd8b398a5ae752bf8f2ea651126af3ff0efa14ebc28d1cf93ca",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/95bda1229077803ed9f1d6893ef2c7d1a9e0e71d610d8a229b54e706c7510a44.json",
+      "sha256": "de6ac56d534762c6f904fba9272e9769d9e3fe84b6877922a7ec461447bd04e4"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_qa_hotpotqa_16k:0493",
+    "task": "ruler_qa_hotpotqa_16k",
+    "sequence": [
+      "L24",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "d3e3f08c6ceb5d420e968a9c25219e9a0fe19a8107c695983de1f3a9abdea3f1",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/3441a705475ed8fee69cff78e51edecf8bbadfb05671b1bffa5cf4cd7a59be21.json",
+      "sha256": "4af1160d4abe537b39ca1e207d16298b3101721e6f5671d02461b2800b5401ce"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0033",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "L12",
+      "L18",
+      "L18",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 14,
+    "switch_count": 2,
+    "tau": 3,
+    "boundary": 4,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12,
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "58b8cc2cdeda124451b3cd0a00761e13767ea9ab77cc36f9888378408dd892d6",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/04050c55468493a41bec6f4018fec27e056e0d531f9139b87389a559e1711782.json",
+      "sha256": "3b14abc9baf06303aa7acfafd10bc45a5ef0365d973ec65a45a05b787d5f655c"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0056",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "L24",
+      "ALL",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF"
+    ],
+    "T": 13,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "f9dfca46951cccedeb9c0e6b24c2e9ed07a91e68fe7aa3df2b1a22c01143c380",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/82e1546ba4e102d8a710d3c8feaf6ba842bbe8b8883eac6d8f4e53a78d8b1366.json",
+      "sha256": "1949bbf80c53c3ceeab6a9d1b623f780196c5788479b28b7112f3f0111e53c99"
+    },
+    "r2_candidates": 504
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0085",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "ALL",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "4a1ddacf39399fb6aaddfe1431a18a79f0ee0c1585ac271d218d1641a51ca3d1",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/a2d9d154afcc67c14a72679e4a365ea8cfb07dfe500e8d0782986259a8f4464f.json",
+      "sha256": "d63075560f2ca93b33d0b970556cceffffc2e0c500859aca5974d84e4794e48c"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0141",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "OFF",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 12,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": false,
+    "deletion_targets": [],
+    "sham_layer": null,
+    "prefix_written_layers": [],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "d3d699e99550d6a8edc734b7c5dfd552d8062a64af2388524b76cce38ecbc2b7",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/b950a2751c64403138c760fce2376b073c5bad14720e6949f6196697354e72ae.json",
+      "sha256": "bbe3df5c623b5e3c4c55d11195e9112a26c6cf37757c0a24698a5c5a9c7552a2"
+    },
+    "r2_candidates": 462
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0161",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "ALL",
+      "L12",
+      "L12",
+      "L0",
+      "L0",
+      "L0",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 12,
+    "switch_count": 3,
+    "tau": 6,
+    "boundary": 7,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "5c1d014ef4b54d96ec1827b1930007eebb135ecd0a30d39dae0cb831e0868f15",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/4a897e05be8463712e7ebc9b2c4b8cad3464defea1d014a79fd58a49f68bce8f.json",
+      "sha256": "03b6c0c4bb03c3e2fd3509af2a1d3feeba2c8962eea91c79fea99cf8a6010e6d"
+    },
+    "r2_candidates": 462
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0172",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "ALL",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 12,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "d634d445dfaf87d761676e1bf4a2e6b2c10b37d1141fd6aeb21f3e146f5c63e0",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/96f2663be858ee2423fd1ea7f85d14c405cc99a26995010e97163929036bf215.json",
+      "sha256": "b87e241dbdae00c2a5690f86ee8c4d7f0d67fa55f320a0ea4ff1068c3718905f"
+    },
+    "r2_candidates": 462
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0184",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "L18",
+      "L0",
+      "L6",
+      "L0",
+      "L0",
+      "L6",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 12,
+    "switch_count": 5,
+    "tau": 6,
+    "boundary": 7,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 12,
+    "prefix_written_layers": [
+      0,
+      6,
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "ae309045e8b98ba90e126c8b9d7f04e9808941fa47da7704c925721e06dc1d19",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/bdf67bc75867e903e3190fd82aaaf973cfaa25842eb4e6f594f15d1c8e895c18.json",
+      "sha256": "6c4cb2a9f1a3f521f0fd4ca6f6c698f8fdc4100a2d7a2b5af88d5ee22a7c6d03"
+    },
+    "r2_candidates": 462
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0305",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "ALL",
+      "L12",
+      "L0",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 12,
+    "switch_count": 3,
+    "tau": 3,
+    "boundary": 4,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "5047346509cce1b0429a6153c0265f2e8f24aa1f8bdcd6600c47895ea4aeee3f",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/bc0d2d6bcd39ecd9a94481e7029f7083ebf2e6676cca6baf9fc5de085dce52b3.json",
+      "sha256": "db6949f1181b181f2e857426ba6306306914ca6d86527198f3d9b7fb13bf4b50"
+    },
+    "r2_candidates": 462
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0363",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "L0",
+      "L24",
+      "L18",
+      "L24",
+      "L0",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 13,
+    "switch_count": 5,
+    "tau": 5,
+    "boundary": 6,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0,
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "063b9458c0da5b6b8389ec479d87e23d88af83f82e6aa87694d806f2c2267ee9",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/e58046891c66a106f6865428c6f76ec08e1676923a1f0b345b233d5065e27f23.json",
+      "sha256": "3b5dc8cdb33c5f03c4247c146ccd3250c537cc732d782ebda502dcd015d5d5b0"
+    },
+    "r2_candidates": 504
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0424",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "ALL",
+      "L12",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 13,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "ab6db6513a41f50c9186a6140baf7ddfd877cfb685f447bc63d3b63d5fe8289e",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/61d8cc70a052fc5cea53e27ca0f4779344b73dd7d157f7fef0941c8405ed20f4.json",
+      "sha256": "3a8833f50cbb7687b843afecab1c2324c0a74351cba47b61965611c0f239f7b9"
+    },
+    "r2_candidates": 504
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0429",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "ALL",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF"
+    ],
+    "T": 13,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "329fe5862105b00c8327c18cdafc6eb3e3dc5ec970a018145a88d84f2e9871d9",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/a8de5784ccfb17a13cf7aab715a02650a919d04e0ca99826fecbc1368fa0f43d.json",
+      "sha256": "8398a4275c86a9e822962c2b0221e3cd8c3d59cde8ce916f7a6efaa606bdafb6"
+    },
+    "r2_candidates": 504
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0432",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "ALL",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 13,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "687a1ab5d296148f0cb994d663607325633492a909781816907b441da41aca07",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/d93129f1bb9f1253fbed23364414d979c19696b243babec9a0d2c9a7a72bd19d.json",
+      "sha256": "c06079767bb34263fdaeae291945480d85399f0724ed95c252caabd308076073"
+    },
+    "r2_candidates": 504
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0444",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "L18",
+      "L12",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 12,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12,
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "877c20556a17866956c7bef760257fdd1eeed431c82790c409f2b6736accee90",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/c2ff3b7f8eb941e7ee06a0f3eb1704ba21f327ed7c4ae82573840bb3b88a3842.json",
+      "sha256": "45460c9ce0c6667d8f8eb8ad09564b376176fcf0bbdd7101998762302eecb721"
+    },
+    "r2_candidates": 462
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0445",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "OFF",
+      "L0",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF"
+    ],
+    "T": 12,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "7d2b46da6322b55ac3158ac3b8ba5ec8cbf3bc727bfbdbc7e051a694c79691b1",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/af701fa340ccbf03b0e3ff9208f231e1df37b05d5f772b075732e3c9bb2a57c0.json",
+      "sha256": "82711ca962758f5348e850ba827d25568a479a5e37e39518eea19fbf2a496890"
+    },
+    "r2_candidates": 462
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0458",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "L12",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L0",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 12,
+    "switch_count": 3,
+    "tau": 6,
+    "boundary": 7,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0,
+      12,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "7882841399a6c6e9c10b36cf4545c3108e4a027ef4c530e9cd3d192141c5122f",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/5f57f0189bb55a176964505d1a7c5caf35edf168803d1dd17c847e09f5d2440c.json",
+      "sha256": "2b1d9b76ea50f7359fed11385ac4739411c5f99b8d99ce2c4089fab276d1157d"
+    },
+    "r2_candidates": 462
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0472",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "ALL",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 12,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "a623b5375cee4ff081ff9de5fb823d547ba4361d36ed24da13b2ab86132fcaa9",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/b91ba41c9e4d2a7159474d4287857ff7521304a43214a79805b98d950042ffb0.json",
+      "sha256": "2fad2612f4dec0790e69317dece360995178b2cdd54e340a1d4634ddfb65df91"
+    },
+    "r2_candidates": 462
+  },
+  {
+    "sample_id": "ruler_qa_squad_16k:0491",
+    "task": "ruler_qa_squad_16k",
+    "sequence": [
+      "ALL",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 14,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "8245ec43279f71376f00013c840d513285c7fc4e60ec800459522897a28497c2",
+    "sample_best": 0.0,
+    "off": 0.0,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/f207133c8a389550f136cbd981f0531b0fbddb57a7defe5c65218fc8d9250d27.json",
+      "sha256": "c9b1f21bf143a3021179a13de802db7e318183a694ee634617a73dc8746a3be8"
+    },
+    "r2_candidates": 546
+  },
+  {
+    "sample_id": "ruler_vt_16k:0008",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L0",
+      "ALL",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "9b0e058ca768f997804f4c153822ebb339419d256f0e0565d2fda783964967c7",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/9a84c3d1f114c7ffecb1400709ee82fcdbd681db8b865bd2726d99baffc6d64f.json",
+      "sha256": "ff9a22ec379be2709a247dffd993fd86b2d954ec94996a3c02db1e1c02aaeac8"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0024",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L24",
+      "L18",
+      "L0",
+      "ALL",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 4,
+    "tau": 4,
+    "boundary": 5,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "1ad9f59a147bdb68cf4dc0ebe4f4542baab47811443b8402ce2a2cba739b019f",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/5ea586462414a18ab723a363869225c4ec1aecf73001d8f48f864f0b6bc23219.json",
+      "sha256": "8db2be100ed078c78d8e1d82edae6906b17dbae921ec5f7f89a04423b6b600b5"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0044",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "OFF",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": false,
+    "deletion_targets": [],
+    "sham_layer": null,
+    "prefix_written_layers": [],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "a03d0300281fa8ecf03d18615d32870faa97c9b7ce31b09ab0472e633805424e",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/88695346d8c8e4519dbd826b30aa257c1c3f86db001b0b1ebfc2f56910012b6c.json",
+      "sha256": "91626c3b21afdae6b923daa7e10e09effd24bddca552380378fb5a3b9fac1996"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0045",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "OFF",
+      "L12",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "6e4617c4637983c711c3ef3aea6d51abcff32b1365c0abbccc7daddcb462962b",
+    "sample_best": 0.2,
+    "off": 0.2,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/c6ff940cad9d9716861a6f3958b14ea86ce68b00bd122d9c1a87828ea7c5203a.json",
+      "sha256": "4519528301bc00cf8ce24f8349a1cba4b09224004d20c7cec1969eba186bdc25"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0048",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L0",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 0.4,
+    "native_prediction_hash": "4857a10db8dbb76175ab941edbd7a7aee1d239a37332b1473d99b46ce2898479",
+    "sample_best": 0.2,
+    "off": 0.2,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/31db1301a74b4f5fb6e2248c5db4f4342574d60dcada00613a09b0d86d74a7ef.json",
+      "sha256": "951e05b719cf6bd088a83b2afb9cc7dd1a1890612c370081674e9f062d94c039"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0050",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L24",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "4cc5ec4da0d491177f0e1b7adc84315cbd3791e099b10e5b1042e47cd51e47f1",
+    "sample_best": 0.6,
+    "off": 0.6,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/4f670baead57f99163776b94c829ea79ef3ec5be3dc91357ef4966b83f9b4b2d.json",
+      "sha256": "67c7cc6ad2f425078bc30732ead285f35833999299765edb54a0fb4619d5da52"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0057",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L6",
+      "L12",
+      "L12",
+      "ALL",
+      "L12",
+      "L12",
+      "ALL",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 5,
+    "tau": 7,
+    "boundary": 8,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "7b5e9515a1cc02b230dd20ad6972dca1b012b10999d31a9356aacc3a61b51ce0",
+    "sample_best": 0.4,
+    "off": 0.2,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/fb67185c844a73947f243781629db2119f5279fd72e4acbbc24c908564e940ac.json",
+      "sha256": "92d3904d3a409795c1719624e17304dfb462d6048fcf6c1cb0a84643d2b5e92d"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0063",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L24",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "aa6b3aa5b0d8f3526e2401f6305b13f2bbfc9bb848699a0dd6d7a141b8ea865b",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/e953987ef83794f2f9457da2de4db02404f4211958f8c999c4ec1856880bf039.json",
+      "sha256": "e93ee6cf07315da63d16772fba8b1feb7bda673f49fc5c4897af4eada9c64a8b"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0065",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L24",
+      "L24",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "e668fe5d2ffaf3a56c9b487e5aae38281a24d67ef4cad635d83b8197b243b0fd",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/f555cb63cb3a1ea0922dc068fd11dfa0ba1db70d873cb38cb59b76ef9f3279b4.json",
+      "sha256": "2b996a736b5391c403480604742eafb057e80a5f6b5955ef0152cf4b08bc0e62"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0070",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L24",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 0.6,
+    "native_prediction_hash": "866ad27219f884272dc3dda446faf78fe4f6adc76686996a5899afb06ff64247",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/b3805b453adbb2ec5a0599e5b41e1466e687dbf162636631491e1854f5fcb807.json",
+      "sha256": "633cc7d5b6dd7fb3aed002243ba7e7b9cbe241bdbe9e858bcd89183a5075f615"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0083",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L0",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "a2ccfc0b2c2d91609da52ee666f84b6a94f9987bfe915e669a5d6f16bf4af01c",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/78bc45be138b5d6947a9da034f589616b9310d13348252bec0c4d0e7055ddf65.json",
+      "sha256": "56e76efc92a4ad775031b5181227e88a64e8af5822001e986fb335e17cc680c7"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0086",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L0",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "3b1cbcc5aeeb3262f5bc63bef995be3007549e49a0e82c2fa0d5c58bc1031379",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/e5b0ab914f4aa3dc7b179e9eae5a7b755cad2a07742f0257efd2f1c6d8e7e707.json",
+      "sha256": "24c1d076266b761132b037c54b36bb9b49f2640ce57e2e9c3f7357f7d6f33bfe"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0091",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L18",
+      "L0",
+      "L18",
+      "L18",
+      "ALL",
+      "ALL",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 4,
+    "tau": 6,
+    "boundary": 7,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "b96a28e93feffc13213c8ed8971a8973a0d9135fc80edc5f75b91c5a0ca11245",
+    "sample_best": 0.6,
+    "off": 0.6,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/430f56408ec85966aff6ff09b3fe0983ded124c68e4818d7cb096e017ada6eea.json",
+      "sha256": "898bbfab12273569f481c70c6be2a50cf566fa702e385212b4b1c314f1143977"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0093",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "OFF",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": false,
+    "deletion_targets": [],
+    "sham_layer": null,
+    "prefix_written_layers": [],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "2cc643517ec00fb68095183dc47a42722d37d4d303098f4b9852e76d079d0e98",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/ae013bac65a87890a7f8f566d728294d1b229692b277fbbd72bfa3840fe61e06.json",
+      "sha256": "d4614cbe524ad053c828802d14d6917ae1d51d78cf767c3605ff7ab41a3c8422"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0098",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "ALL",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "6de1e795fad6b0a643066859810cc691af4db72ff6c4dee6f044c32f796a2a4c",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/64a454f92469d39737936e457145ec944204697ff3f6d7c4aed1235732dd6074.json",
+      "sha256": "293144b7e37537d4d83d72b45dd3f3e654a86a2fdb4d7b30eb7f84c7db50e738"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0108",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "ALL",
+      "L24",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "dcb18fcb49d0106202a40c60065b558dff9f4a68937e9fa84c6ce7af4f6f353b",
+    "sample_best": 0.6,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/cf6858bbf7f14763e84e62d0d49c8bec4e204c1d261e458ce628db1f515e890f.json",
+      "sha256": "9ed62dc21dd27f35a964f7fe8a2be38f3271f3d0d4014367a3689d9cf37708bb"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0113",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L24",
+      "L18",
+      "L0",
+      "L24",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 4,
+    "tau": 4,
+    "boundary": 5,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0,
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "3472ceb6af9d490e9a3f3ee60dc5fbf1d5d9065ee835004ec1d1698cd08ead4d",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/f3610b767483adf0519fac3e732ae9970160e3f915903955354ac866b6041539.json",
+      "sha256": "3f9ecd53c94f06da26c66cb7d10a3cc7042045c949d2d04aa58242ebb13ac452"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0123",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L18",
+      "L0",
+      "L18",
+      "L18",
+      "ALL",
+      "L18",
+      "L18",
+      "L6",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 6,
+    "tau": 8,
+    "boundary": 9,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "7f32965e57b024e3a9dc8c3cc10b80375ab4be70f52f4c430964845e04a160c7",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/84df9a0af73ed81d2b0b5314728efbf2268cafdad705f4f204685f6ec79076ae.json",
+      "sha256": "811bb5d3e87353babb245bb919633d43f66df5035a78f1be09de47bfb82ea7a8"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0139",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L18",
+      "L6",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6,
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "1d08a67aa41b472453fee3ab7f7fc66716eea8c698c8c55d95d30c38cd378d6f",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/298e2598b45225da02293ae5eb574c9090e48648e6b1de83b02aadc995accd55.json",
+      "sha256": "394d25e5b4815a68bbae80800b4a18e2762b8c4a336d86ae052149d787a9df1f"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0140",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "OFF",
+      "L18",
+      "L6",
+      "OFF",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 4,
+    "tau": 4,
+    "boundary": 5,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6,
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "eb4506f194569864342fe60e039318d4a2752b8221c129ce2ab52356b1f1647a",
+    "sample_best": 0.6,
+    "off": 0.6,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/e4ae690018dfcc550b6bc56fc3e1b62d95cf407685e0635c8c492a9a9f042148.json",
+      "sha256": "1ea70fe3cdb42209fb2db40995af6374b65987e356a5201307f3b9424ab848d7"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0149",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "OFF",
+      "L18",
+      "L0",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 3,
+    "tau": 3,
+    "boundary": 4,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0,
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "5359d2194e7cbd47e8cbbb7253cd329312e167910bbc5562310d108f55d2299f",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/661968ab33a88c078c9f32f42af5933045dbc4815e352b2a53c12bc88c5517f2.json",
+      "sha256": "3b398472d5d39fae3f686608c7a18a7d14420cbb7ae68eabe775b926f11c1897"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0157",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L0",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "34bc405dd798412bd567a3035ebbae46b0d1cf268d8e7091bec6cb32fdb81b35",
+    "sample_best": 0.6,
+    "off": 0.6,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/a77fda3abf106cbcafc119b99d1ce5a2bc6f0c80e9b502ab753ae477b46d618d.json",
+      "sha256": "4260ca68b25b764b246c3e7591e88701465dc7ef868b08922a91027c76cc835a"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0160",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L6",
+      "L12",
+      "L12",
+      "OFF",
+      "OFF",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 3,
+    "tau": 5,
+    "boundary": 6,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6,
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "d1b73bee3fb3ce0eff0692f8f5ac327b28feeb8d69fcee539851153423bd9f53",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/a14ef9fe82b90a70f07587a370e4e7a16bbe5c12ccd0bd548abbddebb8f8090d.json",
+      "sha256": "a798acfd768a4f3581413693d11f2bed162cbfdb55cf2b451be1e31b67fb2e4e"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0164",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L12",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "0e09f18dcfd318959246a9011a81ba1570ff0fdc915ea8fd8e5c9857e46fe2fb",
+    "sample_best": 0.6,
+    "off": 0.6,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/3fa059b06ca8af444b2addc5fdfba31de7c4b3adeb24655befdad9f4b4b0345a.json",
+      "sha256": "6abb57b1e606e6ca6d11d2c98b4ccf378e0982bf617093924e150320b2321efb"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0165",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "OFF",
+      "L6",
+      "OFF",
+      "L6",
+      "L6",
+      "OFF",
+      "L6",
+      "L6",
+      "L6",
+      "L18",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 15,
+    "switch_count": 7,
+    "tau": 10,
+    "boundary": 11,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6,
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "ae6975992024330e410e13766c4e2bb0f6a683d35e6c1b63076c672a6da83512",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/0b4a7d0e5434e9b94f5ea79e6182dae57e6baeaebdf49b20f2da5bcf91da3929.json",
+      "sha256": "e87cdb60b8931d63a428d3b58250fd99273fb46bb8fa4ff49a85a319b66442a5"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0170",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L18",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "76e4a10ee25672ac22df24a5fd595a2903671cdc6c7f46a44b04c7964523267b",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/b727ca2111a08d658be0d4a8c4ccfac5b6e9bfb30d99f7fc4e3845f3fcde050c.json",
+      "sha256": "1b7c804d2b0f730e973d0851061f4768690d82d15410d84d119bf30b226f80e5"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0172",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L18",
+      "L24",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 0.6,
+    "native_prediction_hash": "e3a1f922109712e9fb1a6f1d3d4acb148fd0f19a3ff4b43133f68f7f5d89be83",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/5a322aaf49c60ca8651cfc4d003442e9f6fbc8ed774108b73bd235e5f5298906.json",
+      "sha256": "53972753aef2c981ba33fbb92e6d65803d9638cffe023827aa1a22f725467eff"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0183",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L18",
+      "L0",
+      "L18",
+      "L18",
+      "ALL",
+      "L18",
+      "L18",
+      "L0",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 6,
+    "tau": 8,
+    "boundary": 9,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "926ac6354c30a511e561bc508d3900060db8993beb9b86f7a3da96f1adc985bb",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/57c48b333345ed0a60f0c1677f0cf2636e87ae051d18c4ebb9014e55734189fe.json",
+      "sha256": "d41ad2cb5bd664402cbb404a0a3d006d5885b099d0f37364d564719606d63da3"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0188",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L0",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "3841a59a625c25fc7258647880234b0f73d1d582e75d7e6284fab4c83b2f7e2d",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/59bec9505d7d6adc081c0db399005db247edf66bccdebda658e93684fe948f43.json",
+      "sha256": "f2a388441e86546fc46c72adba47785ef70f2c53b2191e15b430d8562640dedc"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0194",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L6",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "80f633800c76341b9a2b39200aaa53af5b196d5905be785b289d48a1f6981d69",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/f67a0162ee79a85d59e7e4e67e4b84285f70f90ab0d58e8b4c562848f7440ded.json",
+      "sha256": "865ff9e2f0bf467ebee200653be8cb024df13e83fd09f6105f50ddc50fdea895"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0196",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L6",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "0b87123eea532d8f27e92f553c367be7645d33d40294d61ab718277c201124a5",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/c9ec8c6d266222fe5227d0c35dcc4e374177db2316420d8e5bc202bd36c1b2d6.json",
+      "sha256": "218ba0b138207356bd9083437c399c2a7ccfd39ba959ac9a2e6250e3788f8a20"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0199",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "OFF",
+      "L12",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 0.6,
+    "native_prediction_hash": "1ee309ad6a80d5d5a61bdcc92682b814fffd25f55218505790decdbcd991ca03",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/100e3efbd6668080b08d746766f4f573a06dc321838cbf5afc79d09fa3a0b482.json",
+      "sha256": "a0cdef13af831573d058c1b51b1b3bff80fabcbeba7e139c6af3ebe10e482ce8"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0203",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L18",
+      "L0",
+      "L18",
+      "L18",
+      "ALL",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L0",
+      "L18",
+      "L0",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 8,
+    "tau": 12,
+    "boundary": 13,
+    "reset_eligible": false,
+    "nontrivial_reset": false,
+    "deletion_targets": [],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "94d5548fed5341b04d7bd9e68ae829e64e54a99a25512e56615a50beedcd3a3f",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/a3be3411a18ad467a4d2d9e2724b53bdcafe2ccef0296faacfdb4466bc83382c.json",
+      "sha256": "ba18388e7331bbb0f5d11c8af8199135862a98e759b574e5c0ea50da371cb971"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0220",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L6",
+      "L12",
+      "L0",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 3,
+    "tau": 3,
+    "boundary": 4,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 18,
+    "prefix_written_layers": [
+      0,
+      6,
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "e2ed2bff8559b4601f2fa2cd8a40a9e5e836aa332c1f6e540fd9800add069474",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/ea2af4411144a88b8618f00c73b792e56925678a5af60eed989e69841da7b00b.json",
+      "sha256": "6a05a567817f3f4f8dc1ad371aaaf9a3288294db9c9f13f93b7fd206bac50a9c"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0223",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L24",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "18d6004cede51b0b7af989af5cfadeba1fea0144d95a9e469218d04785ceb823",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/850e24df1207a66fb7cd70d20d9b5e068b5b3dc800af2e1fc69cc425c26bfae2.json",
+      "sha256": "609bd43e1c1afcdb76ef8783b08d37e1085f4538130dbb47053025cf45243861"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0226",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L18",
+      "L0",
+      "L18",
+      "L18",
+      "L6",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 4,
+    "tau": 5,
+    "boundary": 6,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 12,
+    "prefix_written_layers": [
+      0,
+      6,
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "012bd9c86e68ebb49da9d4d887c42f9c2d41787f5353e637078c3a703a551303",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/e2039d6e5399e184dd63ed542598b786c7b3acb63937c6cb7dfe9fb39ff35f83.json",
+      "sha256": "3fe858a572e78802d7263b6f4f28a2e25d1175b7c0ee75844c4b83830909db9c"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0237",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L6",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "f02c1e9130b1c976d9ae2399330e871e9a4819a8d86f75c1eca75c3754dd0333",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/da13a189e67d2c9727f685cb7e876edfbe1e856e2809f4c07d6c1828c1561936.json",
+      "sha256": "9808f3678c58d261f22bb7b70fa5f2772bbd912cfa78cc82abcd1736caae8297"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0240",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "OFF",
+      "L6",
+      "OFF",
+      "L6",
+      "L6",
+      "OFF",
+      "L6",
+      "L6",
+      "L0",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 15,
+    "switch_count": 7,
+    "tau": 9,
+    "boundary": 10,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 12,
+    "prefix_written_layers": [
+      0,
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "a7e6e5524119728d3ee30a112d06121c4d14331fd4e63f19a78575243dd2182c",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/440c0786533a1065922d998b90e7578a8ceffb3a8b760a7f1cc59fce45286b0d.json",
+      "sha256": "cc7db881a8470c9d6c3488d01b1b525373d56d920da924cf5dfde7b78eeb7668"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0270",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "ALL",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "6e29b4b9c03a5432b68c3b8fddfb9d159c107f97b9151af0cbee31590d254409",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/002cd5e3a3f1cecef4880a3f14903e6e219d41489418222fb4d2986a2ff7b934.json",
+      "sha256": "eb7f7fae4699656e774d6c8c99d2e859613438776fadce1809bc03c60e62c540"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0272",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L18",
+      "L6",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6,
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "638af3946ccbb52be2a0f03d64d7542321a836c885aa16771ceb33f7a9f87e38",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/43ec1bb256a137bb29c1d6e42c35091f3c4db60bcddee7c881af6237c4d3a35f.json",
+      "sha256": "9b867e87ba5190710f8cbad2089667b69158e818f296299b15c2477d0249f0cc"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0277",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L24",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "2d5d501cbc62ab7279d598b88dc0ef3fd92e21cebfd7e993a6c0058668f76374",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/979525d876c0079286e45d7c724f6a39e7c34915f05740fa0959feb99d26226c.json",
+      "sha256": "bdf0b9e4024ecfe8f434e27253442da8ad1a9d0a172698d3a53c46cd67f1f03d"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0279",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L0",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "035e4c00b4050cea7a16440ac5da1e62cc23998d6b0f5f11d4a19800db71ea51",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/b24a9fd5adc8386a21d840c0fd0760aadae88e87d722264fbb5d9487ed0f1335.json",
+      "sha256": "4836c80d07c53a77d40962ec807b7d1b58df83f0d9f39793e1177754a5fe01b8"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0286",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L12",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "dd77b31640140143e85fb3d2f97febab736beec46aae2a9ae0a27a92ed45f373",
+    "sample_best": 0.6,
+    "off": 0.6,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/9c5e8a1d33a72b1c02736b0c855e4872bc25cd6e59937fec866a137f6dc06bee.json",
+      "sha256": "b35ea840608eaf82b5758e7a890b53f461e93770824e3873b9b49f7fed54fc4c"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0295",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "ALL",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "c7ed114acf95d9632f505aff1cc5272f2231aeaac5e6e096eee604382cdff985",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/cb19f6e35ea722917ba4bee7311a38a4791175262097a3815f7febc4df73ae91.json",
+      "sha256": "32dd10c5116e3027327508875cb47f5386af5903e169bc87abdc9dd4633bae42"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0299",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "OFF",
+      "OFF",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": false,
+    "deletion_targets": [],
+    "sham_layer": null,
+    "prefix_written_layers": [],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "46a327ee6c00094737cd19c885adbd741417ef24c35f5ffd17e6b2a69bdebae6",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/2b2114631a7bad7db5714b8161974e008cf4f42d66ce70653caddc3937ebb049.json",
+      "sha256": "b4ee2ac11545a87536e8938c7e22f487226b8ceac7a24b4e7eb0c729aabd9ea9"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0310",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L0",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "03ee23266bd42047c4617521e06fa5d5364ea8d4adb4b700b4b4cd6ce150bd0d",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/f72da0132c54e00e1d2b39dd6e38630e4c6145ff230b4bb418700d8da6906d01.json",
+      "sha256": "99492cf482b1275a8bd71b3b8c98457340bd600f1c7425477fef71674472bc94"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0317",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L24",
+      "L0",
+      "L0",
+      "OFF",
+      "L18",
+      "L18",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 4,
+    "tau": 6,
+    "boundary": 7,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      24
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0,
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "18ff8bba30fe087b61c7e9f4f519309d3457425bd19278f652c1d6cf64ecb9c0",
+    "sample_best": 0.2,
+    "off": 0.2,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/8db49871b57d9e5db0c9c5318b72e6b938a914f4633250456a2fd69358b6f42b.json",
+      "sha256": "6ef4614be705b793923da91cd92d9d271e3b47aed51f4e7e3a0cb278b9bf9090"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0322",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "ALL",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 1.0,
+    "native_prediction_hash": "4bda48a1eefc0722b2d49362ac7aeafe3818d39f2009d9a2b1f31378328bb082",
+    "sample_best": 0.8,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/bf2fd5aa5f0333957e6f471faf8232916da6e9bfab2ac3e7d0625034f1ea0ad4.json",
+      "sha256": "3448f94e1f67e0505f0fe341dc7bbdb64134a146b0eb1ab2ee112f477e9a6efa"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0323",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L6",
+      "L12",
+      "L12",
+      "ALL",
+      "L18",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 4,
+    "tau": 5,
+    "boundary": 6,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "192532762d01c1a4ed2a51d94904b2703a3cb0d10cf3000d3c3cccb724cb1967",
+    "sample_best": 0.6,
+    "off": 0.6,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/92203bd46b707b83f6f7e316a746311e99d226b530e71ea106181060a80127d5.json",
+      "sha256": "a3b33c5034d8458a907a9c80f18d7a6a0050bc493606f7611d866e394d252cbf"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0333",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L12",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "bc23773fdae6fd5283f30e963ed158753e52fb5a3520045a7e12f430c3f795c1",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/b392c6f639153bc47f39e4bfa310c8f8a4bfe96539a315e30df842125bb7a26f.json",
+      "sha256": "8501123c2251a30346763571e1908d1287ffb3fb4e8d1c8bcfc5899321bd1614"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0342",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L12",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "aff1f4947c6818cda21771542d4e23bfb027e78622be695b5a2686bacdc8bbf6",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/19894ae090bda9e2642657c8c4617125f502022c495a7427e2b8f7409ddc35bd.json",
+      "sha256": "d1b7f0e4e6af80487ccc150784e55228c2f669fc2f9d4fcf8abb47752ae5ea76"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0352",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L6",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "0da6904ddfaf0191eb683e88525bea73714caf627e0ba8eaf8ffe645572409d5",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/756b1c69b18bebcd6f84bfa3d983c57340996624a9340ccd6231a9641a6f3c43.json",
+      "sha256": "1b628e76ac9651878801c94ee5e549dbd1390be94dd8d9b771b619f4741dbb07"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0358",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L18",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "1a285ce4a02a075c063a4709078c4a4bc13029179ddc0876dd29a6a86d157ac0",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/c06018d5c11c891e7d6d04fdd32993f6e515c70fbc564bd7edf4ef6fa53bc49b.json",
+      "sha256": "76bc235c9de63711bb43e74dfc990547f3fb7031442094d885b3f00cbf5d7cc4"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0362",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "ALL",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "a423ea2b352f3ee7a4bfb43b6dc41353eebfd96d4196e4fed35a556866cb3f96",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/4cfb5abdc514bc8f4d8433fcd34ae9ea4297e05fed8bc2a459591c0b183520e4.json",
+      "sha256": "173667452ad846ec5f0e029d6d07424fb0483a0dcce3e7a9dcc0f5ef6688e254"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0372",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L0",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "3f99492ae3efcc7d6725f85a71c8d2809e010d38a476d5ee410a87be371eb166",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/1daf9687a4e022276b1c02224185c876340f5deb0f639a5fa32704d2e4cd32be.json",
+      "sha256": "df71c158a4677dc036b50ebc554515346d37a5f5d2ae292444682987ef1e345b"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0373",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "ALL",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "8f075e0127208605dfb2d176a3944d9b40e0cbfd2a045f02d538f3f1110e3692",
+    "sample_best": 0.2,
+    "off": 0.2,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/63910c3c7df1c76d4abf35e138021a09992c3e3cc902dd15fea759d733e16d7c.json",
+      "sha256": "1a08c7a76bf4c3e0564a3fa1665bb31ff3adea32520375167110ac9e17f20b93"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0376",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L6",
+      "L12",
+      "L12",
+      "ALL",
+      "L12",
+      "ALL",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 5,
+    "tau": 6,
+    "boundary": 7,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "e0810aa921e70c3c0c26684bc3ed751d4e84aeceb8b36f3bbabbbca481fe9e6d",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/161abbeeca344fab694b67e8514616ef0fc3cd36945ae243207b8f4618c93c8f.json",
+      "sha256": "514c3a4cb987e3d6153496cc90075fb6559b69ee1df8c69b755820f76dc01cad"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0381",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L6",
+      "L6",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "2b781f34aab6a1e9508c6180022e502c27dcbe35356cc4204f7c5b96850cc6c7",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/f653e29d45289b373d3d0ee06478a84c894dfef0cbddd0c65635b314bdb7a7a6.json",
+      "sha256": "51d95aeae41d527a04bc0aeeb35d783689db104a80e7bac8838ac1d85ae9b748"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0394",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L6",
+      "L12",
+      "L12",
+      "ALL",
+      "L12",
+      "L12",
+      "L6",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 5,
+    "tau": 7,
+    "boundary": 8,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "e123dce99bede59a71feb1c603a9b806b06a9659306270346c3b1f42abed5e06",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/1a0e46aedb68c4e97fa8b909dccdb623c3afb8669a4c1c60ab1b6038910e5ead.json",
+      "sha256": "66577453adf8c068b80733344575bfb43a4ea3bb16b5b712edd2c46f1285c635"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0396",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L18",
+      "L0",
+      "L18",
+      "L24",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 4,
+    "tau": 4,
+    "boundary": 5,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0,
+      18,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "3ffaf30b07089e0c33d7d929e73a89bf3624c7ead568cb5f77fe8fd7c8514228",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/e650dede10feea1e809b1addf1c7ea8b566a042b1ee908841700604a5a5222dd.json",
+      "sha256": "898f873a6ba443e1f87d46d5f5f95a1cf856313cb95b7cf65db625a619dd4f77"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0400",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "OFF",
+      "OFF",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": false,
+    "deletion_targets": [],
+    "sham_layer": null,
+    "prefix_written_layers": [],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "17909183c1a4f3118e2da22ff46bb35ea55c67375b1c59a39433b66bc97c5ad4",
+    "sample_best": 0.6,
+    "off": 0.2,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/46891d50ba56d891ecfd8dd6de5a6d79ab1008eb0a5b9400ae83eebee55ec326.json",
+      "sha256": "4aca2f23a599ffda7efeae2c190c231d9148f21776dde3918befc8aa66398720"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0404",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "OFF",
+      "L6",
+      "OFF",
+      "L24",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6",
+      "L6"
+    ],
+    "T": 15,
+    "switch_count": 4,
+    "tau": 4,
+    "boundary": 5,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6,
+      24
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "a9de70e130c3be7da34ac2bf218105d9feba1306623432322042a4980580116a",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/7ef63f7a92d305284c4ef3bcf3fc90ab9e7eb2d432ae2b148e4542e8b529be48.json",
+      "sha256": "773c9c486cb9399912e7a6beaba150efc5b97a7413915d82b34876884ece9424"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0405",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L18",
+      "ALL",
+      "L24",
+      "L6",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF"
+    ],
+    "T": 15,
+    "switch_count": 4,
+    "tau": 4,
+    "boundary": 5,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "1160a923814f11dc217aaf58f079349eada1119db5c55a9fb5086a91797793ae",
+    "sample_best": 0.6,
+    "off": 0.2,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/446e378e3d6106031d04ad9f5599029f7ba83b91a160c742c1e1f42436ffdc1d.json",
+      "sha256": "23389f3cc5790ea673361311d27fd44baec7c480962de327c5209b98a8f86f3b"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0416",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "OFF",
+      "OFF",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": false,
+    "deletion_targets": [],
+    "sham_layer": null,
+    "prefix_written_layers": [],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "5dbf348be01540cfd8de207a248abdbec0e8165721b059616ccb214f5dd906e3",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/f997349d17f2474c372b0eeb2d04b835c89cfca3992a3eba98c7df8193102a5e.json",
+      "sha256": "ba4eb685ee461ff69990c50a59dd694ea91368844c3e70aa0b3090b652d28a70"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0418",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L0",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "edbb62e23b60fc84637b0539cebd37965d17109bf1b1dec4d08bdc85e4845aeb",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/58447a4f2304c165787acf4651f36e09fbef28e4facd74b5500a164520ec0979.json",
+      "sha256": "e1070efac06fe47ea5545a76bf43f223e8aab8def3059c6f0c1387e5d1c5d3eb"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0420",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "ALL",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "acb71926adca766341897f5df05f2ec9174feee78ae103babc231884502b93f1",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/f3af742439c68bf40244e2ae4158b558bab30bc48abeac79d2c990cc5b01f304.json",
+      "sha256": "782abffb6733a53319b83c338b85e3725e71e977bfb3a5d7805c867512cc4013"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0421",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L6",
+      "L12",
+      "L12",
+      "ALL",
+      "L18",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12",
+      "L12"
+    ],
+    "T": 15,
+    "switch_count": 4,
+    "tau": 5,
+    "boundary": 6,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "de9578d1a7fdb19ae80fea36e11d7c2efc34d6bfee68f3dd6db1a9603d705375",
+    "sample_best": 0.2,
+    "off": 0.2,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/49b344f603e1fd5a26d9bac432ed09af3df79e00610e08583121423fd065bc0c.json",
+      "sha256": "903324cffd7aa0d0113b79d17571366ebe4b24c062982b69956c34245b5c9636"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0422",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "OFF",
+      "L0",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 2,
+    "tau": 2,
+    "boundary": 3,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "0d7bd3f9e6a8a6fe9768fca906ed7ef5cff37c2420572fa4278a2edef50da780",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/aa920d2dcea8c02a3a9f86a50a844b49981b1daf17ab1ae65060e7fa66616ac0.json",
+      "sha256": "853cbc2faa0ac184644799df8d6e4da088412614f9cf61c6863cca0c9726a743"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0425",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L12",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "08bf028ff2cd1327a941561822ae1f281b6ce8453eb38b457c600543d21b00b2",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/2eaff9431c84ca26e12ae0f4f5394b20ff4f42722b3419b5e0d32c0d92d97a04.json",
+      "sha256": "fa576f1592a166919d079cfef5e0ce866fa9df274b6483abf72998c0a1edf169"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0445",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L0",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "bf828f0c1efa6934f92397acccd9dac50559bf6e383c3835a5e6512a873818fd",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/922f41371bc6a22919812a8e0efe9166a5056bb3640e8bbfbd2684cb46dedf29.json",
+      "sha256": "e88349df7d43a6e5c35daf91dd46b5e088f2dad7164772f95a3bce41fc1f3347"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0451",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L0",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "4b7d140d3d5918b4ae175d0f7317986cdd1076210d63b1c96d0199e87544d297",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/7f40b5f93046a7ec62e5dace87278a6d24d2187d6e82971569ea5c2d291e8889.json",
+      "sha256": "a04141c5b74b10417559ab89f00c4184da95128032e94812d44ed55f53354a04"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0454",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L12",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18",
+      "L18"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      12
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      12
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "822f5542979589ca12acb7c760293403b92cebd8eddedbef0450661b7c14c158",
+    "sample_best": 0.8,
+    "off": 0.6,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/6cb22fba69f941f08f67e91fc23c400f17a8785a0cdca3ef71055765259c6a75.json",
+      "sha256": "023fd1877e8cf59a677f3b1016d441388d75609b820ce35b3d33f7ef584ab76b"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0456",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "ALL",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "24bfab0ace9eaface72e61cc6a9e86572897b454d17f0e78f96404fda0524fb9",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/75063494fead47f0f4239af4136fdeff89441ae18b53e48aa673301137fef2c6.json",
+      "sha256": "47aa296d558273c460ba054637ccd38e7cbd2de9c2bfc546861c37ea0b8e1311"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0470",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L6",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF",
+      "OFF"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      6
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      6
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "c853208a765083bc30598c131af0dfb1ee67d6b635bfc96784dd24f74e33cd7a",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/46948b7ffe7757e309ffd75c168d475b14d849e54d240f16e9268ea403bed538.json",
+      "sha256": "2c8e6b1b67b6c746761a0fecd10a1ad05fedc55ac8dae416ba94d3d55c9c8886"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0477",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L0",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24",
+      "L24"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0
+    ],
+    "sham_layer": 6,
+    "prefix_written_layers": [
+      0
+    ],
+    "all_prefix": false,
+    "native_score": 1.0,
+    "native_prediction_hash": "1d9b89c131ce02882b82de88ebf2c719b5ae3454635dca4ca79a5599c0a0b2e6",
+    "sample_best": 0.8,
+    "off": 0.8,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/ae9bb74d675eefa39c0eea48fa7d50d8eebe11f39c97234da97f54c0b8d02df4.json",
+      "sha256": "5f82450ec076e2774e4bd0af8b6240e4c46ac0b723628eb7637209c27ba9406c"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0485",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "OFF",
+      "ALL",
+      "L24",
+      "L0",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL",
+      "ALL"
+    ],
+    "T": 15,
+    "switch_count": 4,
+    "tau": 4,
+    "boundary": 5,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "sham_layer": null,
+    "prefix_written_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "all_prefix": true,
+    "native_score": 0.8,
+    "native_prediction_hash": "5c6827d21e81b572539aef304b6f8f535805f535a7d83db9526b0e7587dedab4",
+    "sample_best": 0.6,
+    "off": 0.6,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/audits/dynamic_old1k_v2_merge_20260921/dynamic_old1k_v2_remote_transfer_20260921/dynamic_old1k_v2_remote_results/results/81b34941f23398cc4831fe3d6146fddfa7298560a426a2c179df619dd15fdb19.json",
+      "sha256": "1963a2d3dd5b21887e6b13768c78d762b5dc33978e91691aecfba4c91d081939"
+    },
+    "r2_candidates": 588
+  },
+  {
+    "sample_id": "ruler_vt_16k:0499",
+    "task": "ruler_vt_16k",
+    "sequence": [
+      "L18",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0",
+      "L0"
+    ],
+    "T": 15,
+    "switch_count": 1,
+    "tau": 1,
+    "boundary": 2,
+    "reset_eligible": true,
+    "nontrivial_reset": true,
+    "deletion_targets": [
+      18
+    ],
+    "sham_layer": 0,
+    "prefix_written_layers": [
+      18
+    ],
+    "all_prefix": false,
+    "native_score": 0.8,
+    "native_prediction_hash": "fa1c2891fa8c8f8569cbede2b9f6f1648758b6d0fe00d8c296f93ec10c0d68c8",
+    "sample_best": 0.4,
+    "off": 0.4,
+    "dynamic_source": {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_old1k_v2_noncwe_local_20260918/results/5daffeef9b504305c0906b20a9562802711b6603c5f7f7615705785f13d60458.json",
+      "sha256": "e3875b75739beff1ce08f3f4daa9c15fb63aa6a0c4725ef0f5caf06c5ae8b351"
+    },
+    "r2_candidates": 588
+  }
+]

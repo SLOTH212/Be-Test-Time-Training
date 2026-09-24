@@ -1,0 +1,80 @@
+{
+  "deletion_branch_n": 349,
+  "sham_n": 109,
+  "all_OFF_prefix_n": 8,
+  "K_closure": {
+    "n": 165,
+    "K0_trace_exact": 110,
+    "K1_trace_exact": 165,
+    "K0_prediction_exact": 118
+  },
+  "K_nontrivial": {
+    "n": 157,
+    "native_percent": 93.24840764331209,
+    "condition_percent": 77.95116772823779,
+    "native_minus_condition_pp": 15.297239915074309,
+    "CI95": [
+      11.23115711252654,
+      19.745222929936308
+    ],
+    "lower": 47,
+    "equal": 110,
+    "higher": 0
+  },
+  "r2_subgroups": [
+    {
+      "cohort": "Native one switch",
+      "N": 92,
+      "match_n": 92,
+      "Native_mean": 93.33333333333333,
+      "R2_mean": 93.33333333333333
+    },
+    {
+      "cohort": "Native multiple switches",
+      "N": 78,
+      "match_n": 62,
+      "Native_mean": 93.76068376068375,
+      "R2_mean": 79.93589743589743
+    },
+    {
+      "cohort": "Multi-switch, full score",
+      "N": 57,
+      "match_n": 46,
+      "Native_mean": 100.0,
+      "R2_mean": 83.88888888888889
+    },
+    {
+      "cohort": "Multi-switch, below full score",
+      "N": 21,
+      "match_n": 16,
+      "Native_mean": 76.82539682539684,
+      "R2_mean": 69.20634920634922
+    }
+  ],
+  "native_at_full_score_n": 122,
+  "native_below_full_score_n": 48,
+  "fixed13_aggregates": {
+    "OFF": 77.2853846153846,
+    "L0": 77.1974358974359,
+    "L6": 77.33615384615385,
+    "L12": 77.2176923076923,
+    "L18": 77.30025641025641,
+    "L24": 77.32282051282051,
+    "ALL": 77.19589743589744
+  },
+  "fixed12_aggregates": {
+    "OFF": 83.31416666666668,
+    "L0": 83.21388888888889,
+    "L6": 83.3625,
+    "L12": 83.23416666666667,
+    "L18": 83.32194444444444,
+    "L24": 83.35305555555556,
+    "ALL": 83.21222222222222
+  },
+  "dynamic_candidate_record_n": 531113,
+  "searched_improvement_pct": 11.863224005582694,
+  "parent12_improvement_pct": 2.833333333333333,
+  "parent13_improvement_pct": 2.6153846153846154,
+  "best_global_single_layer13": "L6",
+  "best_global_single_layer12": "L6"
+}

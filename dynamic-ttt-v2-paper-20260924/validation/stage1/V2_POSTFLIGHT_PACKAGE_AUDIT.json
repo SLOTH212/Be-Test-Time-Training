@@ -1,0 +1,1242 @@
+{
+  "status": "PASS",
+  "checks": {
+    "historical_and_frozen_sources_unchanged": true,
+    "count:V2_FIXED7_173.csv": true,
+    "count:V2_NATIVE_173.csv": true,
+    "count:V2_SAMPLE_BEST_173.csv": true,
+    "count:V2_GAP_173.csv": true,
+    "count:V2_HISTORICAL_SCORE_SHIFT.csv": true,
+    "count:V2_STATE_ISOLATION.csv": true,
+    "unique_complete_cells": true,
+    "all_native_identity": true,
+    "all_state_checks": true,
+    "all_five_functional": true,
+    "precheck_gate": true,
+    "no_errors": true,
+    "actual_update_event_counts": true,
+    "no_tail_or_generation_writes": true,
+    "independent_GT": true,
+    "independent_EQ": true,
+    "independent_LT": true,
+    "independent_mean": true,
+    "publication_safe_fields": true,
+    "no_tensor_dumps": true
+  },
+  "hash_checks": [
+    {
+      "path": "/home/zonghan/ttt/audits/formal_execution_validation_1p7b_20260915/FORMAL_SAMPLE_SELECTION.json",
+      "expected": "75f74e3e52d8c34c3ba5d28b4c4d9909e2821f070ae14d7d3b10adff6be0f2a6",
+      "actual": "75f74e3e52d8c34c3ba5d28b4c4d9909e2821f070ae14d7d3b10adff6be0f2a6",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/audits/formal_execution_validation_1p7b_20260915/FROZEN_EXECUTION_VALIDATION_PROTOCOL.json",
+      "expected": "b34ea7ec441ae231f285327cb3410a3d83ad866ce1c4e75f3a47528f226e539b",
+      "actual": "b34ea7ec441ae231f285327cb3410a3d83ad866ce1c4e75f3a47528f226e539b",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/benchmarks/ruler_16k_standard_13task500_v1/benchmark_manifest.json",
+      "expected": "5d16e3a6963d4c21450f0530af743730b91bf7b2442699e288e10754f77ad0c5",
+      "actual": "5d16e3a6963d4c21450f0530af743730b91bf7b2442699e288e10754f77ad0c5",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/benchmarks/ruler_16k_standard_13task500_v1/sample_manifest.jsonl",
+      "expected": "8000dfccd5199ff83bf0cb0ede51e91991083a5dc6a90ac27397b8b24988dfdc",
+      "actual": "8000dfccd5199ff83bf0cb0ede51e91991083a5dc6a90ac27397b8b24988dfdc",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/code/ruler/tools/common.py",
+      "expected": "cee3f5cb3cad1709f81abe3dc32b364ca97322e7ebd91747a8b119aecb0ce556",
+      "actual": "cee3f5cb3cad1709f81abe3dc32b364ca97322e7ebd91747a8b119aecb0ce556",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/models/qwen3_1p7b_stage2/added_tokens.json",
+      "expected": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+      "actual": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/models/qwen3_1p7b_stage2/artifact_manifest.json",
+      "expected": "3423298f44509f53c3bcabaa552658d7539955fd5715ffd74e4a7de731ed5d70",
+      "actual": "3423298f44509f53c3bcabaa552658d7539955fd5715ffd74e4a7de731ed5d70",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/models/qwen3_1p7b_stage2/chat_template.jinja",
+      "expected": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5",
+      "actual": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/models/qwen3_1p7b_stage2/config.json",
+      "expected": "fa73d59802247c14b682233cf41ce14e903d55a579a994689216a391ef75912d",
+      "actual": "fa73d59802247c14b682233cf41ce14e903d55a579a994689216a391ef75912d",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/models/qwen3_1p7b_stage2/generation_config.json",
+      "expected": "f0904c78d21bc055c816eb0d1bf8b628c0ef2c1689603c7846e131d3af9a9477",
+      "actual": "f0904c78d21bc055c816eb0d1bf8b628c0ef2c1689603c7846e131d3af9a9477",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/models/qwen3_1p7b_stage2/merges.txt",
+      "expected": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "actual": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/models/qwen3_1p7b_stage2/model.safetensors",
+      "expected": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+      "actual": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/models/qwen3_1p7b_stage2/special_tokens_map.json",
+      "expected": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+      "actual": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/models/qwen3_1p7b_stage2/tokenizer.json",
+      "expected": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "actual": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/models/qwen3_1p7b_stage2/tokenizer_config.json",
+      "expected": "67e5a0a11cd35f9c00ee52e0af4cdc0baa75fea0cb5fce7d1beb251b4621d15c",
+      "actual": "67e5a0a11cd35f9c00ee52e0af4cdc0baa75fea0cb5fce7d1beb251b4621d15c",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/models/qwen3_1p7b_stage2/vocab.json",
+      "expected": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "actual": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/config/DYNAMIC_FORMAL_CONFIG.json",
+      "expected": "ef5cf628c98250d8355c96fa8809b021387a4cec1e5e57f429214bbf0de128a8",
+      "actual": "ef5cf628c98250d8355c96fa8809b021387a4cec1e5e57f429214bbf0de128a8",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/002cd5e3a3f1cecef4880a3f14903e6e219d41489418222fb4d2986a2ff7b934.json",
+      "expected": "343d78bcd6bcbd4426580aed24da6a79ded746e669b6ce02e1ea7d78db7e24ae",
+      "actual": "343d78bcd6bcbd4426580aed24da6a79ded746e669b6ce02e1ea7d78db7e24ae",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/0257d1a20260311269662fceda60137f68ea5a60c5eb5d2596138d470ef09953.json",
+      "expected": "fc451778a83f1420596d64c991632307d2218c033e812a133850b4da3bf54398",
+      "actual": "fc451778a83f1420596d64c991632307d2218c033e812a133850b4da3bf54398",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/032f6e582fcc12d8da317c3c3a58fa9abbc88f5e47fd3f43e374263839ccfe89.json",
+      "expected": "bcfb88cc2b31304742bd8f9f8e72d7245dad13a646cd317e130b66936fd71edc",
+      "actual": "bcfb88cc2b31304742bd8f9f8e72d7245dad13a646cd317e130b66936fd71edc",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/04050c55468493a41bec6f4018fec27e056e0d531f9139b87389a559e1711782.json",
+      "expected": "82d70b8553143fc1bfa84a9722e6b52834ce384e8a501d2e5acc9c1d8c48cafb",
+      "actual": "82d70b8553143fc1bfa84a9722e6b52834ce384e8a501d2e5acc9c1d8c48cafb",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/04cb1a4237d7633a5c3883e2f0538a9a699645123c1b6629f78e8b7cfcaedf9f.json",
+      "expected": "214d062699d570fe60f14a39453360b190878c110f45b1b45f890fe3c7270939",
+      "actual": "214d062699d570fe60f14a39453360b190878c110f45b1b45f890fe3c7270939",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/06f0c2ced44f1be8886379d62ac8ce7a88d6f677513ce8aed4e7161b92833200.json",
+      "expected": "65d9fd2a0767ef9859ccd6ee38377c4140cbecb00d9f1fc6b098e9c4a8ca1223",
+      "actual": "65d9fd2a0767ef9859ccd6ee38377c4140cbecb00d9f1fc6b098e9c4a8ca1223",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/08c2d2b5924143cb6f8f2d2bd491ea28c8c2134872aefbd98c18c60bf270e826.json",
+      "expected": "afc174c3c5e00229b819303e7138c758a693e45d06d8f38efefbc109acd79186",
+      "actual": "afc174c3c5e00229b819303e7138c758a693e45d06d8f38efefbc109acd79186",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/0a7c2c4323825cf31c41e08e0edd6dab7ebf489946d9a224db0c48d34b36ad62.json",
+      "expected": "ee0331e11440a82849f1612b5a34c3ce5f1da298b0b0274489527884390472cf",
+      "actual": "ee0331e11440a82849f1612b5a34c3ce5f1da298b0b0274489527884390472cf",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/0b4a7d0e5434e9b94f5ea79e6182dae57e6baeaebdf49b20f2da5bcf91da3929.json",
+      "expected": "ac6775e1759621ff5190747dca1db682e47c3d3b0a05fb5ea0be29926b7e7451",
+      "actual": "ac6775e1759621ff5190747dca1db682e47c3d3b0a05fb5ea0be29926b7e7451",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/100e3efbd6668080b08d746766f4f573a06dc321838cbf5afc79d09fa3a0b482.json",
+      "expected": "0062bfce1cb0255318ad0d6e17d174e1841ad73f07a4e4e6d68153237de71d25",
+      "actual": "0062bfce1cb0255318ad0d6e17d174e1841ad73f07a4e4e6d68153237de71d25",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/114f68f63d1cbb8e7717edd8a3679519fde968ce9b7d7d2bc467384ba49c9d53.json",
+      "expected": "325f35bad3e1730e7b4849a07d077ff2489f36234cd088bd4ce4e4453420b542",
+      "actual": "325f35bad3e1730e7b4849a07d077ff2489f36234cd088bd4ce4e4453420b542",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/1153b8191cba2aa65ca3f4e73764248a9e0d3937075da9c3a44ff54151513334.json",
+      "expected": "5bc826608b290cc1323dd141789520d1b1a395c1039ac3c0f41346cb8314c38b",
+      "actual": "5bc826608b290cc1323dd141789520d1b1a395c1039ac3c0f41346cb8314c38b",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/11da2f0d33072ca38f84e3395732cbd1410617a5c8b54180e0ec2ee073b0cbc1.json",
+      "expected": "d5ea5320e33617b8f528d5ed8aad6720c46f230a2cdd237672f58985a509507b",
+      "actual": "d5ea5320e33617b8f528d5ed8aad6720c46f230a2cdd237672f58985a509507b",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/127fc6b7d4af53b352e6609847d94b1744087e03ca85d32775e8df12032c94be.json",
+      "expected": "0d140ccc5d70e921f26fc1055736b089253a18a22d259eb74d3a1f6648fa10d7",
+      "actual": "0d140ccc5d70e921f26fc1055736b089253a18a22d259eb74d3a1f6648fa10d7",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/161abbeeca344fab694b67e8514616ef0fc3cd36945ae243207b8f4618c93c8f.json",
+      "expected": "f2167c6839a28a2c6046aa3ffb964e1894bd1084a37229dba0ce4ef71cdf1efa",
+      "actual": "f2167c6839a28a2c6046aa3ffb964e1894bd1084a37229dba0ce4ef71cdf1efa",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/177bea3115c3b1eda645c6847835f14e1dd73f74e734433b89d02558a41c310c.json",
+      "expected": "bc527e457025e86f13081a3e1f5213d835b4b263d49f2d79a471b38f7f216a4e",
+      "actual": "bc527e457025e86f13081a3e1f5213d835b4b263d49f2d79a471b38f7f216a4e",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/1785c1a35918e2e488e06aca543d02fa03271b824e8dfb63fe9163e171e0f82d.json",
+      "expected": "d961a513184e650ebc8545fe0d80034004cc1b09d2f9f5dcb39928620b54b4db",
+      "actual": "d961a513184e650ebc8545fe0d80034004cc1b09d2f9f5dcb39928620b54b4db",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/17b74f20fd7e78edd631b58fa5b70c9b7d4502ffb4aeb9487b05fb6b548382af.json",
+      "expected": "af14b6204dfe7de3f5d6b1cc8f4f8626970e53611a922082146495ac82617f5d",
+      "actual": "af14b6204dfe7de3f5d6b1cc8f4f8626970e53611a922082146495ac82617f5d",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/19894ae090bda9e2642657c8c4617125f502022c495a7427e2b8f7409ddc35bd.json",
+      "expected": "3f3bea9c3e40bf2c6948ed667e7e9755c8aac2f6e302daf1e6bc138176c494c5",
+      "actual": "3f3bea9c3e40bf2c6948ed667e7e9755c8aac2f6e302daf1e6bc138176c494c5",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/1a0e46aedb68c4e97fa8b909dccdb623c3afb8669a4c1c60ab1b6038910e5ead.json",
+      "expected": "8538dc84e8d342e30de1403b2f14cf5997a03a94488c4268b23509a9d7dda37f",
+      "actual": "8538dc84e8d342e30de1403b2f14cf5997a03a94488c4268b23509a9d7dda37f",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/1ade0a4f960ac09eaf8a19d1937f0bd32dc6548bf5421dcb7d3bd273cfb3d10a.json",
+      "expected": "51e4e741165d25c457b6fa2565fd3634aba0aab76f6652a83ef47907ca344374",
+      "actual": "51e4e741165d25c457b6fa2565fd3634aba0aab76f6652a83ef47907ca344374",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/1d6c3b42f1d467ad3e07686fe31e0dbf845e1cf62c8aa04c3a1a05b392498a93.json",
+      "expected": "4a8e0ecda068ce962c70863bc9587d1149f611965a4ad14fc74ff366579b20c5",
+      "actual": "4a8e0ecda068ce962c70863bc9587d1149f611965a4ad14fc74ff366579b20c5",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/1daf9687a4e022276b1c02224185c876340f5deb0f639a5fa32704d2e4cd32be.json",
+      "expected": "201708b4ef31f01768217db1ea95e2b292d5f44e45384fec72139acdd56f17f2",
+      "actual": "201708b4ef31f01768217db1ea95e2b292d5f44e45384fec72139acdd56f17f2",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/1e44c98a1050343d3f4eeaed9fcee1d83f3ee8c840fa9dad30b785b8945865fb.json",
+      "expected": "70860e18c5f2166402c4210427e411c8feaa39e1d259c910e33f258849edc2b3",
+      "actual": "70860e18c5f2166402c4210427e411c8feaa39e1d259c910e33f258849edc2b3",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/25c4622acc001d6e272e644ea2f505ae32ebb939424e6bfb66aa137c1edea302.json",
+      "expected": "0a0e82fdc5e50e715b6f8c8d2c6894ea91cfadc72fb29b742a1fc3f3588ea1c9",
+      "actual": "0a0e82fdc5e50e715b6f8c8d2c6894ea91cfadc72fb29b742a1fc3f3588ea1c9",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/27710615ee878786b649b37e948b3f5a1318750fab7fe86d6270c41cfdf07470.json",
+      "expected": "718f0aaca57ea93be8a78113f3126d393158787c0ad23b05fef70a51f7182d6b",
+      "actual": "718f0aaca57ea93be8a78113f3126d393158787c0ad23b05fef70a51f7182d6b",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/298e2598b45225da02293ae5eb574c9090e48648e6b1de83b02aadc995accd55.json",
+      "expected": "73afac3712e7859fc21add767bb9d48b85c7236327686a757b2bf864d1606dfe",
+      "actual": "73afac3712e7859fc21add767bb9d48b85c7236327686a757b2bf864d1606dfe",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/2b2114631a7bad7db5714b8161974e008cf4f42d66ce70653caddc3937ebb049.json",
+      "expected": "b1fddeca572e2bca66e8c346ea9183b81901ce66a89abf31594d7503264bd277",
+      "actual": "b1fddeca572e2bca66e8c346ea9183b81901ce66a89abf31594d7503264bd277",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/2c25971e08472c4d13e6a8b462c076f1237f0d662dbc3901899e8183858a239a.json",
+      "expected": "edb86d12c42ae7d6acf1d4ab19e55d4860c04f221425129517ece8a21bc2fc08",
+      "actual": "edb86d12c42ae7d6acf1d4ab19e55d4860c04f221425129517ece8a21bc2fc08",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/2d12e69b984dea77254f1aba4f6f79a8156bc28ab344cfacf08fcb6c622c558f.json",
+      "expected": "c71348639b337dd4431a7a7d432ce67d76a0606d2212663a1bfc0cb94e240c9d",
+      "actual": "c71348639b337dd4431a7a7d432ce67d76a0606d2212663a1bfc0cb94e240c9d",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/2eaff9431c84ca26e12ae0f4f5394b20ff4f42722b3419b5e0d32c0d92d97a04.json",
+      "expected": "76911a86204832a65d1c5ce72b073f3fb481d2c619944c93fa76072dcb3e4f3f",
+      "actual": "76911a86204832a65d1c5ce72b073f3fb481d2c619944c93fa76072dcb3e4f3f",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/31db1301a74b4f5fb6e2248c5db4f4342574d60dcada00613a09b0d86d74a7ef.json",
+      "expected": "2fb9d4c371b5b9e1f75f59510b7dee712205f17a73e0127b71e6865d375d9c3e",
+      "actual": "2fb9d4c371b5b9e1f75f59510b7dee712205f17a73e0127b71e6865d375d9c3e",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/3441a705475ed8fee69cff78e51edecf8bbadfb05671b1bffa5cf4cd7a59be21.json",
+      "expected": "3a34a9d0b2fa9468e2b58d9cd47a1b7f7d4c6276eb08edade6b320cb9630b0ff",
+      "actual": "3a34a9d0b2fa9468e2b58d9cd47a1b7f7d4c6276eb08edade6b320cb9630b0ff",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/3fa059b06ca8af444b2addc5fdfba31de7c4b3adeb24655befdad9f4b4b0345a.json",
+      "expected": "0b043e04f7f9eb724c5eaec72e1701c807ed680e17af53171807e8eac75e1ae4",
+      "actual": "0b043e04f7f9eb724c5eaec72e1701c807ed680e17af53171807e8eac75e1ae4",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/42b57de524dabaa72f51f5353f482ecc6b81fd5a95da88dad0c658fad355fc28.json",
+      "expected": "9ad4424ed77806249f1d0c6980ddc344a61d0ca92d2fca5c92655575839fd32c",
+      "actual": "9ad4424ed77806249f1d0c6980ddc344a61d0ca92d2fca5c92655575839fd32c",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/430f56408ec85966aff6ff09b3fe0983ded124c68e4818d7cb096e017ada6eea.json",
+      "expected": "c37266c2b8cebea99774b903b023a4d4d68cc709fd468a9fc7d7aec557d0e371",
+      "actual": "c37266c2b8cebea99774b903b023a4d4d68cc709fd468a9fc7d7aec557d0e371",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/43ec1bb256a137bb29c1d6e42c35091f3c4db60bcddee7c881af6237c4d3a35f.json",
+      "expected": "6a092f48b16962ec489aadc6f18d03f62016bafb67d9b3a9dde70640fe7433d0",
+      "actual": "6a092f48b16962ec489aadc6f18d03f62016bafb67d9b3a9dde70640fe7433d0",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/440c0786533a1065922d998b90e7578a8ceffb3a8b760a7f1cc59fce45286b0d.json",
+      "expected": "d547b1290525fd3a9cf6e9228e74ed6e225be494e1b021442ac7fc4942e790fd",
+      "actual": "d547b1290525fd3a9cf6e9228e74ed6e225be494e1b021442ac7fc4942e790fd",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/446e378e3d6106031d04ad9f5599029f7ba83b91a160c742c1e1f42436ffdc1d.json",
+      "expected": "0658d8c4bc87711b62cb91d6255cad8b0ab4b6e30814f9fd103aacdbfebc500c",
+      "actual": "0658d8c4bc87711b62cb91d6255cad8b0ab4b6e30814f9fd103aacdbfebc500c",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/44c987a31f6cc05d981470ab0a280c04fcfee3822af8f8b74ef3e8c3cfe5ec39.json",
+      "expected": "f4efc9b3a10894e836fe9ff582a74d5df000935fb3415a95794d133442762db0",
+      "actual": "f4efc9b3a10894e836fe9ff582a74d5df000935fb3415a95794d133442762db0",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/46891d50ba56d891ecfd8dd6de5a6d79ab1008eb0a5b9400ae83eebee55ec326.json",
+      "expected": "90b8c13a5e67808cad61ecacdca452d2fce9e6d583d0f61cc21978f443a28e38",
+      "actual": "90b8c13a5e67808cad61ecacdca452d2fce9e6d583d0f61cc21978f443a28e38",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/46948b7ffe7757e309ffd75c168d475b14d849e54d240f16e9268ea403bed538.json",
+      "expected": "abd313e27b6d554fce0bc18f8a0d88f7fd15718fe76b8e02f46d26370c0052ea",
+      "actual": "abd313e27b6d554fce0bc18f8a0d88f7fd15718fe76b8e02f46d26370c0052ea",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/493f8c7797fdd0392f5f6ee26a5cdaae52f4fecbdd27935e6419ceb0cc9e8ed3.json",
+      "expected": "85aea88ef595f6b449753b09578d1e1d4dd56ab2eec423bb7b5b1d3ccd698004",
+      "actual": "85aea88ef595f6b449753b09578d1e1d4dd56ab2eec423bb7b5b1d3ccd698004",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/49b344f603e1fd5a26d9bac432ed09af3df79e00610e08583121423fd065bc0c.json",
+      "expected": "62458eed4066cfba24e3c7994461e7db307a077d58d0821fa9748355c92ed3f0",
+      "actual": "62458eed4066cfba24e3c7994461e7db307a077d58d0821fa9748355c92ed3f0",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/4a6efd80a501c6705513d7b5cd07c5f18146030271f8a53c75a6915a0f03b92d.json",
+      "expected": "5492fbd867d572e1cc98fbf6637a0044e850bdb170bb2a0f3cf01bce520a9039",
+      "actual": "5492fbd867d572e1cc98fbf6637a0044e850bdb170bb2a0f3cf01bce520a9039",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/4a897e05be8463712e7ebc9b2c4b8cad3464defea1d014a79fd58a49f68bce8f.json",
+      "expected": "33cd19dc6ad9e2575d63ffddaca6a5c9a42bc8f6efe9e870be2caed9a6f3913d",
+      "actual": "33cd19dc6ad9e2575d63ffddaca6a5c9a42bc8f6efe9e870be2caed9a6f3913d",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/4bc279f078af77963dbf014423e7212894378518c0d006226e4f1b7616403535.json",
+      "expected": "817a969aa41b0b622b402edeedd590762b3966298b2c2e069bceb0b168cb8a83",
+      "actual": "817a969aa41b0b622b402edeedd590762b3966298b2c2e069bceb0b168cb8a83",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/4cfb5abdc514bc8f4d8433fcd34ae9ea4297e05fed8bc2a459591c0b183520e4.json",
+      "expected": "a5787c7d97420b5c5053757fa8d666f99e8673c7ce9ae826161133fc81d1224b",
+      "actual": "a5787c7d97420b5c5053757fa8d666f99e8673c7ce9ae826161133fc81d1224b",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/4e84444efa0a6b543bcd18058310a2d574abf37ce6aa685de8137fc518dfddc4.json",
+      "expected": "9efd1f828ce9f063e976e9c714a1cb82125580521b8001d6d84fd8d67b5a9d3d",
+      "actual": "9efd1f828ce9f063e976e9c714a1cb82125580521b8001d6d84fd8d67b5a9d3d",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/4f670baead57f99163776b94c829ea79ef3ec5be3dc91357ef4966b83f9b4b2d.json",
+      "expected": "8a9e14207f693580f7c74c401d6a35759cdade88b6a8f6b65e651fe34dc1d04f",
+      "actual": "8a9e14207f693580f7c74c401d6a35759cdade88b6a8f6b65e651fe34dc1d04f",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/5550d17ac96c5f245e50d87397ab8d5839299930d1ef999910f6dbdf4bb697b6.json",
+      "expected": "1e34f7a9f8ba0c3710df90748462d6f34852acd2e553153c31656300d4fc9e94",
+      "actual": "1e34f7a9f8ba0c3710df90748462d6f34852acd2e553153c31656300d4fc9e94",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/57c48b333345ed0a60f0c1677f0cf2636e87ae051d18c4ebb9014e55734189fe.json",
+      "expected": "f83f41cf624de12e362b3d16a1c928b1cd1ff09b80aa8ba7408ba93f0652eb84",
+      "actual": "f83f41cf624de12e362b3d16a1c928b1cd1ff09b80aa8ba7408ba93f0652eb84",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/5809553d34c41f166bfa5e5c9bbadd8dedd1f439266bf7f575e70b947c551d55.json",
+      "expected": "2fdb9d128fdd510103c41074c35a24851b1785c6bc432288d3a196ea3ba2adb4",
+      "actual": "2fdb9d128fdd510103c41074c35a24851b1785c6bc432288d3a196ea3ba2adb4",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/58447a4f2304c165787acf4651f36e09fbef28e4facd74b5500a164520ec0979.json",
+      "expected": "547b64cff73092b31b9feff16bdc92be53b293f1922b080e5013140af9f7b3b6",
+      "actual": "547b64cff73092b31b9feff16bdc92be53b293f1922b080e5013140af9f7b3b6",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/59bec9505d7d6adc081c0db399005db247edf66bccdebda658e93684fe948f43.json",
+      "expected": "bfeef46d88bb3ac9e480abe83fe63c1e1d73b18138a1fa3159ade830fceb9a5c",
+      "actual": "bfeef46d88bb3ac9e480abe83fe63c1e1d73b18138a1fa3159ade830fceb9a5c",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/5a322aaf49c60ca8651cfc4d003442e9f6fbc8ed774108b73bd235e5f5298906.json",
+      "expected": "21fb70392c99a59d087cb1eed1c76d0d96087efcae756b04260641b86ca10a21",
+      "actual": "21fb70392c99a59d087cb1eed1c76d0d96087efcae756b04260641b86ca10a21",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/5daffeef9b504305c0906b20a9562802711b6603c5f7f7615705785f13d60458.json",
+      "expected": "b958b14f4c6fc6423691dbba33efd279f451f75a6eac5327ec28aeb35e8a6f73",
+      "actual": "b958b14f4c6fc6423691dbba33efd279f451f75a6eac5327ec28aeb35e8a6f73",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/5ea586462414a18ab723a363869225c4ec1aecf73001d8f48f864f0b6bc23219.json",
+      "expected": "cc5dc255ac839584dda26c55e90d967acc4a6210fc14d774dfe3938ce10f82a5",
+      "actual": "cc5dc255ac839584dda26c55e90d967acc4a6210fc14d774dfe3938ce10f82a5",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/5f57f0189bb55a176964505d1a7c5caf35edf168803d1dd17c847e09f5d2440c.json",
+      "expected": "b838eeb8b087dc4e96dc3cb7a0f46ee92b45216bda6d4d4dec2b87276a3119dc",
+      "actual": "b838eeb8b087dc4e96dc3cb7a0f46ee92b45216bda6d4d4dec2b87276a3119dc",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/60d9d5a968fb0e3f15aeb72b34441a2ab498163f4c8781c5a069ced625a369db.json",
+      "expected": "4e762bbf64c9bee298d6e88613f61af191268e86420ed38d7e77ac94bece0154",
+      "actual": "4e762bbf64c9bee298d6e88613f61af191268e86420ed38d7e77ac94bece0154",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/6171deefa7c2dee5e68c1c694563421f08ed5536766e7a509cbdabdcb3828211.json",
+      "expected": "904b9e638a4a5a91088c823a8015f65d0147bc2dde8ca3fa1e08123872071905",
+      "actual": "904b9e638a4a5a91088c823a8015f65d0147bc2dde8ca3fa1e08123872071905",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/61d8cc70a052fc5cea53e27ca0f4779344b73dd7d157f7fef0941c8405ed20f4.json",
+      "expected": "ed596db138ab5d6fe44b44b15190556c85acca09d87e49dfcbc7172c862eb40a",
+      "actual": "ed596db138ab5d6fe44b44b15190556c85acca09d87e49dfcbc7172c862eb40a",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/61dc7e88a5bec6e49ed641760c76ba11e211b029fb0635524379c17289aa4ebd.json",
+      "expected": "71a0371cf48bd8b2a51c8a005da9eecb68f3a34718c76a5003c0650a0600185a",
+      "actual": "71a0371cf48bd8b2a51c8a005da9eecb68f3a34718c76a5003c0650a0600185a",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/624f9fec8e2a25ad63aa731748248f461f9c750fdfae838c3f5743d490ead2c6.json",
+      "expected": "fb40ab672a99df20b6f80550e7b17a5870a9f1f17871ac19c1819f955353019e",
+      "actual": "fb40ab672a99df20b6f80550e7b17a5870a9f1f17871ac19c1819f955353019e",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/63910c3c7df1c76d4abf35e138021a09992c3e3cc902dd15fea759d733e16d7c.json",
+      "expected": "b4238f52c48973c96b8658c6a9aa0c2a35070c2287f6b066503834b536d34088",
+      "actual": "b4238f52c48973c96b8658c6a9aa0c2a35070c2287f6b066503834b536d34088",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/64a454f92469d39737936e457145ec944204697ff3f6d7c4aed1235732dd6074.json",
+      "expected": "f57f0ce430d1418651a3324f95495f43f7a2587de29bd1b5e0a83be92916722a",
+      "actual": "f57f0ce430d1418651a3324f95495f43f7a2587de29bd1b5e0a83be92916722a",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/661968ab33a88c078c9f32f42af5933045dbc4815e352b2a53c12bc88c5517f2.json",
+      "expected": "f4c288f1e5a9b0f1b7dd631722d433e2b889f0ed9facc9c3ea579e91712ffd2f",
+      "actual": "f4c288f1e5a9b0f1b7dd631722d433e2b889f0ed9facc9c3ea579e91712ffd2f",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/69e198b160c704d2b96e05e8d3cb5f9a0edd32481f572186ae24e2ca14d307e3.json",
+      "expected": "dd825bf70babe973be028045b736b67c901977f4125345aee0271af8a7e9c98a",
+      "actual": "dd825bf70babe973be028045b736b67c901977f4125345aee0271af8a7e9c98a",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/6a50e2cd300d05233dc257ef0ce42c5a93bd927e00d6d09725f8ab26ec67afdf.json",
+      "expected": "bafdcff4568474911d9f66b36e3be852d907ebb7c99f087f8a93c0bb210e9ea4",
+      "actual": "bafdcff4568474911d9f66b36e3be852d907ebb7c99f087f8a93c0bb210e9ea4",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/6cb22fba69f941f08f67e91fc23c400f17a8785a0cdca3ef71055765259c6a75.json",
+      "expected": "230197cd0265966a8ee123cd0957715c8379489ba9062f89e630dec86ace3884",
+      "actual": "230197cd0265966a8ee123cd0957715c8379489ba9062f89e630dec86ace3884",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/6e1f0337ff514c084e1503156fe837b3a0ff7ba67530aca4b3662923a488ccef.json",
+      "expected": "fecc64c959e39daf8dbd9f91dd9386e6deeb5f8739e133dcbd82f3477c021b09",
+      "actual": "fecc64c959e39daf8dbd9f91dd9386e6deeb5f8739e133dcbd82f3477c021b09",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/6e893965988d3953e7f7d7ed551128d5ca12ae8e6313bc295d2716f25e5b5685.json",
+      "expected": "8c0f04830437fe7cb77d9a6a0fdc28971e735b7907307493d41053c0a40eefb4",
+      "actual": "8c0f04830437fe7cb77d9a6a0fdc28971e735b7907307493d41053c0a40eefb4",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/6ebac043b1031a225a4fb1b1a4507a7c6ceb7f716205133116d7a8c558c971be.json",
+      "expected": "7ea2e73e2f0d10daa80d4ba41a0f80a31cfa594ed8661ca011363175aa19833d",
+      "actual": "7ea2e73e2f0d10daa80d4ba41a0f80a31cfa594ed8661ca011363175aa19833d",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/71c0151c08c682aff243da071b593813b9e6a3b557de176bd1836efbc7988625.json",
+      "expected": "f90262e82cf0d83e4e9189ff1a1ef51e31aee8ddf3676c363fecd145e688bd48",
+      "actual": "f90262e82cf0d83e4e9189ff1a1ef51e31aee8ddf3676c363fecd145e688bd48",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/75063494fead47f0f4239af4136fdeff89441ae18b53e48aa673301137fef2c6.json",
+      "expected": "a230f0e59438daa13ae7e1234d4fdf6bf2400b6c80bc268b557de7b52dd8feb3",
+      "actual": "a230f0e59438daa13ae7e1234d4fdf6bf2400b6c80bc268b557de7b52dd8feb3",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/756b1c69b18bebcd6f84bfa3d983c57340996624a9340ccd6231a9641a6f3c43.json",
+      "expected": "7bdfa2e2a359e1ee37ea5f0ba692c347a891bc2bda030d7e423a7d8ffee42cab",
+      "actual": "7bdfa2e2a359e1ee37ea5f0ba692c347a891bc2bda030d7e423a7d8ffee42cab",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/78bc45be138b5d6947a9da034f589616b9310d13348252bec0c4d0e7055ddf65.json",
+      "expected": "22f3a4dacada09674716ecadeef84842fbb8336f3ca6c1b8867fd29a179f41ef",
+      "actual": "22f3a4dacada09674716ecadeef84842fbb8336f3ca6c1b8867fd29a179f41ef",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/79dfefac383a9dbed017f5b61df3bbd7aeba4c1b7e2e8378312b9d06f4ab8c95.json",
+      "expected": "81eeb08c0bbc8a7c864095bc7081068aecc633d17db550049c4e1833fde8306a",
+      "actual": "81eeb08c0bbc8a7c864095bc7081068aecc633d17db550049c4e1833fde8306a",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/7ef63f7a92d305284c4ef3bcf3fc90ab9e7eb2d432ae2b148e4542e8b529be48.json",
+      "expected": "cdb034861e2867b73c801187c81b2471d93b58f3f6d1c5bd481846a159a9fc27",
+      "actual": "cdb034861e2867b73c801187c81b2471d93b58f3f6d1c5bd481846a159a9fc27",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/7f40b5f93046a7ec62e5dace87278a6d24d2187d6e82971569ea5c2d291e8889.json",
+      "expected": "d08bb39f501b2e0803e7a9fc201cc022250a1d736a72317b4cc6c99cae610aec",
+      "actual": "d08bb39f501b2e0803e7a9fc201cc022250a1d736a72317b4cc6c99cae610aec",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/81b34941f23398cc4831fe3d6146fddfa7298560a426a2c179df619dd15fdb19.json",
+      "expected": "4747ef9f8828cf2ce3b9b90b47f941825e9d25835f3a2ae3d594ff1c9ea581c2",
+      "actual": "4747ef9f8828cf2ce3b9b90b47f941825e9d25835f3a2ae3d594ff1c9ea581c2",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/82e1546ba4e102d8a710d3c8feaf6ba842bbe8b8883eac6d8f4e53a78d8b1366.json",
+      "expected": "89ff015dc58b3a1fe4befd367c715ad419f63fe77974a0572819aec3b202405c",
+      "actual": "89ff015dc58b3a1fe4befd367c715ad419f63fe77974a0572819aec3b202405c",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/8341aa98d760eaa452a5628c52a11b84f6860b59437660fecbc64a5c155de2b7.json",
+      "expected": "b4ef2183e8526c3885206974838136482dfdd6bc2734db8067c814a279ffea99",
+      "actual": "b4ef2183e8526c3885206974838136482dfdd6bc2734db8067c814a279ffea99",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/84df9a0af73ed81d2b0b5314728efbf2268cafdad705f4f204685f6ec79076ae.json",
+      "expected": "eaf41df8b695529dcdc0c7a2600695163bffec563ecf014f3aee88dec798fa07",
+      "actual": "eaf41df8b695529dcdc0c7a2600695163bffec563ecf014f3aee88dec798fa07",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/850e24df1207a66fb7cd70d20d9b5e068b5b3dc800af2e1fc69cc425c26bfae2.json",
+      "expected": "146da60b9ceadea551b8e16dcfd6b8c95641061094068e224a79a290dca2efb5",
+      "actual": "146da60b9ceadea551b8e16dcfd6b8c95641061094068e224a79a290dca2efb5",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/88695346d8c8e4519dbd826b30aa257c1c3f86db001b0b1ebfc2f56910012b6c.json",
+      "expected": "619c1dfe17bd3388fb51cd6a6feaff2996489e98960d30fb31ca458e196fa26d",
+      "actual": "619c1dfe17bd3388fb51cd6a6feaff2996489e98960d30fb31ca458e196fa26d",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/8a5163618708e7e9232f2c6223aa75f0e498bce2c226e16a7e4e90720d9168ca.json",
+      "expected": "b5b1e5171bff59d01a187aa2f0e5bec76df193c31ba6ad865bc130aa0a7bb6f8",
+      "actual": "b5b1e5171bff59d01a187aa2f0e5bec76df193c31ba6ad865bc130aa0a7bb6f8",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/8b7b2ad8a8d67acc6ef0f0cdec2ddee390744a5572263f144c87a7897bbc1ef3.json",
+      "expected": "b81de8b0647f335362ac6639921f0f8894a8c77c6a2cf1552ea45e831d42d9a9",
+      "actual": "b81de8b0647f335362ac6639921f0f8894a8c77c6a2cf1552ea45e831d42d9a9",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/8d6e906d2bd7855cdfa5c7af0c3fec4a482762603301e3361aa7af676497c730.json",
+      "expected": "857711df7d1ce3baa2a7923abdbfebbeec1c44f776cd2566e9882e8e8970c173",
+      "actual": "857711df7d1ce3baa2a7923abdbfebbeec1c44f776cd2566e9882e8e8970c173",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/8db49871b57d9e5db0c9c5318b72e6b938a914f4633250456a2fd69358b6f42b.json",
+      "expected": "9f062b102f77d1ca3c823a43f9488830f147bfa045cf0e41f9fa3ac7ef1e3f58",
+      "actual": "9f062b102f77d1ca3c823a43f9488830f147bfa045cf0e41f9fa3ac7ef1e3f58",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/8f6d8c27c64890e122c654e6be409e424342d7827304665b9c1030d736931ea0.json",
+      "expected": "a676370ed775316eca1da1c7899081b80fe8e390e4de385fbdd74bca7a49935d",
+      "actual": "a676370ed775316eca1da1c7899081b80fe8e390e4de385fbdd74bca7a49935d",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/92203bd46b707b83f6f7e316a746311e99d226b530e71ea106181060a80127d5.json",
+      "expected": "6cd50615607af0e6b27fea9a9523b867f0cd72b547a5cfa2711fc505daebcae4",
+      "actual": "6cd50615607af0e6b27fea9a9523b867f0cd72b547a5cfa2711fc505daebcae4",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/922f41371bc6a22919812a8e0efe9166a5056bb3640e8bbfbd2684cb46dedf29.json",
+      "expected": "ddcb2d824441c5392e0bb1cbc2f6559cd1424b1ac7d74e3780fed274be03236a",
+      "actual": "ddcb2d824441c5392e0bb1cbc2f6559cd1424b1ac7d74e3780fed274be03236a",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/92ec05d93b2b4f34b2c9505c06f819d339a2a3ffbd982503720bebd399884c4e.json",
+      "expected": "012169c6f73ce514e7ee0ffa24cff28dd427f198de310ec25e8d0ac3cd273626",
+      "actual": "012169c6f73ce514e7ee0ffa24cff28dd427f198de310ec25e8d0ac3cd273626",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/95bda1229077803ed9f1d6893ef2c7d1a9e0e71d610d8a229b54e706c7510a44.json",
+      "expected": "d17a1af1699fc2212344b6bb38f8052163778e9eefdfa7d09f9039073e376ed9",
+      "actual": "d17a1af1699fc2212344b6bb38f8052163778e9eefdfa7d09f9039073e376ed9",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/96f2663be858ee2423fd1ea7f85d14c405cc99a26995010e97163929036bf215.json",
+      "expected": "2c93baebe34459b71b76ef6595366ccbf1f62bceca026ef70f3d2a44bc04b4e4",
+      "actual": "2c93baebe34459b71b76ef6595366ccbf1f62bceca026ef70f3d2a44bc04b4e4",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/979525d876c0079286e45d7c724f6a39e7c34915f05740fa0959feb99d26226c.json",
+      "expected": "79b7bd0765376885790e068a31743d9c6c171956273044751979a35e53dcb6d7",
+      "actual": "79b7bd0765376885790e068a31743d9c6c171956273044751979a35e53dcb6d7",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/9a84c3d1f114c7ffecb1400709ee82fcdbd681db8b865bd2726d99baffc6d64f.json",
+      "expected": "80a20da1089e3384584a177e531fe19b2dd1eb7b7aa71d1adb15088cfbda9f6f",
+      "actual": "80a20da1089e3384584a177e531fe19b2dd1eb7b7aa71d1adb15088cfbda9f6f",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/9c5e8a1d33a72b1c02736b0c855e4872bc25cd6e59937fec866a137f6dc06bee.json",
+      "expected": "e511887e90642c8efc16acfe6941980b7ab6cb22308e37e555dca563998bb5dd",
+      "actual": "e511887e90642c8efc16acfe6941980b7ab6cb22308e37e555dca563998bb5dd",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/9f7f0ba2e3c0db2d94f1800d08c29eb03d67b01fb3f1816626e8cfa777b918fb.json",
+      "expected": "d52dfb85605175742ccdb0303ac4e2f1035238a0dbfe066b28dafcdcb404dc2b",
+      "actual": "d52dfb85605175742ccdb0303ac4e2f1035238a0dbfe066b28dafcdcb404dc2b",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/9fa741130981bfd68338368179bd7a4fcf0f2810330df7c957943e8638aabad3.json",
+      "expected": "86a802fbcc43ebf551a90077a8f1891efd9d8595d4271133c2420f8617dcf3d0",
+      "actual": "86a802fbcc43ebf551a90077a8f1891efd9d8595d4271133c2420f8617dcf3d0",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/a14ef9fe82b90a70f07587a370e4e7a16bbe5c12ccd0bd548abbddebb8f8090d.json",
+      "expected": "f80d4f2f295d8d650b8e61f0e7584a365f1ac41c53e59fdd5d242293c08d46d5",
+      "actual": "f80d4f2f295d8d650b8e61f0e7584a365f1ac41c53e59fdd5d242293c08d46d5",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/a2d9d154afcc67c14a72679e4a365ea8cfb07dfe500e8d0782986259a8f4464f.json",
+      "expected": "8005864c9043b59beccda70e2eb6e53f3eceb8221698fbf3f49d4d5c27d40e17",
+      "actual": "8005864c9043b59beccda70e2eb6e53f3eceb8221698fbf3f49d4d5c27d40e17",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/a3be3411a18ad467a4d2d9e2724b53bdcafe2ccef0296faacfdb4466bc83382c.json",
+      "expected": "88d7e1a6c632b7ecd0552809ddb5a34b33d1d7ff87a39ba029b0098dc4f4dc8f",
+      "actual": "88d7e1a6c632b7ecd0552809ddb5a34b33d1d7ff87a39ba029b0098dc4f4dc8f",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/a5b90521bf4bf7510cc44de78ee481920fc67c44802cb3e797a6f6efd7165a62.json",
+      "expected": "60f1c1e5f2b48e8d85f5c6c9e57f04213060c63e771121bbbde79ee04a0bf2bb",
+      "actual": "60f1c1e5f2b48e8d85f5c6c9e57f04213060c63e771121bbbde79ee04a0bf2bb",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/a77fda3abf106cbcafc119b99d1ce5a2bc6f0c80e9b502ab753ae477b46d618d.json",
+      "expected": "410acf6ec40e644c88d48b00eb4d524657fde665ab8bb3e7c20b4dde828e8928",
+      "actual": "410acf6ec40e644c88d48b00eb4d524657fde665ab8bb3e7c20b4dde828e8928",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/a947bd9b9e8c360f439ff7ae21e036ab0413df4cf300cb91555fd344651154ed.json",
+      "expected": "86059123105e0bb6af7b6106704f73b4640814b427ce9cde87d6a857eda3076e",
+      "actual": "86059123105e0bb6af7b6106704f73b4640814b427ce9cde87d6a857eda3076e",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/aa920d2dcea8c02a3a9f86a50a844b49981b1daf17ab1ae65060e7fa66616ac0.json",
+      "expected": "2d500c2bc2d4d62290e09105ad132bf152ee12d85c2b9aa88ce43ba88ec662fb",
+      "actual": "2d500c2bc2d4d62290e09105ad132bf152ee12d85c2b9aa88ce43ba88ec662fb",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/ab10b22317c8a6f6f2ee8b3c2827c4de86bf3d48b914b240607a4e29a37ffb20.json",
+      "expected": "31aab69f9387b614531e5939e6ecf73d66d8ffe5b469739226dc0dd90a680763",
+      "actual": "31aab69f9387b614531e5939e6ecf73d66d8ffe5b469739226dc0dd90a680763",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/ae013bac65a87890a7f8f566d728294d1b229692b277fbbd72bfa3840fe61e06.json",
+      "expected": "4798129a395f7f6c09fa42960f8d6248e19ca4ac21aa5cfd684be1612706cd50",
+      "actual": "4798129a395f7f6c09fa42960f8d6248e19ca4ac21aa5cfd684be1612706cd50",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/ae9bb74d675eefa39c0eea48fa7d50d8eebe11f39c97234da97f54c0b8d02df4.json",
+      "expected": "dc8faa345048e43eea43989925caf6a944ac226760944b28374bdf48f4d59184",
+      "actual": "dc8faa345048e43eea43989925caf6a944ac226760944b28374bdf48f4d59184",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/af701fa340ccbf03b0e3ff9208f231e1df37b05d5f772b075732e3c9bb2a57c0.json",
+      "expected": "2ca3c9e149e040871f0912d1c827336172ef5b861af956f303160195ed9e568c",
+      "actual": "2ca3c9e149e040871f0912d1c827336172ef5b861af956f303160195ed9e568c",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/af7fe87c227395580f57ade1556b052758e775b950434575df8b0a256e207cea.json",
+      "expected": "94a485b05c59732872e4c59c65b911af49372cf19ef29effc5f07df15b78fee6",
+      "actual": "94a485b05c59732872e4c59c65b911af49372cf19ef29effc5f07df15b78fee6",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/b24a9fd5adc8386a21d840c0fd0760aadae88e87d722264fbb5d9487ed0f1335.json",
+      "expected": "462e27e66749a2992e5a7b8975816b235c7bf7e02a1bdbbc34ae75aa0167bcf9",
+      "actual": "462e27e66749a2992e5a7b8975816b235c7bf7e02a1bdbbc34ae75aa0167bcf9",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/b3805b453adbb2ec5a0599e5b41e1466e687dbf162636631491e1854f5fcb807.json",
+      "expected": "70b02f0af9da80eab8f18c5d639b15180a0891be9ba522aab634721f5a470803",
+      "actual": "70b02f0af9da80eab8f18c5d639b15180a0891be9ba522aab634721f5a470803",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/b392c6f639153bc47f39e4bfa310c8f8a4bfe96539a315e30df842125bb7a26f.json",
+      "expected": "d3fd27fab45b7e82382a686497d493b377a515d774fe04e3ac7c079b937aea74",
+      "actual": "d3fd27fab45b7e82382a686497d493b377a515d774fe04e3ac7c079b937aea74",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/b50163d52852f0b313de98be1f2db6be23d1a7b87d27138f2ef48c4070f0a59e.json",
+      "expected": "3f0a570d0e69850236eb692cb2e7f17e3a570274856ca5eacc9261e9c5609ed7",
+      "actual": "3f0a570d0e69850236eb692cb2e7f17e3a570274856ca5eacc9261e9c5609ed7",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/b727ca2111a08d658be0d4a8c4ccfac5b6e9bfb30d99f7fc4e3845f3fcde050c.json",
+      "expected": "fd3c6ce0e70b8d88a125fa317c40b5806bc1988553214753a95bd37078dafaa2",
+      "actual": "fd3c6ce0e70b8d88a125fa317c40b5806bc1988553214753a95bd37078dafaa2",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/b91ba41c9e4d2a7159474d4287857ff7521304a43214a79805b98d950042ffb0.json",
+      "expected": "034d4c9295bcef7ee6fc4917549f8d44be591adf245ec161d3a1a4b96c444503",
+      "actual": "034d4c9295bcef7ee6fc4917549f8d44be591adf245ec161d3a1a4b96c444503",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/b950a2751c64403138c760fce2376b073c5bad14720e6949f6196697354e72ae.json",
+      "expected": "e48a1b69d3d68a829ce7f68c075958bec9d0bb9ff37e59eef3ec5954f180bf3f",
+      "actual": "e48a1b69d3d68a829ce7f68c075958bec9d0bb9ff37e59eef3ec5954f180bf3f",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/bb13d2a18c96a17e64234364a25092542131a690a0005ec7ab08de6e9c8215c6.json",
+      "expected": "e637a5fd8a1729db1f9507c59da75b745af77843da7176947c31aabad48909af",
+      "actual": "e637a5fd8a1729db1f9507c59da75b745af77843da7176947c31aabad48909af",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/bc0d2d6bcd39ecd9a94481e7029f7083ebf2e6676cca6baf9fc5de085dce52b3.json",
+      "expected": "f24eae0999c76ed83cc8b7fd5d7a4b946493ff4a971304d20d7090b93cb12115",
+      "actual": "f24eae0999c76ed83cc8b7fd5d7a4b946493ff4a971304d20d7090b93cb12115",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/bdf67bc75867e903e3190fd82aaaf973cfaa25842eb4e6f594f15d1c8e895c18.json",
+      "expected": "eeedd3bc2c3e16ddf1e28bed7ee3a41ac7b8863c459f7bc4557163cc85c330ef",
+      "actual": "eeedd3bc2c3e16ddf1e28bed7ee3a41ac7b8863c459f7bc4557163cc85c330ef",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/bf2fd5aa5f0333957e6f471faf8232916da6e9bfab2ac3e7d0625034f1ea0ad4.json",
+      "expected": "fbc9faa8cc304ee2e95e885ea5eee0ec8bb8c9040ae149ae6fd0a954958486e2",
+      "actual": "fbc9faa8cc304ee2e95e885ea5eee0ec8bb8c9040ae149ae6fd0a954958486e2",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/bff821f5a5269ae55941ec1c0b79742187fea5ac41409321841eabe119fc71ff.json",
+      "expected": "aa0c14d9fca5f194a9d20bdeaaf9f2da41691afb658848dd3d5bea35bf03bf44",
+      "actual": "aa0c14d9fca5f194a9d20bdeaaf9f2da41691afb658848dd3d5bea35bf03bf44",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/c06018d5c11c891e7d6d04fdd32993f6e515c70fbc564bd7edf4ef6fa53bc49b.json",
+      "expected": "5ea9d642a65878c0eb0f8065c66e40530a45cd04e05045a3bb4ad2f37e5fd34f",
+      "actual": "5ea9d642a65878c0eb0f8065c66e40530a45cd04e05045a3bb4ad2f37e5fd34f",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/c219e7537914fcedbc1c9be0974eeec3625984098c83fc14f6368e5773661f0a.json",
+      "expected": "16d96c7d53c39fbd88e3aa5457f2976bdc35652857986e30ebbe4e6ad9c149e9",
+      "actual": "16d96c7d53c39fbd88e3aa5457f2976bdc35652857986e30ebbe4e6ad9c149e9",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/c2fd93338c0e44a679dcd87e5d320e651c73344adb776258ceed663e7d24c9f5.json",
+      "expected": "6d29d3c5a16ece32870762ad3e8d4978cb7e860d7cc1554ae3ee74064f0b476e",
+      "actual": "6d29d3c5a16ece32870762ad3e8d4978cb7e860d7cc1554ae3ee74064f0b476e",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/c2ff3b7f8eb941e7ee06a0f3eb1704ba21f327ed7c4ae82573840bb3b88a3842.json",
+      "expected": "2554c1d1683a37c06b7dcae0cac8642fb9cd385dafa9bf02f76bd7741a04145d",
+      "actual": "2554c1d1683a37c06b7dcae0cac8642fb9cd385dafa9bf02f76bd7741a04145d",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/c38028b905cb6f7902135ca62f307d715058d8b3710430787914d6f42d597eee.json",
+      "expected": "46540935d2dd24353d7ec1b1aa07c25653d8696c4d9c0e92f5498e8d29e93cb0",
+      "actual": "46540935d2dd24353d7ec1b1aa07c25653d8696c4d9c0e92f5498e8d29e93cb0",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/c453e1c754dcfd8678847dad2c2d0b5d88bb00ac23a4cd9c205f910aa59c6e41.json",
+      "expected": "8e2ea8120dde6f165aae746569cc7b53a1b06bc530007866426a27336c3099cb",
+      "actual": "8e2ea8120dde6f165aae746569cc7b53a1b06bc530007866426a27336c3099cb",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/c6ff940cad9d9716861a6f3958b14ea86ce68b00bd122d9c1a87828ea7c5203a.json",
+      "expected": "8813feb043fcf0aeac4ee13fe91576d2759e03c889b143a85612507152e8b875",
+      "actual": "8813feb043fcf0aeac4ee13fe91576d2759e03c889b143a85612507152e8b875",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/c9ec8c6d266222fe5227d0c35dcc4e374177db2316420d8e5bc202bd36c1b2d6.json",
+      "expected": "595336ab5168078cbf23ea33df75b34844ce172a9c0e675eb7cbc11b8b4d234c",
+      "actual": "595336ab5168078cbf23ea33df75b34844ce172a9c0e675eb7cbc11b8b4d234c",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/cb19f6e35ea722917ba4bee7311a38a4791175262097a3815f7febc4df73ae91.json",
+      "expected": "26f458847978c7dc451937313ee2c7245d43c5e6d8f54c085156ea0d85feb9b4",
+      "actual": "26f458847978c7dc451937313ee2c7245d43c5e6d8f54c085156ea0d85feb9b4",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/cf205c9a3179968116706488d3710dd97b9797ab686166ac40866a18b1fe5e27.json",
+      "expected": "954020d031aeb54c260523ff3dfaab827244e70d4f1a90887236cc0130be30b3",
+      "actual": "954020d031aeb54c260523ff3dfaab827244e70d4f1a90887236cc0130be30b3",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/cf6858bbf7f14763e84e62d0d49c8bec4e204c1d261e458ce628db1f515e890f.json",
+      "expected": "fe7d70fd7c0ddaada07ba4afbf66630d4fda80258d769d0144881a1e0b338491",
+      "actual": "fe7d70fd7c0ddaada07ba4afbf66630d4fda80258d769d0144881a1e0b338491",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/d3d3a8db9f2aa50187d75c2dd99e1e679368a90ea5fb8328f95283150e862943.json",
+      "expected": "6637081c8f7ec8186b71c656c19a82b01cf1cdb4e320df8c0976ae00d6c3527f",
+      "actual": "6637081c8f7ec8186b71c656c19a82b01cf1cdb4e320df8c0976ae00d6c3527f",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/d52f7fec280157fa18210d827d94e4aaa0abcdc210984c0e70d9c34c1c468483.json",
+      "expected": "e1214bcc57ca2ee487154a1f054027ec5207301c1b67f6ed58f0cd643982fc9a",
+      "actual": "e1214bcc57ca2ee487154a1f054027ec5207301c1b67f6ed58f0cd643982fc9a",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/d68a42a4549c728f8af8cbedfbcf4623051899dad0c129087d672c3f216ec845.json",
+      "expected": "a99834c944adce3d8826ce419e7d2d19b34374eb113a53231113cad25702ea2f",
+      "actual": "a99834c944adce3d8826ce419e7d2d19b34374eb113a53231113cad25702ea2f",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/d93129f1bb9f1253fbed23364414d979c19696b243babec9a0d2c9a7a72bd19d.json",
+      "expected": "15ee64b2195d1a2ad4926abb5b081c22c4bc6ea6ace3f781286afdba218528b9",
+      "actual": "15ee64b2195d1a2ad4926abb5b081c22c4bc6ea6ace3f781286afdba218528b9",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/da13a189e67d2c9727f685cb7e876edfbe1e856e2809f4c07d6c1828c1561936.json",
+      "expected": "a1de0723653f59180ae0689ea926a54223dd7c365cb2536184de588adbb144ee",
+      "actual": "a1de0723653f59180ae0689ea926a54223dd7c365cb2536184de588adbb144ee",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/df1c6895123a00c9a47318108b72fa7be0d515b9e76eecb1d7c1f98736fee3a8.json",
+      "expected": "93e564a4383140c6972cd68f17a428d951e1e647cdf1314cbc2bc6e14ab0c4fd",
+      "actual": "93e564a4383140c6972cd68f17a428d951e1e647cdf1314cbc2bc6e14ab0c4fd",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/e08dcc78832608351d887a18f352c19397763d7fc9af99748942f0cd959d8c02.json",
+      "expected": "6fc049b98d36b5c05b3c937ed392bef0cb6b9f577ff7cf9a2fe8c9eb38d6b4a9",
+      "actual": "6fc049b98d36b5c05b3c937ed392bef0cb6b9f577ff7cf9a2fe8c9eb38d6b4a9",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/e2039d6e5399e184dd63ed542598b786c7b3acb63937c6cb7dfe9fb39ff35f83.json",
+      "expected": "79694c28d6fcd918c93bca50ad3d064a285756a1f0eaecb6e7d66357ada6fa0c",
+      "actual": "79694c28d6fcd918c93bca50ad3d064a285756a1f0eaecb6e7d66357ada6fa0c",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/e2359dfbbf3f90d06f99ac5da1c7c87659e8325127b793e125b9d65ce53b067c.json",
+      "expected": "85339fdd4126dd723c3b67316d0b6bb6928696aeb84263647d78b2548a0127d8",
+      "actual": "85339fdd4126dd723c3b67316d0b6bb6928696aeb84263647d78b2548a0127d8",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/e2b390a0b81ad955b236bec475f0c08cc6cb1c1410369c647ad56ca824f74144.json",
+      "expected": "01a1a492d093d5b70164f8eb4a7021509cf262aca15f51955e54dedc5cb30d7a",
+      "actual": "01a1a492d093d5b70164f8eb4a7021509cf262aca15f51955e54dedc5cb30d7a",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/e2fa8db21604572ed61158f064d70cf5964578981da5581e6494879d3971974c.json",
+      "expected": "fe7510f31841331fb4b81c9b13948bc8557a2c7213f59c8550a082fc52f88bc1",
+      "actual": "fe7510f31841331fb4b81c9b13948bc8557a2c7213f59c8550a082fc52f88bc1",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/e414cf792bf6787113384bd15c4c5754ddd06ce36c3766d16828e8f6236671a8.json",
+      "expected": "3096cb51379f610a31279b215a2babaaa7721ecdb58cefc050531faa77852d02",
+      "actual": "3096cb51379f610a31279b215a2babaaa7721ecdb58cefc050531faa77852d02",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/e4ae690018dfcc550b6bc56fc3e1b62d95cf407685e0635c8c492a9a9f042148.json",
+      "expected": "196891e5f6de7244130d32307d22e40b2b76400ef33417a8b4aa6471890c6fc7",
+      "actual": "196891e5f6de7244130d32307d22e40b2b76400ef33417a8b4aa6471890c6fc7",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/e5b0ab914f4aa3dc7b179e9eae5a7b755cad2a07742f0257efd2f1c6d8e7e707.json",
+      "expected": "dbd89756fc54d8118c9d1edcc9201391ce6d44a9bc404af1df299a6340b7cb1a",
+      "actual": "dbd89756fc54d8118c9d1edcc9201391ce6d44a9bc404af1df299a6340b7cb1a",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/e650dede10feea1e809b1addf1c7ea8b566a042b1ee908841700604a5a5222dd.json",
+      "expected": "826e5916782e85b5b6fe6bf943f15068ce35c7532b245c82da8dc392725b6c87",
+      "actual": "826e5916782e85b5b6fe6bf943f15068ce35c7532b245c82da8dc392725b6c87",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/e953987ef83794f2f9457da2de4db02404f4211958f8c999c4ec1856880bf039.json",
+      "expected": "890a40312271cbd844a53a4e5c1ea8647aad81af13de4efbf8048420782384ba",
+      "actual": "890a40312271cbd844a53a4e5c1ea8647aad81af13de4efbf8048420782384ba",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/ea2af4411144a88b8618f00c73b792e56925678a5af60eed989e69841da7b00b.json",
+      "expected": "d05e961d2b822a3cdf097ab0de1c23f8c3a7a915d3973a2dcfa5e69007754a11",
+      "actual": "d05e961d2b822a3cdf097ab0de1c23f8c3a7a915d3973a2dcfa5e69007754a11",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/eced7d35696354044531e1a0daba6a1a19893d82b577cc1ed079fb5b13c28013.json",
+      "expected": "058a7aaa4e766692dfd29e45c9ca858f6c52dfe604408adc560441f56bc566f1",
+      "actual": "058a7aaa4e766692dfd29e45c9ca858f6c52dfe604408adc560441f56bc566f1",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/ee4ec7ea13a0a8a299f61253273f8107d2cc6bbd6cb7423f3ef5273a17959a67.json",
+      "expected": "dd8e92913bca4db873bb51f3eab6aeec76df41e91241f3293204a928495d2bd2",
+      "actual": "dd8e92913bca4db873bb51f3eab6aeec76df41e91241f3293204a928495d2bd2",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/ef7add3c67709815ee1446d1f480dbf20b704e92c4cbab4eabdbf226ae70e72d.json",
+      "expected": "2ede03a51b8ce2b4ee6854090c7ba104bf71bae664f956d115a19f4666b7ff12",
+      "actual": "2ede03a51b8ce2b4ee6854090c7ba104bf71bae664f956d115a19f4666b7ff12",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/f0fa1447f06530c146d0cd71c74a7d8cf56ca72184fc660df1c83a63f5d86a38.json",
+      "expected": "827b64946355f9a240f294ded1c0c868be995388dcb9742f5a1a36c29e32294f",
+      "actual": "827b64946355f9a240f294ded1c0c868be995388dcb9742f5a1a36c29e32294f",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/f1f15569a4f494aec9054f9268acf415f52f9f3f0b695d8efb0e2608eff44e81.json",
+      "expected": "2002d7ac34a47b165212d5636dfb45276757cf4e3fe10c974c97c6aaa3f6610d",
+      "actual": "2002d7ac34a47b165212d5636dfb45276757cf4e3fe10c974c97c6aaa3f6610d",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/f207133c8a389550f136cbd981f0531b0fbddb57a7defe5c65218fc8d9250d27.json",
+      "expected": "8de544d664dd808e745bd3be69a7579dfb708e3c67805e1a6e9834fc0c996ee6",
+      "actual": "8de544d664dd808e745bd3be69a7579dfb708e3c67805e1a6e9834fc0c996ee6",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/f3610b767483adf0519fac3e732ae9970160e3f915903955354ac866b6041539.json",
+      "expected": "48cc4c45a1908851ca06c8b55203607678e1e03743cf3706515e16f7c571bf72",
+      "actual": "48cc4c45a1908851ca06c8b55203607678e1e03743cf3706515e16f7c571bf72",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/f3af742439c68bf40244e2ae4158b558bab30bc48abeac79d2c990cc5b01f304.json",
+      "expected": "a772c7bdcd3b4392fbf98ba8876c7db7b7def72c44fae412767cd09821959d96",
+      "actual": "a772c7bdcd3b4392fbf98ba8876c7db7b7def72c44fae412767cd09821959d96",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/f555cb63cb3a1ea0922dc068fd11dfa0ba1db70d873cb38cb59b76ef9f3279b4.json",
+      "expected": "308f8f70b132999795536d05372ad8f2ee24e20d4a7ec0c31d99fe771c558315",
+      "actual": "308f8f70b132999795536d05372ad8f2ee24e20d4a7ec0c31d99fe771c558315",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/f61d51bbefd57dfdadcae96e251f529d91dd8ad4242a6d9acbd377d390fc449c.json",
+      "expected": "89de82ad27729247b390c5aa503a7e586e9d437af6f8068bfb679ea29c4cfc10",
+      "actual": "89de82ad27729247b390c5aa503a7e586e9d437af6f8068bfb679ea29c4cfc10",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/f653e29d45289b373d3d0ee06478a84c894dfef0cbddd0c65635b314bdb7a7a6.json",
+      "expected": "a47106807218fa8e3224feacbe9ea4757839b8e0d0d5ce3955fa222c13a58a2d",
+      "actual": "a47106807218fa8e3224feacbe9ea4757839b8e0d0d5ce3955fa222c13a58a2d",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/f67a0162ee79a85d59e7e4e67e4b84285f70f90ab0d58e8b4c562848f7440ded.json",
+      "expected": "a17b313055a6a2a8045a4b9d4f491bf34764d7ec0d8f10e38c113d71b367dcae",
+      "actual": "a17b313055a6a2a8045a4b9d4f491bf34764d7ec0d8f10e38c113d71b367dcae",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/f6ad0375140741cebdca14ccbce81df4bb88ccb7576004f04032628192a78fd5.json",
+      "expected": "32a01ae4a81e28a02679b68eb5be68fb26db98f58296bf95fcbab1ada7cc947e",
+      "actual": "32a01ae4a81e28a02679b68eb5be68fb26db98f58296bf95fcbab1ada7cc947e",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/f72da0132c54e00e1d2b39dd6e38630e4c6145ff230b4bb418700d8da6906d01.json",
+      "expected": "764d948b5109373ff1b34cbd1a72031459401b4202b2f2b6ec087b2152e06fb9",
+      "actual": "764d948b5109373ff1b34cbd1a72031459401b4202b2f2b6ec087b2152e06fb9",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/f910589711922aeab1958ec311d4c1c5b08061bd236c67ee1ca765a9e034666c.json",
+      "expected": "d57e0f42368803915af0f7b04d2f9703358b6054a285c3c655fad2660f810f17",
+      "actual": "d57e0f42368803915af0f7b04d2f9703358b6054a285c3c655fad2660f810f17",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/f997349d17f2474c372b0eeb2d04b835c89cfca3992a3eba98c7df8193102a5e.json",
+      "expected": "2338c2851710bfb8a1967309209899a6be89339f885c98bc03be9e1d7e1067a6",
+      "actual": "2338c2851710bfb8a1967309209899a6be89339f885c98bc03be9e1d7e1067a6",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/fa07c54a55d164e4dfcdb6dddfb084558b4e04f41cad8cd28e6b675b1aefa9f5.json",
+      "expected": "ee4f2454c6d68d030b1373c1fc5400544761601dce9f387c1142469050fe4493",
+      "actual": "ee4f2454c6d68d030b1373c1fc5400544761601dce9f387c1142469050fe4493",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/fb67185c844a73947f243781629db2119f5279fd72e4acbbc24c908564e940ac.json",
+      "expected": "6d7cde1d77c2ebef336a9ed031698f3e49d2a585eae4e5ad88b1ea82bbce76c7",
+      "actual": "6d7cde1d77c2ebef336a9ed031698f3e49d2a585eae4e5ad88b1ea82bbce76c7",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/fb93338f9b955da369c8751e7f5284ae16f75a182cb37044dca31e09629ecc52.json",
+      "expected": "9299db4dfad589df7a78f2d9c24391a5ebebd1224b8897e1d8d816c11fb50a11",
+      "actual": "9299db4dfad589df7a78f2d9c24391a5ebebd1224b8897e1d8d816c11fb50a11",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/results/fd64765639fc6ea0690337914f9a217dd40bafb9b13619c091523781f144326d.json",
+      "expected": "2ff680dd6e7b9d37b7e409925b3860195aa9029de3fd28e5bb6c289000be6285",
+      "actual": "2ff680dd6e7b9d37b7e409925b3860195aa9029de3fd28e5bb6c289000be6285",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/fixed7_1p7b_v1/run_20260828T012948+0800/config/FORMAL_CONFIG_MANIFEST.json",
+      "expected": "255026285fc1e3b67daf2b5888d36cbac1b66e3682698015fa8908988aaebc5f",
+      "actual": "255026285fc1e3b67daf2b5888d36cbac1b66e3682698015fa8908988aaebc5f",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/runs/formal/fixed7_1p7b_v1/run_20260828T012948+0800/manifests/all_fixed7_results.jsonl",
+      "expected": "f03dc563504f6fd2fb2fb369dd7cd3198640502ef3591dade5a23c7006661a60",
+      "actual": "f03dc563504f6fd2fb2fb369dd7cd3198640502ef3591dade5a23c7006661a60",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt_dynamic_mining_v1/phase_d_enriched_dynamic_mining_v1/runtime/code/dynamic_runner.py",
+      "expected": "293886005cb8f78c943f0affe3e3b383d6de238f4bc825a5aea28a6e6dc66f6e",
+      "actual": "293886005cb8f78c943f0affe3e3b383d6de238f4bc825a5aea28a6e6dc66f6e",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/factorial_core.py",
+      "expected": "3e3bd26eba32a61ef6070420230c19b9af0057b21ee10ce3c003aee4f3bf6ee3",
+      "actual": "3e3bd26eba32a61ef6070420230c19b9af0057b21ee10ce3c003aee4f3bf6ee3",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt_mechanism_analysis_v1/trajectory_state_closure_audit_v1/scripts/closure_core.py",
+      "expected": "9fcbb2b1c5928a135b5cc0a673ba386fd402f158d23bfe755896516ba6d04a6f",
+      "actual": "9fcbb2b1c5928a135b5cc0a673ba386fd402f158d23bfe755896516ba6d04a6f",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/audits/reference_executor_v2_stage1_20260915/source/instrumented_reference_executor_v2.py",
+      "expected": "a71183f8f9ba4a3fa2847e6a35ef3578f604fb1c060cc0ca43306a2c33bb256e",
+      "actual": "a71183f8f9ba4a3fa2847e6a35ef3578f604fb1c060cc0ca43306a2c33bb256e",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/audits/reference_executor_v2_stage1_20260915/source/instrumented_ttt_state_core.py",
+      "expected": "9e2a216e1ea372560fa2cbf15cde2bce53241ae89bd907081bfb653dbf4d9bb0",
+      "actual": "9e2a216e1ea372560fa2cbf15cde2bce53241ae89bd907081bfb653dbf4d9bb0",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/audits/reference_executor_v2_stage1_20260915/source/reference_executor_v2.py",
+      "expected": "8b7d8612e889c2a4c868ffa899acac1492c2ef75ab66fc39608e055c0371689c",
+      "actual": "8b7d8612e889c2a4c868ffa899acac1492c2ef75ab66fc39608e055c0371689c",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/code/ntp/hf_models/hf_qwen3/ttt_state_core.py",
+      "expected": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e",
+      "actual": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/code/ntp/inference_model/hf_qwen3/modeling_qwen3.py",
+      "expected": "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43",
+      "actual": "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/audits/reference_executor_v2_stage1_20260915/formal.py",
+      "expected": "47251e4d3adc9f3348124edf933b2203f9ec386e621a8e10c296a98a815a3a9c",
+      "actual": "47251e4d3adc9f3348124edf933b2203f9ec386e621a8e10c296a98a815a3a9c",
+      "match": true
+    },
+    {
+      "path": "/home/zonghan/ttt/audits/reference_executor_v2_stage1_20260915/V2_STAGE1_COHORT.json",
+      "expected": "24894322e41e483300d65497c77b0361509936225e35719481d7b0bfa8b1b09a",
+      "actual": "24894322e41e483300d65497c77b0361509936225e35719481d7b0bfa8b1b09a",
+      "match": true
+    }
+  ],
+  "publication_safe_field_violations": [],
+  "scientific_result_not_changed_by_verifier": true
+}

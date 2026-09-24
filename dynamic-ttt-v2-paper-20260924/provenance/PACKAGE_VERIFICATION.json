@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "created_at": "2026-09-24T20:47:55.964104+08:00",
+  "scope": "final paper V2 only; early 2K/cross-chunk excluded",
+  "source_entries_verified_unchanged": 521,
+  "CPU_RECOMPUTE": "PASS",
+  "GPU_USED": false,
+  "MODEL_LOADED": false,
+  "REMOTE_CREATED": false,
+  "PUSHED": false,
+  "portable_entrypoints": [
+    "analysis/recompute.py",
+    "analysis/verify_package.py",
+    "analysis/r2_supplement.py"
+  ],
+  "gpu_scripts": "archival originals; external data and host-path adaptation required",
+  "unresolved_validation": [
+    "V2 empirical scorer isolation NOT_FOUND",
+    "Full original precheck rerun on final adapter hash NOT_FOUND"
+  ],
+  "licensing": "upstream notices preserved; repository-wide license not declared",
+  "credential_pattern_scan": "no matches for common GitHub/HF token or private-key patterns; heuristic scan",
+  "largest_file": {
+    "path": "data/fixed/FIXED7_FULL6500.csv",
+    "bytes": 9244523
+  },
+  "payload_bytes": 47456247,
+  "R2_SUPPLEMENT_RECOMPUTE": "PASS; seven numeric tables"
+}

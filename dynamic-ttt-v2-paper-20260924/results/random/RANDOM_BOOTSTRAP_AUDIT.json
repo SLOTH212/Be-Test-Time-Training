@@ -1,0 +1,18 @@
+{
+  "seed": 20260923,
+  "draws": 20000,
+  "numpy": "2.4.4",
+  "RNG": "PCG64",
+  "input_sha256": "a07b4c009d5fa34c5c2e5e894d892abfec4a26e56517e87b894a6817b4b7575a",
+  "ordering": "task lexicographic then sample_id lexicographic",
+  "draw_hash": "79a237aa30968caa5133ef0f9a106df790b82934a20d48679af70a1d4fef0ae5",
+  "draw_hash_encoding": "task UTF8 + null then little-endian int64 index matrix per task",
+  "CI95": [
+    1.450980392156863,
+    6.03921568627451
+  ],
+  "quantile": "linear",
+  "sample_weighted": true,
+  "random_seed_uncertainty_estimated": false,
+  "interpretation": "Sample uncertainty conditional on this fixed random realization; not expected random-search performance CI"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "verified_tables": [
+    "setwise_alignment_and_reversal.csv",
+    "setwise_summary.csv",
+    "task_transition_enrichment.csv",
+    "task_transition_types.csv",
+    "dominant_transition_by_task.csv",
+    "cross_task_direction_consistency.csv",
+    "within_task_rank_correlations.csv"
+  ],
+  "GPU_USED": false,
+  "MODEL_LOADED": false,
+  "input_identity": "package serialized R2; original hashes remain in provenance/COPIED_FILES.json",
+  "scope": "set-wise alignment/reversal CIs, task direction and task-centered rank correlations; base per-sample structure table supplied as frozen input"
+}

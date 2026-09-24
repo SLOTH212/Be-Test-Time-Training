@@ -1,0 +1,19 @@
+{
+  "status": "PASS_EXACT",
+  "formal32_n": 32,
+  "counts": {
+    "repeat": 4,
+    "zero": 64,
+    "future": 15,
+    "apply": 5
+  },
+  "same_path_repeat_status": "PASS_EXACT",
+  "zero_write_schedule_invariance_status": "PASS_EXACT",
+  "future_action_prefix_status": "PASS_EXACT",
+  "apply_then_update_status": "PASS_EXACT",
+  "checkpoint_isolation_status": "PASS_EXACT",
+  "trajectory_n": 144,
+  "checkpoint_unchanged_n": 144,
+  "state_reset_pass_n": 144,
+  "precheck_protocol_sha256": "a6842d9bc9f5b19c6d0191ef42494381a6cecb2a2eae2631c59c8055434fa148"
+}

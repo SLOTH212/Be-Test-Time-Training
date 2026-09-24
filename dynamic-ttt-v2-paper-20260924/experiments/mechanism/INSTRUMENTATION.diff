@@ -1,0 +1,32 @@
+--- V2_authority
++++ V2_mechanism
+@@ -97,6 +97,13 @@
+             projection=self.ttt_proj.weight if self.ttt_proj is not None else torch.eye(self.hidden_size,dtype=x.dtype,device=x.device)
+             for j,start in enumerate(range(0,full_len,self.ttt_chunk)):
+                 end=start+self.ttt_chunk;action=self._dynamic_sequence[j];active=int(self.layer_idx) in ACTION_LAYERS[action]
++                mech=getattr(self,'_mechanism',{})
++                if j==mech.get('tau'):
++                    self._boundary_before=state.weight.detach().cpu().clone()
++                    if int(self.layer_idx) in mech.get('reset_layers',[]):state=TTTState(self.down_proj.weight)
++                    if int(self.layer_idx) in mech.get('inject',{}):state=TTTState(mech['inject'][int(self.layer_idx)].to(device=x.device,dtype=x.dtype))
++                    self._boundary_after=state.weight.detach().cpu().clone()
++                    self._intervention_events.append({'layer':int(self.layer_idx),'chunk_index':j+1,'before':tensor_hash(self._boundary_before),'after':tensor_hash(self._boundary_after),'reset':int(self.layer_idx) in mech.get('reset_layers',[]),'injected':int(self.layer_idx) in mech.get('inject',{})})
+                 pre_hash=tensor_hash(state.weight) if self._capture_identity else None
+                 pre_identity=f'{self._branch_id}:L{self.layer_idx}:v{version}'
+                 if active:
+@@ -141,13 +148,13 @@
+         if any(a not in ACTIONS for a in seq):raise ValueError('INVALID_ACTION')
+         branch=canonical({'stage':self.stage,'sample_id':self.row['sample_id'],'sequence':seq,'capture':capture,'nonce':len(self.records) if force else 0})[:20]
+         for layer in LAYERS:
+-            m=self.model.model.layers[layer].mlp;m._dynamic_sequence=list(seq);m._branch_id=branch;m._capture_identity=capture;m._events=[];m._generation_forward_calls=0;m._captured_final_state=None
++            m=self.model.model.layers[layer].mlp;m._dynamic_sequence=list(seq);m._branch_id=branch;m._capture_identity=capture;m._events=[];m._generation_forward_calls=0;m._captured_final_state=None;m._boundary_before=None;m._boundary_after=None;m._intervention_events=[]
+         # V2: action labels control writes only. All five candidates retain the same functional path.
+         assert self.model.model.ttt_mode
+         assert all(hasattr(self.model.model.layers[l].mlp,'ttt_conv') for l in LAYERS)
+         self.torch.cuda.reset_peak_memory_stats();started=time.perf_counter()
+         with self.torch.inference_mode():
+-            out=self.model.generate(**self.enc,max_new_tokens=self.row['max_new_tokens'],do_sample=False,num_beams=1,use_cache=True,pad_token_id=self.tok.eos_token_id)
++            out=self.model.generate(**self.enc,**({'past_key_values':self.ctx.mechanism_cache} if getattr(self.ctx,'mechanism_cache',None) is not None else {}),max_new_tokens=self.row['max_new_tokens'],do_sample=False,num_beams=1,use_cache=True,pad_token_id=self.tok.eos_token_id)
+         self.torch.cuda.synchronize();elapsed=time.perf_counter()-started
+         pred=self.tok.decode(out[0,self.n:],skip_special_tokens=True);score=float(self.ctx.score_fn(self.row['family'],pred,self.row['reference']))
+         counts={};events=[];gen_calls=0

@@ -1,0 +1,102 @@
+{
+  "actions": [
+    "OFF",
+    "L0",
+    "L6",
+    "L12",
+    "L18",
+    "L24",
+    "ALL"
+  ],
+  "layers": [
+    0,
+    6,
+    12,
+    18,
+    24
+  ],
+  "search": {
+    "beam": 4,
+    "sweeps": 1,
+    "position_order": "forward",
+    "full_prompt_replay": true,
+    "reference_scored": true,
+    "winner_replay": true
+  },
+  "expected_versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.3",
+    "tokenizers": "0.22.2",
+    "numpy": "2.4.4",
+    "safetensors": "0.7.0",
+    "einops": "0.8.2"
+  },
+  "version": "OLD1K_V2_NONCWE_EQUAL_SPLIT_V1",
+  "model_sha256": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+  "executor_sha256": "85a659a6ab2d5c97187cd464db08e8074722fb7d4567284f04cb17671fd5f812",
+  "chunk_size": 1024,
+  "seed": 20260915,
+  "all_non_ceiling": 1433,
+  "local_n": 717,
+  "remote_n": 716,
+  "scope": "12 tasks; CWE excluded, 6000 denominator",
+  "split_tasks": {
+    "ruler_fwe_16k": {
+      "total": 311,
+      "local": 156,
+      "remote": 155
+    },
+    "ruler_niah_multikey_1_16k": {
+      "total": 6,
+      "local": 3,
+      "remote": 3
+    },
+    "ruler_niah_multikey_2_16k": {
+      "total": 23,
+      "local": 11,
+      "remote": 12
+    },
+    "ruler_niah_multikey_3_16k": {
+      "total": 132,
+      "local": 66,
+      "remote": 66
+    },
+    "ruler_niah_multiquery_16k": {
+      "total": 44,
+      "local": 22,
+      "remote": 22
+    },
+    "ruler_niah_multivalue_16k": {
+      "total": 21,
+      "local": 11,
+      "remote": 10
+    },
+    "ruler_qa_hotpotqa_16k": {
+      "total": 278,
+      "local": 139,
+      "remote": 139
+    },
+    "ruler_qa_squad_16k": {
+      "total": 237,
+      "local": 118,
+      "remote": 119
+    },
+    "ruler_vt_16k": {
+      "total": 381,
+      "local": 191,
+      "remote": 190
+    }
+  },
+  "split_method": "per-task SHA256 order, alternating assignments, odd extra to smaller half",
+  "fixed_source": "/home/zonghan/ttt/runs/formal/fixed7_old1p7b_chunk1024_v2_reuse_20260918",
+  "fixed_source_sha256": "37d0da37f467b9abb75f278887bb6da4b5b9c55c0a6ff826bfcf5f863d158f09",
+  "inputs": {
+    "data/samples.jsonl": "b074ef3d70332f4be5310661a54f39add06f8878e04b4ef3a9febd474bab11d9",
+    "data/bridge_ids.json": "279ac1516d22cb181ea063050f0f111f15f3b28c91d53d91596d5bc043d0fe01",
+    "data/fixed_all6500.jsonl": "077638200ca432f77bcb7026246e949719d130317c29e9d4db7d2bc43ec5af6c",
+    "data/assignment_local.json": "764825e9543d71fccd61657706a2f7cdd740db3b793debf090ceecfe5dfdb93d",
+    "data/assignment_remote.json": "1db32635e7eb856d2ef74bcfaf049e225cff0123d5ec9942334ec01bce11046a",
+    "data/fixed_reference.json": "75dd484388e11113c3c05f841291310e4d0d74c9dd76d0ea4eadbea2e12da0f5"
+  },
+  "automatic_monitoring": false
+}

@@ -1,0 +1,29 @@
+metric	value	scope	weighting	source
+R2_DYNAMIC_IMPROVED_N	170	170 improved (outcome-conditioned)	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_CANDIDATE_N	97356	170 improved (outcome-conditioned)	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_REUSED_N	7733	170 improved (outcome-conditioned)	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_NATIVE_ONE_SWITCH_N	92	170 improved (outcome-conditioned)	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_NATIVE_MULTI_SWITCH_N	78	170 improved (outcome-conditioned)	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_MATCH_ALL_N	154	170 improved (outcome-conditioned)	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_MATCH_MULTI_N	62	170 improved (outcome-conditioned)	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_UNMATCHED_MULTI_N	16	170 improved (outcome-conditioned)	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_MEAN_PER_SAMPLE_RECOVERY	0.9058823529411765	170 improved (outcome-conditioned)	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_MEAN_RECOVERY_CI	[0.8588235294117647, 0.9470588235294117]	170 improved (outcome-conditioned)	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_RATIO_OF_SUMS_RECOVERY	0.8805832410483572	170 improved (outcome-conditioned)	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_MULTI_MULTIPLE_MATCH_N	50	62 score-matched native-multi-switch samples	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_MULTI_UNIQUE_MATCH_N	12	62 score-matched native-multi-switch samples	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_MATCH_COUNT_MEDIAN	4.0	62 score-matched native-multi-switch samples	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_ADJACENT_SUCCESS_BOUNDARY_N	22	62 score-matched native-multi-switch samples	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_ISOLATED_WITHIN_PAIR_N	40	62 score-matched native-multi-switch samples	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_MATCH_PREDICTION_HASH_ANY_ALL	152	154 score-matched samples	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_MATCH_PREDICTION_HASH_ANY_MULTI	60	62 score-matched native-multi-switch samples	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_GAIN_SWITCH_SPEARMAN	0.014992806252524195	170 improved (outcome-conditioned)	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+R2_GAIN_SWITCH_CI	[-0.1334389586275021, 0.1592395094466521]	170 improved (outcome-conditioned)	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+REVERSAL_ALL_MATCHED_MEAN_PP	50.125875539874635	154 score-matched samples	sample equal; candidates equal within sample	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+REVERSAL_ALL_MATCHED_CI	[48.35892568219956, 51.86754547376798]	154 score-matched samples	sample equal; candidates equal within sample	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+REVERSAL_MULTI_MATCHED_MEAN_PP	54.32828648957035	62 score-matched native-multi-switch samples	sample equal; candidates equal within sample	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+REVERSAL_MULTI_MATCHED_CI	[51.6016595599894, 57.119056262890176]	62 score-matched native-multi-switch samples	sample equal; candidates equal within sample	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+MULTI_ALL_MATCHES_STRICTLY_BEAT_REVERSE_N	54	62 score-matched native-multi-switch samples	see R2_STATISTICAL_DEFINITIONS.json	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+GLOBAL_UNORDERED_PAIR_N	48678	170 improved (outcome-conditioned)	sample equal; candidates equal within sample	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+GLOBAL_PAIR_SCORE_DIFFERENT_PCT	9.920998702511309	170 improved (outcome-conditioned)	sample equal; candidates equal within sample	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
+GLOBAL_ABS_DIFF_MEAN_PP	4.65787550451416	170 improved (outcome-conditioned)	sample equal; candidates equal within sample	/home/zonghan/ttt/audits/latest_dynamic_mechanism_cpu_20260923
