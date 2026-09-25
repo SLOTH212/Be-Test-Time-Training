@@ -1,0 +1,169 @@
+{
+  "audit_timestamp": "2026-09-05T14:37:40.520535+08:00",
+  "authority_precedence": [
+    "actual executed manifest/script",
+    "frozen mechanism interpretation",
+    "Phase C",
+    "Phase B",
+    "Phase A/D",
+    "exploratory prose/comments"
+  ],
+  "historical_vs_proposed_nontrivial_order": {
+    "conflict": false,
+    "historical_rule": "reverse(sequence) must differ and preserve exact length/composition",
+    "proposed_formal_rule": "len>=2 AND unique_action_count>=2 AND reverse_distinct",
+    "reconciliation": "EQUIVALENT_ON_FINITE_ACTION_SEQUENCES_FOR_REVERSE_DISTINCTNESS"
+  },
+  "only_silently_inherited": [
+    "Exact Reverse structural/replayability checks",
+    "primary outcome-free matched-negative priority"
+  ],
+  "rules": [
+    {
+      "classification": "PROVEN_EXACT",
+      "eligibility_rule": "len(reference)==decision_chunk_count; reverse differs; intervention has identical sorted composition",
+      "exclusion_logic": "malformed length, identical reverse, composition mismatch, absent donor",
+      "experiment_or_rule": "EXACT_REVERSE_EXECUTED_SELECTION_AND_REPLAY",
+      "input_pool": "TARGETED_REPLAY_MINIMAL_SET + MISSING_COUNTERFACTUALS + ABCD matched controls",
+      "negative_definition": "ABCD controls receive a deterministic same-task/same-decision-chunk positive donor trajectory",
+      "negative_n": 18,
+      "new_formal_interpretation": "Formal nontrivial_order is logically implied by reverse-distinct and does not conflict with executed rule. Historical plan membership and old outcomes are not inherited.",
+      "positive_definition": "frozen positive plan rows marked EXACT_REVERSE_MISSING; intervention is exact list reversal",
+      "positive_n": 20,
+      "random_seed": null,
+      "replayability_checks": "reset per sequence; exact full replay; frozen model/checkpoint/executor",
+      "sample_count": 38,
+      "source_file": "/home/USER/ttt_mechanism_analysis_v1/minimal_targeted_causal_replay_v1/scripts/build_frozen_manifest.py",
+      "source_sha256": "887064ba2b91a0903305896598ace1a1882f42fd1dcd75c7780ec60a3d530d92",
+      "thresholds": [],
+      "trajectory_requirements": "complete sequence; reverse-distinct; downstream recomputation"
+    },
+    {
+      "classification": "PROVEN_EXACT",
+      "experiment_or_rule": "MATCHED_NEGATIVE_PRIMARY_OUTCOME_FREE",
+      "input_pool": "ABCD observations; controls are not dynamic-positive",
+      "matching_variables": [
+        "same task",
+        "same D-vs-not-D phase if available",
+        "absolute decision_chunk_count distance",
+        "absolute character_count distance",
+        "sample_id lexical tie-break"
+      ],
+      "negative_definition": "not dynamic-positive",
+      "new_formal_interpretation": "Single formal authority collapses the historical phase stratum; primary outcome-free priorities remain deterministic.",
+      "positive_definition": "ABCD dynamic-positive",
+      "random_seed": null,
+      "replacement": true,
+      "secondary_rule_not_inherited": "SECONDARY_OUTCOME_MATCHED used OFF score and is not needed for the primary leakage-free rule",
+      "source_file": "/home/USER/ttt_mechanism_analysis_v1/signal_analysis_abcd_v1/scripts/run_discovery_and_freeze.py",
+      "source_sha256": "d521c37a0950b9bda19933486a3ed7055ce55926da0e14416ba6b42c339eb40b",
+      "thresholds": []
+    },
+    {
+      "classification": "PROVEN_EXACT",
+      "eligibility_rule": "positive membership came from EARLY_STEADY_EXACT_REVERSE; reset boundary is one-based start of terminal equal-action run",
+      "experiment_or_rule": "STATE_RESET_EARLY_STEADY",
+      "input_pool": "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/manifests/STATE_REPLAY_MANIFEST.jsonl",
+      "new_formal_transfer_status": "UNRESOLVED",
+      "random_seed": null,
+      "reason": "early-steady membership is a historical Exact Reverse outcome, unavailable and forbidden for new eligibility screening",
+      "replayability_checks": "strict cross-action, carried fast-state at valid complete-chunk terminal-run boundary",
+      "sample_count": 38,
+      "source_file": "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/build_state_replay_manifest.py",
+      "source_sha256": "a705b35c1a6d3f5d1de1dd54bf71e9f52a1e616cbb005433f1be5436de832363",
+      "thresholds": []
+    },
+    {
+      "classification": "PROVEN_EXACT",
+      "eligibility_rule": "State-Reset positive early-steady cohort; terminal-run switch; prefix-written layer set; observed nonzero component norm; ALL uses leave-one-out, otherwise deterministic primary plus zero-norm sham",
+      "experiment_or_rule": "SELECTIVE_COMPONENT_DELETION",
+      "input_pool": "/home/USER/ttt_mechanism_analysis_v1/selective_state_component_ablation_v1/manifests/COMPONENT_ABLATION_MANIFEST.jsonl",
+      "new_formal_transfer_status": "UNRESOLVED",
+      "random_seed": null,
+      "reason": "requires prior Reverse-selected early-steady membership and instrumented boundary component norms",
+      "sample_count": 35,
+      "source_file": "/home/USER/ttt_mechanism_analysis_v1/selective_state_component_ablation_v1/scripts/build_ablation_manifest.py",
+      "source_sha256": "90a2b6c0de856e4199706c105d634ef12cdaa4244886268c4ee5abf109460b91",
+      "thresholds": [
+        "component norm > 0 for primary",
+        "component norm == 0 for sham"
+      ]
+    },
+    {
+      "classification": "PROVEN_EXACT",
+      "eligibility_rule": "deterministically selected exact R2 anchor and compatible frozen fast-state component mapping",
+      "experiment_or_rule": "EARLY_STATE_LATER_REGIME_TRANSPLANT",
+      "input_pool": "Exact TRAIN42 R2 optimum set plus frozen component provenance",
+      "negative_definition": "R2_minus_P1 < 0.05 and an optimal A!=OFF,B!=OFF schedule exists",
+      "new_formal_transfer_status": "UNRESOLVED",
+      "positive_definition": "R2_minus_P1 >= 0.05 and an optimal A!=OFF,B!=OFF schedule exists",
+      "random_seed": null,
+      "reason": "requires Exact R2 outcomes and prior component intervention provenance",
+      "sample_count": 42,
+      "source_file": "/home/USER/ttt_mechanism_analysis_v1/early_state_later_regime_transplant_v1/scripts/setup_authority.py",
+      "source_sha256": "ba001d6e81da6546eee214ecfdd28eef7032120d8a2cf6f6b5c2a51f1e8c24b7",
+      "thresholds": [
+        0.05
+      ]
+    },
+    {
+      "classification": "PROVEN_EXACT",
+      "eligibility_rule": "valid continuation boundary; same future suffix/action; exact fast-weight parity; K/P mismatch diagnosed at first divergence; reconstructible attention-KV K and TTT-cache/path P",
+      "experiment_or_rule": "KP_CLOSURE_FACTORIAL",
+      "input_pool": "42 frozen transplant/closure anchors",
+      "new_formal_transfer_status": "UNRESOLVED",
+      "random_seed": null,
+      "reason": "requires prior transplant/closure boundary snapshots and continuation instrumentation",
+      "sample_count": 42,
+      "source_file": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/setup_authority.py",
+      "source_sha256": "119b0d8ac871115d6af5c42301a90e0ab8da8415d1d60294e3c9a29350aec3f4",
+      "thresholds": []
+    },
+    {
+      "action_space": [
+        "OFF",
+        "L0",
+        "L6",
+        "L12",
+        "L18",
+        "L24",
+        "ALL"
+      ],
+      "classification": "PROVEN_PARTIAL",
+      "experiment_or_rule": "EXACT_R2_INPUT_AND_SCHEDULE",
+      "input_pool": "frozen selected TRAIN42 feasibility cohort inherited from DYNAMIC_POSITIVE_AD50 42/8 split",
+      "new_formal_transfer_status": "UNRESOLVED",
+      "random_seed": null,
+      "reason": "schedule family is exact, but executed input eligibility is only the frozen selected TRAIN42 cohort; no proven generic rule maps all new Dynamic positives into Exact R2 inputs",
+      "replayability_checks": "complete chunks only; exact downstream recomputation; no stored-delta stitching; generation update false",
+      "sample_count": 42,
+      "schedule_rule": "A^[0:tau)->B^[tau:T), A!=B, tau=1..T-1, 42*(T-1) exact candidates",
+      "selection_script": "/home/USER/ttt_mechanism_analysis_v1/regime_level_control_opportunity_audit_v1/scripts/setup_authority.py",
+      "source_file": "/home/USER/ttt_mechanism_analysis_v1/regime_level_control_opportunity_audit_v1/authority/REGIME_SEARCH_SPEC_V1.json",
+      "source_sha256": "f115c676a911a7e55695c9322989f633b22568ef41f46233beed168f1da10f8e",
+      "thresholds": []
+    },
+    {
+      "classification": "PROVEN_PARTIAL",
+      "eligibility_rule": "critical labels require expert continuation action values/headroom and sample-grouped folds; several later interventions additionally require frozen P1 and state representations",
+      "experiment_or_rule": "CRITICALITY_AND_OBSERVABILITY",
+      "input_pool": "frozen TRAIN42/heldout split and expert query states",
+      "new_formal_transfer_status": "UNRESOLVED",
+      "random_seed": null,
+      "reason": "Dynamic outcome alone cannot generate critical labels, expert state/value labels, folds, or intervention-ready representations",
+      "source_file": "/home/USER/ttt_mechanism_analysis_v1/critical_event_state_representation_analysis_v1/scripts/setup_authority.py",
+      "source_sha256": "82b254f6e7a4a1eb85dfd8a851765c0676f6a488ebf1b781b75e38262eae8e01",
+      "thresholds": [
+        "headroom >= 0.05 in critical-state authorities"
+      ]
+    }
+  ],
+  "status": "PASS_WITH_UNRESOLVED_RULES",
+  "unresolved_for_new_pool": [
+    "State Reset",
+    "Selective Deletion",
+    "Exact R2 input eligibility",
+    "K/P factorial",
+    "Criticality/Observability"
+  ]
+}

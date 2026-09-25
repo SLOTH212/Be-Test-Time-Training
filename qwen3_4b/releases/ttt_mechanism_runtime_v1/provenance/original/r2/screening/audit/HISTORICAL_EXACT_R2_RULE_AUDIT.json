@@ -1,0 +1,193 @@
+{
+  "FROZEN_EXPERT_FORMAL_COMPARATOR": false,
+  "P1_FORMAL_COMPARATOR": false,
+  "all_core_search_space_fields_exact": true,
+  "components": [
+    {
+      "blocking": false,
+      "component": "structural_class",
+      "exact_recovered_rule": "exactly two nonempty regimes A^[0:tau)->B^[tau:T), A!=B",
+      "source": "REGIME_SEARCH_SPEC_V1.json; run_r2_full_exact.py",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "action_set",
+      "exact_recovered_rule": "OFF,L0,L6,L12,L18,L24,ALL",
+      "source": "REGIME_SEARCH_SPEC_V1.json; BEST_SCHEDULE_TIEBREAK_FREEZE.json",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "regime_count",
+      "exact_recovered_rule": "2",
+      "source": "REGIME_SEARCH_SPEC_V1.json",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "switch_count",
+      "exact_recovered_rule": "1",
+      "source": "REGIME_SEARCH_SPEC_V1.json",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "tau_domain",
+      "exact_recovered_rule": "integer 1..T-1; tau is number of A chunks",
+      "source": "REGIME_SEARCH_SPEC_V1.json; run_r2_full_exact.py",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "constant_handling",
+      "exact_recovered_rule": "not in R2; A==B forbidden and endpoints forbidden",
+      "source": "REGIME_SEARCH_SPEC_V1.json; run_r2_full_exact.py",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "A_equals_B",
+      "exact_recovered_rule": "forbidden",
+      "source": "REGIME_SEARCH_SPEC_V1.json; run_r2_full_exact.py",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "OFF_legality",
+      "exact_recovered_rule": "legal",
+      "source": "REGIME_SEARCH_SPEC_V1.json",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "ALL_legality",
+      "exact_recovered_rule": "legal",
+      "source": "REGIME_SEARCH_SPEC_V1.json",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "canonicalization",
+      "exact_recovered_rule": "SHA256(json.dumps(sequence, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode())",
+      "source": "run_r2_full_exact.py",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "duplicate_elimination",
+      "exact_recovered_rule": "sequence hash unique per sample; no duplicates in intrinsic parameterization",
+      "source": "R2_SEARCH_COMPLETENESS_AUDIT.json; freeze_r2_and_gate_r3.py",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "execution_semantics",
+      "exact_recovered_rule": "clean independent full-sequence replay; no prefix cache or delta stitching",
+      "source": "run_r2_full_exact.py; STATE_RECOMPUTATION_AUDIT.json",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "objective",
+      "exact_recovered_rule": "same-sample terminal frozen RULER task reward",
+      "source": "REGIME_SEARCH_SPEC_V1.json; run_r2_full_exact.py",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "tie_break",
+      "exact_recovered_rule": "max score, earliest tau, A order, B order, sequence hash; tolerance 1e-12",
+      "source": "BEST_SCHEDULE_TIEBREAK_FREEZE.json; freeze_r2_and_gate_r3.py",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "incomplete_tail",
+      "exact_recovered_rule": "normal forward and retain; no TTT update",
+      "source": "REGIME_SEARCH_SPEC_V1.json; run_r2_full_exact.py",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "generation",
+      "exact_recovered_rule": "no TTT update",
+      "source": "GENERATION_NO_UPDATE_AUDIT.json; run_r2_full_exact.py",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "scorer",
+      "exact_recovered_rule": "frozen family-specific RULER terminal task reward",
+      "source": "REGIME_SEARCH_SPEC_V1.json; run_r2_full_exact.py",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "blocking": false,
+      "component": "historical_parent_identity",
+      "exact_recovered_rule": "TRAIN42, development-only historical identity check",
+      "source": "TRAIN42_MANIFEST.csv; R2_SEARCH_COMPLETENESS_AUDIT.json",
+      "status": "PROVEN_EXACT"
+    }
+  ],
+  "correction_note": "An early prefix-cache pilot was non-equivalent and rejected before formal search; the final authority used clean full-sequence replay and zero pilot outcomes entered R2.",
+  "historical_source_hashes": {
+    "benchmark_manifest": {
+      "path": "/home/USER/ttt/benchmarks/ruler_16k_standard_13task500_v1/benchmark_manifest.json",
+      "sha256": "5d16e3a6963d4c21450f0530af743730b91bf7b2442699e288e10754f77ad0c5"
+    },
+    "benchmark_samples": {
+      "path": "/home/USER/ttt/benchmarks/ruler_16k_standard_13task500_v1/sample_manifest.jsonl",
+      "sha256": "8000dfccd5199ff83bf0cb0ede51e91991083a5dc6a90ac27397b8b24988dfdc"
+    },
+    "dynamic_aggregation": {
+      "path": "/home/USER/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/aggregation/dynamic_full12task_reconstructed.csv",
+      "sha256": "8f646e261a8271002acc8f23cff27da1a93ff04deae9b10fda892b44a8bec25f"
+    },
+    "dynamic_final_audit": {
+      "path": "/home/USER/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800/audits/FINAL_DYNAMIC_NONCEILING_12TASK_AUDIT.json",
+      "sha256": "89e5b7da8b85ce063af15216ef9a16de5c433d4e489a19efaae20ad16099689f"
+    },
+    "fixed7_all_results": {
+      "path": "/home/USER/ttt/runs/formal/fixed7_1p7b_v1/run_20260828T012948+0800/manifests/all_fixed7_results.jsonl",
+      "sha256": "f03dc563504f6fd2fb2fb369dd7cd3198640502ef3591dade5a23c7006661a60"
+    },
+    "fixed7_final_audit": {
+      "path": "/home/USER/ttt/runs/formal/fixed7_1p7b_v1/run_20260828T012948+0800/audits/FINAL_FIXED7_FORMAL_AUDIT.json",
+      "sha256": "b2c7f7105bdafa53fcebc11815b37fcb1fd3a2ed7005ca749908f754b95b1885"
+    },
+    "historical_completeness": {
+      "path": "/home/USER/ttt_mechanism_analysis_v1/regime_level_control_opportunity_audit_v1/audits/R2_SEARCH_COMPLETENESS_AUDIT.json",
+      "sha256": "5e444e190155033a4b1444863938513598b3b5630b0d1ccf8e3fd881bee37ceb"
+    },
+    "historical_final_freezer": {
+      "path": "/home/USER/ttt_mechanism_analysis_v1/regime_level_control_opportunity_audit_v1/scripts/freeze_r2_and_gate_r3.py",
+      "sha256": "230dd2c6bb6c4eea8a7c696af99d77a17e431c225fa487514b75bcaf52ced6ce"
+    },
+    "historical_final_r2_runner": {
+      "path": "/home/USER/ttt_mechanism_analysis_v1/regime_level_control_opportunity_audit_v1/scripts/run_r2_full_exact.py",
+      "sha256": "b6e90265b40cc8e264c210077a5e446bb4b0b0f5c5c960a04d9832d9a2d36955"
+    },
+    "historical_generation": {
+      "path": "/home/USER/ttt_mechanism_analysis_v1/regime_level_control_opportunity_audit_v1/audits/GENERATION_NO_UPDATE_AUDIT.json",
+      "sha256": "53a8c431817844c9cb006f041c851cbb66871db18581102831b9b41cbed8e2b0"
+    },
+    "historical_regime_spec": {
+      "path": "/home/USER/ttt_mechanism_analysis_v1/regime_level_control_opportunity_audit_v1/authority/REGIME_SEARCH_SPEC_V1.json",
+      "sha256": "f115c676a911a7e55695c9322989f633b22568ef41f46233beed168f1da10f8e"
+    },
+    "historical_state_recomputation": {
+      "path": "/home/USER/ttt_mechanism_analysis_v1/regime_level_control_opportunity_audit_v1/audits/STATE_RECOMPUTATION_AUDIT.json",
+      "sha256": "fc922821433bab4d5360fb73ab8a47e323d73621cc7ef141f73a8fb564128ce1"
+    },
+    "historical_tiebreak": {
+      "path": "/home/USER/ttt_mechanism_analysis_v1/regime_level_control_opportunity_audit_v1/authority/BEST_SCHEDULE_TIEBREAK_FREEZE.json",
+      "sha256": "f44eac1aa148e33c02604336ccd5864812e4e5d91ddeb5714cca8b71bf8b6ac7"
+    },
+    "historical_train42": {
+      "path": "/home/USER/ttt_mechanism_analysis_v1/regime_level_control_opportunity_audit_v1/tables/TRAIN42_MANIFEST.csv",
+      "sha256": "808f486b62704907a17a1739302d7d881beafa516ed74ac0507c69c9f4b2bdd2"
+    }
+  },
+  "status": "PASS"
+}

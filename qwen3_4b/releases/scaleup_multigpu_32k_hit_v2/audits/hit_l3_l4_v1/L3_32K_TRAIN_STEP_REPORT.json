@@ -1,0 +1,158 @@
+{
+  "context_length": 32768,
+  "cuda_visible_devices": "2,3",
+  "distributed_loss_runtime_check": "PASS",
+  "distributed_partition_runtime_check": "PASS",
+  "formal_training": false,
+  "global_denominator": 65534,
+  "global_loss": 0.006115622489450252,
+  "global_numerator": 400.7812042236328,
+  "grad_norm_after_clip": 1.0,
+  "grad_norm_before_clip": 6.03125,
+  "gradient_finite": true,
+  "l30_ttt_parameter_coverage": "PASS",
+  "learning_rate": 5e-06,
+  "logical_tokens": 65536,
+  "loss_finite": true,
+  "optimizer_steps": 1,
+  "ranks": [
+    {
+      "l30_gradient": {
+        "model.layers.30.mlp.ttt_conv.weight": {
+          "expected_present": false,
+          "finite": true,
+          "local_norm": 0.0,
+          "present": false,
+          "reason": "gated_next_position_hidden_does_not_read_conv_kernel"
+        },
+        "model.layers.30.mlp.ttt_ntp_gate": {
+          "expected_present": true,
+          "finite": true,
+          "local_norm": 4.67618465423584,
+          "present": true
+        },
+        "model.layers.30.mlp.ttt_proj.weight": {
+          "expected_present": true,
+          "finite": true,
+          "local_norm": 0.0,
+          "present": true
+        }
+      },
+      "l30_optimizer_state": {
+        "model.layers.30.mlp.ttt_conv.weight": {
+          "owned": true,
+          "state_expected": false,
+          "state_keys": []
+        },
+        "model.layers.30.mlp.ttt_ntp_gate": {
+          "owned": true,
+          "state_expected": true,
+          "state_keys": [
+            "exp_avg",
+            "exp_avg_sq",
+            "step"
+          ]
+        },
+        "model.layers.30.mlp.ttt_proj.weight": {
+          "owned": true,
+          "state_expected": true,
+          "state_keys": [
+            "exp_avg",
+            "exp_avg_sq",
+            "step"
+          ]
+        }
+      },
+      "local_numerator": 201.58914184570312,
+      "local_rank": 0,
+      "logical_device": "cuda:0",
+      "peak_allocated_bytes": 20690839040,
+      "peak_reserved_bytes": 31566331904,
+      "physical_gpu": 2,
+      "rank": 0,
+      "sample_ids": [
+        "hit-synthetic-32k-0000"
+      ],
+      "step_seconds": 30.888561548199505,
+      "weights_finite": true
+    },
+    {
+      "l30_gradient": {
+        "model.layers.30.mlp.ttt_conv.weight": {
+          "expected_present": false,
+          "finite": true,
+          "local_norm": 0.0,
+          "present": false,
+          "reason": "gated_next_position_hidden_does_not_read_conv_kernel"
+        },
+        "model.layers.30.mlp.ttt_ntp_gate": {
+          "expected_present": true,
+          "finite": true,
+          "local_norm": 0.7557042241096497,
+          "present": true
+        },
+        "model.layers.30.mlp.ttt_proj.weight": {
+          "expected_present": true,
+          "finite": true,
+          "local_norm": 0.0,
+          "present": true
+        }
+      },
+      "l30_optimizer_state": {
+        "model.layers.30.mlp.ttt_conv.weight": {
+          "owned": true,
+          "state_expected": false,
+          "state_keys": []
+        },
+        "model.layers.30.mlp.ttt_ntp_gate": {
+          "owned": true,
+          "state_expected": true,
+          "state_keys": [
+            "exp_avg",
+            "exp_avg_sq",
+            "step"
+          ]
+        },
+        "model.layers.30.mlp.ttt_proj.weight": {
+          "owned": true,
+          "state_expected": true,
+          "state_keys": [
+            "exp_avg",
+            "exp_avg_sq",
+            "step"
+          ]
+        }
+      },
+      "local_numerator": 199.1920623779297,
+      "local_rank": 1,
+      "logical_device": "cuda:1",
+      "peak_allocated_bytes": 20690839040,
+      "peak_reserved_bytes": 31566331904,
+      "physical_gpu": 3,
+      "rank": 1,
+      "sample_ids": [
+        "hit-synthetic-32k-0001"
+      ],
+      "step_seconds": 30.879347479902208,
+      "weights_finite": true
+    }
+  ],
+  "scheduler_step": 1,
+  "stage": 1,
+  "status": "PASS",
+  "step_time_seconds": 30.888561548199505,
+  "synthetic_data_only": true,
+  "token_accounting_runtime_check": "PASS",
+  "tokens_per_second": 2121.691549078306,
+  "ttt_chunk_size": 4096,
+  "ttt_layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "weights_finite": true,
+  "world_size": 2
+}

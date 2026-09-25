@@ -1,0 +1,66 @@
+{
+  "authorities": {
+    "dynamic_root": "/home/USER/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800",
+    "eligibility_sha256": "e74831509b3d46068de7364aeffeead89003d057d086e23a496ab3c3f2e55220",
+    "rule_sha256": "e816801b71358265c6c9458e8754887e71508c6b26448e6dad5a336f64fecf47",
+    "screening_root": "/home/USER/ttt/runs/formal/state_reset_screening_1p7b_v1/run_20260905T175639+0800"
+  },
+  "benchmark": {
+    "context": 16384,
+    "identity": "5d16e3a6963d4c21450f0530af743730b91bf7b2442699e288e10754f77ad0c5",
+    "root": "/home/USER/ttt/benchmarks/ruler_16k_standard_13task500_v1"
+  },
+  "boundary_bins_frozen": [
+    "b/N <= 0.25",
+    "0.25 < b/N <= 0.5",
+    "b/N > 0.5"
+  ],
+  "cohort": {
+    "N": 167,
+    "historical_overlap": 0,
+    "manifest": "/home/USER/ttt/runs/formal/state_reset_1p7b_v1/run_20260905T180918+0800/manifests/STATE_RESET_167_COHORT.jsonl",
+    "sha256": "07f067cf793072f7bd880d8ba31392b44542b2ae633891f3b255b46ba666dcac"
+  },
+  "counterfactual": "same schedule; reset local TTTState.weight at frozen terminal-run-start boundary in layers [0,6,12,18,24]",
+  "frozen_at": "2026-09-05T18:15:03+08:00",
+  "model": {
+    "checkpoint_identity": "f4e264ed6f5671f123d6c8a27c69bce3af5ffcba518c9e298398314c6147d9fd",
+    "identity": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+    "root": "/home/USER/ttt/models/qwen3_1p7b_stage2"
+  },
+  "no_other_mechanisms": true,
+  "primary_effect": "Native-Reset; headline mean",
+  "reference": "frozen Dynamic score/schedule, no reset",
+  "semantics": {
+    "chunk": 1024,
+    "clip_frobenius": 1e-05,
+    "cpu_affinity": "8-23",
+    "execution": "apply-then-update",
+    "fast_weight": "mlp.down_proj.weight",
+    "generation_update": false,
+    "incomplete_tail_update": false,
+    "layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "objective": "contextual_hidden_direct_outer_product_no_scalar_loss",
+    "reset": "fresh TTTState(checkpoint down_proj.weight) immediately before boundary; preserve KV/prefix/RNG/prompt history/schedule",
+    "ttt_lr": 1,
+    "workers": 1
+  },
+  "statistics": {
+    "ci": 0.95,
+    "ordinary_paired_bootstrap": {
+      "resamples": 20000,
+      "seed": 20260907
+    },
+    "task_stratified_paired_bootstrap": {
+      "resamples": 20000,
+      "seed": 20260908
+    }
+  },
+  "version": "STATE_RESET_1P7B_FORMAL_V1"
+}

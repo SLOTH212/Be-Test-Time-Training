@@ -1,0 +1,115 @@
+{
+  "fields": [
+    {
+      "AMBIGUITY": "none",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "18 early-steady positives + 18 matched N_ORDER_1 negatives historically; new parent all 167 frozen State Reset eligible positives",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/selective_state_component_ablation_v1/scripts/build_ablation_manifest.py",
+      "FIELD": "PARENT_RULE",
+      "HASH": "90a2b6c0de856e4199706c105d634ef12cdaa4244886268c4ee5abf109460b91",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "none",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "at least one candidate layer written before terminal-run boundary; ALL-prefix uses five LOO branches",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/selective_state_component_ablation_v1/scripts/build_ablation_manifest.py",
+      "FIELD": "POSITIVE_ELIGIBILITY",
+      "HASH": "90a2b6c0de856e4199706c105d634ef12cdaa4244886268c4ee5abf109460b91",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "tensor recomputed at runtime, not serialized",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "one layer entire accumulated prefix delta W_fast(layer,b-)-W_checkpoint(layer), not a chunk update",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/selective_state_component_ablation_v1/scripts/run_selective_ablation.py",
+      "FIELD": "COMPONENT_DEFINITION",
+      "HASH": "a2bc6d2bc233e1aa03e8777866ecd06da3d464ffb491d948c474ad2c2b51bff7",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "none",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "ALL in prefix => five LOO; otherwise first non-OFF early action layer; prefix-only OFF unavailable",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/selective_state_component_ablation_v1/scripts/build_ablation_manifest.py",
+      "FIELD": "COMPONENT_SELECTION_RULE",
+      "HASH": "90a2b6c0de856e4199706c105d634ef12cdaa4244886268c4ee5abf109460b91",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "none",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "selected layer state=TTTState(checkpoint down_proj.weight); other layer states preserved",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/selective_state_component_ablation_v1/scripts/run_selective_ablation.py",
+      "FIELD": "DELETION_OPERATION",
+      "HASH": "a2bc6d2bc233e1aa03e8777866ecd06da3d464ffb491d948c474ad2c2b51bff7",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "none",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "immediately before one-based terminal-run-start boundary chunk",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/selective_state_component_ablation_v1/scripts/run_selective_ablation.py",
+      "FIELD": "DELETION_TIMING",
+      "HASH": "a2bc6d2bc233e1aa03e8777866ecd06da3d464ffb491d948c474ad2c2b51bff7",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "none",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "boundary and later chunks execute from modified state; later updates recomputed; no stored-delta stitching",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/selective_state_component_ablation_v1/scripts/run_selective_ablation.py",
+      "FIELD": "DOWNSTREAM_RECOMPUTATION",
+      "HASH": "a2bc6d2bc233e1aa03e8777866ecd06da3d464ffb491d948c474ad2c2b51bff7",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "none",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "lowest candidate layer absent from prefix-written set; same boundary/path; already checkpoint zero-state",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/selective_state_component_ablation_v1/scripts/build_ablation_manifest.py",
+      "FIELD": "SHAM_RULE",
+      "HASH": "90a2b6c0de856e4199706c105d634ef12cdaa4244886268c4ee5abf109460b91",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "none",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "matched non-improved N_ORDER_1; 18 retained/17 executable historically; current parent has zero",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/selective_state_component_ablation_v1/scripts/build_ablation_manifest.py",
+      "FIELD": "NEGATIVE_CONTROL_RULE",
+      "HASH": "90a2b6c0de856e4199706c105d634ef12cdaa4244886268c4ee5abf109460b91",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "none",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "(Normal-mean Selective)/(Normal-FullReset) if denominator>0 else None; unclamped; downstream only",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/selective_state_component_ablation_v1/scripts/finalize_ablation_analysis.py",
+      "FIELD": "EXPLAINED_FRACTION",
+      "HASH": "b15b55ae3f76bb4f612936bf9a1a083cda4e260e084323dfaa8bb0b2eb876a8c",
+      "STATUS": "PROVEN_EXACT"
+    }
+  ],
+  "historical_counts": {
+    "actual_exposure_n": 35,
+    "all_prefix_n": 7,
+    "negative_parent_n": 18,
+    "negative_selective_eligible_n": 17,
+    "positive_n": 18,
+    "sham_n": 10,
+    "single_layer_disjoint_n": 9
+  },
+  "source_hashes": {
+    "COMPONENT_ABLATION_HYPOTHESIS_REGISTRY.json": "e729bad7496e88b9ac078ab90949029dd75acf0c0e2c9dc7abc84bd6177e65c1",
+    "COMPONENT_ABLATION_MANIFEST.jsonl": "d5e972a2c5b34145b512c5a66c73c39ae3514daeda8ee5a079db32793176cbb4",
+    "COMPONENT_PROVENANCE.jsonl": "88692e9dd9583baf1781c4ac62270a8b45a3922e0402d7065a2e83afa7670fa3",
+    "FINAL_INTEGRITY_AUDIT.json": "adad123e73d737aa13acc56fe78283346859b8efa0693aa34b328d97546f20e8",
+    "SELECTIVE_COMPONENT_ABLATION_CONFIG.json": "42acf03f76fb0be1fed3323d661416b633377c3f12859e1a5b8aa442ee8bcfc9",
+    "build_ablation_manifest.py": "90a2b6c0de856e4199706c105d634ef12cdaa4244886268c4ee5abf109460b91",
+    "finalize_ablation_analysis.py": "b15b55ae3f76bb4f612936bf9a1a083cda4e260e084323dfaa8bb0b2eb876a8c",
+    "instrumented_backend.py": "c15b6872c625ee13ee2b71e522a9414e6f797edd6a695e185465dff05c5326ee",
+    "run_selective_ablation.py": "a2bc6d2bc233e1aa03e8777866ecd06da3d464ffb491d948c474ad2c2b51bff7"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,85 @@
+{
+  "FROZEN_EXPERT_FORMAL_COMPARATOR": false,
+  "N": 173,
+  "P1_FORMAL_COMPARATOR": false,
+  "bootstrap": {
+    "interval": "2.5th and 97.5th percentiles",
+    "paired_resamples": 20000,
+    "paired_seed": 20260906,
+    "retention_resampling_formula": "ratio of sums inside each cohort resample",
+    "task_stratified_resamples": 20000,
+    "task_stratified_seed": 20260907
+  },
+  "candidates": 99120,
+  "claim_boundary": {
+    "does_not_test": [
+      "online predictability",
+      "deployability",
+      "router quality",
+      "observability",
+      "decision difficulty"
+    ],
+    "tests": "structural complexity"
+  },
+  "determinism_smoke": {
+    "candidate_id": "r2-0510-001-54ed3fb84f17",
+    "canonical_sample_id": "ruler_fwe_16k:0010",
+    "intervening_candidate_id": "r2-0510-002-f1673ff2657c",
+    "predeclared_before_outcomes": true,
+    "task": "ruler_fwe_16k"
+  },
+  "execution": {
+    "atomic_candidate_commit": true,
+    "beam_search": false,
+    "clean_candidate_reset": true,
+    "cpu_affinity": "8-23",
+    "early_stop": false,
+    "heuristic_pruning": false,
+    "manifest_order": true,
+    "prefix_cache": false,
+    "stored_delta_stitching": false,
+    "workers": 1
+  },
+  "frozen_at": "2026-09-06T01:48:09+08:00",
+  "next_experiment_launch": false,
+  "objective": "same-sample frozen terminal RULER task reward",
+  "one_switch_containment_invariant": true,
+  "one_switch_smoke_candidate_ids": [
+    "r2-0517-337-523a9feb1ba3",
+    "r2-3574-100-021643360d32",
+    "r2-5585-003-7ad26c47236f"
+  ],
+  "oracle_type": "offline hindsight structural oracle",
+  "paired_classification_tolerance": 1e-12,
+  "predefined_multi_switch_analysis": true,
+  "primary_comparison": "OFF_VS_R2_VS_DYNAMIC",
+  "primary_dynamic_r2_gap": "MEAN(Dynamic-R2)",
+  "primary_gain_retention": "SUM(R2-OFF)/SUM(Dynamic-OFF); ratio of sums; raw; unclamped",
+  "primary_table_order": [
+    "OFF",
+    "R2",
+    "Dynamic"
+  ],
+  "schema": "EXACT_R2_1P7B_FORMAL_V1",
+  "secondary_sample_best": true,
+  "standard_deviation": "population standard deviation (ddof=0)",
+  "tie_break": {
+    "action_order": [
+      "OFF",
+      "L0",
+      "L6",
+      "L12",
+      "L18",
+      "L24",
+      "ALL"
+    ],
+    "order": [
+      "maximum score",
+      "earliest tau",
+      "action order A",
+      "action order B",
+      "sequence SHA256"
+    ],
+    "score_tolerance": 1e-12
+  }
+}

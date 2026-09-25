@@ -1,0 +1,9 @@
+mode: "on"
+output_dir: /root/autodl-tmp/ttt/pipelines/gated_ntp_300m_qa10m_eval13k_v2/inference/on
+ttt_enabled: true
+online_update_path: true
+batch_size: 1
+ttt_lr: 1.0
+delta_clip_frobenius: 1.0e-5
+expected_generation_update_count: 0
+reset_fast_weight_per_sample: true

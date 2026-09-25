@@ -1,0 +1,25 @@
+"""Derived reporting tables; never grants launch authority."""
+import json, math, hashlib, time
+from pathlib import Path
+import numpy as np
+R=Path('/path/to/ttt');A=R/'audits/v3';D=A/'analysis'
+read=lambda p:json.loads(Path(p).read_text())
+write=lambda p,v:Path(p).write_text(json.dumps(v,indent=2)+'\n')
+rows=[json.loads(x) for x in (D/'ALL_TENSOR_PAIR_METRICS.jsonl').read_text().splitlines()];inf=read(D/'ALL_TENSOR_INFERENCE.json');inp=read(A/'REPLICATE_INPUT_PARITY.json');names=inp['names'];pairs=read(D/'PAIR_METRIC_MANIFEST.json')['pairs']
+summary={}
+for cls in ['UU','RU','RR']:
+ ids=[i for i,(a,b) in enumerate(pairs) if ('RU' if a[0]!=b[0] else a[0]+b[0])==cls];summary[cls]={}
+ for group in ['model','optimizer','optimizer_moments','optimizer_step']:
+  rr=[x for x in rows if x['group']==('optimizer' if group.startswith('optimizer') else group) and (not x['key'].endswith('.step') if group=='optimizer_moments' else x['key'].endswith('.step') if group=='optimizer_step' else True)]
+  aggregates=[]
+  for i in ids:
+   mx=max(x['pairs'][i]['max_abs'] for x in rr);l1=sum(x['pairs'][i]['L1'] for x in rr);l2=math.sqrt(sum(x['pairs'][i]['L2']**2 for x in rr));n=sum(x['numel'] for x in rr);left,right=pairs[i];norm=math.sqrt(sum(x['run_stats'][left]['norm']**2 for x in rr));other=math.sqrt(sum(x['run_stats'][right]['norm']**2 for x in rr))
+   aggregates.append({'left':left,'right':right,'max_abs':mx,'mean_abs':l1/n,'L1':l1,'L2':l2,'left_reference_relative_L2':l2/max(norm,np.finfo(float).tiny),'left_norm':norm,'right_norm':other,'exact_tensor_count':sum(x['pairs'][i]['exact'] for x in rr),'legacy_allclose_tensor_count':sum(x['pairs'][i]['old_allclose'] for x in rr),'tensor_count':len(rr)})
+  summary[cls][group]={'definition':'Each observation aggregates one entire pair of executions across this group. Model retains417 serialized keys including tied embedding/head alias; optimizer_step scalars counted once after rank equality. Moment-only excludes step counters.','pairs':aggregates,'distribution':{m:dict(zip(['median','p95','max'],map(float,np.quantile([x[m] for x in aggregates],[.5,.95,1])))) for m in ['max_abs','mean_abs','L1','L2','left_reference_relative_L2']}}
+write(A/'UNINTERRUPTED_NONDETERMINISM_BASELINE.json',{'status':'PASS','group_aggregates':summary['UU'],'all_tensor_table':str(D/'ALL_TENSOR_PAIR_METRICS.jsonl'),'inference_table':str(D/'ALL_TENSOR_INFERENCE.json')})
+write(A/'RESUMED_NUMERICAL_VARIABILITY.json',{'status':'PASS','RU':summary['RU'],'RR':summary['RR'],'all_tensor_table':str(D/'ALL_TENSOR_PAIR_METRICS.jsonl')})
+write(A/'WHOLE_STATE_EMPIRICAL_ANALYSIS.json',{'status':'ANALYSIS_COMPLETE','counts':read(A/'STATISTICAL_RESULT_V3.json')['counts'],'new_abnormal_outside_original76':[x['key'] for x in inf if x['group']!='loss' and not x['primary76'] and x['confirmed_abnormal']],'new_extreme_outside_original76':[x['key'] for x in inf if x['group']!='loss' and not x['primary76'] and any(not v['extreme_pass'] for v in x['metrics'].values())],'worst_by_RU_max_abs':sorted([{'key':x['key'],'RU_max_abs':x['metrics']['max_abs']['RU']['max'],'UU_max_abs':x['metrics']['max_abs']['UU']['max'],'empirical_pass':x['empirical_equivalence_pass']} for x in inf if x['group']!='loss'],key=lambda x:x['RU_max_abs'],reverse=True)[:30],'step_counter_note':'410 exact scalar optimizer step items do not dilute moment-only norms; model aliases retained as required.'})
+write(A/'RESUME_DIRECTIONAL_DRIFT_ANALYSIS.json',{'status':read(A/'STATISTICAL_RESULT_V3.json')['RESUME_DIRECTIONAL_DRIFT_STATUS'],'primary76':[{'key':x['key'],**x['direction']} for x in inf if x['primary76']],'whole_state_significant':[{'key':x['key'],**x['direction']} for x in inf if x['direction']['significant_above_floor'] or x['direction']['significant_below_floor']],'interpretation':'Exact252 whole-run label assignments and maxT family include every tensor plus loss. No significance alone establishes equivalence. Below-resolution significant shifts are retained and conservatively veto empirical PASS.'})
+u=[n for n in names if n.startswith('U')];r=[n for n in names if n.startswith('R')];losses={n:{x['step']:x['loss'] for x in inp['trajectories'][n]} for n in names};offsets={n:[losses[n][s]-float(np.mean([losses[un][s] for un in u])) for s in [3,4,5]] for n in r}
+write(A/'LOSS_TRAJECTORY_ANALYSIS.json',{'status':'ANALYSIS_COMPLETE','full_observables':inp['trajectories'],'post_boundary_loss_inference':[x for x in inf if x['group']=='loss'],'R_minus_U_mean_offsets':offsets,'descriptive_same_sign_over_post_steps':{n:bool(all(v>0 for v in vs) or all(v<0 for v in vs)) for n,vs in offsets.items()},'descriptive_monotonic_absolute_offset':{n:bool(all(abs(vs[i+1])>=abs(vs[i]) for i in range(2))) for n,vs in offsets.items()},'note':'Descriptive sign/monotonic patterns are reported even when label tests are inconclusive; significance and empirical margins evaluated by the frozen whole-replicate protocol. Loss does not establish state equivalence.'})
+print('REPORTING_EVIDENCE_COMPLETE',flush=True)

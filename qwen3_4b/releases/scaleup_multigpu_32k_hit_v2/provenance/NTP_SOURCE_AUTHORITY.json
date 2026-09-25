@@ -1,0 +1,20 @@
+{
+  "schema": "ntp-source-authority-v1",
+  "authority_class": "EXACT_SHA_MATCHED_COMPLETED_RUN_SNAPSHOT",
+  "remote_original": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp",
+  "local_forensic_source": "../audits/remote_ntp_builder_recovery_v1/recovered",
+  "vendored_root": "vendor/ntp_source_190580a",
+  "ntp_reference_head": "190580a29780030969cd337763098188bce8c88c",
+  "pipeline_reference_head": "6665596be4cccb51387b7cf6a4f15b338f7d103a",
+  "historical_multigpu_reference": "be2324829b0e91c8fd10a74d4b43714fde6676e1",
+  "pinned_veomni_reference": "9b91e164bea9e17f17ed490aab5e076c2335ca25",
+  "frozen_files": {
+    "vendor/ntp_source_190580a/tools/cloud/formal_train_gated_ntp.py": "960465d4c0850345fb998e81b6bf19f2517ecea104aed2946a8b3e31bb416cf3",
+    "vendor/ntp_source_190580a/hf_models/__init__.py": "cc2c397dab164ab9e92165c834ec0c4a40263b8178abf586b6ce94eb08d9eda8",
+    "vendor/ntp_source_190580a/hf_models/hf_qwen3/__init__.py": "2ef4fb7b17e59ac651edb16934f6b1e1f210656dde83548861c581c27d684266",
+    "vendor/ntp_source_190580a/hf_models/hf_qwen3/configuration_qwen3.py": "b3f309ec54094694cfc86a74b66d860193fc4e684b9cc3c0d1d2ed84ca2112fb",
+    "vendor/ntp_source_190580a/hf_models/hf_qwen3/modeling_qwen3.py": "e949cef8b01394ff845041dca0c5d72d5e536139c471be5eea130db2a884d0e0",
+    "vendor/ntp_source_190580a/hf_models/hf_qwen3/ttt_state_core.py": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e"
+  },
+  "policy": "Frozen files are byte-for-byte authority. Distributed/device adaptation belongs in lib/model_factory.py and must not edit vendor sources."
+}

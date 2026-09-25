@@ -1,0 +1,13 @@
+auto_shutdown:
+  enabled: true
+  on_success: true
+  on_failure: false
+  delay_seconds: 300
+  cancel_file: /root/autodl-tmp/ttt/pipelines/gated_ntp_300m_qa10m_eval13k_v2/locks/CANCEL_AUTO_SHUTDOWN
+  block_if_other_workload_detected: true
+  dry_run: false
+implementation:
+  smoke_auto_shutdown_dry_run: true
+  formal_training_ack_env: CONFIRM_FORMAL_GATED_NTP_PIPELINE
+  formal_training_ack_value: YES
+

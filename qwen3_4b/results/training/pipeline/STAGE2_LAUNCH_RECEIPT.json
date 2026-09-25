@@ -1,0 +1,22 @@
+{
+  "created_at": 1789706218.40169,
+  "ended_at": 1789706245.3895137,
+  "executed_controller_sha256": "6352567c76458c170dacfa1e35853a769e07bd42960893655835fb9580c13f2d",
+  "explicit_user_instruction": "Directly attempt Stage2 launch with current GPU4/5 free capacity",
+  "gpu_before": "index, uuid, memory.free [MiB]\n4, GPU-ae0edae4-c3bc-cfb2-4b15-f8cdd888bc25, 48527 MiB\n5, GPU-25896d0f-c552-9793-5c7a-ced116606c44, 44387 MiB\n",
+  "observed": {
+    "FORMAL_STAGE2_TRAINING_STARTED": true,
+    "parent_authority": "/path/to/ttt/models/qwen3_4b_stage1_1b_32k_final_v1/STAGE1_FINAL_AUTHORITY.json",
+    "pid": 2167197,
+    "run_root": "/path/to/ttt/runs/qwen3_4b_stage2_formal_20260918T123725",
+    "started_unix": 1789706245.3888419
+  },
+  "only_override": "Remove fixed 48000 MiB free-memory gate; real CUDA allocation errors remain fatal",
+  "original_controller_sha256": "6c1bc7f2a745bcbd1d834e0c0e4102104e3d021b445b107122589731b5ff2e27",
+  "override_script_sha256": "195fd009b8ea9b823ab11c47ecdf6595909abe4fbb221648949d9fecdb1a2762",
+  "phase": "LAUNCHER_RETURNED",
+  "returncode": 0,
+  "scientific_config_changed": false,
+  "source_authority_sha256": "22b4790a8f820398fdfeb9aefbfa75a6a72bed8621e2fac974558881ddacbbfa",
+  "stage": 2
+}

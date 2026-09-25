@@ -1,0 +1,29 @@
+stage: stage1
+project_root: ${TTT_PROJECT_ROOT}
+model_base: ${TTT_MODEL_ROOT}/Qwen3-1.7B-Base
+train_data: ${TTT_DATASET_ROOT}/continual_16k_300m_prolong_v3_full/train.jsonl
+validation_data: ${TTT_DATASET_ROOT}/continual_16k_300m_prolong_v3_full/validation.jsonl
+record_cursor_final: 21002
+train_tokens: 297000000
+validation_records: 220
+validation_tokens: 3000000
+context_length: 16384
+batch_size: 1
+gradient_accumulation: 1
+precision: bf16
+gradient_checkpointing: true
+ttt_lr: 1.0
+ttt_chunk_size: 1024
+ttt_layers: [0, 6, 12, 18, 24]
+fast_weight: mlp.down_proj.weight
+optimizer: AdamW
+outer_lr: 5.0e-6
+betas: [0.9, 0.95]
+eps: 1.0e-8
+weight_decay: 0.1
+outer_grad_clip: 1.0
+scheduler: constant
+save_steps: [100, 1000]
+save_every_after_1000: 1000
+force_save_at_stage_boundary: true
+

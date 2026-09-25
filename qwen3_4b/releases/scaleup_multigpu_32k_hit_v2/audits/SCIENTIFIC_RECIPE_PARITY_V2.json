@@ -1,0 +1,35 @@
+{
+  "old_2pct_warmup_restored": false,
+  "old_cosine_scheduler_restored": false,
+  "old_global_batch_64_forced": false,
+  "old_shuffle_restored": false,
+  "scaleup_debug_configuration": {
+    "context_length": 32768,
+    "formal_capacity_config_frozen": false,
+    "ttt_chunk_size": 4096,
+    "ttt_layers": [
+      0,
+      6,
+      12,
+      18,
+      24,
+      30
+    ]
+  },
+  "schema": "scientific-recipe-parity-v2",
+  "scientific_recipe_parity_v2": "PASS",
+  "status": "PASS",
+  "unchanged_semantics": {
+    "answer_loss_semantics": "separate global group means",
+    "canonical_data_ordering": "no shuffle",
+    "distributed_global_loss": "global numerator and denominator",
+    "gate_semantics": "zero-init gated NTP",
+    "hidden_target": "hidden_states",
+    "ntp_objective": "gated_next_position_hidden",
+    "optimizer": "AdamW",
+    "precision": "bf16",
+    "projection_semantics": "ttt_proj",
+    "scheduler": "constant",
+    "stage1_to_stage2_handoff": "model-only"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "direct_nonstdlib_imports": [
+    "numpy",
+    "torch",
+    "transformers",
+    "yaml",
+    "liger_kernel"
+  ],
+  "expected_hit_environment": {
+    "cuda": "NCCL-capable CUDA build compatible with host driver; local build used CUDA 13.0",
+    "liger_kernel": "0.8.0",
+    "numpy": "2.4.6",
+    "python": ">=3.11,<3.12",
+    "pyyaml": "6.0.3",
+    "safetensors": "0.7.0",
+    "status": "EXPECTED_NOT_YET_PROVEN_ON_HIT",
+    "tokenizers": "0.22.2",
+    "torch": "FSDP2/DCP API-compatible; validate against 2.12.0",
+    "transformers": "4.57.3"
+  },
+  "external_runtime_modules_for_legacy_single_gpu_or_eval_paths": [
+    "answer_context_fused_loss",
+    "OpenCompass/evaluation environment"
+  ],
+  "proven_local_test_environment": {
+    "cudnn": "9.2.0",
+    "evidence": "Package metadata read with importlib.metadata; CUDA devices hidden for torch metadata import.",
+    "liger_kernel": "0.8.0",
+    "numpy": "2.4.6",
+    "python": "3.11.15",
+    "pyyaml": "6.0.3",
+    "safetensors": "0.7.0",
+    "tokenizers": "0.22.2",
+    "torch": "2.12.0+cu130",
+    "torch_cuda_build": "13.0",
+    "transformers": "4.57.3"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "formal_training_authorized": false,
+  "gpu_used_for_this_goal": false,
+  "hit_l3_l4": {
+    "authority": "audits/hit_l3_l4_v1/",
+    "hardware": "2x NVIDIA RTX A6000 physical GPUs 2,3",
+    "reused": true,
+    "status": "PASS"
+  },
+  "hit_patch_manifest_sha256": "0cee070b3d9faa59c80a3f0ec4c6f3d1f08accce4231ec89916abf95b750bb15",
+  "hit_patch_n": 7,
+  "ntp_builder_sha256": "960465d4c0850345fb998e81b6bf19f2517ecea104aed2946a8b3e31bb416cf3",
+  "package_sha256": {
+    "authority": "external PACKAGE_SHA256SUMS.txt and RELEASE_RECEIPT.json",
+    "reason": "An archive cannot contain its own cryptographic hash; same non-self-reference rule as V1 manifest.",
+    "value": null
+  },
+  "pre_hit_base_head": "dfe16e97cd6fc37a42d350fd826fe1f9005b67f6",
+  "pre_hit_package_sha256": "d9b0300354c6716ed7340992a2f8bd1c3011433b7904028a427ca06b3a40756f",
+  "release_git_head": "NOT_APPLICABLE_NOT_GIT_BACKED",
+  "release_id": "scaleup_multigpu_32k_hit_v2",
+  "release_level0_status": "PASS",
+  "release_level1_status": "PASS",
+  "release_tree_authority": {
+    "sha256": "bf9391aa0f43da97d24695e44c76ffebaa726d23b65c42d8c1d2953cf71b399a",
+    "type": "deterministic_release_source_manifest_sha256"
+  },
+  "release_validated_source_parity": "PASS",
+  "schema": "multigpu-runtime-authority-v2",
+  "validated_debug_tree_sha256": "982b3d4dd574f5d867edcb21cff2d3556c7ab5b46d97ad093e56377c60aeb02a",
+  "validation_tiers": {
+    "HIT_L3_L4": "real 2-GPU validation inherited by byte parity",
+    "L5_4GPU": "PENDING",
+    "LOCAL_L0_L2": "historical/pre-HIT validation plus release L0/L1",
+    "REAL_DATA_INTEGRATION": "PENDING"
+  }
+}

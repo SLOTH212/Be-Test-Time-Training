@@ -1,0 +1,95 @@
+{
+  "MKL_NUM_THREADS": 4,
+  "OMP_NUM_THREADS": 4,
+  "OPENBLAS_NUM_THREADS": 4,
+  "actions": [
+    "OFF",
+    "L0",
+    "L6",
+    "L12",
+    "L18",
+    "L24",
+    "L30",
+    "ALL"
+  ],
+  "active_sample_per_worker": 1,
+  "attention_implementation": "sdpa",
+  "benchmark_authority_sha256": "b62966b2754fa0d1cfef2c9aa3cef8d4b2bbae2a664495eb733c2ed5e5a4bebd",
+  "ceiling_skip_policy": "abs(SampleBest-1)<=1e-12; Dynamic=SampleBest",
+  "chunk_size": 4096,
+  "classification": "FORMAL_PROTOCOL_CONFIG_NOT_EXECUTED",
+  "complete_prompt_chunk_update": true,
+  "config_frozen": true,
+  "context_length": 32768,
+  "delta_clip_frobenius": 1e-05,
+  "dtype": "bfloat16",
+  "dynamic": {
+    "beam": 4,
+    "downstream_recomputation": true,
+    "position_order": "forward",
+    "stored_delta_stitching": false,
+    "sweeps": 1
+  },
+  "eligible_task_n": 12,
+  "excluded_tasks": [
+    "ruler_cwe_16k"
+  ],
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": "FROZEN_BENCHMARK_ROW",
+    "num_beams": 1,
+    "temperature": null,
+    "top_k": null,
+    "top_p": null,
+    "use_cache": true
+  },
+  "generation_update": false,
+  "inference_base_package_sha256": "65a0d7bd9c8801c92fc30477ab8662d3eb52261612eff2acef0bbeb3edf6ba51",
+  "inference_config_sha256": "210db096574f2170c2f2194338f51ff767977b9abd2c56a031f60caa1d3617a9",
+  "layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "model_family": "Qwen3-4B",
+  "num_hidden_layers": 36,
+  "parent_authority_required": "Fixed8 FINAL",
+  "phase": "dynamic",
+  "physical_gpu_allowlist": [
+    2,
+    3
+  ],
+  "replay_budget": {
+    "A": 8,
+    "B": 4,
+    "C": "actual full prompt chunks",
+    "S": 1,
+    "actual_C6": 204,
+    "actual_C7": 232,
+    "capacity_C8": 260,
+    "final_capture_additional": 1,
+    "formula": "A+A*(A-1)+(C*S-1)*B*(A-1) if C>0 else A"
+  },
+  "reset_scope": "PER_SAMPLE",
+  "statistics": {
+    "draws": 10000,
+    "method": "task_stratified_paired",
+    "seed": 20260828,
+    "source": "frozen dynamic/aggregate_dynamic.py"
+  },
+  "tail_update": false,
+  "ttt_lr": 1.0,
+  "update_order": "APPLY_THEN_UPDATE",
+  "workers": 2,
+  "workers_per_gpu": 1,
+  "executor_version": "V2",
+  "source_manifest": "/path/to/ttt/provenance/QWEN3_4B_DOWNSTREAM_SOURCE_MANIFEST_V2.json",
+  "model_parent_authority": "/path/to/ttt/models/qwen3_4b_stage2_30m_32k_final_v1/INFERENCE_PARENT_AUTHORITY.json",
+  "model_parent_authority_sha256": "6fd7bd0aeebf43d7cef9398b2023851672c0de5dea52bcb0ade83b415d3ba14b",
+  "run_root": "/path/to/ttt/runs/qwen3_4b_ruler32k_dynamic_4k_executor_v2",
+  "gpu_acceptance_required": true,
+  "fixed_baseline_requirement": "Fresh V2 Fixed8 FINAL authority, matching current source manifest; no OLD baseline"
+}

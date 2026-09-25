@@ -1,0 +1,32 @@
+stage: stage2
+parent_artifact: /root/autodl-tmp/ttt/pipelines/gated_ntp_300m_qa10m_eval13k_v2/artifacts/stage1_final_resume
+train_data: /root/autodl-tmp/data/qa_replay_10m_v1_veomni_indexed_v1/train.jsonl
+answer_mask_sidecar: /root/autodl-tmp/data/qa_replay_10m_v1_answer_context_masks_v1/masks.jsonl
+record_cursor_final: 1291
+sequence_tokens: 10000000
+valid_prediction_tokens: 9998709
+answer_tokens: 13332
+context_tokens: 9985377
+batch_size: 1
+gradient_accumulation: 1
+ttt_lr: 1.0
+optimizer_policy: reinitialize_adamw_from_stage1_model_weights
+scheduler_policy: reinitialize_constant_scheduler
+global_step_policy: reset_to_zero_for_stage2
+rng_policy: reset_stage2_seed_42_and_checkpoint_resume_exactly
+outer_lr: 5.0e-6
+betas: [0.9, 0.95]
+eps: 1.0e-8
+weight_decay: 0.1
+outer_grad_clip: 1.0
+scheduler: constant
+loss_contract_name: inplace_ttt_stage2_answer_focused
+loss_contract_version: v1
+loss_reduction: separate_group_means
+answer_group_weight: 1.0
+context_group_weight: 0.1
+context_mask_rule: valid_prediction_mask_and_not_answer_mask
+legacy_weighted_denominator_forbidden: true
+save_steps: [50, 500, 1000]
+force_save_at_stage_boundary: true
+

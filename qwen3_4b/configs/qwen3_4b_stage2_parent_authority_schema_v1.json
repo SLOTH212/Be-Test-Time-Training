@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Qwen3-4B Stage1 FINAL to Stage2 parent interface",
+  "type": "object",
+  "required": [
+    "STAGE1_FINAL_INTEGRITY",
+    "stage1_completed",
+    "record_cursor",
+    "cumulative_tokens",
+    "checkpoint_path",
+    "checkpoint_sha256",
+    "manifest_sha256",
+    "config_sha256",
+    "tokenizer_sha256",
+    "model_identity",
+    "ttt_layers",
+    "context_length"
+  ],
+  "properties": {
+    "STAGE1_FINAL_INTEGRITY": {
+      "const": "PASS"
+    },
+    "stage1_completed": {
+      "const": true
+    },
+    "DEBUG_ONLY": {
+      "const": false
+    },
+    "record_cursor": {
+      "const": 38335
+    },
+    "cumulative_tokens": {
+      "const": 989996971
+    },
+    "checkpoint_path": {
+      "type": "string",
+      "pattern": "^/path/to/ttt/"
+    },
+    "checkpoint_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "manifest_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "config_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "tokenizer_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "model_identity": {
+      "const": "Qwen3-4B"
+    },
+    "ttt_layers": {
+      "const": [
+        0,
+        6,
+        12,
+        18,
+        24,
+        30
+      ]
+    },
+    "context_length": {
+      "const": 32768
+    }
+  },
+  "description": "Launcher additionally validates actual model-only manifest metadata, file hashes, tokenizer and completion; JSON claims alone do not authorize launch. DEBUG authority is accepted only by explicit CPU parser test mode."
+}

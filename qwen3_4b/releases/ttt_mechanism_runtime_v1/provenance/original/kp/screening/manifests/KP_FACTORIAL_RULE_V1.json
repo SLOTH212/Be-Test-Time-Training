@@ -1,0 +1,147 @@
+{
+  "F11_native_equivalence_rule": "Strict exact Native parity at L1-L6; F11 score equality alone is insufficient.",
+  "K": {
+    "K0": "F00/control-derived prefix KV untouched",
+    "K1": "same-anchor Native K and V, all attention layers, positions [0,prefix_chunks*1024), exact copy",
+    "excludes": [
+      "post-boundary KV",
+      "generation KV",
+      "fast weights",
+      "P"
+    ],
+    "name": "PREFIX_ATTENTION_KV_CONTEXT"
+  },
+  "P": {
+    "P0": "explicitly inject all five candidate layers",
+    "P1": "inject only full-Native-schedule-used candidate layers; leave unused absent on standard MLP path",
+    "implementation_qualified": true,
+    "name": "TTT_CACHE_OCCUPANCY_AND_UNUSED_LAYER_FORWARD_PATH"
+  },
+  "allowed_screening_features": [
+    "frozen parent membership",
+    "identity metadata",
+    "Dynamic sequence",
+    "terminal-run boundary",
+    "static replayability",
+    "static K/P constructability",
+    "historical exposure hashes"
+  ],
+  "boundary": {
+    "historical": "after tau complete 1024-token chunks, post-transplant/pre-continuation",
+    "new_formal": "one-based start of frozen Dynamic terminal action run",
+    "reconstruction_parity": "PASS_167_OF_167"
+  },
+  "cells": {
+    "F00": "Native effective fast weights + Control K + Control/P0 all-five materialization",
+    "F01": "Native effective fast weights + Control K + Native/P1 materialization",
+    "F10": "Native effective fast weights + Native K + Control/P0 all-five materialization",
+    "F11": "Native effective fast weights + Native K + Native/P1 materialization"
+  },
+  "claim_boundary": {
+    "forbidden": [
+      "universal KV requirement",
+      "P as universal mathematical state",
+      "fast weights unimportant",
+      "universal TTT state decomposition"
+    ],
+    "implementation_qualified": "Cache materialization and unused-layer forward-path semantics may additionally be required for exact replay.",
+    "mechanism_level": "Persistent fast weights plus trajectory-conditioned prefix attention context may be necessary for exact continuation under the tested implementation."
+  },
+  "closure": {
+    "L1": "all recorded first-continuation and first-post-boundary-update tensors torch.equal",
+    "L2": "all recorded complete-continuation final hidden chunks torch.equal",
+    "L3": "all recorded incomplete prompt-tail tensors torch.equal",
+    "L4": "generation-start logits torch.equal",
+    "L5": "full decoded prediction SHA256 equal",
+    "L6": "L1 AND L2 AND L3 AND L4 AND L5",
+    "tolerance": 0
+  },
+  "control_state_definition": "OFF for every pre-boundary chunk, unchanged terminal suffix, naturally control-derived KV/base state; external reference distinct from F00.",
+  "factor_bit_order": "first bit K; second bit P",
+  "factorial_analysis": {
+    "additional": [
+      "first-divergence elimination",
+      "exact closure L1-L6"
+    ],
+    "conditional_effects": [
+      "K@P0 = d00-d10",
+      "K@P1 = d01-d11",
+      "P@K0 = d00-d01",
+      "P@K1 = d10-d11"
+    ],
+    "interaction": "d00-d10-d01+d11",
+    "main_effects": "average corresponding conditional effects",
+    "primary_continuous": "generation-start-logit relative L2 distance to Native",
+    "secondary": "terminal reward analogues"
+  },
+  "fast_weight_parity": {
+    "layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "method": "SHA256 of contiguous tensor viewed as uint16 raw bytes",
+    "requirement": "exact hash equality across F00/F10/F01/F11 for every layer",
+    "timing": "post-injection continuation boundary",
+    "tolerance": 0
+  },
+  "forbidden_screening_features": [
+    "Exact Reverse outcome",
+    "State Reset effect",
+    "Selective Deletion effect",
+    "explained fraction",
+    "historical KP outcome",
+    "KP repair diagnostic outcome",
+    "R2 outcome",
+    "criticality outcome"
+  ],
+  "formal_amendment": {
+    "correction": "Use exact full frozen Dynamic Native schedule and union used layers across that full schedule; Control changes only pre-boundary actions to OFF.",
+    "outcome_seen": false,
+    "reason": "Historical driver hard-coded A^tau+B; 71/167 new parents have more than one switch.",
+    "required": true
+  },
+  "historical_parent_rule": "All 42 immutable V1 anchors; no additional KP-stage filtering",
+  "historical_source_hashes": {
+    "historical_K_definition": "0feed6f02548106b0c7223f8ba4ffced19161eee6886637a84c82e2985982b4b",
+    "historical_P_definition": "057a28ca5387876e4940bc654439d4fdb2c7991a808dd3e0cf74f2f969bc278e",
+    "historical_analyzer": "6628347b67dd5ab7ee9c93dac9f1a89f727981fcb4cbee862f521df458418119",
+    "historical_closure_core": "9fcbb2b1c5928a135b5cc0a673ba386fd402f158d23bfe755896516ba6d04a6f",
+    "historical_factorial_core": "3e3bd26eba32a61ef6070420230c19b9af0057b21ee10ce3c003aee4f3bf6ee3",
+    "historical_factorial_design": "42fc73002c0bec213a826671dd9d87af22ef9633f9de0a2a1c4dbe1d862809e5",
+    "historical_final_audit": "847c6dc7d1873681ec9e0cbea13e97565c4f168707cb6f7a030ce7de5cb98999",
+    "historical_full_structural_executor": "e6838ab4dcd1f2d2750f7229110c1bad2e919f06acf93c0a47c81c974af99e62",
+    "historical_reward_executor": "873da418d426bdbf10d8e9405684f0663c9bfe3e72a2de1c123e8e20fa42f66b",
+    "state_reset_eligibility_manifest": "e74831509b3d46068de7364aeffeead89003d057d086e23a496ab3c3f2e55220",
+    "state_reset_parent": "d8aee5cc1bcb5f724cc0eda26c2309816ef63ec05f3504fa3950b56f356b62e8",
+    "state_reset_rule": "e816801b71358265c6c9458e8754887e71508c6b26448e6dad5a336f64fecf47",
+    "transplant_v1_executor": "80090602480e33ada67efc3fe39c18403fa7695f97bc8b5e9cb43d81ac8cb972",
+    "transplant_v1_final_audit": "c470c154e0072b8e8bcb9591b50a4951bab8586fbc96666d9bc3c3735b9e4262",
+    "transplant_v1_manifest": "e616cb878c7829038965b0ebc2bb36779d7237863887f6e47487ceaf6005e408"
+  },
+  "historical_source_paths": {
+    "historical_K_definition": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/intervention_impl/FACTOR_DEFINITION_K.md",
+    "historical_P_definition": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/intervention_impl/FACTOR_DEFINITION_P.md",
+    "historical_analyzer": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/analyze_finalize.py",
+    "historical_closure_core": "/home/USER/ttt_mechanism_analysis_v1/trajectory_state_closure_audit_v1/scripts/closure_core.py",
+    "historical_factorial_core": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/factorial_core.py",
+    "historical_factorial_design": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/preregistration/FACTORIAL_DESIGN.md",
+    "historical_final_audit": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/audits/FINAL_TRAJECTORY_CLOSURE_FACTORIAL_AUDIT.json",
+    "historical_full_structural_executor": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/run_full_structural.py",
+    "historical_reward_executor": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/run_terminal_reward.py",
+    "state_reset_eligibility_manifest": "/home/USER/ttt/runs/formal/state_reset_screening_1p7b_v1/run_20260905T175639+0800/manifests/STATE_RESET_ELIGIBILITY_V1_MANIFEST.json",
+    "state_reset_parent": "/home/USER/ttt/runs/formal/state_reset_screening_1p7b_v1/run_20260905T175639+0800/pools/STATE_RESET_ELIGIBLE_ALL.jsonl",
+    "state_reset_rule": "/home/USER/ttt/runs/formal/state_reset_screening_1p7b_v1/run_20260905T175639+0800/manifests/STATE_RESET_RULE_V1.json",
+    "transplant_v1_executor": "/home/USER/ttt_mechanism_analysis_v1/early_state_later_regime_transplant_v1/scripts/run_formal_transplants.py",
+    "transplant_v1_final_audit": "/home/USER/ttt_mechanism_analysis_v1/early_state_later_regime_transplant_v1/audits/FINAL_TRANSPLANT_INTEGRITY_AUDIT.json",
+    "transplant_v1_manifest": "/home/USER/ttt_mechanism_analysis_v1/early_state_later_regime_transplant_v1/manifests/FROZEN_BRANCH_MANIFEST.csv"
+  },
+  "kp_counterfactual_executed": false,
+  "native_state_definition": "Full original Dynamic schedule; Native effective fast weights; Native prefix attention KV; Native used-layer occupancy/materialization; same future inputs.",
+  "parent_rule": "ALL_167_FROZEN_STATE_RESET_ELIGIBLE_ANCHORS; true historical content overlaps excluded",
+  "recovery_status": "PROVEN_EXACT_WITH_PREOUTCOME_FORMAL_AMENDMENT",
+  "score_metric": "Existing frozen RULER family scorer; terminal reward is secondary and accessed only after structural freeze.",
+  "version": "KP_FACTORIAL_RULE_V1"
+}

@@ -1,0 +1,64 @@
+{
+  "format": "gated_ntp_stage1_model_only_dcp_v1",
+  "complete": true,
+  "world_size": 2,
+  "metadata": {
+    "PARENT_CLASS": "DEBUG_ONLY",
+    "DEBUG_ONLY": true,
+    "STAGE1_FINAL_INTEGRITY": "NOT_FORMAL_FINAL",
+    "debug_integrity": "PASS",
+    "model_identity": "Qwen3-4B",
+    "layers": 36,
+    "ttt_layers": [
+      0,
+      6,
+      12,
+      18,
+      24,
+      30
+    ],
+    "ttt_chunk_size": 4096,
+    "context_length": 32768,
+    "source_checkpoint": "/path/to/ttt/runs/qwen3_4b_gpu23_prelaunch_determinism_v4/fresh_B/checkpoints/slot_B",
+    "source_manifest_sha256": "605a282bfc5700adf3f14ecbfc3df49be178fcd12c0cc6ef20f7e087f621cf8a",
+    "progress": {
+      "accumulation_phase": 0,
+      "cumulative_tokens": 286544,
+      "dataloader_state": {
+        "canonical_next_position": 10
+      },
+      "global_valid_tokens": 56419,
+      "input_identity": {
+        "cache_policy_sha256": "fdecd856e2e03859cde4e374736f67fc7a1144724034eca2813d4c1289e85852",
+        "checkpoint_module_sha256": "48fd2a39d06619422d20fda97e79a538725e334e1d405a24f5033759d6ffc608",
+        "config_sha256": "495e7ddd4a31667b12df33de47a50ba0378047c63a28b4558cef11d210b5ac11",
+        "data_manifest_sha256": "542f501069c54ec7702152fa341898afb4964043c8b5f8721612767ac5008f6d",
+        "dataset_authority_sha256": "3f74e0fc501bb6dedd0912b35eb9142d73b0ee1888a9b3412fb111930948208f",
+        "model_identity_sha256": "2397f0674d7d016aba0110b62e859e95566189cb35a5dac37256ab32155b6f6c",
+        "worker_sha256": "b93593c2a176b0ba8ebc72e5422d20f562c905efefbe7286ef070b6fa52ec47c"
+      },
+      "local_valid_tokens": 23652,
+      "rank_assignment_state": {
+        "mapping": "canonical_modulo_with_accumulation_v1",
+        "rank": 0,
+        "world_size": 2
+      },
+      "record_cursor": 10,
+      "stage": 1,
+      "update_step": 5
+    },
+    "config_sha256": "495e7ddd4a31667b12df33de47a50ba0378047c63a28b4558cef11d210b5ac11",
+    "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "model_parameter_entries": 417,
+    "state_numel_with_tied_alias": 4450838016,
+    "unique_parameter_numel": 4061881856,
+    "tie_word_embeddings": true,
+    "tied_weights_equal": true,
+    "source_parity_audit": "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_determinism_v4/REAL_RESUME_NUMERIC_PARITY.json",
+    "source_parity_audit_sha256": "6328898ebced3710c02042e87f6838cb46dd9fd8d41a24fbabb44d25d02723f6",
+    "optimizer_policy": "Stage2 fresh initialize; no Stage1 optimizer loaded"
+  },
+  "files": {
+    "model.pt": "cd460e8659cc8a020f8f8ed55b8cb0567c0a2028d0dac0bc9065f0823aeaa503"
+  }
+}

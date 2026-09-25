@@ -1,0 +1,32 @@
+{
+  "FORMAL_RESULT_REPLAY_STATUS": "PASS",
+  "HISTORICAL_DYNAMIC_AGGREGATION_PARITY": "PASS",
+  "HISTORICAL_FIXED_AGGREGATION_PARITY": "PASS",
+  "dynamic_checks": {
+    "BOOTSTRAP_HIGH": true,
+    "BOOTSTRAP_LOW": true,
+    "BOOTSTRAP_MEAN": true,
+    "COUNT": true,
+    "DELTA": true,
+    "DYNAMIC": true,
+    "OFF": true,
+    "SAMPLE_BEST": true
+  },
+  "fixed_checks": {
+    "BEST_SINGLE": true,
+    "BEST_SINGLE_ACTION": true,
+    "COUNT": true,
+    "OFF": true,
+    "SAMPLE_BEST": true
+  },
+  "reconstructed": {
+    "bootstrap_ci": [
+      0.012669375000000002,
+      0.017833333333333333
+    ],
+    "dynamic_mean": 0.8595972222222221,
+    "dynamic_minus_sample_best_pp": 1.5216666666666545,
+    "fixed_sample_best": 0.7834589743589744
+  },
+  "status": "PASS"
+}

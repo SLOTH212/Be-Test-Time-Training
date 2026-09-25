@@ -1,0 +1,53 @@
+stage: stage2
+run_name: QWEN3_0P6B_STAGE2_V1
+parent_artifact: /home/USER/ttt/qwen3_0p6b_replication_v1/stage1/checkpoints/current
+train_data: /home/USER/ttt/data/qa_replay_10m_v1_veomni_indexed_v1/train.jsonl
+answer_mask_sidecar: /home/USER/ttt/data/qa_replay_10m_v1_answer_context_masks_v1/masks.jsonl
+dataset_manifest: /home/USER/ttt/data/qa_replay_10m_v1_answer_context_masks_v1/derivation_manifest.json
+record_cursor_final: 1291
+sequence_tokens: 10000000
+valid_prediction_tokens: 9998709
+answer_tokens: 13332
+context_tokens: 9985377
+context_length: 16384
+batch_size: 1
+gradient_accumulation: 1
+precision: bf16
+gradient_checkpointing: true
+seed: 42
+ttt_lr: 1.0
+ttt_chunk_size: 1024
+ttt_layers: [0, 6, 12, 18, 24]
+fast_weight: mlp.down_proj.weight
+target_type: gated_next_position_hidden
+gate_enabled: true
+gate_initialization: inherited_from_stage1
+within_chunk_only: true
+update_order: apply_then_update
+training_inner_clip: null
+optimizer_policy: reinitialize_adamw_from_stage1_model_weights
+scheduler_policy: reinitialize_constant_scheduler
+global_step_policy: reset_to_zero_for_stage2
+rng_policy: reset_stage2_seed_42_and_checkpoint_resume_exactly
+optimizer: AdamW
+fused_optimizer: true
+outer_lr: 5.0e-6
+betas: [0.9, 0.95]
+eps: 1.0e-8
+weight_decay: 0.1
+outer_grad_clip: 1.0
+scheduler: constant
+data_order: sequential
+loss_contract_name: inplace_ttt_stage2_answer_focused
+loss_contract_version: v1
+loss_formula: mean_answer_ce_plus_0.1_mean_context_ce
+loss_reduction: separate_group_means
+answer_group_weight: 1.0
+context_group_weight: 0.1
+context_mask_rule: valid_prediction_mask_and_not_answer_mask
+legacy_weighted_denominator_forbidden: true
+rolling_resume_steps: [50, 500, 1000]
+checkpoint_policy: rolling_temporary_only
+historical_checkpoint_retention: false
+final_export: /home/USER/ttt/models/qwen3_0p6b_stage2
+

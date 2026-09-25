@@ -1,0 +1,131 @@
+{
+  "base_model_authority_sha256": "2397f0674d7d016aba0110b62e859e95566189cb35a5dac37256ab32155b6f6c",
+  "downstream_started": false,
+  "final_model_index_path": "/path/to/ttt/provenance/QWEN3_4B_TWO_STAGE_FINAL_MODEL_INDEX_V1.json",
+  "final_model_index_sha256": "5711d6e2d7bfc9616f6d94f41c872afab311f1fcd1e22cc6031a033280f0f6a0",
+  "models": [
+    {
+      "authority_path": "/path/to/ttt/models/qwen3_4b_stage1_1b_32k_final_v1/STAGE1_FINAL_AUTHORITY.json",
+      "authority_sha256": "6a8561a2f886429b7fa998c99ba230cc3e6b59b7025fc0e96b167888e84e4a5b",
+      "class": "STAGE1_FINAL",
+      "config_identity": "d7180bea369e128635289016568654fb592b0f995474a8532e45d473bb3454db",
+      "model_manifest_sha256": "9c38e60d32865697bdcbb42dd1edf97712e5c97b82ecb19b0c1c8142f3545be2",
+      "model_path": "/path/to/ttt/models/qwen3_4b_stage1_1b_32k_final_v1",
+      "parent_identity": "2397f0674d7d016aba0110b62e859e95566189cb35a5dac37256ab32155b6f6c",
+      "training_data_identity": "3f74e0fc501bb6dedd0912b35eb9142d73b0ee1888a9b3412fb111930948208f"
+    },
+    {
+      "authority_path": "/path/to/ttt/models/qwen3_4b_stage2_30m_32k_final_v1/STAGE2_FINAL_AUTHORITY.json",
+      "authority_sha256": "cc5d936163102063bbdbfa62ef5e943e52a533399c647e062557d95d62b35e03",
+      "class": "STAGE2_FINAL",
+      "config_identity": "05b4389f9b1e7d849930025f5c89bee861f53ea861c9afee4c3b93bdb768aeee",
+      "model_manifest_sha256": "bb121a84d0d9be49aa4c9b62cf1d204fcb56e71f240aacc85aec99d735039245",
+      "model_path": "/path/to/ttt/models/qwen3_4b_stage2_30m_32k_final_v1",
+      "parent_identity": "6a8561a2f886429b7fa998c99ba230cc3e6b59b7025fc0e96b167888e84e4a5b",
+      "training_data_identity": "e423c322602c5124acc839470079cfe23559b43c0a29eb9042cf1a3a4ee6ddd0"
+    }
+  ],
+  "source_authority_sha256": "22b4790a8f820398fdfeb9aefbfa75a6a72bed8621e2fac974558881ddacbbfa",
+  "stage1_prelaunch_sha256": "344795e0c0775265e639923bbff41d28a5a8b78339b3e2d25cd2d4e6e3b04e29",
+  "stage2_preflight_sha256": "3b1806f5c1a436598d80ed2535b3fccbc263d2e4e51524734420d3ca490323e1",
+  "state_history": [
+    {
+      "authority_hash": "344795e0c0775265e639923bbff41d28a5a8b78339b3e2d25cd2d4e6e3b04e29",
+      "next_state": "STAGE1_READY",
+      "previous_state": "PRECHECK",
+      "reason": "Prelaunch authority and parent gates passed",
+      "run_root": "/path/to/ttt/runs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1",
+      "timestamp": 1789109837.0608113
+    },
+    {
+      "authority_hash": "344795e0c0775265e639923bbff41d28a5a8b78339b3e2d25cd2d4e6e3b04e29",
+      "next_state": "STAGE1_RUNNING",
+      "previous_state": "STAGE1_READY",
+      "reason": "Authorized launcher returned; durable launch receipt recorded",
+      "run_root": "/path/to/ttt/runs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1",
+      "timestamp": 1789109850.727623
+    },
+    {
+      "authority_hash": "260bcb7c5020925a15adcb9f166710e14604bc7f538f850984b0ab23fde7031f",
+      "next_state": "BLOCKED",
+      "previous_state": "STAGE1_RUNNING",
+      "reason": "USER_REQUESTED_SAFE_PAUSE: verified step 7000 DCP retained; owned training and pipeline supervisors stopped; explicit resume required",
+      "run_root": "/path/to/ttt/runs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1",
+      "timestamp": 1789317630.871882
+    },
+    {
+      "authority_hash": "344795e0c0775265e639923bbff41d28a5a8b78339b3e2d25cd2d4e6e3b04e29",
+      "next_state": "STAGE1_RUNNING",
+      "previous_state": "BLOCKED",
+      "reason": "Explicit user resume from hash-verified step 7000; new attempt archived separately",
+      "run_root": "/path/to/ttt/runs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1",
+      "timestamp": 1789329090.142405
+    },
+    {
+      "authority_hash": "344795e0c0775265e639923bbff41d28a5a8b78339b3e2d25cd2d4e6e3b04e29",
+      "next_state": "STAGE1_FINALIZING",
+      "previous_state": "STAGE1_RUNNING",
+      "reason": "Process exited and exact counters/DCP/authorities verified",
+      "run_root": "/path/to/ttt/runs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1",
+      "timestamp": 1789704823.1266716
+    },
+    {
+      "authority_hash": "22b4790a8f820398fdfeb9aefbfa75a6a72bed8621e2fac974558881ddacbbfa",
+      "next_state": "BLOCKED",
+      "previous_state": "STAGE1_FINALIZING",
+      "reason": "[Errno 13] Permission denied: '/path/to/ttt/runs/qwen3_4b_stage1_stage2_pipeline_formal_v1/finalization_attempts/stage1_1789704940559088930/model' -> '/path/to/ttt/models/qwen3_4b_stage1_1b_32k_final_v1'",
+      "run_root": "/path/to/ttt/runs/qwen3_4b_stage1_stage2_pipeline_formal_v1",
+      "timestamp": 1789705023.1927636
+    },
+    {
+      "authority_hash": "344795e0c0775265e639923bbff41d28a5a8b78339b3e2d25cd2d4e6e3b04e29",
+      "next_state": "STAGE1_FINAL_FROZEN",
+      "previous_state": "BLOCKED",
+      "reason": "Published Stage1 final validated after permission repair",
+      "run_root": "/path/to/ttt/runs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1",
+      "timestamp": 1789705990.512603
+    },
+    {
+      "authority_hash": "3b1806f5c1a436598d80ed2535b3fccbc263d2e4e51524734420d3ca490323e1",
+      "next_state": "STAGE2_READY",
+      "previous_state": "STAGE1_FINAL_FROZEN",
+      "reason": "Waiting for existing GPU4/5 capacity threshold before launch intent",
+      "run_root": null,
+      "timestamp": 1789705990.5599
+    },
+    {
+      "authority_hash": "3b1806f5c1a436598d80ed2535b3fccbc263d2e4e51524734420d3ca490323e1",
+      "next_state": "STAGE2_RUNNING",
+      "previous_state": "STAGE2_READY",
+      "reason": "Explicit user-authorized direct allocation attempt launched; fixed free-memory gate bypassed once",
+      "run_root": "/path/to/ttt/runs/qwen3_4b_stage2_formal_20260918T123725",
+      "timestamp": 1789706245.511933
+    },
+    {
+      "authority_hash": "3b1806f5c1a436598d80ed2535b3fccbc263d2e4e51524734420d3ca490323e1",
+      "next_state": "STAGE2_FINALIZING",
+      "previous_state": "STAGE2_RUNNING",
+      "reason": "Process exited and exact counters/DCP/authorities verified",
+      "run_root": null,
+      "timestamp": 1789734126.5792036
+    },
+    {
+      "authority_hash": "3b1806f5c1a436598d80ed2535b3fccbc263d2e4e51524734420d3ca490323e1",
+      "next_state": "STAGE2_FINAL_FROZEN",
+      "previous_state": "STAGE2_FINALIZING",
+      "reason": "Atomic immutable final verified",
+      "run_root": null,
+      "timestamp": 1789734347.501003
+    },
+    {
+      "authority_hash": "3b1806f5c1a436598d80ed2535b3fccbc263d2e4e51524734420d3ca490323e1",
+      "next_state": "PIPELINE_COMPLETE",
+      "previous_state": "STAGE2_FINAL_FROZEN",
+      "reason": "Exactly two immutable FINAL models verified; no downstream actions",
+      "run_root": null,
+      "timestamp": 1789734373.0030355
+    }
+  ],
+  "state_sha256": "ad44d26d5be4803db83f8ba805d8b6c4bac251e1ee52c6be854e1aa233036871",
+  "status": "PIPELINE_COMPLETE"
+}

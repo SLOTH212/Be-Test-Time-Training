@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "auxiliary_shell_line_endings": "Preserved byte-identically; not rewritten during freeze",
+    "companion_frozen_source_hashes": "PASS",
+    "fsdp2_inventory": {
+      "blocks": 36,
+      "root": true
+    },
+    "imports": "PASS",
+    "no_hardcoded_physical_device_selection": "PASS; HIT allowlist and physical labels do not select CUDA devices",
+    "ntp_builder_sha256": "960465d4c0850345fb998e81b6bf19f2517ecea104aed2946a8b3e31bb416cf3",
+    "python_syntax_file_count": 36,
+    "source_manifest": "PASS",
+    "stage1_stage2_entrypoints": "PASS",
+    "torchrun_launchers": "PASS",
+    "yaml_configs": "PASS"
+  },
+  "gpu_visible_count": 0,
+  "release_level0_status": "PASS",
+  "status": "PASS"
+}

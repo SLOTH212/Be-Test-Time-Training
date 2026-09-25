@@ -1,0 +1,37 @@
+{
+  "STAGE2_LOSS_SEMANTICS_AUTHORITY": "PASS_SOURCE_AND_REAL_KERNEL_FIXTURE",
+  "source_path": "/path/to/ttt/src/training_runtime/code/workers/distributed_stage2_train_worker_v1.py",
+  "source_sha256": "68fbb9bc2b963d69600c37e3579c0843577f01267d76dab475823f9dbf0a6a79",
+  "historical_builder": "/path/to/ttt/src/training_runtime/code/vendor/ntp_source_190580a/tools/cloud/formal_train_gated_ntp.py",
+  "historical_builder_sha256": "960465d4c0850345fb998e81b6bf19f2517ecea104aed2946a8b3e31bb416cf3",
+  "actual_functions": [
+    "masks_for",
+    "count_window",
+    "fused_sum",
+    "main Stage2 branch"
+  ],
+  "observed_active_semantics": {
+    "labels": "input_ids[:,1:]",
+    "hidden": "hidden[:,:-1]",
+    "answer_range_shift": "[max(1,start)-1:max(1,stop)-1]",
+    "context": "boolean complement of answer over n_tokens-1 positions",
+    "denominators": "separate globally reduced answer/context counts",
+    "rank_loss": "world_size * answer_ce_sum/global_answer + context_group_weight * world_size * context_ce_sum/global_context",
+    "frozen_config_weights": {
+      "answer": 1.0,
+      "context": 0.1
+    },
+    "fused_loss": "LigerFusedLinearCrossEntropyLoss(reduction=sum, accum_dtype=torch.float32)",
+    "zero_answer": "masks_for rejects even a locally empty group",
+    "zero_context": "mask helper allows; division guard absent in Stage2 branch",
+    "document_boundary": "whole real unpadded record [(0,n)]",
+    "BOS_EOS": "no special exemption in active masks_for; position0 excluded, later tokens belong to answer or context",
+    "padding": "current worker retokenizes text without physical padding; n_tokens checked in GPU worker"
+  },
+  "STAGE2_LOSS_MODIFIED": false,
+  "lineage_audit": "/path/to/ttt/audits/STAGE2_LOSS_LINEAGE_AUDIT.json",
+  "historical_actual_loss_source": "/path/to/ttt/work/qwen3_4b_stage2_preflight_v1/recovered_0p6b/source/loss/answer_context_fused_loss.py",
+  "historical_actual_loss_sha256": "25c686f51693fe881ff9fa1c7f6feaeb9a51fcd6f05a05554c900d8a895adf31",
+  "actual_executed_data_helper": "/path/to/ttt/work/qwen3_4b_stage2_preflight_v1/recovered_0p6b/scripts/train_worker.py::stage2_input",
+  "zero_group_authority": "explicit ZERO_ANSWER_DENOMINATOR / ZERO_CONTEXT_DENOMINATOR rejection"
+}

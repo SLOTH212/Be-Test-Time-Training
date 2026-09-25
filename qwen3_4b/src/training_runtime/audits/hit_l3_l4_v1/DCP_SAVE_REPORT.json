@@ -1,0 +1,81 @@
+{
+  "batch_metadata": {
+    "global_batch_size": 2,
+    "gradient_accumulation": 1,
+    "micro_batch_size": 1
+  },
+  "checkpoint_root": "/home/USER/data/USER/work/scaleup_multigpu_32k_gpu23_debug_v1/runs/l4_interrupted_v2/checkpoints",
+  "dcp_rank_shards": [
+    "dcp/__0_0.distcp",
+    "dcp/__1_0.distcp"
+  ],
+  "format": "gated_ntp_fsdp2_dcp_v1",
+  "hash_verification_during_successful_resume": "PASS",
+  "manifest_complete": true,
+  "mesh_shape": [
+    2
+  ],
+  "model_state": "PASS",
+  "optimizer_state": "PASS",
+  "payload_file_count": 5,
+  "progress": {
+    "accumulation_phase": 0,
+    "cumulative_tokens": 65536,
+    "dataloader_state": {
+      "canonical_next_position": 2
+    },
+    "global_valid_tokens": 65534,
+    "local_valid_tokens": 32767,
+    "rank_assignment_state": {
+      "mapping": "canonical_modulo_with_accumulation_v1",
+      "rank": 0,
+      "world_size": 2
+    },
+    "record_cursor": 2,
+    "stage": 1,
+    "update_step": 1
+  },
+  "rank_state_files": [
+    "rank_00000.pt",
+    "rank_00001.pt"
+  ],
+  "rank_states": [
+    {
+      "keys": [
+        "numpy_rng",
+        "progress",
+        "python_rng",
+        "scheduler",
+        "torch_cpu_rng",
+        "torch_cuda_rng"
+      ],
+      "numpy_rng_present": true,
+      "python_rng_present": true,
+      "rank": 0,
+      "scheduler_present": true,
+      "torch_cpu_rng_present": true,
+      "torch_cuda_rng_count": 2
+    },
+    {
+      "keys": [
+        "numpy_rng",
+        "progress",
+        "python_rng",
+        "scheduler",
+        "torch_cpu_rng",
+        "torch_cuda_rng"
+      ],
+      "numpy_rng_present": true,
+      "python_rng_present": true,
+      "rank": 1,
+      "scheduler_present": true,
+      "torch_cpu_rng_present": true,
+      "torch_cuda_rng_count": 2
+    }
+  ],
+  "rng_state": "PASS",
+  "scheduler_state": "PASS",
+  "slot": "slot_A",
+  "status": "PASS",
+  "world_size": 2
+}

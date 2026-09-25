@@ -1,0 +1,234 @@
+{
+  "l30_parameters": {
+    "ttt_conv.weight": {
+      "optimizer_owned": true,
+      "requires_grad": true,
+      "shape": [
+        2560,
+        1,
+        5
+      ]
+    },
+    "ttt_ntp_gate": {
+      "optimizer_owned": true,
+      "requires_grad": true,
+      "shape": [
+        2560
+      ]
+    },
+    "ttt_proj.weight": {
+      "optimizer_owned": true,
+      "requires_grad": true,
+      "shape": [
+        2560,
+        2560
+      ]
+    }
+  },
+  "l30_ttt_parameter_coverage": "PASS",
+  "post_fsdp": {
+    "0": {
+      "down_proj": true,
+      "forward_stats_present": false,
+      "ttt_chunk": 4096,
+      "ttt_conv": true,
+      "ttt_ntp_gate": true,
+      "ttt_proj": true
+    },
+    "12": {
+      "down_proj": true,
+      "forward_stats_present": false,
+      "ttt_chunk": 4096,
+      "ttt_conv": true,
+      "ttt_ntp_gate": true,
+      "ttt_proj": true
+    },
+    "18": {
+      "down_proj": true,
+      "forward_stats_present": false,
+      "ttt_chunk": 4096,
+      "ttt_conv": true,
+      "ttt_ntp_gate": true,
+      "ttt_proj": true
+    },
+    "24": {
+      "down_proj": true,
+      "forward_stats_present": false,
+      "ttt_chunk": 4096,
+      "ttt_conv": true,
+      "ttt_ntp_gate": true,
+      "ttt_proj": true
+    },
+    "30": {
+      "down_proj": true,
+      "forward_stats_present": false,
+      "ttt_chunk": 4096,
+      "ttt_conv": true,
+      "ttt_ntp_gate": true,
+      "ttt_proj": true
+    },
+    "6": {
+      "down_proj": true,
+      "forward_stats_present": false,
+      "ttt_chunk": 4096,
+      "ttt_conv": true,
+      "ttt_ntp_gate": true,
+      "ttt_proj": true
+    }
+  },
+  "pre_fsdp": {
+    "0": {
+      "down_proj": true,
+      "forward_stats_present": false,
+      "ttt_chunk": 4096,
+      "ttt_conv": true,
+      "ttt_ntp_gate": true,
+      "ttt_proj": true
+    },
+    "12": {
+      "down_proj": true,
+      "forward_stats_present": false,
+      "ttt_chunk": 4096,
+      "ttt_conv": true,
+      "ttt_ntp_gate": true,
+      "ttt_proj": true
+    },
+    "18": {
+      "down_proj": true,
+      "forward_stats_present": false,
+      "ttt_chunk": 4096,
+      "ttt_conv": true,
+      "ttt_ntp_gate": true,
+      "ttt_proj": true
+    },
+    "24": {
+      "down_proj": true,
+      "forward_stats_present": false,
+      "ttt_chunk": 4096,
+      "ttt_conv": true,
+      "ttt_ntp_gate": true,
+      "ttt_proj": true
+    },
+    "30": {
+      "down_proj": true,
+      "forward_stats_present": false,
+      "ttt_chunk": 4096,
+      "ttt_conv": true,
+      "ttt_ntp_gate": true,
+      "ttt_proj": true
+    },
+    "6": {
+      "down_proj": true,
+      "forward_stats_present": false,
+      "ttt_chunk": 4096,
+      "ttt_conv": true,
+      "ttt_ntp_gate": true,
+      "ttt_proj": true
+    }
+  },
+  "requested_layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "runtime_backward": [
+    {
+      "model.layers.30.mlp.ttt_conv.weight": {
+        "expected_present": false,
+        "finite": true,
+        "local_norm": 0.0,
+        "present": false,
+        "reason": "gated_next_position_hidden_does_not_read_conv_kernel"
+      },
+      "model.layers.30.mlp.ttt_ntp_gate": {
+        "expected_present": true,
+        "finite": true,
+        "local_norm": 4.67618465423584,
+        "present": true
+      },
+      "model.layers.30.mlp.ttt_proj.weight": {
+        "expected_present": true,
+        "finite": true,
+        "local_norm": 0.0,
+        "present": true
+      }
+    },
+    {
+      "model.layers.30.mlp.ttt_conv.weight": {
+        "expected_present": false,
+        "finite": true,
+        "local_norm": 0.0,
+        "present": false,
+        "reason": "gated_next_position_hidden_does_not_read_conv_kernel"
+      },
+      "model.layers.30.mlp.ttt_ntp_gate": {
+        "expected_present": true,
+        "finite": true,
+        "local_norm": 0.7557042241096497,
+        "present": true
+      },
+      "model.layers.30.mlp.ttt_proj.weight": {
+        "expected_present": true,
+        "finite": true,
+        "local_norm": 0.0,
+        "present": true
+      }
+    }
+  ],
+  "runtime_optimizer_state": [
+    {
+      "model.layers.30.mlp.ttt_conv.weight": {
+        "owned": true,
+        "state_expected": false,
+        "state_keys": []
+      },
+      "model.layers.30.mlp.ttt_ntp_gate": {
+        "owned": true,
+        "state_expected": true,
+        "state_keys": [
+          "exp_avg",
+          "exp_avg_sq",
+          "step"
+        ]
+      },
+      "model.layers.30.mlp.ttt_proj.weight": {
+        "owned": true,
+        "state_expected": true,
+        "state_keys": [
+          "exp_avg",
+          "exp_avg_sq",
+          "step"
+        ]
+      }
+    },
+    {
+      "model.layers.30.mlp.ttt_conv.weight": {
+        "owned": true,
+        "state_expected": false,
+        "state_keys": []
+      },
+      "model.layers.30.mlp.ttt_ntp_gate": {
+        "owned": true,
+        "state_expected": true,
+        "state_keys": [
+          "exp_avg",
+          "exp_avg_sq",
+          "step"
+        ]
+      },
+      "model.layers.30.mlp.ttt_proj.weight": {
+        "owned": true,
+        "state_expected": true,
+        "state_keys": [
+          "exp_avg",
+          "exp_avg_sq",
+          "step"
+        ]
+      }
+    }
+  ],
+  "status": "PASS"
+}

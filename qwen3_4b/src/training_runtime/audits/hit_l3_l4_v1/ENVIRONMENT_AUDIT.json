@@ -1,0 +1,23 @@
+{
+  "cuda_available_with_allowlist": true,
+  "cuda_visible_device_count": 2,
+  "dcp_import": "PASS",
+  "distributed_available": true,
+  "fsdp2_import": "PASS",
+  "liger_kernel": "0.8.0",
+  "nccl_available": true,
+  "numpy": "2.4.6",
+  "package_reference_deviation": {
+    "torch": "2.11.0+cu128 selected because host driver supports CUDA 12.8, while 2.12.0+cu130 failed CUDA initialization"
+  },
+  "python": "3.11.15",
+  "pytorch": "2.11.0+cu128",
+  "pyyaml": "6.0.3",
+  "runtime_root": "/home/USER/data/USER/work/scaleup_multigpu_32k_gpu23_debug_v1/runtime/python311",
+  "safetensors": "0.7.0",
+  "status": "PASS",
+  "system_install_performed": false,
+  "tokenizers": "0.22.2",
+  "torch_cuda_build": "12.8",
+  "transformers": "4.57.3"
+}

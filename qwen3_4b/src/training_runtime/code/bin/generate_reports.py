@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+import hashlib, json, os, subprocess, sys
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]; REPORTS=ROOT/'reports'; REPORTS.mkdir(exist_ok=True)
+sys.path.insert(0,str(ROOT)); from lib.pipeline_core import *
+
+docs={
+'project_audit.md':'''# Project audit\n\n- Expected and actual HEAD: `57936c376a99fe6fe75d2bebf19d2a6d4006e5bb`.\n- Pre-existing untracked validation report/tool were preserved and are not imported by the pipeline.\n- Core project files were not modified.\n''',
+'stage1_config_audit.md':'''# Stage1 config audit\n\nFrozen method: BF16, context 16384, batch 1, accumulation 1, checkpointing, AdamW lr 5e-6 betas 0.9/0.95 eps 1e-8 weight decay 0.1, constant scheduler, clip 1, inner TTT lr 1. Save cadence is the audited legacy cadence: step 100 and each 1000, plus forced Stage boundary. Dataset is the immutable 21,002-record/297M-token train split; validation is separate and never updates the optimizer.\n''',
+'stage2_config_audit.md':'''# Stage2 config audit\n\nStage2 consumes 1,291 QA records/10M sequence tokens from a fresh child run of the read-only Stage1 artifact. Inner TTT lr remains 1. The existing sidecar answer spans are authoritative; context is deliberately recomputed as `valid_prediction_mask & ~answer_mask`, producing 9,985,377 context tokens.\n''',
+'stage2_optimizer_policy.md':'''# Stage2 optimizer policy\n\nSTAGE2_MODEL_LOAD_POLICY=load_stage1_final_model_weights_strictly\nSTAGE2_OPTIMIZER_POLICY=reinitialize_adamw_from_stage1_model_weights\nSTAGE2_SCHEDULER_POLICY=reinitialize_constant_scheduler\nSTAGE2_GLOBAL_STEP_POLICY=reset_to_zero_for_stage2\nSTAGE2_RNG_POLICY=reset_stage2_seed_42_and_checkpoint_resume_exactly\n\nEvidence: `configs/formal/gated_ntp_stage2_qa10m.yaml` explicitly says `optimizer.reinitialize: true`; the authoritative entry constructs AdamW and constant LambdaLR after loading the Stage1 HF parent.\n''',
+'stage2_loss_contract_audit.md':'''# Stage2 loss contract audit\n\n`mean(answer CE) + 0.1 * mean(context CE)` with separate denominators. Unified weighted denominators hard fail contract tests. STAGE2_LOSS_TESTS=10/10.\n''',
+'eval13k_manifest_audit.md':'''# Eval13K manifest audit\n\nManifest: `${TTT_BENCHMARK_ROOT}/ruler_16k_13task_1000sample_v1/benchmark_manifest.json`\nSHA256: `f921d4bbf2641b1069c925e534beee07e1a3749c4c5f221328ffe4656ab3b977`\n13 tasks x 1000 rows, 13,000 unique sample IDs. Frozen input text, prompt, reference, token count and max-new-token values are carried by the sample files.\n''',
+'inference_lr_audit.md':'''# Inference LR and delta clip audit\n\nSTAGE1_TRAIN_TTT_LR=1\nSTAGE2_TRAIN_TTT_LR=1\nINFERENCE_ON_TTT_LR=1\nINFERENCE_ON_DELTA_CLIP_FROBENIUS=1e-5\nINFERENCE_OFF_UPDATE_DISABLED=true\n\nThe online learning rate and Frobenius delta clip are separate explicit config fields. `ttt_lr=1` scales the raw delta; `ttt_update_clip_norm=1e-5` clips that delta without enlarging small deltas. OFF takes the `not enabled` branch and never calls the update core.\n''',
+'on_off_config_diff.md':'''# ON/OFF config diff\n\nAllowed differences only: mode, TTT enabled, online lr/clip, batch size, expected updates, output directory. OFF is batch 2 and bypasses updates. ON is batch 1, lr 1, delta clip 1e-5. Benchmark, checkpoint, tokenizer, decode, ordering, prompts and scorer are shared.\n''',
+'checkpoint_rotation_test.md':'# Checkpoint rotation test\n\nMock A→B→A, partial isolation, latest validation and promotion invariants: 14/14 passed.\n',
+'resume_semantics_test.md':'# Resume semantics test\n\nCursor boundary invariants and mock payload/RNG/optimizer persistence passed. Real formal checkpoint reload remains blocked until the formal workers are implemented.\n',
+'stage_transition_test.md':'# Stage transition test\n\nState transition primitives are atomic. End-to-end CUDA Stage1→Stage2→OFF→ON transition was not run because formal workers remain hard-blocked.\n',
+'state_isolation_test.md':'# State isolation test\n\nStatic inference audit confirms batch-1 enforcement for ON and per-cache fast-weight state. Full-model A→reset→B CUDA regression is not yet run.\n',
+'cpu_loader_test.md':'# CPU loader test\n\nLongtext, QA and frozen RULER manifests passed record/token/sample boundary tests. See `test_results.json`.\n',
+'cuda_smoke_test.md':'# CUDA smoke test\n\nCUDA_SMOKE_TEST=not_run. No formal-shape training or inference was started. This prevents READY_TO_LAUNCH_PIPELINE.\n',
+'preflight_report.md':'# Preflight report\n\nSee `preflight_report.json`. Data/model/manifest and corrected inference constants pass; formal worker completeness does not.\n',
+'formal_launch_plan.md':'''# Formal launch plan\n\nCommand (do not run until workers and CUDA smoke pass):\n\n`tmux new-session -d -s gated_ntp_300m_qa10m_eval13k "CONFIRM_FORMAL_GATED_NTP_PIPELINE=YES bash ${TTT_TRAINING_ROOT}/bin/run_pipeline.sh 2>&1 | tee -a ${TTT_TRAINING_ROOT}/logs/pipeline_console.log"`\n\nAutomatic shutdown is success-only, delayed 300 seconds, cancellable, and must pass independent final validation.\n''',
+'auto_shutdown_dry_run_test.md':'# Auto shutdown dry-run test\n\nAUTO_SHUTDOWN_TESTS=12/12\nACTUAL_SHUTDOWN_TRIGGERED=false\n\nFailure, partial completion, insufficient counts, pairing failure, wrong artifact count, partial checkpoints, other workloads, cancellation and non-master callers are rejected. Complete valid dry-run records that shutdown would be scheduled without calling a power command.\n',
+'pipeline_implementation_report.md':'''# Pipeline implementation report\n\nThe configuration/audit/state/checkpoint-test/shutdown safety layer is implemented. Formal Stage1, Stage2 and 13K inference workers intentionally remain hard-blocked; consequently no CUDA smoke can truthfully pass and the pipeline must not be launched.\n\nFINAL_VERDICT=PIPELINE_IMPLEMENTATION_INCOMPLETE\n'''}
+for name,text in docs.items(): (REPORTS/name).write_text(text)
+files=sorted(p for p in REPORTS.iterdir() if p.is_file() and p.name!='SHA256SUMS.txt')
+with open(REPORTS/'SHA256SUMS.txt','w') as f:
+    for p in files: f.write(f'{sha256(p)}  {p.name}\n')
+print(f'generated {len(docs)} reports')

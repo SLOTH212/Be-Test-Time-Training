@@ -1,0 +1,28 @@
+{
+  "context_length": 16384,
+  "cumulative_tokens": 10000000,
+  "expected_total_steps": 1291,
+  "formal_run": true,
+  "global_step": 1291,
+  "initialization_source": "stage1_terminal_weights",
+  "last_checkpoint": "/home/USER/ttt/qwen3_0p6b_replication_v1/stage2/checkpoints/current",
+  "micro_step": 0,
+  "outer_lr": 5e-06,
+  "precision": "bf16",
+  "record_cursor": 1291,
+  "run_id": "qwen3_0p6b_replication_v1",
+  "smoke": false,
+  "stage": "stage2",
+  "state": "STAGE2_COMPLETE",
+  "target_tokens": 10000000,
+  "ttt_chunk_size": 1024,
+  "ttt_layers": [
+    0,
+    6,
+    12,
+    18,
+    24
+  ],
+  "ttt_lr": 1.0,
+  "worker_pid": 22678
+}

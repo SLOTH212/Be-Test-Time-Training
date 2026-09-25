@@ -1,0 +1,83 @@
+{
+  "bad_status": {},
+  "checks": {
+    "all_required_checks_true": true,
+    "formal_training_false": true,
+    "frozen_unchanged": true,
+    "no_reject_files": true,
+    "receipt_pass": true,
+    "required_files_present": true,
+    "safe_yes": true,
+    "status_files_pass": true,
+    "unauthorized_gpu_false": true
+  },
+  "files": {
+    "CHUNK_TRACE.json": {
+      "sha256": "eacb1f4887f9a0d92ac7beab187c26447ef1a60e5a0511463e8667c5adda0905",
+      "size": 9418
+    },
+    "COMPLETION_RECEIPT.json": {
+      "sha256": "4dc0af50e5bfa20399c9bc33606cf7ddc228ee34d834a15041f9315a72074114",
+      "size": 3877
+    },
+    "COMPLETION_RECEIPT.md": {
+      "sha256": "a84be8963c8b208395239a7d194082bd928072bc572c5a9529eaeb852355593b",
+      "size": 1615
+    },
+    "DCP_SAVE_REPORT.json": {
+      "sha256": "0a751b14c08de383781fba62793d9c6113204555549a86d6907bec154f5811a8",
+      "size": 1883
+    },
+    "DEBUG_PATCH_MANIFEST.json": {
+      "sha256": "276bfdd3142e7a04d9cc9d7fa1621343b48f227d5da04e16d5938fb1da9f79a9",
+      "size": 4448
+    },
+    "ENVIRONMENT_AUDIT.json": {
+      "sha256": "6bc1d74d6d446f325edf7406d1550d30c0b9ded9f74a1b33feff4ae8415b2503",
+      "size": 743
+    },
+    "FAILURE_PROPAGATION_REPORT.json": {
+      "sha256": "f60fb2da9ab28d26cbddcd2c16c46b11466fc2f32300517a8023a81dbfb4736e",
+      "size": 454
+    },
+    "FSDP2_RUNTIME_AUDIT.json": {
+      "sha256": "4e1a3b1e370bccf6f196f1256084aa46245bef99aeef9c9b38b3a79ef7e5aba2",
+      "size": 841
+    },
+    "GPU_VISIBILITY_AUDIT.json": {
+      "sha256": "607dac27b40d8c70e1dfbc23361ce59dd493117ed25871942fe1794924017590",
+      "size": 490
+    },
+    "L3_32K_FORWARD_REPORT.json": {
+      "sha256": "f95760bb4789e59d9c6008535f50f18e87a104cecd7ff890db61606a17d5d2fe",
+      "size": 22774
+    },
+    "L3_32K_TRAIN_STEP_REPORT.json": {
+      "sha256": "e5ae764fcb56849b444b68910f5ef1201e9f2c84f6efd91d5225a1ed4c0944b2",
+      "size": 4225
+    },
+    "L3_NCCL_REPORT.json": {
+      "sha256": "47a79a82a5d0a2bd7df157795940c18aa4e9ba5a1e8d680ffddfdc3f9e2c5759",
+      "size": 657
+    },
+    "L4_RESUME_PARITY.json": {
+      "sha256": "ca391919600bef2e7465ab2d32df780c595c0b4c2905abc56c2e0bf16819d3ca",
+      "size": 1963
+    },
+    "MODEL_CONFIG_AUDIT.json": {
+      "sha256": "f60ee7b9cd565efe955d95ba6eff965396de32b07c6c176490270d4d3c8b3a94",
+      "size": 510
+    },
+    "SYNTHETIC_FIXTURE_MANIFEST.json": {
+      "sha256": "ce6514cf02eb2c7f6acc487e180b884d29f65eb91b35fae666f9dedf0b4cf392",
+      "size": 841
+    },
+    "TTT_LAYER_COVERAGE.json": {
+      "sha256": "54da569a79f484cc9a4cae468c5953a55d6b767d2d9de5fc138edfdf23643c50",
+      "size": 5178
+    }
+  },
+  "missing": [],
+  "rejects": [],
+  "status": "PASS"
+}

@@ -1,0 +1,33 @@
+{
+  "backend": "nccl",
+  "collective": "PASS",
+  "cuda_visible_devices": "2,3",
+  "hostname": "amax",
+  "physical_gpu_allowlist": [
+    2,
+    3
+  ],
+  "ranks": [
+    {
+      "all_reduce_value": 3.0,
+      "barrier": "PASS",
+      "device_name": "NVIDIA RTX A6000",
+      "local_rank": 0,
+      "logical_device": "cuda:0",
+      "physical_gpu": 2,
+      "rank": 0
+    },
+    {
+      "all_reduce_value": 3.0,
+      "barrier": "PASS",
+      "device_name": "NVIDIA RTX A6000",
+      "local_rank": 1,
+      "logical_device": "cuda:1",
+      "physical_gpu": 3,
+      "rank": 1
+    }
+  ],
+  "status": "PASS",
+  "unauthorized_gpu_used": false,
+  "world_size": 2
+}

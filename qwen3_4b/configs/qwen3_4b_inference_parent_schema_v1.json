@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Qwen3-4B Stage2 FINAL inference parent V1",
+  "type": "object",
+  "required": [
+    "status",
+    "DEBUG_ONLY",
+    "source_stage2_authority",
+    "source_stage2_authority_sha256",
+    "source_checkpoint_manifest_sha256",
+    "model_identity",
+    "ttt_layers",
+    "inference_ttt_chunk_size",
+    "inference_reference_sha256",
+    "context_length",
+    "files"
+  ],
+  "properties": {
+    "DEBUG_ONLY": {
+      "const": false
+    },
+    "model_identity": {
+      "const": "Qwen3-4B"
+    },
+    "ttt_layers": {
+      "const": [
+        0,
+        6,
+        12,
+        18,
+        24,
+        30
+      ]
+    },
+    "inference_ttt_chunk_size": {
+      "const": 4096
+    },
+    "context_length": {
+      "const": 32768
+    },
+    "inference_reference_sha256": {
+      "const": "210db096574f2170c2f2194338f51ff767977b9abd2c56a031f60caa1d3617a9"
+    },
+    "files": {
+      "type": "object",
+      "required": [
+        "config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "state_dict_audit.json"
+      ],
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      }
+    }
+  },
+  "x-executable-validator": "/path/to/ttt/src/qwen3_4b_downstream_pipeline_v1/contracts.py",
+  "x-model-path": "directory containing this authority; arbitrary HF paths are not accepted",
+  "x-transitive-requirements": [
+    "source Stage2 authority hash",
+    "STAGE2_FINAL_INTEGRITY=PASS",
+    "stage2_completed=true",
+    "925 records and 30000000 input tokens",
+    "actual completed DCP manifest hash and progress",
+    "model safetensor shard hashes",
+    "36 layers and six-layer NTP/TTT shape audit",
+    "tokenizer contract hashes"
+  ],
+  "x-debug-exception": "only preflight --debug-test; formal launch always rejects DEBUG"
+}

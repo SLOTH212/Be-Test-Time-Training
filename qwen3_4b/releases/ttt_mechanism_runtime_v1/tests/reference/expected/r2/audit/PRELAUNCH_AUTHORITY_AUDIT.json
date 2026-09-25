@@ -1,0 +1,30 @@
+{
+  "BENCHMARK_IDENTITY_MATCH": true,
+  "CANDIDATE_MANIFEST_HASH_MATCH": true,
+  "CHECKPOINT_IDENTITY_MATCH": true,
+  "ELIGIBILITY_HASH_MATCH": true,
+  "EXECUTION_COHORT_N": 173,
+  "FROZEN_EXPERT_FORMAL_COMPARATOR": false,
+  "MODEL_IDENTITY_MATCH": true,
+  "MULTI_SWITCH_DYNAMIC_N": 73,
+  "ONE_SWITCH_DYNAMIC_CANDIDATE_MAPPING_N": 100,
+  "ONE_SWITCH_DYNAMIC_N": 100,
+  "P1_FORMAL_COMPARATOR": false,
+  "PROTOCOL_HASH_MATCH": true,
+  "RULE_HASH_MATCH": true,
+  "TOTAL_CANDIDATES_EXPECTED": 99120,
+  "authority_checks": {
+    "benchmark": true,
+    "candidate": true,
+    "dynamic": true,
+    "eligibility": true,
+    "executor": true,
+    "fixed7": true,
+    "model": true,
+    "rule": true,
+    "scorer": true
+  },
+  "formal_outcomes_before_freeze": 0,
+  "status": "PASS",
+  "timestamp": "2026-09-06T01:48:09+08:00"
+}

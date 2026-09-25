@@ -1,0 +1,47 @@
+{
+  "amendment_type": "EXECUTION_ONLY_CONCURRENCY_CHANGE",
+  "candidate_commit_unit": "INDIVIDUAL_CANDIDATE",
+  "candidate_manifest_sha256": "737a5244a561e103c660ae33aff7a94e9c53e195d1fc05fc1006a1a7b4979739",
+  "candidate_manifest_unchanged": true,
+  "candidate_state_reuse": "FORBIDDEN",
+  "committed_after_safe_pause": 32948,
+  "cpu_affinity": {
+    "worker0": "8-15",
+    "worker1": "16-23"
+  },
+  "created_at": "2026-09-06T12:14:35+08:00",
+  "different_sample_concurrent_candidate_ids": [
+    "r2-0510-001-54ed3fb84f17",
+    "r2-0517-001-54ed3fb84f17"
+  ],
+  "eligibility_sha256": "f966cbfd65f8f9fbc0d079e44cd5e46fb24ca7da72130f5200c84be6faee3a42",
+  "eligibility_unchanged": true,
+  "isolated_parity_candidate_ids": [
+    "r2-0510-001-54ed3fb84f17",
+    "r2-3964-505-60f6909e22a2",
+    "r2-5691-169-ccaa6ebe8bed",
+    "r2-6223-505-60f6909e22a2",
+    "r2-6499-588-162643d89643"
+  ],
+  "isolated_parity_manifest_positions": [
+    0,
+    24780,
+    49560,
+    74340,
+    99119
+  ],
+  "original_protocol_sha256": "b3cd7b596169499d92816ab043206a9dba32ebc0a74ece7225343213ec09fd76",
+  "original_workers": 1,
+  "outcomes_used_to_choose_amendment": false,
+  "parallelization_unit": "SAMPLE",
+  "partially_completed_samples_at_migration": 1,
+  "rule_sha256": "afeb7f0ceb42cfaa753ea04d926866ba346f83015be92ff8ad5138d5c32f8378",
+  "rule_unchanged": true,
+  "same_sample_concurrent_execution": false,
+  "sample_ownership": "EXCLUSIVE",
+  "scientific_protocol_changed": false,
+  "scorer_unchanged": true,
+  "smoke_selection_rule": "manifest positions [0,N//4,N//2,3N//4,N-1]; concurrent first candidates of first two already-complete samples",
+  "target_workers": 2,
+  "winner_rule_unchanged": true
+}

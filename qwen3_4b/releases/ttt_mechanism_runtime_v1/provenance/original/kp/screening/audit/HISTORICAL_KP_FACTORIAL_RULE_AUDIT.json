@@ -1,0 +1,134 @@
+{
+  "all_four_cells_every_anchor": true,
+  "fields": [
+    {
+      "AMBIGUITY": "Historical cohort was outcome-conditioned before KP; not reused as new eligibility.",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "Immutable 42-anchor V1 cohort: 33 PRIMARY_SUCCESS + 9 STRUCTURAL_NEGATIVE.",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/setup_authority.py",
+      "FIELD": "HISTORICAL_PARENT",
+      "HASH": "119b0d8ac871115d6af5c42301a90e0ab8da8415d1d60294e3c9a29350aec3f4",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "No general historical intrinsic eligibility beyond frozen membership and executable authority.",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "All 42 frozen V1 anchors entered KP; no additional KP-stage filtering.",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/run_full_structural.py",
+      "FIELD": "ANCHOR_ELIGIBILITY",
+      "HASH": "e6838ab4dcd1f2d2750f7229110c1bad2e919f06acf93c0a47c81c974af99e62",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "New multi-switch trajectories require terminal-run boundary generalization.",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "BOUNDARY_POST_TRANSPLANT_PRE_CONTINUATION after tau complete 1024-token chunks.",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/run_full_structural.py",
+      "FIELD": "CONTINUATION_BOUNDARY",
+      "HASH": "e6838ab4dcd1f2d2750f7229110c1bad2e919f06acf93c0a47c81c974af99e62",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "None historically.",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "A^tau then B continuation, Native fast weights, Native prefix KV, Native used-layer occupancy/path.",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/run_full_structural.py",
+      "FIELD": "NATIVE_REFERENCE_STATE",
+      "HASH": "e6838ab4dcd1f2d2750f7229110c1bad2e919f06acf93c0a47c81c974af99e62",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "None historically.",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "OFF^tau then identical B continuation with control-derived KV and base-started fast state; external reference, distinct from F00.",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/run_terminal_reward.py",
+      "FIELD": "CONTROL_REFERENCE_STATE",
+      "HASH": "873da418d426bdbf10d8e9405684f0663c9bfe3e72a2de1c123e8e20fa42f66b",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "No layer/head/position subset; generation KV excluded.",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "All attention-layer K and V tensors at positions [0,tau*1024), copied from same-anchor Native into materialized cache.",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/factorial_core.py",
+      "FIELD": "K",
+      "HASH": "3e3bd26eba32a61ef6070420230c19b9af0057b21ee10ce3c003aee4f3bf6ee3",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "Implementation-qualified occupancy/materialization intervention, not generic cache_position state.",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "P0 explicitly injects all five candidate layers; P1 injects only Native-used candidate layers, leaving unused layers absent and on standard MLP path.",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/run_full_structural.py",
+      "FIELD": "P",
+      "HASH": "e6838ab4dcd1f2d2750f7229110c1bad2e919f06acf93c0a47c81c974af99e62",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "Hash equality rather than approximate numeric tolerance.",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "SHA256 over contiguous uint16-view tensor bytes for effective weights at L0/L6/L12/L18/L24; exact equality, tolerance 0, checked at boundary.",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/trajectory_state_closure_audit_v1/scripts/closure_core.py",
+      "FIELD": "FAST_WEIGHT_IDENTITY",
+      "HASH": "9fcbb2b1c5928a135b5cc0a673ba386fd402f158d23bfe755896516ba6d04a6f",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "None.",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "First bit is K, second is P; F00=(K0,P0), F10=(K1,P0), F01=(K0,P1), F11=(K1,P1).",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/run_full_structural.py",
+      "FIELD": "F00_F10_F01_F11",
+      "HASH": "e6838ab4dcd1f2d2750f7229110c1bad2e919f06acf93c0a47c81c974af99e62",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "Tolerance 0; score equality alone is insufficient.",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "Strict L6: exact L1 first-step/update tensors, L2 complete chunks, L3 prompt tail, L4 generation-start logits, and L5 prediction hash.",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/analyze_finalize.py",
+      "FIELD": "CLOSURE",
+      "HASH": "6628347b67dd5ab7ee9c93dac9f1a89f727981fcb4cbee862f521df458418119",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "First-divergence outcomes were cross-check/diagnosis, not new eligibility.",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "K_DIFF from any prefix attention KV inequality; P_DIFF from any TTT occupancy inequality; Sxy frozen before augmented reward.",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/setup_authority.py",
+      "FIELD": "DIAGNOSTIC_CLASSIFICATION",
+      "HASH": "119b0d8ac871115d6af5c42301a90e0ab8da8415d1d60294e3c9a29350aec3f4",
+      "STATUS": "PROVEN_EXACT"
+    },
+    {
+      "AMBIGUITY": "None.",
+      "BLOCKING": false,
+      "EXACT_RECOVERED_BEHAVIOR": "Primary continuous endpoint generation-start-logit relative L2; conditional K/P effects, averaged main effects and interaction; L1-L6 closure; reward secondary.",
+      "EXECUTED_SOURCE": "/home/USER/ttt_mechanism_analysis_v1/trajectory_closure_factorial_intervention_v1/scripts/analyze_finalize.py",
+      "FIELD": "FACTORIAL_ANALYSIS",
+      "HASH": "6628347b67dd5ab7ee9c93dac9f1a89f727981fcb4cbee862f521df458418119",
+      "STATUS": "PROVEN_EXACT"
+    }
+  ],
+  "historical_eligible_n": 42,
+  "historical_executed_n": 42,
+  "historical_parent_n": 42,
+  "source_hashes": {
+    "historical_K_definition": "0feed6f02548106b0c7223f8ba4ffced19161eee6886637a84c82e2985982b4b",
+    "historical_P_definition": "057a28ca5387876e4940bc654439d4fdb2c7991a808dd3e0cf74f2f969bc278e",
+    "historical_analyzer": "6628347b67dd5ab7ee9c93dac9f1a89f727981fcb4cbee862f521df458418119",
+    "historical_closure_core": "9fcbb2b1c5928a135b5cc0a673ba386fd402f158d23bfe755896516ba6d04a6f",
+    "historical_factorial_core": "3e3bd26eba32a61ef6070420230c19b9af0057b21ee10ce3c003aee4f3bf6ee3",
+    "historical_factorial_design": "42fc73002c0bec213a826671dd9d87af22ef9633f9de0a2a1c4dbe1d862809e5",
+    "historical_final_audit": "847c6dc7d1873681ec9e0cbea13e97565c4f168707cb6f7a030ce7de5cb98999",
+    "historical_full_structural_executor": "e6838ab4dcd1f2d2750f7229110c1bad2e919f06acf93c0a47c81c974af99e62",
+    "historical_reward_executor": "873da418d426bdbf10d8e9405684f0663c9bfe3e72a2de1c123e8e20fa42f66b",
+    "state_reset_eligibility_manifest": "e74831509b3d46068de7364aeffeead89003d057d086e23a496ab3c3f2e55220",
+    "state_reset_parent": "d8aee5cc1bcb5f724cc0eda26c2309816ef63ec05f3504fa3950b56f356b62e8",
+    "state_reset_rule": "e816801b71358265c6c9458e8754887e71508c6b26448e6dad5a336f64fecf47",
+    "transplant_v1_executor": "80090602480e33ada67efc3fe39c18403fa7695f97bc8b5e9cb43d81ac8cb972",
+    "transplant_v1_final_audit": "c470c154e0072b8e8bcb9591b50a4951bab8586fbc96666d9bc3c3735b9e4262",
+    "transplant_v1_manifest": "e616cb878c7829038965b0ebc2bb36779d7237863887f6e47487ceaf6005e408"
+  },
+  "status": "PASS"
+}

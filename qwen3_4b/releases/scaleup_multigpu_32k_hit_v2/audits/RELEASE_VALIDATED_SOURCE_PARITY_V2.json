@@ -1,0 +1,13 @@
+{
+  "authority": "audits/hit_l3_l4_v1/",
+  "eligible_file_count": 64,
+  "excluded_debug_only_backups": [
+    "code/lib/distributed_runtime.py.orig",
+    "code/lib/fsdp2_runtime.py.orig",
+    "code/workers/distributed_train_worker.py.orig"
+  ],
+  "hit_l3_l4_evidence_reused": true,
+  "mismatches": [],
+  "release_validated_source_parity": "PASS",
+  "status": "PASS"
+}

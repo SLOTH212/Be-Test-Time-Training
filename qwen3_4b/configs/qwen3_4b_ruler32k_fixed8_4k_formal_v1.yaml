@@ -1,0 +1,63 @@
+{
+  "MKL_NUM_THREADS": 4,
+  "OMP_NUM_THREADS": 4,
+  "OPENBLAS_NUM_THREADS": 4,
+  "actions": [
+    "OFF",
+    "L0",
+    "L6",
+    "L12",
+    "L18",
+    "L24",
+    "L30",
+    "ALL"
+  ],
+  "active_sample_per_worker": 1,
+  "attention_implementation": "sdpa",
+  "benchmark_authority_sha256": "b62966b2754fa0d1cfef2c9aa3cef8d4b2bbae2a664495eb733c2ed5e5a4bebd",
+  "chunk_size": 4096,
+  "classification": "FORMAL_PROTOCOL_CONFIG_NOT_EXECUTED",
+  "complete_prompt_chunk_update": true,
+  "config_frozen": true,
+  "context_length": 32768,
+  "delta_clip_frobenius": 1e-05,
+  "dtype": "bfloat16",
+  "expected_cells": 52000,
+  "expected_samples": 6500,
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": "FROZEN_BENCHMARK_ROW",
+    "num_beams": 1,
+    "temperature": null,
+    "top_k": null,
+    "top_p": null,
+    "use_cache": true
+  },
+  "generation_update": false,
+  "inference_base_package_sha256": "65a0d7bd9c8801c92fc30477ab8662d3eb52261612eff2acef0bbeb3edf6ba51",
+  "inference_config_sha256": "210db096574f2170c2f2194338f51ff767977b9abd2c56a031f60caa1d3617a9",
+  "layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "model_family": "Qwen3-4B",
+  "num_hidden_layers": 36,
+  "parent_authority_required": "Stage2 FINAL inference parent",
+  "phase": "fixed",
+  "physical_gpu_allowlist": [
+    2,
+    3
+  ],
+  "reset_scope": "PER_SAMPLE",
+  "tail_update": false,
+  "task_policy": "ALL_13_INCLUDING_CWE",
+  "tie_policy": "all maximum actions within 1e-12 in configured action order",
+  "ttt_lr": 1.0,
+  "update_order": "APPLY_THEN_UPDATE",
+  "workers": 2,
+  "workers_per_gpu": 1
+}

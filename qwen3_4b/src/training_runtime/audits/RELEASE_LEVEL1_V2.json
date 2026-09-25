@@ -1,0 +1,17 @@
+{
+  "command": "CUDA_VISIBLE_DEVICES empty; test_distributed_level1.py",
+  "coverage": [
+    "global-to-rank partition",
+    "distributed loss oracle",
+    "gradient accumulation math",
+    "token accounting",
+    "checkpoint and full RNG schema",
+    "world-size mismatch preflight",
+    "Stage1-to-Stage2 handoff",
+    "failure propagation via any_rank_failed"
+  ],
+  "gpu_used": false,
+  "release_level1_status": "PASS",
+  "status": "PASS",
+  "tests_run": 1
+}

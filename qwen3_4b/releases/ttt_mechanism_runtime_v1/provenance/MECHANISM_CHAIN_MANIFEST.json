@@ -1,0 +1,44 @@
+{
+  "edges": [
+    [
+      "dynamic_parent",
+      "searched"
+    ],
+    [
+      "searched",
+      "improved"
+    ],
+    [
+      "improved",
+      "reverse"
+    ],
+    [
+      "improved",
+      "reset"
+    ],
+    [
+      "reset",
+      "kp"
+    ],
+    [
+      "reset",
+      "deletion"
+    ],
+    [
+      "improved",
+      "r2"
+    ]
+  ],
+  "kp_to_deletion_edge": false,
+  "nodes": {
+    "deletion": 151,
+    "dynamic_parent": 6000,
+    "improved": 173,
+    "kp": 167,
+    "r2": 173,
+    "reset": 167,
+    "reverse": 173,
+    "searched": 1435
+  },
+  "reverse_receipt_role_in_reset": "authority readiness only; no Reverse outcome selection"
+}

@@ -1,0 +1,32 @@
+{
+  "all_decoder_blocks_wrapped": true,
+  "each_decoder_block_unique": true,
+  "expected_block_n": 36,
+  "forward_backward_runtime_evidence": "L3_32K_TRAIN_STEP_REPORT.json",
+  "mixed_precision": "bf16",
+  "optimizer_constructed_after_wrapping": true,
+  "ranks": [
+    {
+      "build_seconds": 4.124668530188501,
+      "local_rank": 0,
+      "logical_device": "cuda:0",
+      "peak_allocated_bytes": 8288823808,
+      "peak_reserved_bytes": 8709472256,
+      "physical_gpu": 2,
+      "rank": 0
+    },
+    {
+      "build_seconds": 3.814137876033783,
+      "local_rank": 1,
+      "logical_device": "cuda:1",
+      "peak_allocated_bytes": 8288823808,
+      "peak_reserved_bytes": 8709472256,
+      "physical_gpu": 3,
+      "rank": 1
+    }
+  ],
+  "reduce_precision": "fp32",
+  "root_wrapped": true,
+  "status": "PASS",
+  "wrapped_block_n": 36
+}

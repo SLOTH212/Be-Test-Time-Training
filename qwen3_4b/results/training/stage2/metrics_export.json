@@ -1,0 +1,20 @@
+{
+  "source": "runs/qwen3_4b_stage2_formal_20260918T123725/training.jsonl",
+  "rows": 463,
+  "fields": [
+    "update_step",
+    "stage",
+    "cumulative_tokens",
+    "global_mean_loss",
+    "global_valid_tokens",
+    "global_answer_positions",
+    "global_context_positions",
+    "grad_norm_before_clip",
+    "grad_norm_after_clip",
+    "learning_rate",
+    "iteration_seconds_excluding_checkpoint",
+    "checkpoint_seconds",
+    "logged_at_unix"
+  ],
+  "note": "Scalar metrics only; source records may include multiple ranks/attempts. Not a reconstructed optimizer history."
+}

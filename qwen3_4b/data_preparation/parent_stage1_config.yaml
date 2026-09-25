@@ -1,0 +1,97 @@
+{
+  "dataset_id": "PROLONG_DERIVED_1B_32K_QWEN3_STAGE1_V3_STREAMING",
+  "historical_anchor_sha256": "017a74186b419b2c3f566f568e6c2d120723e3ddafb69024138eb6b321c90ae8",
+  "upstream_repo": "princeton-nlp/prolong-data-64K",
+  "upstream_revision": "1447128c751f0fbc7d2082b2a113a938426a9bba",
+  "target_sources": [
+    "book-65536",
+    "thestackv1_concat_by_repo-65536",
+    "fineweb-2023-50",
+    "fineweb-edu",
+    "dolmawiki",
+    "stackexchange",
+    "arxiv",
+    "openwebmath",
+    "textbooks",
+    "tuluv2"
+  ],
+  "excluded_sources": [
+    "dclm-baseline-1.0"
+  ],
+  "source_split_quotas": {
+    "book-65536": {
+      "train": 297000000,
+      "validation": 3000000
+    },
+    "thestackv1_concat_by_repo-65536": {
+      "train": 297000000,
+      "validation": 3000000
+    },
+    "fineweb-2023-50": {
+      "train": 99000000,
+      "validation": 1000000
+    },
+    "fineweb-edu": {
+      "train": 99000000,
+      "validation": 1000000
+    },
+    "dolmawiki": {
+      "train": 39600000,
+      "validation": 400000
+    },
+    "stackexchange": {
+      "train": 39600000,
+      "validation": 400000
+    },
+    "arxiv": {
+      "train": 29700000,
+      "validation": 300000
+    },
+    "openwebmath": {
+      "train": 29700000,
+      "validation": 300000
+    },
+    "textbooks": {
+      "train": 29700000,
+      "validation": 300000
+    },
+    "tuluv2": {
+      "train": 29700000,
+      "validation": 300000
+    }
+  },
+  "train_logical_tokens": 990000000,
+  "validation_logical_tokens": 10000000,
+  "tokenizer_json_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+  "eos_token_id": 151643,
+  "selection_protocol": "DETERMINISTIC_SHARD_PERMUTATION_STREAMING_V1",
+  "within_shard_order": "NATIVE_ROW_ORDER",
+  "duplicate_policy": "online identity and decoded-content exclusion",
+  "terminal_trim": "exact prefix; no overshoot or redistribution",
+  "canonical_order": "historical anchor then V3 extension per split",
+  "packing": "recovered first-fit 32768; reset at component/source-run boundaries",
+  "max_context": 32768,
+  "output_schema": {
+    "format": "UTF-8 JSONL",
+    "newline": "LF",
+    "trainer_retokenizes_text": true,
+    "tokenizer_add_special_tokens": false,
+    "logical_token_count_field": "token_count",
+    "document_boundaries_field": "document_boundaries_qwen_json",
+    "record_fields": [
+      "text",
+      "sample_id",
+      "split",
+      "category",
+      "domain",
+      "source_name",
+      "source_revision",
+      "source_shard",
+      "source_row_ids_json",
+      "logical_document_ids_json",
+      "document_boundaries_qwen_json",
+      "provenance_json",
+      "token_count"
+    ]
+  }
+}

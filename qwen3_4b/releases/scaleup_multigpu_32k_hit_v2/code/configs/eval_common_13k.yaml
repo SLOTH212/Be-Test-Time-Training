@@ -1,0 +1,39 @@
+benchmark:
+  name: RULER-16K
+  task_set: Full-13
+  task_count: 13
+  samples_per_task: 1000
+  total_samples: 13000
+  sha256: f921d4bbf2641b1069c925e534beee07e1a3749c4c5f221328ffe4656ab3b977
+  manifest: /root/autodl-tmp/benchmarks/ruler_16k_13task_1000sample_v1/benchmark_manifest.json
+  samples_root: /root/autodl-tmp/benchmarks/ruler_16k_13task_1000sample_v1/samples
+model:
+  checkpoint: /root/autodl-tmp/ttt/pipelines/gated_ntp_300m_qa10m_eval13k_v2/artifacts/stage2_final_eval
+  tokenizer: /root/autodl-tmp/models/Qwen3-1.7B-Base
+  context_length: 16384
+ttt:
+  chunk_size: 1024
+  layers: [0, 6, 12, 18, 24]
+  fast_weight: mlp.down_proj.weight
+  target: gated_next_position_contextual_hidden
+  update_order: apply_then_update
+  reset_per_sample: true
+  reset_per_document: true
+  conv_forward_expected: 0
+tailfix:
+  complete_prompt_chunks_can_update: true
+  incomplete_prompt_tail_can_update: false
+  discard_incomplete_tail_before_generation: true
+  retain_prompt_derived_fast_weight: true
+  generation_append_ttt_tail: false
+  generation_online_update: false
+  expected_generation_update_count: 0
+decode:
+  do_sample: false
+  temperature: null
+  top_p: null
+  top_k: null
+  num_beams: 1
+  seed: 42
+  use_cache: true
+

@@ -1,0 +1,497 @@
+{
+  "schema": "QWEN3_4B_STAGE1_1B_32K_GPU23_PRELAUNCH_AUTHORITY_V1",
+  "document_status": "FINALIZED_BY_USER_REQUEST_NO_FURTHER_GPU_TESTS",
+  "QWEN3_4B_STAGE1_PRELAUNCH_STATUS": "FAIL",
+  "SAFE_TO_LAUNCH_QWEN3_4B_STAGE1_1B_32K_GPU23": "NO",
+  "HOST": "amax",
+  "USER": "USER",
+  "TRAINING_RUNTIME_AUTHORITY": "PASS",
+  "TRAINING_RUNTIME_SHA256": "79d89c95908ea787c1358a651c9003ca14eced1957853154b43041db845c162b",
+  "ADAPTED_RUNTIME_SOURCE_MANIFEST_SHA256": "481321ee222ca545a3097858e23b6e76a4606331219a1b1dd1016eac255975f1",
+  "MODEL_PATH": "/home/USER/data/USER/models/Qwen3-4B-Base",
+  "MODEL_AUTHORITY_STATUS": "PASS",
+  "STAGE1_DATASET_ROOT": "/path/to/ttt/datasets",
+  "STAGE1_DATASET_RUNTIME_AUTHORITY": "PASS",
+  "STAGE1_PACKAGE_SHA256": "11ddc46d95381c6bdaed7f3a62a7f2f2711e95db1223f7f50ec85e249832217d",
+  "TRAIN_LOGICAL_TOKENS": 990000000,
+  "VAL_LOGICAL_TOKENS": 10000000,
+  "TOTAL_LOGICAL_TOKENS": 1000000000,
+  "TRAIN_ACTUAL_INPUT_TOKENS": 989996971,
+  "VAL_ACTUAL_INPUT_TOKENS": 9999975,
+  "CONTEXT_LENGTH": 32768,
+  "TTT_CHUNK_SIZE": 4096,
+  "TTT_LAYERS": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "MODEL_PARAMETER_COUNT": 4061881856,
+  "MODEL_LAYERS": 36,
+  "PHYSICAL_GPU_ALLOWLIST": [
+    2,
+    3
+  ],
+  "FORMAL_GPU_SET": [
+    2,
+    3
+  ],
+  "CUDA_VISIBLE_DEVICE_COUNT": 2,
+  "GPU_MAPPING_STATUS": "PASS",
+  "UNAUTHORIZED_GPU_USED": false,
+  "FORMAL_WORLD_SIZE": 2,
+  "FORMAL_MICRO_BATCH_PER_GPU": 1,
+  "FORMAL_GRAD_ACCUM": 1,
+  "FORMAL_GLOBAL_BATCH": 2,
+  "FORMAL_LOGICAL_TOKENS_PER_UPDATE": "No exact per-record source-budget mapping is asserted. Runtime counts actual input tokens; nominal1B allocation=990M train+10M validation. Stop at exact frozen train cursor38335/input989996971.",
+  "FORMAL_INPUT_TOKENS_PER_UPDATE": "variable sum of canonical record token_count across both ranks; maximum65536 input tokens; supervised positions=sum(n-1)",
+  "FORMAL_BATCH_SEMANTICS_FROZEN": true,
+  "FORMAL_GPU_POLICY_FROZEN": true,
+  "QWEN3_4B_MODEL_AUTHORITY": "PASS",
+  "REAL_STAGE1_DATALOADER_PREFLIGHT": "PASS",
+  "HISTORICAL_BATCH_SEMANTICS_STATUS": "PASS",
+  "REAL_DATA_2GPU_STAGE1_SMOKE": "PASS",
+  "REAL_DATA_DOCUMENT_BOUNDARY_CHECK": "PASS",
+  "REAL_DATA_TOKEN_ACCOUNTING": "PASS",
+  "FORMAL_TTT_LAYER_COVERAGE": "PASS",
+  "FORMAL_CHUNK4K_RUNTIME": "PASS_REPRESENTATIVE_FULL_AND_PARTIAL_RECORDS",
+  "REAL_DATA_DCP_SAVE": "PASS",
+  "REAL_DATA_RESUME_PARITY": "FAIL_ORIGINAL_NON_DETERMINISTIC_MODE",
+  "REAL_DATA_FAILURE_RECOVERY": "NOT_COMPLETED",
+  "STAGE1_VALIDATION_DATA_SMOKE": "PASS",
+  "FORMAL_DATA_ORDER_PREFLIGHT": "PASS",
+  "REAL_ONE_TOKEN_GPU_EDGE": "NOT_RUN_TO_COMPLETION",
+  "REAL_ODD_FINAL_GPU_EDGE": "NOT_RUN_TO_COMPLETION",
+  "FORMAL_PRELAUNCH_AUDIT": "FAIL_NOT_ALL_MANDATORY_GATES_PASS",
+  "STEADY_STATE_STEP_TIME_MEAN": 30.114049801789225,
+  "STEADY_STATE_STEP_TIME_P50": 30.184402849990875,
+  "STEADY_STATE_STEP_TIME_P95": 30.34143995749764,
+  "STEADY_STATE_INPUT_TOKENS_PER_SEC": 1830.142420655938,
+  "STEADY_STATE_LOGICAL_TOKENS_PER_SEC": "Not separately measurable: exact source-logical-budget mapping per record is absent; measured input rate is1830.142420655938/s.",
+  "DATALOADER_WAIT_FRACTION": 3.226890534441221e-05,
+  "ESTIMATED_1B_STAGE1_WALL_TIME_OPTIMISTIC_H": 137.49551047495177,
+  "ESTIMATED_1B_STAGE1_WALL_TIME_CENTRAL_H": 157.22917431397306,
+  "ESTIMATED_1B_STAGE1_WALL_TIME_CONSERVATIVE_H": 176.56689433709423,
+  "ACTUAL_TRAIN_SPLIT_CENTRAL_H": 155.71092134343607,
+  "CHECKPOINT_ESTIMATED_SIZE": 25154358973,
+  "CHECKPOINT_CADENCE": "first step25, every250 updates thereafter, final19168 forced; estimated78 saves",
+  "CHECKPOINT_RETENTION_POLICY": "/path/to/ttt/config/CHECKPOINT_RETENTION_POLICY.json",
+  "FORMAL_CONFIG_PATH": "/path/to/ttt/configs/qwen3_4b_stage1_1b_32k_gpu23_formal_v1.yaml",
+  "FORMAL_CONFIG_SHA256": "75740a4513f3f74302f276e1be38314a98ac095ed68d5ede458f4f8774576ff8",
+  "FORMAL_LAUNCH_SCRIPT": "/path/to/ttt/bin/launch_qwen3_4b_stage1_1b_32k_gpu23_formal_v1.sh",
+  "FORMAL_STATUS_SCRIPT": "/path/to/ttt/bin/status_qwen3_4b_stage1_1b_32k_gpu23_formal_v1.sh",
+  "FORMAL_STAGE1_TRAINING_STARTED": false,
+  "BLOCKING_PHASE": [
+    "REAL_DATA_RESUME_PARITY",
+    "REAL_DATA_FAILURE_RECOVERY",
+    "REAL_GPU_EDGE_COVERAGE"
+  ],
+  "BLOCKING_REASON": [
+    "Original non-deterministic mode failed existing model/optimizer numerical tolerance; exact DCP roundtrip and RNG/cursor checks do not override that failure.",
+    "Controlled software failure and recovery suite not completed.",
+    "Real one-token and odd-final-rank GPU edge tests not completed.",
+    "User explicitly requested original mode and no further GPU testing; documentation finalized from available evidence."
+  ],
+  "warnings": [
+    "Shared model files are world writable; not modified.",
+    "Historical Triton cache write outside authorized root occurred before remediation; preserved explicitly.",
+    "GPU driver utilization counter reported0 during real computation; raw values are not evidence of idle GPUs.",
+    "Historical1.7B implemented batch verified from frozen formal source; completed1.7B run log not independently verified.",
+    "Original-mode throughput is prior measured data, not a new final-candidate benchmark.",
+    "Shared GPU2 process observed during slower deterministic benchmark; individual slowdown causes not isolated.",
+    "Nominal1B dataset means990M train plus10M validation; exact input totals differ slightly."
+  ],
+  "historical_batch": {
+    "schema": "BATCH_SEMANTICS_AUDIT_V1",
+    "status": "PASS",
+    "authorities": [
+      {
+        "authority": "0.6B completed-run source snapshot",
+        "micro_batch_per_gpu": 1,
+        "world_size": 1,
+        "gradient_accumulation": 1,
+        "global_batch": 1,
+        "tokens_per_update": "actual retokenized record length <=16384; not fixed 16384",
+        "evidence": {
+          "provenance": "/path/to/ttt/src/training_runtime/provenance/NTP_SOURCE_AUTHORITY.json",
+          "builder_sha256": "960465d4c0850345fb998e81b6bf19f2517ecea104aed2946a8b3e31bb416cf3",
+          "lines": "builder454-501 one row zero_grad/backward/opt.step/scheduler.step"
+        }
+      },
+      {
+        "authority": "1.7B frozen formal config and implementation",
+        "micro_batch_per_gpu": 1,
+        "world_size": 1,
+        "gradient_accumulation": 1,
+        "global_batch": 1,
+        "tokens_per_update": "actual token_count per canonical record <=16384",
+        "evidence": {
+          "config": "/path/to/ttt/src/training_runtime/code/configs/stage1_300m.yaml",
+          "worker": "/path/to/ttt/src/training_runtime/code/workers/train_worker.py",
+          "config_sha256": "9cb1973419c18e1e378b633dc15194b717cfa5d40f8591c4280f30f4011542da",
+          "worker_sha256": "9a52c6e59e84b9369a293d0db967c4ab4f3190bb31f758d8ed440b8ba8aeb0bc"
+        }
+      }
+    ],
+    "two_gpu_candidates": [
+      {
+        "micro": 1,
+        "world_size": 2,
+        "gradient_accumulation": 1,
+        "global_batch": 2,
+        "max_input_tokens_per_update": 65536,
+        "reason": "minimum positive ordinary two-rank batch and no added accumulation versus recovered lineage"
+      },
+      {
+        "micro": 1,
+        "world_size": 2,
+        "gradient_accumulation": 2,
+        "global_batch": 4,
+        "max_input_tokens_per_update": 131072,
+        "selected": false,
+        "reason": "additional accumulation has no recovered lineage justification"
+      },
+      {
+        "micro": 1,
+        "world_size": 2,
+        "gradient_accumulation": 32,
+        "global_batch": 64,
+        "selected": false,
+        "reason": "explicitly prohibited historical global-batch64 restoration"
+      }
+    ],
+    "runtime_test_candidate": {
+      "micro": 1,
+      "world_size": 2,
+      "gradient_accumulation": 1,
+      "global_batch": 2
+    },
+    "optimization_delta": "global batch increases from1 to2; not exact single-rank optimization parity",
+    "logical_tokens_per_update": "Source-budget accounting is distinct from actual input tokens; no exact per-record mapping to nominal logical budget asserted.",
+    "FORMAL_BATCH_SEMANTICS_FROZEN": true,
+    "HISTORICAL_BATCH_SEMANTICS_STATUS": "PASS",
+    "COMPLETED_1P7B_RUN_LOG_VERIFICATION": "NOT_VERIFIED",
+    "scope": "Implemented semantics recovered from user-designated frozen formal sources; no claim of independent completed 1.7B run verification",
+    "selected_formal_batch": {
+      "micro_batch_per_gpu": 1,
+      "world_size": 2,
+      "gradient_accumulation": 1,
+      "global_batch": 2
+    },
+    "independent_review": "independent_stop_audit: section9 requires recovery from formal authorities, not additional completed-run logs",
+    "input_tokens_per_update": "variable sum(record token_count); maximum65536; shifted supervision=sum(n-1)"
+  },
+  "GPU_METRICS": {
+    "2": {
+      "physical_id": 2,
+      "utilization_percent": {
+        "mean": 0.0,
+        "median": 0.0,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "memory_mib": {
+        "mean": 36620.0,
+        "median": 36620.0,
+        "p95": 36620.0,
+        "max": 36620.0
+      },
+      "power_w": {
+        "mean": 148.76618644067796,
+        "median": 149.79000000000002,
+        "p95": 195.222,
+        "max": 199.47
+      },
+      "sm_clock_mhz": {
+        "mean": 1555.550847457627,
+        "median": 1545.0,
+        "p95": 1860.0,
+        "max": 1860.0
+      },
+      "pstates": [
+        "P2"
+      ],
+      "samples": 118,
+      "torch_peak_allocated_bytes": 28563138560,
+      "torch_peak_reserved_bytes": 37337694208
+    },
+    "3": {
+      "physical_id": 3,
+      "utilization_percent": {
+        "mean": 0.0,
+        "median": 0.0,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "memory_mib": {
+        "mean": 36495.38983050847,
+        "median": 36496.0,
+        "p95": 36496.0,
+        "max": 36496.0
+      },
+      "power_w": {
+        "mean": 149.74110169491524,
+        "median": 150.73000000000002,
+        "p95": 192.321,
+        "max": 198.3
+      },
+      "sm_clock_mhz": {
+        "mean": 1628.7711864406779,
+        "median": 1575.0,
+        "p95": 1905.0,
+        "max": 1920.0
+      },
+      "pstates": [
+        "P2"
+      ],
+      "samples": 118,
+      "torch_peak_allocated_bytes": 28563138560,
+      "torch_peak_reserved_bytes": 37337694208
+    }
+  },
+  "throughput_and_estimate": {
+    "status": "EXISTING_MEASUREMENT_REUSED_NO_NEW_GPU_RUN",
+    "source_receipt": "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_corrected_v2/STEADY_STATE_THROUGHPUT.json",
+    "source_sha256": "313cad923b90fc65f3564de3d9ac70ef856e89a7753a7e68b0b22b264b440b63",
+    "training_loop_equivalence_receipt": "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_final_v3/FINAL_ENGINEERING_CHANGE_AUTHORITY.json",
+    "input_tokens_per_second": 1830.142420655938,
+    "step_seconds": {
+      "mean": 30.114049801789225,
+      "median": 30.184402849990875,
+      "p95": 30.34143995749764,
+      "max": 30.37181629613042
+    },
+    "gpu": {
+      "2": {
+        "physical_id": 2,
+        "utilization_percent": {
+          "mean": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "memory_mib": {
+          "mean": 36620.0,
+          "median": 36620.0,
+          "p95": 36620.0,
+          "max": 36620.0
+        },
+        "power_w": {
+          "mean": 148.76618644067796,
+          "median": 149.79000000000002,
+          "p95": 195.222,
+          "max": 199.47
+        },
+        "sm_clock_mhz": {
+          "mean": 1555.550847457627,
+          "median": 1545.0,
+          "p95": 1860.0,
+          "max": 1860.0
+        },
+        "pstates": [
+          "P2"
+        ],
+        "samples": 118,
+        "torch_peak_allocated_bytes": 28563138560,
+        "torch_peak_reserved_bytes": 37337694208
+      },
+      "3": {
+        "physical_id": 3,
+        "utilization_percent": {
+          "mean": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "memory_mib": {
+          "mean": 36495.38983050847,
+          "median": 36496.0,
+          "p95": 36496.0,
+          "max": 36496.0
+        },
+        "power_w": {
+          "mean": 149.74110169491524,
+          "median": 150.73000000000002,
+          "p95": 192.321,
+          "max": 198.3
+        },
+        "sm_clock_mhz": {
+          "mean": 1628.7711864406779,
+          "median": 1575.0,
+          "p95": 1905.0,
+          "max": 1920.0
+        },
+        "pstates": [
+          "P2"
+        ],
+        "samples": 118,
+        "torch_peak_allocated_bytes": 28563138560,
+        "torch_peak_reserved_bytes": 37337694208
+      }
+    },
+    "dataloader_wait_fraction": 3.226890534441221e-05,
+    "samples_per_second": 0.06641418252158068,
+    "estimate": {
+      "pure_nominal_1b_training_hours": 151.77932309673471,
+      "optimistic_hours": 137.49551047495177,
+      "central_hours": 157.22917431397306,
+      "conservative_hours": 176.56689433709423,
+      "actual_train_split_central_hours": 155.71092134343607,
+      "overhead_hours": 5.4498512172383355,
+      "checkpoint_seconds_allowance": 203.14472523797303,
+      "checkpoint_count": 78,
+      "validation_4_record_full_wrapper_seconds": 32.14355254173279,
+      "validation395_linear_seconds": 3174.175813496113,
+      "startup_seconds": 600,
+      "IO_included_in_measured_training_seconds": true,
+      "basis": "Original-mode measured20steps; current retention third-save timing and exact-fingerprint validation wrapper; engineering training loop unchanged; no new GPU run."
+    },
+    "limitations": [
+      "first50 canonical records only; corpus mixture may differ",
+      "shared GPU contention can change throughput",
+      "legacy logical-input metric counts actual record input tokens, not an exact nominal source-budget mapping",
+      "no final-candidate GPU retest under latest user scope"
+    ],
+    "formal_training_started": false
+  },
+  "file_sha256": {
+    "/path/to/ttt/configs/qwen3_4b_stage1_1b_32k_gpu23_formal_v1.yaml": "75740a4513f3f74302f276e1be38314a98ac095ed68d5ede458f4f8774576ff8",
+    "/path/to/ttt/bin/activate_ttt.sh": "c39a86a3cc7893d08ffb1456d3bb4504ff565df2ff8dca5e0f9d40c521fecb1f",
+    "/path/to/ttt/configs/paths.env": "fdecd856e2e03859cde4e374736f67fc7a1144724034eca2813d4c1289e85852",
+    "/path/to/ttt/bin/check_shared_assets.sh": "865f32a798c7ef657c2598386346d17981b85338f95215bfd11b373c0a07af90",
+    "/path/to/ttt/bin/launch_qwen3_4b_stage1_1b_32k_gpu23_formal_v1.sh": "537aaddbf330c619c9b46fbcf487c673fedb591dbb1fbb06b2a940973241c9fe",
+    "/path/to/ttt/bin/status_qwen3_4b_stage1_1b_32k_gpu23_formal_v1.sh": "db9f45c3114a9db919552f40868ac6bcbba0aa3c470fe57ebad95e7f7393b7aa",
+    "/path/to/ttt/bin/qwen3_4b_stage1_gpu23_formal_control_v1.py": "f28889c133e53a39304999863575ad83ed02a51662693db7657f7432c545fd07",
+    "/path/to/ttt/config/CHECKPOINT_RETENTION_POLICY.json": "6f5b56770b91bd30a73a11804e0f402e7bd470e8547544cf2dd29dc34169c8f1",
+    "/path/to/ttt/provenance/STAGE1_SCIENTIFIC_CONTRACT.json": "a5083b0170e40e57300c00bcaca5631c8ec490d7c3280fe1bf5961e050f8e930",
+    "/path/to/ttt/audits/BATCH_SEMANTICS_AUDIT.json": "da951654e0190f85edba9c6691236761e5d0a1d139c5d06b866c4363c689b4f6",
+    "/path/to/ttt/audits/STAGE1_STOP_SEMANTICS_AUDIT.json": "3e7ee9e9a284b7f211f201f919446bbcafe983f360c6acb5a4c3da84b7a5edeb",
+    "/path/to/ttt/provenance/QWEN3_4B_SHARED_MODEL_GUARD_SHA256SUMS.txt": "90cba3c0627828c0dad95362149ff28b2dc862a7004ce3342fe2bec15e01bf63",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_v1/FROZEN_INPUT_HASH_VERIFICATION.json": "6d1a42151aa7c7f834d8921dad21e13c932356129a4ede8e5c0ac7fbc332cd9f",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_v1/MODEL_IDENTITY.json": "2397f0674d7d016aba0110b62e859e95566189cb35a5dac37256ab32155b6f6c",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_v1/NCCL_GPU_MAPPING.json": "370008ea046f113665ca8ab8a0b91c5a0b9a6a4518dbeb202b2cca0f28ce3228",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_v1/REAL_DATALOADER_PREFLIGHT.json": "616884fa55c326e4c25672037097cfacde078e4a465956ddbba72667766790b7",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_v1/REAL_METADATA_CORE_REGRESSION.json": "4b084c2854f51d9147c3cc598d0c1815f0bffa5f401eb539891520e88a91a032",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_v1/FULL_CANONICAL_RECORD_ACCOUNTING.json": "2e36b368ef94e2bb0902a2fafc8850779261eab678affb1d220fbd88574eda57",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_v1/GPU_SHARING_AUTHORIZATION.json": "b5ed87f99f660c7397227c968101f9115cd72b7910312292b7cecf74c661927c",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_v1/CACHE_POLICY_INCIDENT_AND_STOP.json": "bef5f84516fcafdfa8abf1421d64d4ec17bdc6a49400cb6c700f7916124b8220",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_v1/CACHE_POLICY_REMEDIATION.json": "4b69729dd76e4942b841b9e519d2e1108ffaa9bc5b85afa44aba3f7ee36d0cf0",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_corrected_v2/STEADY_STATE_THROUGHPUT.json": "313cad923b90fc65f3564de3d9ac70ef856e89a7753a7e68b0b22b264b440b63",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_corrected_v2/REAL_RUNTIME_GATES.json": "8de2bae3057d43b7a28b258b0917e30d4446d7db071674f32f593a9aedccff23",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_corrected_v2/REAL_SCHEMA_AND_METADATA_PREFLIGHT.json": "142982a5d2c7f620b79e66dc80f8bc685dd20f382f366a14f956357f41165b46",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_corrected_v2/REAL_DCP_CONTENT_AUDIT.json": "a81d83af645673b02be58693d011de3bf70f23ff18fda9a7d0b001a4192fb032",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_corrected_v2/FORMAL_CONTROLLER_REGRESSION.json": "d8c87a01a34fab7791ffe812c3a7d234eae58b1d75a02fe21c0218bc05570920",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_corrected_v2/DETACHED_PROCESS_PATTERN_AUDIT.json": "fbedd808fc7a44a6e9dd4568b092e6044fe92717c8dee74cf5f5ab2a7a65549f",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_final_v3/RUNTIME_SOURCE_SHA256.json": "481321ee222ca545a3097858e23b6e76a4606331219a1b1dd1016eac255975f1",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_final_v3/LEVEL0.log": "9fd79ffd0395d954a1faa16c934a70d63dc6cc940609626aeb9591261da8c6c7",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_final_v3/LEVEL1.log": "bb4c8bd7a8e11c1302d75b750ed67d6b20664b3c71a7b4778e13a03f143ada93",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_final_v3/FULL_ENVIRONMENT_IDENTITY.json": "522862ca9c037b2aec1e7893c548a7394153b5fe2d32c598b91d9e38d11eee20",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_final_v3/MODEL_METADATA_IDENTITY.json": "022fff33ed8ffebc92ca458cdd9c6e824d31ac401e5823c6f87fe5b23d01aef1",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_final_v3/REAL_RESUME_NUMERIC_PARITY.json": "23ef308ddd99f5c6ad7636eca7d92001f4ec4d01cc38d5c6be52ccf33ca2d800",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_final_v3/REAL_RESUME_TRAJECTORY_AND_RNG.json": "74096de5e402f1c52fa486b3a74f2a4d99466ec3cb5019ff269dde04c9ab76a1",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_final_v3/REAL_RETENTION_ROUNDTRIP.json": "9f0a5d9fec24eea6bdd676f9618431e713b0e0843ecdcc9184ae4776a9630d4c",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_final_v3/RETENTION_PUBLICATION_FAULT_TEST.json": "44b411cef49593fc62030cad6cbe739ccb0a2fab026330728763c0972d235a4e",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_final_v3/FINAL_ENGINEERING_CHANGE_AUTHORITY.json": "caddd5afe65c5d4e16ce0fcb77cb7fc058f1443f680e5d25c60033203d0cddc9",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_final_v3/PARITY_ACCEPTANCE_CRITERIA.json": "09f5e86b1fe83ac30250329fa22c973d7c0862c7427753421ac6e317fca6c824",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_determinism_v4/ORIGINAL_MODE_RESTORED.json": "874ce8aed0f3bc21c587452f8c0102b18b96b3607322efc0951702d5fef90618",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_determinism_v4/USER_REQUESTED_RETURN_TO_ORIGINAL_MODE.json": "d5df3dc7a0758bed2d76dd3a9c743483ab2b4ffdf3fd7f68cc05dc0608cc7111",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_determinism_v4/REAL_RESUME_NUMERIC_PARITY.json": "6328898ebced3710c02042e87f6838cb46dd9fd8d41a24fbabb44d25d02723f6",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_determinism_v4/PERFORMANCE_REGRESSION_COMPARISON.json": "05e8232d7bec0474259c9c783fc7e8e98f5a595292043d6c50d85f21027ad7fb",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_original_mode_final_v5/GATE_STATUS.json": "b401b04c4be80206e2cb64a7875f71e6edd3431e7ca48bed0ecd3ac6e03d69c6",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_original_mode_final_v5/OUTPUT_POLICY_AND_STOP_AUDIT.json": "b0358e3b521a32b5bc3a8586c604df2e8bac84008f30c02feefc4b9bb3c4f461",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_original_mode_final_v5/FORMAL_DATA_ORDER_PREFLIGHT.json": "77edd0ebca27ff0ce861586336509c1feb4447f3a322558fb7de44e3b76ffdb0",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_original_mode_final_v5/USER_FINALIZATION_SCOPE.json": "94c7a101423a4587fb9b9cceeeba307d81ed87a053f56923444419b2db7af85d",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_original_mode_final_v5/ORIGINAL_MODE_THROUGHPUT_AND_ESTIMATE.json": "5429912275b539bb502dbf7f8a39a1d4f1a7a731105992842623ba1c96efac24",
+    "/path/to/ttt/datasets/authority/V3_BUILDER_AUTHORITY.json": "c97f88c1e7a39dc6bbe68a063ed19e8836dd3c53b0e2e566f45d1f132910b993",
+    "/path/to/ttt/datasets/authority/DATASET_AUTHORITY_V3.md": "6cbe90fc58f81137fe92aa6c57e4f9176a3ea858b36970907e23bc0f656bed4d",
+    "/path/to/ttt/datasets/authority/HISTORICAL_300M_ANCHOR_REFERENCE.json": "0e6cd5fbc0f721ce5c8a094d37cf257715f7c1ecdfca696bd40d9254bac97262",
+    "/path/to/ttt/datasets/authority/SHA256SUMS.txt": "eb129b53636eb4853c72a604ff3e16b5ade2db1deb6bd73581bdf05c683f8554",
+    "/path/to/ttt/datasets/authority/DATASET_AUTHORITY_V3.json": "3f74e0fc501bb6dedd0912b35eb9142d73b0ee1888a9b3412fb111930948208f",
+    "/path/to/ttt/datasets/authority/stage1_1b_32k_qwen3_v3_streaming.yaml": "199abbce64f82335f2a4459ccb7ed2ba37337112a53e5903580f2aab240788f1",
+    "/path/to/ttt/datasets/manifests/FINAL_DATA_FILE_HASHES.jsonl": "542f501069c54ec7702152fa341898afb4964043c8b5f8721612767ac5008f6d",
+    "/path/to/ttt/src/training_runtime/code/bin/generate_reports.py": "e6250df44c976e9dd6c15e2d836d38c5c267a59edc023659d673f6a34199e785",
+    "/path/to/ttt/src/training_runtime/code/bin/generate_worker_reports.py": "e82f8d86c25af3c7245c9177ce765c0d3a63e8e597fefa4a5af68422bee8e3e9",
+    "/path/to/ttt/src/training_runtime/code/bin/pipelinectl.py": "0eefc12e34c0d7e67fafe7bc51c4ec61288f6918480bcbdd1b331612457e86c5",
+    "/path/to/ttt/src/training_runtime/code/bin/preflight.py": "c4ebdd70bef1717186a37e39e09115170b9782eaa0f5e6ca28ef43019db8438e",
+    "/path/to/ttt/src/training_runtime/code/lib/__init__.py": "88b203425c502852c299826882ce11511661beed22c087f2a9d7ee645faaa800",
+    "/path/to/ttt/src/training_runtime/code/lib/distributed_checkpoint.py": "48fd2a39d06619422d20fda97e79a538725e334e1d405a24f5033759d6ffc608",
+    "/path/to/ttt/src/training_runtime/code/lib/distributed_grad.py": "329842fecb19d9a1705c7cdca63bbe822123da8a6acdbec127df7b89f9969f37",
+    "/path/to/ttt/src/training_runtime/code/lib/distributed_runtime.py": "6470d6128862de5b8c06a2bf97b99de69dd5c195760bf8073be2cf7ec71225e4",
+    "/path/to/ttt/src/training_runtime/code/lib/distributed_semantics.py": "76a78a90c69c6aa5a3ed9981130eaf670f6d209f260e051ae4b9bab46135f0a6",
+    "/path/to/ttt/src/training_runtime/code/lib/fsdp2_runtime.py": "e24b877da81fd7e340b013ed3d1f67b5b1c387b158534bc4d43047ea91aa256f",
+    "/path/to/ttt/src/training_runtime/code/lib/model_factory.py": "824b0e6f87433d6e281c0a1a7719413e2d403dd3e35735db2482e124f0f4de7b",
+    "/path/to/ttt/src/training_runtime/code/lib/pipeline_core.py": "e3e2e0ad243aa38dda892f86b60e3512cec28d5a1c9a3002fc02437482e9d385",
+    "/path/to/ttt/src/training_runtime/code/lib/real_checkpoint.py": "7eea84b49d9701106f1d289918e5a60309502b60208cd726ebcf77b6fceeb78a",
+    "/path/to/ttt/src/training_runtime/code/lib/scaleup_debug_adapter.py": "fb7eb5c0c7ede138f2c12c27c52dba790889d5d9272da3cc24377b73b33ddf68",
+    "/path/to/ttt/src/training_runtime/code/tests/cuda_tailfix_runtime.py": "6a807d085b75ac11e21b2243a53b288ea9224e957169d2495600b7512d6dbcb6",
+    "/path/to/ttt/src/training_runtime/code/tests/generate_hit_stage1_fixture.py": "63f1906b8a0fe256ad078f9787d70085f5705011a3f3e828d8b1a28f7da245b9",
+    "/path/to/ttt/src/training_runtime/code/tests/hit_dcp_numeric_compare.py": "4a0223aa1c80c24e9a635bc63b8639b250ea74f12643f432520c7a3249778fbc",
+    "/path/to/ttt/src/training_runtime/code/tests/hit_dcp_state_compare.py": "c77b18d218dd9a4e66aa055efca13319e55d1b2284809e14cc1bc7678dd97343",
+    "/path/to/ttt/src/training_runtime/code/tests/hit_failure_propagation.py": "2fe1d714ca8145778500504337acbaabf5b0bdd0472cbc80cd4fa137a3346480",
+    "/path/to/ttt/src/training_runtime/code/tests/hit_forward_32k.py": "48c22333947dc0b0fda38fcd6c3a424fc711a7a76405ff16b33c5cb99d6201d2",
+    "/path/to/ttt/src/training_runtime/code/tests/hit_model_build_audit.py": "2333f8a2f5804df2f667eb883bec921f5356472a12c973912b27b10a8c796447",
+    "/path/to/ttt/src/training_runtime/code/tests/hit_nccl_smoke.py": "588d854642fd4d892cb79c2590204433b6722d4c53d58bcaad10b2dc9807d0c1",
+    "/path/to/ttt/src/training_runtime/code/tests/real_resume_reference.py": "ec3e66b3eae5e0ef3f6b7da2917925245d732da32a920f8ad0e4a0cd4f0dccf9",
+    "/path/to/ttt/src/training_runtime/code/tests/run_tests.py": "eed888ef7c739e05249ba6a8b249b905f25c2bda306e1fb166c99d93a8701d39",
+    "/path/to/ttt/src/training_runtime/code/tests/test_distributed_level0.py": "693abc9fa876c6644fa446ff8ae50becdaf8be3763861745b4ff0364dd979080",
+    "/path/to/ttt/src/training_runtime/code/tests/test_distributed_level1.py": "c34bf78e6a0b193f5d8ca7433cc6e3dee1fc652ae3c7a2048cc3201820adc0b3",
+    "/path/to/ttt/src/training_runtime/code/tests/test_distributed_level2.py": "6d27d5dd9094e497820d0b3c072cbc32cdd347ddae94fe7684c615941f8f392c",
+    "/path/to/ttt/src/training_runtime/code/vendor/ntp_source_190580a/hf_models/__init__.py": "cc2c397dab164ab9e92165c834ec0c4a40263b8178abf586b6ce94eb08d9eda8",
+    "/path/to/ttt/src/training_runtime/code/vendor/ntp_source_190580a/hf_models/hf_qwen3/__init__.py": "2ef4fb7b17e59ac651edb16934f6b1e1f210656dde83548861c581c27d684266",
+    "/path/to/ttt/src/training_runtime/code/vendor/ntp_source_190580a/hf_models/hf_qwen3/configuration_qwen3.py": "b3f309ec54094694cfc86a74b66d860193fc4e684b9cc3c0d1d2ed84ca2112fb",
+    "/path/to/ttt/src/training_runtime/code/vendor/ntp_source_190580a/hf_models/hf_qwen3/modeling_qwen3.py": "e949cef8b01394ff845041dca0c5d72d5e536139c471be5eea130db2a884d0e0",
+    "/path/to/ttt/src/training_runtime/code/vendor/ntp_source_190580a/hf_models/hf_qwen3/ttt_state_core.py": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e",
+    "/path/to/ttt/src/training_runtime/code/vendor/ntp_source_190580a/tools/cloud/formal_train_gated_ntp.py": "960465d4c0850345fb998e81b6bf19f2517ecea104aed2946a8b3e31bb416cf3",
+    "/path/to/ttt/src/training_runtime/code/workers/distributed_train_worker.py": "b93593c2a176b0ba8ebc72e5422d20f562c905efefbe7286ef070b6fa52ec47c",
+    "/path/to/ttt/src/training_runtime/code/workers/eval_worker.py": "afca970551993299a02fe9a74cf8b9a30dc5536ef7ccd03a2798f9a3392f67d0",
+    "/path/to/ttt/src/training_runtime/code/workers/train_worker.py": "9a52c6e59e84b9369a293d0db967c4ab4f3190bb31f758d8ed440b8ba8aeb0bc",
+    "/home/USER/data/USER/models/Qwen3-4B-Base/.gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+    "/home/USER/data/USER/models/Qwen3-4B-Base/LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "/home/USER/data/USER/models/Qwen3-4B-Base/README.md": "9fd20ab531a1dc75ae18fcde658dd69d04173fdb93311091c38a7098e3d4b4a1",
+    "/home/USER/data/USER/models/Qwen3-4B-Base/config.json": "304b2545a258d35620f1d4bf46940c0471d9baa00715ff8e77f84c2fca5057c1",
+    "/home/USER/data/USER/models/Qwen3-4B-Base/generation_config.json": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+    "/home/USER/data/USER/models/Qwen3-4B-Base/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "/home/USER/data/USER/models/Qwen3-4B-Base/model.safetensors.index.json": "d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c",
+    "/home/USER/data/USER/models/Qwen3-4B-Base/tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "/home/USER/data/USER/models/Qwen3-4B-Base/tokenizer_config.json": "3c04ed3ca964ea2f6b2b5faf0dc4d31aec1cb1e8b4bcf63f402d295046b422b5",
+    "/home/USER/data/USER/models/Qwen3-4B-Base/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "/home/USER/data/USER/models/Qwen3-4B-Base/SHA256SUMS.txt": "ac1145f05ae883f7fb628dcef96f0a198a38177fb224fcacd5473f57aad9aa8e",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_original_mode_final_v5/FINAL_DOCUMENT_REVIEW_INPUT.json": "a3656512fa2a2f396f0ae680b75d1c97a19fbaad7df06896d47ea1141dc5a7d3",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_original_mode_final_v5/FINAL_INDEPENDENT_DOCUMENT_AUDIT.json": "5459fe1ee241048e57ad7c71b23d259ae496815afe49afeb73698359779a1a99",
+    "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_original_mode_final_v5/CLOSED_LAUNCHER_GUARD_VERIFICATION.json": "8f6936f19a9111c4063ff9213aa0221fad946cc1d9e9ed4e9bc45ab277ecb6e6"
+  },
+  "user_scope_receipt": "/path/to/ttt/audits/qwen3_4b_stage1_gpu23_prelaunch_original_mode_final_v5/USER_FINALIZATION_SCOPE.json",
+  "no_further_GPU_workloads": true,
+  "FINAL_DOCUMENT_ACCURACY_AUDIT": "PASS",
+  "SHARED_ASSET_GUARD": "PASS",
+  "independent_document_audit": {
+    "status": "PASS",
+    "scope": "DOCUMENT_ACCURACY_ONLY_NOT_PRELAUNCH_CLEARANCE",
+    "auditor_agent": "independent_stop_audit",
+    "reviewed_input_manifest_sha256": "a3656512fa2a2f396f0ae680b75d1c97a19fbaad7df06896d47ea1141dc5a7d3",
+    "file_hashes_verified": 101,
+    "mismatches": 0,
+    "FORMAL_PRELAUNCH_AUDIT": "FAIL_NOT_ALL_MANDATORY_GATES_PASS",
+    "SAFE_TO_LAUNCH": "NO",
+    "blocking_findings": [
+      "Original-mode numerical resume parity FAIL",
+      "Controlled failure/recovery not completed",
+      "Real one-token and odd-final-rank GPU edge tests not completed"
+    ],
+    "additional_launch_guard_condition": "Other-user GPU2 process observed outside frozen allowed process list; if still present it also triggers availability guard.",
+    "review_summary": "Original mode restored; reused1830.14inputtokens/s is explicitly historical measurement;137.50/157.23/176.57h includes updated overhead. Logical budget and actual input counts separate. Historical cache and sharing confounders retained. A4 deterministic PASS not reused for original-mode clearance."
+  },
+  "launch_guard_validation": {
+    "status": "PASS_FAIL_CLOSED",
+    "observed_rejection": "PRELAUNCH_AUTHORITY_NOT_PASS",
+    "shared_asset_guard_completed_before_rejection": true,
+    "torch_imported": false,
+    "GPU_workload_started": false,
+    "formal_launcher_executed": false,
+    "formal_output_created": false,
+    "control_sha256": "f28889c133e53a39304999863575ad83ed02a51662693db7657f7432c545fd07",
+    "checked_at_unix": 1789039022.0617423
+  }
+}

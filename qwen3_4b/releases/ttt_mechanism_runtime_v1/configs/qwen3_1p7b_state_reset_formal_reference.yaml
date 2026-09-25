@@ -1,0 +1,36 @@
+{
+  "classification": "FORMAL_HISTORICAL_REFERENCE",
+  "model_family": "qwen3",
+  "mechanism": "reset",
+  "context_length": 16384,
+  "chunk_size": 1024,
+  "configured_ttt_layers": [
+    0,
+    6,
+    12,
+    18,
+    24
+  ],
+  "actions": [
+    "OFF",
+    "L0",
+    "L6",
+    "L12",
+    "L18",
+    "L24",
+    "ALL"
+  ],
+  "model_path": "MODEL_PATH",
+  "benchmark_root": "BENCHMARK_ROOT",
+  "fixed_results": "FIXED_RESULTS_JSONL",
+  "dynamic_results": "DYNAMIC_RESULTS_JSONL",
+  "run_root": "NEW_RUN_ROOT",
+  "model_identity": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+  "benchmark_identity": "5d16e3a6963d4c21450f0530af743730b91bf7b2442699e288e10754f77ad0c5",
+  "historical_source_config": "provenance/original/reset/config/STATE_RESET_FORMAL_CONFIG.json",
+  "statistics": {
+    "resamples": 20000,
+    "paired": 20260907,
+    "stratified": 20260908
+  }
+}

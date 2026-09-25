@@ -1,0 +1,86 @@
+{
+  "comparison": "per_tensor_numeric_local_shards",
+  "ranks": [
+    {
+      "model": {
+        "allclose": true,
+        "allclose_tensor_count": 416,
+        "atol": 1e-05,
+        "canonical_sha256_A": "91d237d44c5bc75253690245e2c4a392e4dd945d5c7eae8f282269801c9ac93f",
+        "canonical_sha256_B": "8515a7a06beecdae3fc0a461a3175611677334f3df2cf1c79200284c4f478aac",
+        "exact_tensor_count": 143,
+        "key_sets_equal": true,
+        "max_abs": 8.106231689453125e-06,
+        "reference_rms": 0.02582513833130903,
+        "relative_rms": 3.2501950648817733e-06,
+        "rms_diff": 8.393673715430973e-08,
+        "rtol": 0.01,
+        "shape_dtype_equal": true,
+        "tensor_count": 416,
+        "worst_key": "model.layers.0.self_attn.k_proj.weight"
+      },
+      "optimizer": {
+        "allclose": false,
+        "allclose_tensor_count": 1208,
+        "atol": 1e-06,
+        "canonical_sha256_A": "34706249a6e0745192e13335bcd6977757544d59f87a18ec4300fe5226c59768",
+        "canonical_sha256_B": "7739b812fcb164f4e0631e57b90761286475a7c108ddf802d3722da6a8df3a83",
+        "exact_tensor_count": 455,
+        "key_sets_equal": true,
+        "max_abs": 0.0003662109375,
+        "reference_rms": 0.0006365808445062012,
+        "relative_rms": 1.5586763928351105e-05,
+        "rms_diff": 9.92223534462854e-09,
+        "rtol": 0.01,
+        "shape_dtype_equal": true,
+        "tensor_count": 1248,
+        "worst_key": "model.layers.6.mlp.ttt_ntp_gate.exp_avg"
+      },
+      "physical_gpu": 2,
+      "progress_equal": true,
+      "rank": 0,
+      "scheduler_exact": true
+    },
+    {
+      "model": {
+        "allclose": true,
+        "allclose_tensor_count": 416,
+        "atol": 1e-05,
+        "canonical_sha256_A": "88103e0cb2903692e4a3ea2195015f91ac850607a42b10241706f92253272a22",
+        "canonical_sha256_B": "581924a8308bbaeda4af7fac02d7557017da9e3176c69e9018ebf0fb46d23e08",
+        "exact_tensor_count": 161,
+        "key_sets_equal": true,
+        "max_abs": 1.1444091796875e-05,
+        "reference_rms": 0.02500317319430477,
+        "relative_rms": 3.1089128503558007e-06,
+        "rms_diff": 7.77326864434458e-08,
+        "rtol": 0.01,
+        "shape_dtype_equal": true,
+        "tensor_count": 416,
+        "worst_key": "model.layers.1.self_attn.v_proj.weight"
+      },
+      "optimizer": {
+        "allclose": false,
+        "allclose_tensor_count": 1225,
+        "atol": 1e-06,
+        "canonical_sha256_A": "93cc064d30cd0c89c3f1fe2276468368d8c368d7291fba31e366075e8bd5c911",
+        "canonical_sha256_B": "a95b7619669609b4b34b957bb2864bf87fc5943d4037c0b2eae211e5acf0feb2",
+        "exact_tensor_count": 454,
+        "key_sets_equal": true,
+        "max_abs": 3.814697265625e-05,
+        "reference_rms": 0.0006365777560997076,
+        "relative_rms": 6.171731973910674e-06,
+        "rms_diff": 3.928787291200876e-09,
+        "rtol": 0.01,
+        "shape_dtype_equal": true,
+        "tensor_count": 1248,
+        "worst_key": "model.layers.12.mlp.ttt_ntp_gate.exp_avg"
+      },
+      "physical_gpu": 3,
+      "progress_equal": true,
+      "rank": 1,
+      "scheduler_exact": true
+    }
+  ],
+  "status": "FAIL"
+}

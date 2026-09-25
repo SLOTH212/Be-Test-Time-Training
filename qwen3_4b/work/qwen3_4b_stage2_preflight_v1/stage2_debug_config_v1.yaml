@@ -1,0 +1,54 @@
+{
+  "stage": "stage2_debug_preflight",
+  "formal_training": false,
+  "DEBUG_ONLY": true,
+  "model_base": "/path/to/ttt/shared/models/Qwen3-4B-Base",
+  "train_data": "/path/to/ttt/shared/datasets/train/train.jsonl",
+  "answer_mask_sidecar": "/path/to/ttt/shared/datasets/train/masks.jsonl",
+  "record_cursor_final": 925,
+  "sequence_tokens": 30000000,
+  "train_tokens": 30000000,
+  "context_length": 32768,
+  "world_size": 2,
+  "physical_gpu_allowlist": "2,3",
+  "global_batch_size": 2,
+  "micro_batch_size": 1,
+  "gradient_accumulation": 1,
+  "precision": "bf16",
+  "seed": 42,
+  "ttt_lr": 1.0,
+  "ttt_chunk_size": 4096,
+  "ttt_layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "optimizer": "AdamW",
+  "outer_lr": 5e-06,
+  "betas": [
+    0.9,
+    0.95
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0.1,
+  "outer_grad_clip": 1.0,
+  "scheduler": "constant",
+  "answer_group_weight": 1.0,
+  "context_group_weight": 0.1,
+  "loss_reduction": "separate_global_group_means",
+  "save_steps": [
+    2,
+    5
+  ],
+  "input_identity": {
+    "worker_sha256": "68fbb9bc2b963d69600c37e3579c0843577f01267d76dab475823f9dbf0a6a79",
+    "dataset_authority_sha256": "e423c322602c5124acc839470079cfe23559b43c0a29eb9042cf1a3a4ee6ddd0",
+    "data_manifest_sha256": "4b9a4610effaba35a616c7622c248ee79db18bbd50f1a82a0e5c0d0326c13898",
+    "content_order_sha256": "8ecf2aa5a6ba1fe8c6a6654c588d6d8810dcd9c38d8f12989d4ee44fc319ca43",
+    "parent_authority_path": "/path/to/ttt/audits/qwen3_4b_stage2_30m_32k_gpu23_preflight_v1/DEBUG_STAGE1_PARENT_AUTHORITY.json",
+    "parent_authority_sha256": "cd01bd066604864e72a8ae82754d8e9f70c97f156560425e74780398332033c7"
+  }
+}

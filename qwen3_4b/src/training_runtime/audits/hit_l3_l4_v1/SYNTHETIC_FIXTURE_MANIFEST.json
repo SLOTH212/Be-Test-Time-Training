@@ -1,0 +1,32 @@
+{
+  "document_boundaries_each": [
+    [
+      0,
+      32768
+    ]
+  ],
+  "eos_token_id": 151643,
+  "formal_stage1_dataset_used": false,
+  "path": "/data/qirong/data/USER/work/scaleup_multigpu_32k_gpu23_debug_v1/fixtures/stage1_32k_debug.jsonl",
+  "record_count": 4,
+  "record_ids": [
+    "hit-synthetic-32k-0000",
+    "hit-synthetic-32k-0001",
+    "hit-synthetic-32k-0002",
+    "hit-synthetic-32k-0003"
+  ],
+  "schema_fields": [
+    "document_boundaries_qwen_json",
+    "metadata",
+    "sample_id",
+    "text",
+    "token_count"
+  ],
+  "sha256": "3cd97853cff1937c80ac1aadad5b3f2002409dade334c6bcc270a9105c03b155",
+  "status": "PASS",
+  "synthetic_data_only": true,
+  "token_count_each": 32768,
+  "tokenizer_local_files_only": true,
+  "tokenizer_path": "/home/USER/data/USER/models/Qwen3-4B-Base",
+  "total_logical_tokens": 131072
+}

@@ -1,0 +1,66 @@
+{
+  "stage": "stage2_formal_candidate",
+  "formal_training": true,
+  "DEBUG_ONLY": false,
+  "model_base": "/path/to/ttt/shared/models/Qwen3-4B-Base",
+  "train_data": "/path/to/ttt/shared/datasets/train/train.jsonl",
+  "answer_mask_sidecar": "/path/to/ttt/shared/datasets/train/masks.jsonl",
+  "record_cursor_final": 925,
+  "sequence_tokens": 30000000,
+  "train_tokens": 30000000,
+  "context_length": 32768,
+  "world_size": 2,
+  "physical_gpu_allowlist": "2,3",
+  "global_batch_size": 2,
+  "micro_batch_size": 1,
+  "gradient_accumulation": 1,
+  "precision": "bf16",
+  "seed": 42,
+  "ttt_lr": 1.0,
+  "ttt_chunk_size": 4096,
+  "ttt_layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "optimizer": "AdamW",
+  "outer_lr": 5e-06,
+  "betas": [
+    0.9,
+    0.95
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0.1,
+  "outer_grad_clip": 1.0,
+  "scheduler": "constant",
+  "answer_group_weight": 1.0,
+  "context_group_weight": 0.1,
+  "loss_reduction": "separate_global_group_means",
+  "save_steps": [
+    25,
+    250,
+    463
+  ],
+  "input_identity": {
+    "worker_sha256": "68fbb9bc2b963d69600c37e3579c0843577f01267d76dab475823f9dbf0a6a79",
+    "dataset_authority_sha256": "e423c322602c5124acc839470079cfe23559b43c0a29eb9042cf1a3a4ee6ddd0",
+    "data_manifest_sha256": "4b9a4610effaba35a616c7622c248ee79db18bbd50f1a82a0e5c0d0326c13898",
+    "content_order_sha256": "8ecf2aa5a6ba1fe8c6a6654c588d6d8810dcd9c38d8f12989d4ee44fc319ca43",
+    "scientific_contract_sha256": "6ba9d6c87a80c6f7c084511ff42a8241ac37edd5a0638100d8ba852db712739c",
+    "stage2_checkpoint_adapter_sha256": "65b7a4bae39411c3dba5a54e9d68d979467973d2c277a50991689b714ebdbdfb",
+    "stage2_entry_sha256": "2516e74106d4ec2113571f9dd1163abefcfacee0a83521edfa18687c35521a3b"
+  },
+  "parent_policy": "explicit_STAGE1_FINAL_authority_required",
+  "capacity_status": "PASS_REAL_FORWARD_13_STEPS_RESUME_AND_FINAL_RECORD_GPU23",
+  "data_file_sha256": {
+    "/path/to/ttt/shared/datasets/train/train.jsonl": "c502a2c5ef7184bdde9163ac3bb6ee32f753d12ae128689e035bbdb1e57c4f43",
+    "/path/to/ttt/shared/datasets/train/masks.jsonl": "2401540303d49e369c277038be01251fd0202c6ffd414e41786da95573181787"
+  },
+  "checkpoint_cadence_basis": "Historical Stage2 record cursors50,500,1000 mapped to global batch2; dataset ends925 so save updates25,250 and final463.",
+  "gradient_checkpointing": "non_reentrant",
+  "training_inner_clip": null,
+  "minimum_free_memory_mib_per_gpu": 48000
+}

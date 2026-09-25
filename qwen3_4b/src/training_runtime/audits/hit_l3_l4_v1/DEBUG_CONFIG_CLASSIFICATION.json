@@ -1,0 +1,23 @@
+{
+  "capacity_parameters_frozen": false,
+  "config_class": "HIT_SCALEUP_DEBUG_CONFIG_V1",
+  "context_length": 32768,
+  "debug_copy_class": "HIT_DEBUG_ONLY_NOT_FORMAL",
+  "formal_training": false,
+  "historical_parity_settings": false,
+  "physical_gpu_allowlist": [
+    2,
+    3
+  ],
+  "real_formal_training_executed": false,
+  "ttt_chunk_size": 4096,
+  "ttt_layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "world_size": 2
+}

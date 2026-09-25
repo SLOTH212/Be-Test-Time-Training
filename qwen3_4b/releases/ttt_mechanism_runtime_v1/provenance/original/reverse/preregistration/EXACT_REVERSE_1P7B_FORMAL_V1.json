@@ -1,0 +1,114 @@
+{
+  "benchmark": {
+    "benchmark_identity": "5d16e3a6963d4c21450f0530af743730b91bf7b2442699e288e10754f77ad0c5",
+    "context_length": 16384,
+    "root": "/home/USER/ttt/benchmarks/ruler_16k_standard_13task500_v1",
+    "sample_manifest_sha256": "8000dfccd5199ff83bf0cb0ede51e91991083a5dc6a90ac27397b8b24988dfdc",
+    "samples_per_task": 500,
+    "seed": 42,
+    "task_n": 13,
+    "total_n": 6500
+  },
+  "claim_boundary": {
+    "allowed": [
+      "temporal ordering is causally important for the successful frozen Dynamic trajectories if Reverse damages them",
+      "action composition alone is insufficient for those trajectories if Reverse damages them"
+    ],
+    "not_allowed": [
+      "all TTT trajectories are order-sensitive",
+      "successful trajectories are more order-sensitive than unsuccessful nontrivial trajectories",
+      "mathematical operators are proven non-commutative",
+      "Dynamic is globally optimal"
+    ]
+  },
+  "code_authority": {
+    "aggregator_sha256": "58542afea92b0e22c3c082a70172b73447488ab2361ce595e24c9c892a9f0b09",
+    "controller_sha256": "e5e68e06d88294d9c50ae3ea4e6311dabd229bcfb33bb649258b68fa3090dbc8",
+    "frozen_dynamic_executor": "/home/USER/ttt_dynamic_mining_v1/phase_d_enriched_dynamic_mining_v1/runtime/code/dynamic_runner.py",
+    "frozen_dynamic_executor_sha256": "293886005cb8f78c943f0affe3e3b383d6de238f4bc825a5aea28a6e6dc66f6e",
+    "scorer": "/home/USER/ttt/code/ruler/tools/common.py",
+    "scorer_sha256": "cee3f5cb3cad1709f81abe3dc32b364ca97322e7ebd91747a8b119aecb0ce556",
+    "worker_sha256": "734f784e972ec19dd5f8903b9d8c45e88fbd7c0fb14e92f0339ef2956fbe1d59"
+  },
+  "cohort": {
+    "execution_n": 173,
+    "historical_overlap_n": 0,
+    "manifest": "/home/USER/ttt/runs/formal/exact_reverse_1p7b_v1/run_20260905T144633+0800/manifests/EXACT_REVERSE_173_COHORT.jsonl",
+    "manifest_sha256": "49f5a9a397dd6d25f854675b79d1298533aa8d9e28ccf64f86a7e0a538f09ff5",
+    "posthoc_sample_selection": false,
+    "unique_sample_ids": 173
+  },
+  "frozen_at": "2026-09-05T14:55:41+08:00",
+  "model": {
+    "checkpoint_identity": "f4e264ed6f5671f123d6c8a27c69bce3af5ffcba518c9e298398314c6147d9fd",
+    "model_identity": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+    "root": "/home/USER/ttt/models/qwen3_1p7b_stage2"
+  },
+  "other_mechanisms": {
+    "criticality": false,
+    "exact_r2": false,
+    "kp_factorial": false,
+    "observability": false,
+    "selective_deletion": false,
+    "state_reset": false
+  },
+  "parent": {
+    "dynamic_final_audit_sha256": "89e5b7da8b85ce063af15216ef9a16de5c433d4e489a19efaae20ad16099689f",
+    "dynamic_root": "/home/USER/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800",
+    "fixed7_root": "/home/USER/ttt/runs/formal/fixed7_1p7b_v1/run_20260828T012948+0800",
+    "screening_manifest_sha256": "c5e04276887da0dda6d1b4599da01e70d4dd88ca8a0cf96f3b9db58ee08f2a65",
+    "screening_root": "/home/USER/ttt/runs/formal/mechanism_anchor_screening_1p7b_v1/run_20260905T143059+0800"
+  },
+  "primary_intervention": "exact list reversal; temporal action order only",
+  "primary_outcome": "D_i = Dynamic_i - Reverse_i; headline mean(D_i)",
+  "scientific_semantics": {
+    "actions": [
+      "OFF",
+      "L0",
+      "L6",
+      "L12",
+      "L18",
+      "L24",
+      "ALL"
+    ],
+    "chunk_size": 1024,
+    "complete_prompt_chunk_update": true,
+    "context_length": 16384,
+    "cpu_affinity": "8-23",
+    "delta_clip_frobenius": 1e-05,
+    "downstream_recomputation": true,
+    "execution": "apply-then-update",
+    "fast_weight": "mlp.down_proj.weight",
+    "formal_execution": "full-prompt layer-major",
+    "generation_update": false,
+    "incomplete_tail_update": false,
+    "layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "objective": "contextual_hidden_direct_outer_product_no_scalar_loss",
+    "reset": "per sample",
+    "stored_delta_stitching": false,
+    "ttt_lr": 1.0,
+    "workers": 1
+  },
+  "secondary_outcomes": [
+    "median(D_i)",
+    "worse/equal/better counts",
+    "Reverse-SampleBest",
+    "unclamped retained_gain"
+  ],
+  "statistics": {
+    "ci": 0.95,
+    "classification": "NO_HISTORICAL_THRESHOLD; raw effect first",
+    "paired_bootstrap_resamples": 20000,
+    "paired_bootstrap_seed": 20260905,
+    "sign_test": "NOT_ADDED",
+    "task_stratified_bootstrap_resamples": 20000,
+    "task_stratified_bootstrap_seed": 20260906
+  },
+  "version": "EXACT_REVERSE_1P7B_FORMAL_V1"
+}

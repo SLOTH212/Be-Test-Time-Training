@@ -1,0 +1,39 @@
+stage: stage1
+config_class: HIT_SCALEUP_DEBUG_CONFIG_V1
+debug_copy_class: HIT_DEBUG_ONLY_NOT_FORMAL
+capacity_parameters_frozen: false
+formal_training: false
+synthetic_data_only: true
+physical_gpu_allowlist: "2,3"
+world_size: 2
+model_base: ${TTT_MODEL_ROOT}/Qwen3-4B-Base
+train_data: ${TTT_WORK_ROOT}/fixtures/stage1_32k_debug.jsonl
+validation_data: ${TTT_WORK_ROOT}/fixtures/stage1_32k_debug.jsonl
+validation_records: 4
+record_cursor_final: 4
+train_tokens: 131072
+context_length: 32768
+global_batch_size: 2
+micro_batch_size: 1
+gradient_accumulation: 1
+precision: bf16
+gradient_checkpointing: true
+seed: 42
+ttt_lr: 1.0
+ttt_chunk_size: 4096
+ttt_layers:
+  - 0
+  - 6
+  - 12
+  - 18
+  - 24
+  - 30
+optimizer: AdamW
+outer_lr: 5.0e-6
+betas: [0.9, 0.95]
+eps: 1.0e-8
+weight_decay: 0.1
+outer_grad_clip: 1.0
+scheduler: constant
+save_steps: [1, 2]
+stage1_model_only_artifact: null

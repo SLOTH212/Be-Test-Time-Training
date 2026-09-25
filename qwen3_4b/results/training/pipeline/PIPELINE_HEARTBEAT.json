@@ -1,0 +1,131 @@
+{
+  "phase": "PIPELINE_COMPLETE",
+  "stage1": {
+    "ETA": 0.0,
+    "actual_input_tokens": 989996971,
+    "completion": {
+      "complete": true,
+      "cumulative_tokens": 989996971,
+      "fsdp2_wrapped_blocks": 36,
+      "record_cursor": 38335,
+      "stage": 1
+    },
+    "cumulative_answer_positions": null,
+    "cumulative_context_positions": null,
+    "cursor": 38335,
+    "elapsed": 375509.5583643913,
+    "expected": {
+      "cumulative_tokens": 989996971,
+      "record_cursor": 38335,
+      "update_step": 19168
+    },
+    "latest_DCP": {
+      "manifest_sha256": "f8d63555e120dfaf8bf754a96ac01b98660c7b248c5669b0cf905480f788ea0f",
+      "progress": {
+        "accumulation_phase": 0,
+        "cumulative_tokens": 989996971,
+        "dataloader_state": {
+          "canonical_next_position": 38335
+        },
+        "global_valid_tokens": 14108,
+        "input_identity": {
+          "cache_policy_sha256": "fdecd856e2e03859cde4e374736f67fc7a1144724034eca2813d4c1289e85852",
+          "checkpoint_module_sha256": "48fd2a39d06619422d20fda97e79a538725e334e1d405a24f5033759d6ffc608",
+          "config_sha256": "d7180bea369e128635289016568654fb592b0f995474a8532e45d473bb3454db",
+          "data_manifest_sha256": "542f501069c54ec7702152fa341898afb4964043c8b5f8721612767ac5008f6d",
+          "dataset_authority_sha256": "3f74e0fc501bb6dedd0912b35eb9142d73b0ee1888a9b3412fb111930948208f",
+          "gpu45_resource_loader_sha256": "68ac927ae7afc0eaf339a11390bf6467abd91eb33d5c1625e1b33029f029f3d5",
+          "model_identity_sha256": "2397f0674d7d016aba0110b62e859e95566189cb35a5dac37256ab32155b6f6c",
+          "worker_sha256": "b93593c2a176b0ba8ebc72e5422d20f562c905efefbe7286ef070b6fa52ec47c"
+        },
+        "local_valid_tokens": 14108,
+        "rank_assignment_state": {
+          "mapping": "canonical_modulo_with_accumulation_v1",
+          "rank": 0,
+          "world_size": 2
+        },
+        "record_cursor": 38335,
+        "stage": 1,
+        "update_step": 19168
+      },
+      "slot": "slot_B"
+    },
+    "loss": 0.9380797215010986,
+    "optimizer_step": 19168,
+    "process_identities": [],
+    "run_root": "/path/to/ttt/runs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1",
+    "status": "COMPLETION_PRESENT",
+    "throughput": 1396.8573241201032
+  },
+  "stage2": {
+    "ETA": 0.0,
+    "actual_input_tokens": 30000000,
+    "completion": {
+      "complete": true,
+      "cumulative_tokens": 30000000,
+      "fsdp2_wrapped_blocks": 36,
+      "record_cursor": 925,
+      "stage": 2
+    },
+    "cumulative_answer_positions": 388806,
+    "cumulative_context_positions": 29610269,
+    "cursor": 925,
+    "elapsed": 27624.291835546494,
+    "expected": {
+      "cumulative_answer_positions": 388806,
+      "cumulative_context_positions": 29610269,
+      "cumulative_tokens": 30000000,
+      "record_cursor": 925,
+      "update_step": 463
+    },
+    "latest_DCP": {
+      "manifest_sha256": "86d4ef00b40d7dee36c7548682a961173f621581083e297a76eea09260cf3e5b",
+      "progress": {
+        "accumulation_phase": 0,
+        "cumulative_answer_positions": 388806,
+        "cumulative_context_positions": 29610269,
+        "cumulative_tokens": 30000000,
+        "dataloader_state": {
+          "canonical_next_position": 925
+        },
+        "global_valid_tokens": 24869,
+        "input_identity": {
+          "config_sha256": "d1d3c0567ac4005ce9abd4a6759423cb88d05407b33f5ea32a97ab83d16944f9",
+          "content_order_sha256": "8ecf2aa5a6ba1fe8c6a6654c588d6d8810dcd9c38d8f12989d4ee44fc319ca43",
+          "data_manifest_sha256": "4b9a4610effaba35a616c7622c248ee79db18bbd50f1a82a0e5c0d0326c13898",
+          "dataset_authority_sha256": "e423c322602c5124acc839470079cfe23559b43c0a29eb9042cf1a3a4ee6ddd0",
+          "gpu45_resource_loader_sha256": "68ac927ae7afc0eaf339a11390bf6467abd91eb33d5c1625e1b33029f029f3d5",
+          "parent_authority_sha256": "6a8561a2f886429b7fa998c99ba230cc3e6b59b7025fc0e96b167888e84e4a5b",
+          "parent_checkpoint_sha256": "3870ecd5ed9336600a9933b3caf82ff2cfb9e085e807d4c843164239c9f4e1b1",
+          "scientific_contract_sha256": "6ba9d6c87a80c6f7c084511ff42a8241ac37edd5a0638100d8ba852db712739c",
+          "stage2_checkpoint_adapter_sha256": "65b7a4bae39411c3dba5a54e9d68d979467973d2c277a50991689b714ebdbdfb",
+          "stage2_entry_sha256": "a6e8e8cbc9f6545200858e7572f732df26aaae1ca1734c79e7c7f6abfbb9db6e",
+          "worker_sha256": "68fbb9bc2b963d69600c37e3579c0843577f01267d76dab475823f9dbf0a6a79"
+        },
+        "local_valid_tokens": 24869,
+        "rank_assignment_state": {
+          "mapping": "canonical_modulo_with_accumulation_v1",
+          "rank": 0,
+          "world_size": 2
+        },
+        "record_cursor": 925,
+        "stage": 2,
+        "update_step": 463
+      },
+      "slot": "slot_A"
+    },
+    "loss": 0.3180534839630127,
+    "optimizer_step": 463,
+    "process_identities": [],
+    "run_root": "/path/to/ttt/runs/qwen3_4b_stage2_formal_20260918T123725",
+    "status": "COMPLETION_PRESENT",
+    "throughput": 620.6188227436187
+  },
+  "supervisor": {
+    "boot_id": "326e2e7f-73e6-4f82-a643-09ee601165b5",
+    "command": "python -B /path/to/ttt/bin/qwen3_4b_pipeline_publication_repair_supervisor_v1.py --supervise",
+    "pid": 2167973,
+    "start_ticks": 378552616
+  },
+  "timestamp": 1789734373.1207368
+}

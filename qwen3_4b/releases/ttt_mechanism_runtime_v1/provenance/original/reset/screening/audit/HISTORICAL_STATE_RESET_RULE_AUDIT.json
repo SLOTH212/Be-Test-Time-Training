@@ -1,0 +1,152 @@
+{
+  "CONTROL_RULE_STATUS": "PROVEN_EXACT",
+  "EARLY_STEADY_RULE_STATUS": "PROVEN_EXACT",
+  "HISTORICAL_BOUNDARY_RECONSTRUCTION_PARITY": "PASS",
+  "HISTORICAL_STATE_RESET_ACTUAL_RESET_EXPOSURE_N": 36,
+  "HISTORICAL_STATE_RESET_CONTROL_N": 18,
+  "HISTORICAL_STATE_RESET_EXPERIMENT_UNIQUE_N": 38,
+  "HISTORICAL_STATE_RESET_POSITIVE_N": 18,
+  "HISTORICAL_STATE_RESET_RULE_AUDIT_STATUS": "PASS",
+  "RESET_BOUNDARY_RULE_STATUS": "PROVEN_EXACT",
+  "RESET_OPERATION_RULE_STATUS": "PROVEN_EXACT",
+  "STATE_RESET_RULE_RECOVERY_STATUS": "PROVEN_EXACT",
+  "boundary_mismatch_count": 0,
+  "fields": [
+    {
+      "ambiguity": "The 20-positive upstream set was resource-capped; it is not an intrinsic early-steady rule.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/build_state_replay_manifest.py",
+      "exact_rule": "20 frozen positive targets inherited from Minimal Targeted Causal Replay; 18 matched nonpositive controls.",
+      "field": "historical parent pool",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "No additional reset-effect or gain-magnitude threshold.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/build_state_replay_manifest.py",
+      "exact_rule": "Upstream Dynamic-positive target (Dynamic > Sample Best), then early_transient_then_steady=True; all such cases among the 20 frozen targets were reset.",
+      "field": "positive definition",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "A preceding minimal-replay budget rule, not applied to the new all-173 parent.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/causal_counterfactual_v1/scripts/finalize_analysis.py",
+      "exact_rule": "Group all available discovery/C positives by task; sort strict_cross_action_positive first, then phase and sample_id; take up to 3 per task, yielding 20.",
+      "field": "upstream positive sampling",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "14 two-stage and 4 complex canonical controls.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/build_state_replay_manifest.py",
+      "exact_rule": "18 matched nonpositive samples; N_ORDER_1 frozen donor order is compared with the identical order after reset at its terminal-run boundary.",
+      "field": "negative/control definition",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "Two of 20 positive targets failed early-steady and therefore had no reset branch.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/manifests/STATE_REPLAY_MANIFEST.jsonl",
+      "exact_rule": "18 positive reset samples; 18 control reset samples; 38 unique samples in the full instrumented experiment; 36 unique samples received a reset branch.",
+      "field": "historical sample counts",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "Does not require the entire second half to be constant.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/signal_analysis_abcd_v1/scripts/analysis_common.py",
+      "exact_rule": "first_switch_position/sequence_length <= 0.25 AND, in sequence[floor(N/2):], the deterministic modal action occupies >= 0.80; action tie-break order OFF,L0,L6,L12,L18,L24,ALL.",
+      "field": "early-steady definition",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "None.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/signal_analysis_abcd_v1/scripts/analysis_common.py",
+      "exact_rule": "No explicit k; existence of a switch implies at least one pre-switch chunk.",
+      "field": "minimum early segment length",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "Terminal-run length can be shorter than second-half modal count.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/signal_analysis_abcd_v1/scripts/analysis_common.py",
+      "exact_rule": "No explicit terminal-run k; only >=80% modal occupancy in the second half.",
+      "field": "minimum late segment length",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "Trajectory-specific, not the first switch and not fixed.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/build_state_replay_manifest.py",
+      "exact_rule": "One-based first chunk of the final action's terminal equal-action run, equivalently last switch + 1.",
+      "field": "reset boundary",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "Complex prefixes are allowed.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/signal_analysis_abcd_v1/scripts/analysis_common.py",
+      "exact_rule": "At least one action switch; early first switch plus second-half modal steadiness. No required action identity.",
+      "field": "required action pattern",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "This is distinct from the looser second-half steadiness test.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/build_state_replay_manifest.py",
+      "exact_rule": "Yes, by terminal-run boundary construction.",
+      "field": "constant after boundary",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "Earlier prefix may contain multiple regimes.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/build_state_replay_manifest.py",
+      "exact_rule": "Action immediately before boundary differs from terminal action by construction.",
+      "field": "early versus later action",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "Historical task cap prioritized strict_cross_action_positive but State Reset added no gain cutoff.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/causal_counterfactual_v1/scripts/finalize_analysis.py",
+      "exact_rule": "Dynamic > Sample Best inherited from the positive parent; no additional numeric margin threshold.",
+      "field": "gain threshold",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "GPU replay parity is outside this screening.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/run_instrumented_state_replay.py",
+      "exact_rule": "Frozen source manifest identity, exact action sequence/chunk count, model/checkpoint/executor/scorer identities; action schedule unchanged.",
+      "field": "replayability",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "Only local fast weights; no base-weight mutation.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/instrumented_backend.py",
+      "exact_rule": "Immediately before boundary chunk, replace local TTTState.weight with checkpoint mlp.down_proj.weight independently in layers 0,6,12,18,24.",
+      "field": "reset operation",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "None.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/configs/FAST_WEIGHT_RESET_INTERVENTION_SPEC.json",
+      "exact_rule": "Continue the same prompt forward and frozen action sequence; no prompt restart or prior-chunk replay; downstream chunks execute from reset fast state; generation unchanged.",
+      "field": "continuation semantics",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "None.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/configs/TARGETED_STATE_REPLAY_CONFIG.json",
+      "exact_rule": "Formal evaluator SHA256 cee3f5cb3cad1709f81abe3dc32b364ca97322e7ebd91747a8b119aecb0ce556.",
+      "field": "scorer",
+      "status": "PROVEN_EXACT"
+    },
+    {
+      "ambiguity": "Reverse score was descriptive, not the primary reset comparator.",
+      "evidence": "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/analyze_state_replay.py",
+      "exact_rule": "Same successful Dynamic trajectory without reset minus same trajectory with reset; controls analogously use N_ORDER_1 normal minus reset.",
+      "field": "primary metric/reference",
+      "status": "PROVEN_EXACT"
+    }
+  ],
+  "historical_early_membership_reconstruction_parity": "PASS",
+  "source_hashes": {
+    "/home/USER/ttt_mechanism_analysis_v1/causal_counterfactual_v1/scripts/finalize_analysis.py": "ec6aa65f49d1f43c344f964cd51864e4ca9751d55b078c7258454a2576beaf48",
+    "/home/USER/ttt_mechanism_analysis_v1/minimal_targeted_causal_replay_v1/scripts/analyze_frozen_results.py": "b80858aa8632ba01887c89bab1d1d6e1caa87ca7b4b5546aa417f7f86cf5e361",
+    "/home/USER/ttt_mechanism_analysis_v1/signal_analysis_abcd_v1/scripts/analysis_common.py": "026a70bc1e52cf96ae8ea1c06e0042e654b08f175f2358561f7eed8906a5185a",
+    "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/manifests/STATE_REPLAY_MANIFEST.jsonl": "847cb0c3fb8c27fcb4b20263133702a3f97c0bed573c8b8d5beb9bed33166b4f",
+    "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/build_state_replay_manifest.py": "a705b35c1a6d3f5d1de1dd54bf71e9f52a1e616cbb005433f1be5436de832363",
+    "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/instrumented_backend.py": "c15b6872c625ee13ee2b71e522a9414e6f797edd6a695e185465dff05c5326ee",
+    "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/run_instrumented_state_replay.py": "6cb77ce90c7bed1345eb15e6676422dd2dd96b138b3a1b342974f249ac555250"
+  }
+}

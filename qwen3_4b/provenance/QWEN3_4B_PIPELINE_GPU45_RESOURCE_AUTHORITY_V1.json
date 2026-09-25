@@ -1,0 +1,78 @@
+{
+  "created_at": 1789108488.5442686,
+  "diff_audits": [
+    {
+      "changed_keys": [
+        "physical_gpu_allowlist",
+        "minimum_free_memory_mib",
+        "authorized_existing_gpu_processes",
+        "input_identity",
+        "stage1_model_only_artifact",
+        "gpu_uuids",
+        "output_root"
+      ],
+      "derived_config_sha256": "d7180bea369e128635289016568654fb592b0f995474a8532e45d473bb3454db",
+      "original_config_sha256": "75740a4513f3f74302f276e1be38314a98ac095ed68d5ede458f4f8774576ff8",
+      "scientific_parameters_unchanged": true,
+      "stage": 1
+    },
+    {
+      "changed_keys": [
+        "physical_gpu_allowlist",
+        "input_identity"
+      ],
+      "derived_config_sha256": "05b4389f9b1e7d849930025f5c89bee861f53ea861c9afee4c3b93bdb768aeee",
+      "original_config_sha256": "dce870300374ce64d9e987d4ef4bec39435f6d058f7055c881f392a750ba6edb",
+      "scientific_parameters_unchanged": true,
+      "stage": 2
+    },
+    {
+      "adapted_execution_source_sha256": "4e70b344a556e6d29271ee1e63543d483787c5ebe12e5e95bfbf04efb3324a5f",
+      "change_scope": "Two physical-visibility literals and physical GPU logging offset only; all scientific code byte-identical after reversing these substitutions.",
+      "diff": "/path/to/ttt/audits/qwen3_4b_stage1_stage2_pipeline_formal_v1/STAGE1_GPU45_RESOURCE_ONLY.diff",
+      "original_sha256": "b93593c2a176b0ba8ebc72e5422d20f562c905efefbe7286ef070b6fa52ec47c",
+      "worker": "/path/to/ttt/src/training_runtime/code/workers/distributed_train_worker.py"
+    },
+    {
+      "adapted_execution_source_sha256": "eaed8718f86d37c510b2ad91d5b0acb63a4ae4bc96720106a0408af079c46e63",
+      "change_scope": "Two physical-visibility literals and physical GPU logging offset only; all scientific code byte-identical after reversing these substitutions.",
+      "diff": "/path/to/ttt/audits/qwen3_4b_stage1_stage2_pipeline_formal_v1/STAGE2_GPU45_RESOURCE_ONLY.diff",
+      "original_sha256": "68fbb9bc2b963d69600c37e3579c0843577f01267d76dab475823f9dbf0a6a79",
+      "worker": "/path/to/ttt/src/training_runtime/code/workers/distributed_stage2_train_worker_v1.py"
+    }
+  ],
+  "files": {
+    "/path/to/ttt/bin/launch_qwen3_4b_stage2_30m_32k_gpu45_formal_pipeline_v1.sh": "b42a820da9c02b94ac15c76744b97fb17655cb0ce41a6a7b16a63d14e8897800",
+    "/path/to/ttt/bin/qwen3_4b_stage1_gpu23_formal_control_v4_1.py": "2703d978e7ad79247795e5bc793dc27744ce99de08b0135497acded4447044bd",
+    "/path/to/ttt/bin/qwen3_4b_stage1_gpu45_formal_control_v4_1_pipeline_v1.py": "9f9d4ff67104fc46260f918bf187ceab0268e25b9e52f957107db471487605a0",
+    "/path/to/ttt/bin/qwen3_4b_stage2_formal_control_v1.py": "48235a288fffb17573a5dae551b28d0fac605e5e895158434907646b0fc92c4b",
+    "/path/to/ttt/bin/qwen3_4b_stage2_gpu45_formal_control_pipeline_v1.py": "6c1bc7f2a745bcbd1d834e0c0e4102104e3d021b445b107122589731b5ff2e27",
+    "/path/to/ttt/bin/stage1_runtime_entry_gpu45_pipeline_v1.py": "881c97445b5deab490edaf9a204433e7e0e8ea9bb23e73262ece7dbb1280d571",
+    "/path/to/ttt/bin/stage1_runtime_entry_v2.py": "51649bdb4fcb3a2f6ad05f955efb05cb2b9699affb173237bc624be0a7ddc669",
+    "/path/to/ttt/bin/stage2_runtime_entry_gpu45_pipeline_v1.py": "a6e8e8cbc9f6545200858e7572f732df26aaae1ca1734c79e7c7f6abfbb9db6e",
+    "/path/to/ttt/bin/stage2_runtime_entry_v1.py": "2516e74106d4ec2113571f9dd1163abefcfacee0a83521edfa18687c35521a3b",
+    "/path/to/ttt/configs/qwen3_4b_stage1_1b_32k_gpu23_formal_v1.yaml": "75740a4513f3f74302f276e1be38314a98ac095ed68d5ede458f4f8774576ff8",
+    "/path/to/ttt/configs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1.yaml": "d7180bea369e128635289016568654fb592b0f995474a8532e45d473bb3454db",
+    "/path/to/ttt/configs/qwen3_4b_stage2_30m_32k_gpu23_formal_v1.yaml": "dce870300374ce64d9e987d4ef4bec39435f6d058f7055c881f392a750ba6edb",
+    "/path/to/ttt/configs/qwen3_4b_stage2_30m_32k_gpu45_formal_v1.yaml": "05b4389f9b1e7d849930025f5c89bee861f53ea861c9afee4c3b93bdb768aeee",
+    "/path/to/ttt/src/training_runtime/code/workers/distributed_stage2_train_worker_v1.py": "68fbb9bc2b963d69600c37e3579c0843577f01267d76dab475823f9dbf0a6a79",
+    "/path/to/ttt/src/training_runtime/code/workers/distributed_train_worker.py": "b93593c2a176b0ba8ebc72e5422d20f562c905efefbe7286ef070b6fa52ec47c",
+    "/path/to/ttt/work/qwen3_4b_stage1_stage2_pipeline_formal_v1/gpu45_resource_loader.py": "68ac927ae7afc0eaf339a11390bf6467abd91eb33d5c1625e1b33029f029f3d5"
+  },
+  "formal_training_started": false,
+  "gpu_trials_performed": false,
+  "historical_physical_gpu_allowlist": [
+    2,
+    3
+  ],
+  "historical_stage1_authority_sha256": "344795e0c0775265e639923bbff41d28a5a8b78339b3e2d25cd2d4e6e3b04e29",
+  "historical_stage2_preflight_sha256": "3b1806f5c1a436598d80ed2535b3fccbc263d2e4e51524734420d3ca490323e1",
+  "physical_gpu_allowlist": [
+    4,
+    5
+  ],
+  "schema": "GPU45_RESOURCE_AMENDMENT_V1",
+  "scientific_semantics_changed": false,
+  "user_instruction": "\u628agpu\u6539\u62104-5\uff0c\u4f46\u4e0d\u6b63\u5f0f\u542f\u52a8\uff0c\u5728\u7b49\u5361",
+  "world_size": 2
+}

@@ -1,0 +1,7 @@
+{
+  "pid": 2541667,
+  "started": 1789741967.78234,
+  "command": "source /path/to/ttt/bin/activate_ttt.sh\nexport PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 CUDA_VISIBLE_DEVICES=4,5\nexec python -B /path/to/ttt/work/qwen3_4b_fixed8_gpu45_v2/entry.py",
+  "fixed_only": true,
+  "continuous_monitoring": false
+}

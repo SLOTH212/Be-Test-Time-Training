@@ -1,0 +1,84 @@
+{
+  "allowed_screening_features": [
+    "formal parent membership Dynamic > Sample Best",
+    "frozen Dynamic action sequence",
+    "chunk count",
+    "benchmark/replay identity",
+    "historically executed early-steady and boundary logic"
+  ],
+  "boundary_rule": "one-based start of final action's terminal equal-action run (last switch + 1)",
+  "claim_boundary": {
+    "allowed_if_future_results_support": "On successful early-steady trajectories, removing carried fast-weight state destroys later benefit.",
+    "not_allowed_without_controls": "Successful trajectories depend on carried state more than unsuccessful comparable trajectories."
+  },
+  "control_semantics": "matched nonpositive N_ORDER_1 frozen canonical schedule, normal minus reset at its terminal-run boundary",
+  "early_steady": {
+    "first_switch_position_normalized_max_inclusive": 0.25,
+    "modal_action_tie_break_order": [
+      "OFF",
+      "L0",
+      "L6",
+      "L12",
+      "L18",
+      "L24",
+      "ALL"
+    ],
+    "tail_modal_action_fraction_min_inclusive": 0.8,
+    "tail_slice": "sequence[floor(N/2):]"
+  },
+  "forbidden_outcome_features": [
+    "reverse_score",
+    "Dynamic - Reverse",
+    "harmed/equal/better",
+    "gain retention",
+    "reverse-vs-SampleBest",
+    "historical State Reset outcome",
+    "selective deletion/R2/KP/criticality outcomes"
+  ],
+  "historical_counts": {
+    "actual_reset_exposure_n": 36,
+    "control_reset_n": 18,
+    "full_experiment_unique_n": 38,
+    "positive_reset_n": 18
+  },
+  "historical_source_identities": {
+    "/home/USER/ttt_mechanism_analysis_v1/causal_counterfactual_v1/scripts/finalize_analysis.py": "ec6aa65f49d1f43c344f964cd51864e4ca9751d55b078c7258454a2576beaf48",
+    "/home/USER/ttt_mechanism_analysis_v1/minimal_targeted_causal_replay_v1/scripts/analyze_frozen_results.py": "b80858aa8632ba01887c89bab1d1d6e1caa87ca7b4b5546aa417f7f86cf5e361",
+    "/home/USER/ttt_mechanism_analysis_v1/signal_analysis_abcd_v1/scripts/analysis_common.py": "026a70bc1e52cf96ae8ea1c06e0042e654b08f175f2358561f7eed8906a5185a",
+    "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/manifests/STATE_REPLAY_MANIFEST.jsonl": "847cb0c3fb8c27fcb4b20263133702a3f97c0bed573c8b8d5beb9bed33166b4f",
+    "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/build_state_replay_manifest.py": "a705b35c1a6d3f5d1de1dd54bf71e9f52a1e616cbb005433f1be5436de832363",
+    "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/instrumented_backend.py": "c15b6872c625ee13ee2b71e522a9414e6f797edd6a695e185465dff05c5326ee",
+    "/home/USER/ttt_mechanism_analysis_v1/targeted_fast_weight_state_replay_v1/scripts/run_instrumented_state_replay.py": "6cb77ce90c7bed1345eb15e6676422dd2dd96b138b3a1b342974f249ac555250"
+  },
+  "historical_upstream_resource_cap": "up to 3 positive targets/task after strict-first, phase, sample_id ordering; recovered for provenance but not an intrinsic eligibility condition on the new all-173 parent",
+  "positive_rule": "formal successful sequential trajectory (Dynamic > Sample Best), replayable and independent, satisfying early_steady",
+  "primary_metric": "normal_score - reset_score",
+  "primary_reference": "same frozen successful Dynamic action schedule without reset",
+  "recovery_status": "PROVEN_EXACT",
+  "reset_semantics": {
+    "action_sequence_change": false,
+    "base_parameter_mutation": false,
+    "candidate_layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "exact_reset_expected": true,
+    "generation_change": false,
+    "instrumentation_previous_update_buffer": "Retained only for read-only historical alignment measurement; never consumed by scientific computation.",
+    "kv_cache_reset": false,
+    "negative_boundary": "One-based start of the terminal run in frozen canonical N_ORDER_1; 14 strict two-stage and 4 explicitly flagged complex-canonical cases.",
+    "positive_boundary": "One-based start of the frozen terminal steady action run for the 18 frozen early-transient-then-steady positives.",
+    "prior_chunk_replay": false,
+    "prompt_restart": false,
+    "reset_operation": "Immediately before the frozen reset-boundary chunk, assign TTTState(self.down_proj.weight) independently in every candidate layer.",
+    "reset_target": "All five temporary candidate-layer mlp.down_proj fast-weight tensors",
+    "reset_tolerance": 0.0,
+    "sample_start_state": "The immutable checkpoint self.down_proj.weight for the current loaded model",
+    "scientific_state_object": "Per-layer local TTTState.weight used as mlp.down_proj fast weight during the prompt forward",
+    "version": "FAST_WEIGHT_RESET_INTERVENTION_V1"
+  },
+  "version": "STATE_RESET_RULE_V1"
+}

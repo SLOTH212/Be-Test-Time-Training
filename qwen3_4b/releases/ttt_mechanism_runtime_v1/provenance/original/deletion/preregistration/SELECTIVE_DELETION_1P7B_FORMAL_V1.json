@@ -1,0 +1,86 @@
+{
+  "benchmark": {
+    "context": 16384,
+    "identity": "5d16e3a6963d4c21450f0530af743730b91bf7b2442699e288e10754f77ad0c5",
+    "root": "/home/USER/ttt/benchmarks/ruler_16k_standard_13task500_v1"
+  },
+  "bootstrap": {
+    "disjoint_secondary": {
+      "resamples": 20000,
+      "seed": 20260911
+    },
+    "ordinary": {
+      "resamples": 20000,
+      "seed": 20260909
+    },
+    "task_stratified": {
+      "resamples": 20000,
+      "seed": 20260910
+    }
+  },
+  "branches": {
+    "manifest": "/home/USER/ttt/runs/formal/selective_deletion_1p7b_v1/run_20260905T201047+0800/manifests/SELECTIVE_DELETION_BRANCH_MANIFEST.jsonl",
+    "selective_n": 359,
+    "sha256": "0cb09d2b6f5819f966968cbc34d974ff85b56639df73bb96a57f822d89a3cb1c",
+    "sham_n": 99,
+    "total_n": 458
+  },
+  "claim_limits": [
+    "no additivity",
+    "no globally optimal layer",
+    "no positive-vs-negative claim"
+  ],
+  "cohort": {
+    "N": 151,
+    "all_prefix_n": 52,
+    "manifest": "/home/USER/ttt/runs/formal/selective_deletion_1p7b_v1/run_20260905T201047+0800/manifests/SELECTIVE_DELETION_151_COHORT.jsonl",
+    "non_all_prefix_n": 99,
+    "sha256": "233ca0f40e9d81bbd5b285c492fb7ea9167419276256cb7e339267b06eed34ef",
+    "sham_n": 99
+  },
+  "explained_fraction": "(Normal-Selective)/(Normal-FullReset) if denominator>0 else None; unclamped",
+  "frozen_at": "2026-09-05T20:19:23+08:00",
+  "full_reset_reference": "frozen State Reset score; downstream only",
+  "model": {
+    "checkpoint_identity": "f4e264ed6f5671f123d6c8a27c69bce3af5ffcba518c9e298398314c6147d9fd",
+    "identity": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+    "root": "/home/USER/ttt/models/qwen3_1p7b_stage2"
+  },
+  "primary_effect": "Normal frozen Dynamic score - sample-level Selective score",
+  "sample_aggregation": {
+    "ALL_PREFIX": "arithmetic mean of five fixed layer-wise LOO scores",
+    "NON_ALL": "single frozen selected-layer score",
+    "outcome_layer_selection": false
+  },
+  "screening": {
+    "eligibility_sha256": "ea98b9944921cd892dfdda3bdac5b4a108db50d4bf9c7ce7e556b3cf262d3b98",
+    "root": "/home/USER/ttt/runs/formal/selective_deletion_screening_1p7b_v1/run_20260905T194118+0800",
+    "rule_sha256": "c82ea5f5c94b68ee3df5ec238faff2423ff9b25dd530ab8f34cfb92aafb3a800"
+  },
+  "semantics": {
+    "apply_then_update": true,
+    "chunk": 1024,
+    "clip": 1e-05,
+    "cpu_affinity": "8-23",
+    "downstream_recomputation": true,
+    "fast_weight": "mlp.down_proj.weight",
+    "generation_update": false,
+    "layers": [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    "stored_delta_stitching": false,
+    "ttt_lr": 1,
+    "workers": 1
+  },
+  "sham": "lowest prefix-unwritten layer, exact zero-state precondition, same boundary/path",
+  "state_reset_reference": {
+    "analysis_reference_only": true,
+    "root": "/home/USER/ttt/runs/formal/state_reset_1p7b_v1/run_20260905T180918+0800",
+    "selection_feature": false
+  },
+  "version": "SELECTIVE_DELETION_1P7B_FORMAL_V1"
+}

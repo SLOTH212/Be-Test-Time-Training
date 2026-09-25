@@ -1,0 +1,80 @@
+{
+  "AGGREGATE_GAIN_RETENTION": 0.023183643665571314,
+  "CHECKPOINT_IDENTITY": "f4e264ed6f5671f123d6c8a27c69bce3af5ffcba518c9e298398314c6147d9fd",
+  "COHORT_MANIFEST_SHA256": "49f5a9a397dd6d25f854675b79d1298533aa8d9e28ccf64f86a7e0a538f09ff5",
+  "DYNAMIC_MEAN": 0.9325626204238922,
+  "DYNAMIC_MINUS_REVERSE_MAX": 1.0,
+  "DYNAMIC_MINUS_REVERSE_MEAN": 0.5155105973025048,
+  "DYNAMIC_MINUS_REVERSE_MEDIAN": 0.4,
+  "DYNAMIC_MINUS_REVERSE_MIN": 0.0,
+  "DYNAMIC_MINUS_REVERSE_STD": 0.3399469094010617,
+  "DYNAMIC_MINUS_SAMPLE_BEST_MEAN": 0.5277456647398844,
+  "FINAL_INTEGRITY": "PASS",
+  "FORMAL_EXACT_REVERSE_COMPLETE": true,
+  "GAIN_RETENTION_FRACTION_GE_1": 0.057803468208092484,
+  "GAIN_RETENTION_FRACTION_LE_0": 0.9421965317919075,
+  "GAIN_RETENTION_FRACTION_LT_0P5": 0.9421965317919075,
+  "GAIN_RETENTION_FRACTION_LT_1": 0.9421965317919075,
+  "GAIN_RETENTION_MEAN": 0.017341040462427744,
+  "GAIN_RETENTION_MEDIAN": 0.0,
+  "GAIN_RETENTION_QUANTILES": {
+    "0.0": -3.0000000000000013,
+    "0.05": 0.0,
+    "0.25": 0.0,
+    "0.5": 0.0,
+    "0.75": 0.0,
+    "0.95": 1.0,
+    "1.0": 1.0
+  },
+  "MODEL_IDENTITY": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+  "N": 173,
+  "OFF_MEAN": 0.39296724470134875,
+  "PAIRED_BOOTSTRAP_95CI": [
+    0.4651252408477842,
+    0.5657032755298652
+  ],
+  "PROTOCOL_SHA256": "43c7369cceff668a27afd2b456768e1a2a41be0ab1912fc96ad8d73b0933378f",
+  "REVERSE_BETTER_COUNT": 0,
+  "REVERSE_EQUAL_COUNT": 10,
+  "REVERSE_EQ_SAMPLE_BEST_COUNT": 159,
+  "REVERSE_GT_SAMPLE_BEST_COUNT": 10,
+  "REVERSE_LT_SAMPLE_BEST_COUNT": 4,
+  "REVERSE_MEAN": 0.41705202312138734,
+  "REVERSE_MINUS_SAMPLE_BEST_MEAN": 0.012235067437379576,
+  "REVERSE_WORSE_COUNT": 163,
+  "SAMPLE_BEST_MEAN": 0.4048169556840077,
+  "SCREENING_MANIFEST_SHA256": "c5e04276887da0dda6d1b4599da01e70d4dd88ca8a0cf96f3b9db58ee08f2a65",
+  "STRUCTURALLY_ELIGIBLE_NEGATIVE_CONTROLS": 0,
+  "TASK_STRATIFIED_PAIRED_BOOTSTRAP_95CI": [
+    0.49287090558766866,
+    0.5363198458574181
+  ],
+  "bootstrap_resamples": 20000,
+  "claim_boundary": {
+    "allowed": [
+      "temporal ordering is causally important for the successful frozen Dynamic trajectories if Reverse damages them",
+      "action composition alone is insufficient for those trajectories if Reverse damages them"
+    ],
+    "not_allowed": [
+      "all TTT trajectories are order-sensitive",
+      "successful trajectories are more order-sensitive than unsuccessful nontrivial trajectories",
+      "mathematical operators are proven non-commutative",
+      "Dynamic is globally optimal"
+    ]
+  },
+  "completed_at": "2026-09-05T15:01:14+08:00",
+  "paired_bootstrap_seed": 20260905,
+  "secondary_interpretation": "NOT_CLASSIFIED_NO_HISTORICAL_PREREGISTERED_THRESHOLD",
+  "task_distribution": {
+    "ruler_fwe_16k": 24,
+    "ruler_niah_multikey_1_16k": 1,
+    "ruler_niah_multikey_2_16k": 4,
+    "ruler_niah_multikey_3_16k": 14,
+    "ruler_niah_multiquery_16k": 12,
+    "ruler_niah_multivalue_16k": 8,
+    "ruler_qa_hotpotqa_16k": 18,
+    "ruler_qa_squad_16k": 15,
+    "ruler_vt_16k": 77
+  },
+  "task_stratified_bootstrap_seed": 20260906
+}

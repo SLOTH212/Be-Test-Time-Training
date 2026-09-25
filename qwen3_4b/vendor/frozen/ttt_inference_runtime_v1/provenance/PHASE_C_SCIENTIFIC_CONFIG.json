@@ -1,0 +1,91 @@
+{
+  "approx_oracle_language": "Approx Dynamic Recomputed Chunk-Action Oracle LB",
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260811,
+    "type": "task_stratified_paired"
+  },
+  "candidate_full_trajectory_replay": true,
+  "checkpoint": {
+    "identity_hash": "f4e264ed6f5671f123d6c8a27c69bce3af5ffcba518c9e298398314c6147d9fd",
+    "model_safetensors_sha256": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+    "path": "/root/autodl-tmp/ttt/pipelines/gated_ntp_300m_qa10m_eval13k_v2/artifacts/stage2_final_eval"
+  },
+  "decision_thresholds_pp": {
+    "borderline_gte": 0.10,
+    "meaningful_gte": 0.20,
+    "strong_gte": 0.50,
+    "weak_lt": 0.10
+  },
+  "dev_manifest": {
+    "n": 5600,
+    "path": "/root/autodl-tmp/ttt/pipelines/gated_ntp_stage2_newpool_7task1000_dev800_signalv2_router_v1/manifests/dev_manifest.json",
+    "sha256": "6a12008c5494fb45a0d552ddd018d854ca0c757bbadd60897063a8c70db8b0d0"
+  },
+  "formal_repo": {
+    "head": "190580a29780030969cd337763098188bce8c88c",
+    "path": "/root/autodl-tmp/ttt/inplace_ttt_gated_ntp_perf_parity_v1"
+  },
+  "manifest": {
+    "n": 700,
+    "sha256": "68dc233463e6e43108fe6bb3d89b5f57a2f17d1cf9441af4ced3e19856f57fc9",
+    "task_count": 7,
+    "task_n": 100
+  },
+  "model_semantics": {
+    "action_sequence_state_recomputed": true,
+    "actions": ["OFF", "L0", "L6", "L12", "L18", "L24", "ALL"],
+    "apply_then_update": true,
+    "candidate_layers": [0, 6, 12, 18, 24],
+    "chunk_size": 1024,
+    "context": 16384,
+    "delta_clip_frobenius": 1e-5,
+    "fast_weight": "mlp.down_proj.weight",
+    "generation_update": false,
+    "incomplete_tail_update": false,
+    "model": "Qwen3-1.7B Base",
+    "ntp_objective_type": "contextual_hidden_direct_outer_product_no_scalar_loss",
+    "objective": "gated next-position contextual hidden target",
+    "recompute_downstream_updates": true,
+    "reset_per_sample": true,
+    "stored_delta_stitching": false,
+    "ttt_lr": 1.0
+  },
+  "phase_c_amendment": {
+    "commit": "242483786b9de4178a016c615933cb7f81dd1785",
+    "json_sha256": "d1bb0b96457b344f50b272990d83f0aaa64441090a854e7adec6110c364e1e2f",
+    "md_sha256": "4de09a752037b5c9e8a3d900a77987f04ccc54f9d28760a5d1a6f5447daa1288"
+  },
+  "primary_metric": {
+    "definition": "dynamic_search_score - fixed_oracle_score",
+    "name": "Dynamic-Fixed",
+    "unit": "percentage_points"
+  },
+  "score_protocol": {
+    "official_scorer_path": "/root/opencompass_clean/tools/autodl/ruler_benchmark_v1/common.py",
+    "official_scorer_sha256": "cee3f5cb3cad1709f81abe3dc32b364ca97322e7ebd91747a8b119aecb0ce556",
+    "prediction_equivalence": "exact_string",
+    "tolerance": 1e-12
+  },
+  "search": {
+    "algorithm": "seven_constant_seeds_then_terminal_score_beam_coordinate_search",
+    "beam_width": 4,
+    "constant_seeds": ["OFF", "L0", "L6", "L12", "L18", "L24", "ALL"],
+    "max_replays_for_15_chunks": 385,
+    "position_order": "forward",
+    "sweeps": 1,
+    "tie_break": "deterministic_max_min_hamming_then_sha256"
+  },
+  "secondary_metrics": [
+    "Dynamic-OFF", "Fixed-OFF", "fixed-negative rescue rate",
+    "dynamic improved/equal/worse counts", "per-task Dynamic-Fixed",
+    "positive task count", "gain concentration",
+    "cross-action-specific gain fraction", "sequence complexity"
+  ],
+  "seed_protocol": {
+    "candidate_search": "deterministic candidates and SHA256 tie-break; greedy generation; no explicit stochastic sample RNG",
+    "selection_key": "task|sample_id|PHASE_C_CONFIRMATION_V1",
+    "selection_salt": "PHASE_C_CONFIRMATION_V1"
+  },
+  "version": "phase_c_scientific_v1"
+}

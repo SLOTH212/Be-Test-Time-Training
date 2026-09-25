@@ -1,0 +1,12 @@
+{
+  "authority_sha256": "6a8561a2f886429b7fa998c99ba230cc3e6b59b7025fc0e96b167888e84e4a5b",
+  "final_root": "/path/to/ttt/models/qwen3_4b_stage1_1b_32k_final_v1",
+  "frozen_sources_changed": false,
+  "permission_probe": {
+    "readonly_rename": "[Errno 13] Permission denied: '/path/to/ttt/runs/qwen3_4b_stage1_stage2_pipeline_formal_v1/finalization_attempts/stage1_1789704940559088930/permission_probe_1789705851577131252' -> '/path/to/ttt/models/permission_probe_1789705851577131252'",
+    "writable_rename": "PASS"
+  },
+  "repair": "Keep staging root owner-writable during rename; freeze published root immediately afterward",
+  "status": "PASS",
+  "time": 1789705869.2744706
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "HISTORICAL_ACTION_SET_PARITY": "PASS",
+  "SCALEUP_ACTION_SET_TEST": "PASS",
+  "DYNAMIC_32K_CONFIG_STATIC_TEST": "PASS",
+  "GENERIC_REPLAY_BUDGET_STATUS": "PASS",
+  "SAMPLE_BEST_IMPLEMENTATION_STATUS": "PASS",
+  "resume_ownership_logic": "PASS",
+  "historical_actions": ["OFF", "L0", "L6", "L12", "L18", "L24", "ALL"],
+  "scaleup_actions": ["OFF", "L0", "L6", "L12", "L18", "L24", "L30", "ALL"],
+  "historical_max_unique_candidate_replays": 385,
+  "scaleup_32k_chunk4k_max_unique_candidate_replays": 260
+}

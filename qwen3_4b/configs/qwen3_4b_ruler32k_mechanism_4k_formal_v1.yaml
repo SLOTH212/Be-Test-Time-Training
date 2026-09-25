@@ -1,0 +1,108 @@
+{
+  "MKL_NUM_THREADS": 4,
+  "OMP_NUM_THREADS": 4,
+  "OPENBLAS_NUM_THREADS": 4,
+  "actions": [
+    "OFF",
+    "L0",
+    "L6",
+    "L12",
+    "L18",
+    "L24",
+    "L30",
+    "ALL"
+  ],
+  "active_sample_per_worker": 1,
+  "attention_implementation": "sdpa",
+  "benchmark_authority_sha256": "b62966b2754fa0d1cfef2c9aa3cef8d4b2bbae2a664495eb733c2ed5e5a4bebd",
+  "chunk_size": 4096,
+  "classification": "FORMAL_PROTOCOL_CONFIG_NOT_EXECUTED",
+  "complete_prompt_chunk_update": true,
+  "config_frozen": true,
+  "context_length": 32768,
+  "debug_fixture_resolves_formal_scientific_eligibility": false,
+  "delta_clip_frobenius": 1e-05,
+  "dtype": "bfloat16",
+  "excluded": [
+    "Transplant V1",
+    "Criticality core",
+    "Observability core"
+  ],
+  "experiments": [
+    "reverse",
+    "reset",
+    "deletion",
+    "kp",
+    "r2"
+  ],
+  "formal_reset_eligibility": "ZERO_ELIGIBLE_BY_CHUNK_GEOMETRY",
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": "FROZEN_BENCHMARK_ROW",
+    "num_beams": 1,
+    "temperature": null,
+    "top_k": null,
+    "top_p": null,
+    "use_cache": true
+  },
+  "generation_update": false,
+  "inference_base_package_sha256": "65a0d7bd9c8801c92fc30477ab8662d3eb52261612eff2acef0bbeb3edf6ba51",
+  "inference_config_sha256": "210db096574f2170c2f2194338f51ff767977b9abd2c56a031f60caa1d3617a9",
+  "integration_contract": "/path/to/ttt/provenance/QWEN3_4B_4K_MECHANISM_INTEGRATION_CONTRACT_V1.json",
+  "layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "mechanism_package_sha256": "ce9ee7c7066d0413e4fcf90b69543cfa605ac1761af8d849ddb2d61ccd6fb1a8",
+  "model_family": "Qwen3-4B",
+  "num_hidden_layers": 36,
+  "parent_authority_required": "Dynamic FINAL",
+  "phase": "mechanism",
+  "physical_gpu_allowlist": [
+    2,
+    3
+  ],
+  "r2": {
+    "candidate_count": "8*7*(T-1)",
+    "constants_excluded": true,
+    "exhaustive": true,
+    "family": "A^tau B^(T-tau), A!=B, tau=1..T-1"
+  },
+  "reset_scope": "PER_SAMPLE",
+  "statistics": {
+    "deletion": {
+      "disjoint": 20260911,
+      "paired": 20260909,
+      "resamples": 20000,
+      "stratified": 20260910
+    },
+    "kp": {
+      "paired": 20260827,
+      "resamples": 20000
+    },
+    "r2": {
+      "paired": 20260906,
+      "resamples": 20000,
+      "stratified": 20260907
+    },
+    "reset": {
+      "paired": 20260907,
+      "resamples": 20000,
+      "stratified": 20260908
+    },
+    "reverse": {
+      "paired": 20260905,
+      "resamples": 20000,
+      "stratified": 20260906
+    }
+  },
+  "tail_update": false,
+  "ttt_lr": 1.0,
+  "update_order": "APPLY_THEN_UPDATE",
+  "workers": 2,
+  "workers_per_gpu": 1
+}

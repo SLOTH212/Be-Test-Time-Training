@@ -1,0 +1,21 @@
+{
+  "cuda_visible_device_count": 2,
+  "cuda_visible_devices_required": "2,3",
+  "gpu2_initial_memory_mib": 414,
+  "gpu3_initial_memory_mib": 292,
+  "gpu_model": "NVIDIA RTX A6000",
+  "nvlink_between_gpu2_gpu3": false,
+  "physical_gpu_allowlist": [
+    2,
+    3
+  ],
+  "physical_to_logical": {
+    "2": 0,
+    "3": 1
+  },
+  "runtime_commands_restricted_to": "CUDA_VISIBLE_DEVICES=2,3",
+  "status": "PASS",
+  "topology_gpu2_gpu3": "PXB",
+  "unauthorized_gpu_used": false,
+  "world_size": 2
+}

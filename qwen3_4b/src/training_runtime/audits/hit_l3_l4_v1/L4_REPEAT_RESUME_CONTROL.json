@@ -1,0 +1,106 @@
+{
+  "purpose": "calibrate_cross_launch_bf16_cuda_nondeterminism_from_identical_dcp_start",
+  "rows": [
+    {
+      "exact": false,
+      "key": "model.model.layers.0.self_attn.k_proj.weight",
+      "max_abs": 8.58306884765625e-06,
+      "reference_max_abs": 0.283203125,
+      "relative_rms": 1.0962546523824314e-05
+    },
+    {
+      "exact": false,
+      "key": "model.model.layers.1.self_attn.v_proj.weight",
+      "max_abs": 7.62939453125e-06,
+      "reference_max_abs": 0.1572265625,
+      "relative_rms": 1.0423955899043304e-05
+    },
+    {
+      "exact": false,
+      "key": "optimizer.state.model.layers.0.mlp.ttt_ntp_gate.exp_avg",
+      "max_abs": 4.57763671875e-05,
+      "reference_max_abs": 0.0002765655517578125,
+      "relative_rms": 0.09312879542560148
+    },
+    {
+      "exact": false,
+      "key": "optimizer.state.model.layers.0.mlp.ttt_ntp_gate.exp_avg_sq",
+      "max_abs": 8.102506399154663e-08,
+      "reference_max_abs": 5.587935447692871e-07,
+      "relative_rms": 0.1236969458382901
+    },
+    {
+      "exact": false,
+      "key": "optimizer.state.model.layers.12.mlp.ttt_ntp_gate.exp_avg",
+      "max_abs": 7.62939453125e-05,
+      "reference_max_abs": 0.0087890625,
+      "relative_rms": 0.011183862546801366
+    },
+    {
+      "exact": false,
+      "key": "optimizer.state.model.layers.12.mlp.ttt_ntp_gate.exp_avg_sq",
+      "max_abs": 3.814697265625e-06,
+      "reference_max_abs": 0.00030517578125,
+      "relative_rms": 0.01441495322798729
+    },
+    {
+      "exact": false,
+      "key": "optimizer.state.model.layers.18.mlp.ttt_ntp_gate.exp_avg",
+      "max_abs": 0.00018310546875,
+      "reference_max_abs": 0.0185546875,
+      "relative_rms": 0.006452036230365868
+    },
+    {
+      "exact": false,
+      "key": "optimizer.state.model.layers.18.mlp.ttt_ntp_gate.exp_avg_sq",
+      "max_abs": 3.814697265625e-05,
+      "reference_max_abs": 0.0016326904296875,
+      "relative_rms": 0.016253893423192813
+    },
+    {
+      "exact": false,
+      "key": "optimizer.state.model.layers.24.mlp.ttt_ntp_gate.exp_avg",
+      "max_abs": 6.103515625e-05,
+      "reference_max_abs": 0.0380859375,
+      "relative_rms": 0.0015344472292177303
+    },
+    {
+      "exact": false,
+      "key": "optimizer.state.model.layers.24.mlp.ttt_ntp_gate.exp_avg_sq",
+      "max_abs": 3.814697265625e-06,
+      "reference_max_abs": 0.007781982421875,
+      "relative_rms": 0.00047228802146420944
+    },
+    {
+      "exact": false,
+      "key": "optimizer.state.model.layers.30.mlp.ttt_ntp_gate.exp_avg",
+      "max_abs": 6.103515625e-05,
+      "reference_max_abs": 0.052001953125,
+      "relative_rms": 0.0009826089113661098
+    },
+    {
+      "exact": false,
+      "key": "optimizer.state.model.layers.30.mlp.ttt_ntp_gate.exp_avg_sq",
+      "max_abs": 3.814697265625e-06,
+      "reference_max_abs": 0.0194091796875,
+      "relative_rms": 0.00020522625706281367
+    },
+    {
+      "exact": false,
+      "key": "optimizer.state.model.layers.6.mlp.ttt_ntp_gate.exp_avg",
+      "max_abs": 0.0003662109375,
+      "reference_max_abs": 0.0218505859375,
+      "relative_rms": 0.019857615303791765
+    },
+    {
+      "exact": false,
+      "key": "optimizer.state.model.layers.6.mlp.ttt_ntp_gate.exp_avg_sq",
+      "max_abs": 6.103515625e-05,
+      "reference_max_abs": 0.002227783203125,
+      "relative_rms": 0.02817132056835005
+    }
+  ],
+  "runtime_metrics_exact": true,
+  "sampled_tensor_count": 14,
+  "status": "PASS"
+}

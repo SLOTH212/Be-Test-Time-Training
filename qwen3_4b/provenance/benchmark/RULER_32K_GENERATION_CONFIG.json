@@ -1,0 +1,227 @@
+{
+  "answer_prefix_semantics": "TASK_TEMPLATE_EMBEDS_ANSWER_PREFIX_AT_END_OF_RAW_PROMPT",
+  "auxiliary_resources": {
+    "PaulGrahamEssays.jsonl": {
+      "bytes": 1968927,
+      "path": "/home/USER/ttt/code/ruler/data/PaulGrahamEssays.jsonl",
+      "sha256": "78ad877447201471578c69dd4fc11e6f489970966329468c5d0ac32292d53056"
+    },
+    "dev-v2.0.json": {
+      "bytes": 4370528,
+      "path": "/home/USER/ttt/code/ruler/data/dev-v2.0.json",
+      "sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8"
+    },
+    "hotpotqa.json": {
+      "bytes": 46320117,
+      "path": "/home/USER/ttt/code/ruler/data/hotpotqa.json",
+      "sha256": "4e9ecb5c8d3b719f624d66b60f8d56bf227f03914f5f0753d6fa1b359d7104ea"
+    }
+  },
+  "benchmark_id": "ruler_32k_standard_13task500_v1",
+  "commands": {
+    "formal": "CUDA_VISIBLE_DEVICES='' taskset -c 8-23 /home/USER/conda_envs/ruler_generation_v1/bin/python /home/USER/ttt/scripts/build_ruler32k_6500_v1.py --root /home/USER/ttt/benchmarks/ruler_32k_standard_13task500_v1 --formal",
+    "replay": "CUDA_VISIBLE_DEVICES='' taskset -c 8-23 /home/USER/conda_envs/ruler_generation_v1/bin/python /home/USER/ttt/scripts/build_ruler32k_6500_v1.py --root /home/USER/ttt/benchmarks/ruler_32k_standard_13task500_v1 --replay",
+    "smoke": "CUDA_VISIBLE_DEVICES='' taskset -c 8-23 /home/USER/conda_envs/ruler_generation_v1/bin/python /home/USER/ttt/scripts/build_ruler32k_6500_v1.py --root /home/USER/ttt/benchmarks/ruler_32k_standard_13task500_v1 --smoke"
+  },
+  "context_length": 32768,
+  "environment": {
+    "cuda_visible_devices": "",
+    "platform": "Linux-6.11.0-13-generic-x86_64-with-glibc2.40",
+    "python": "3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]",
+    "torch_cuda_device_count": 0
+  },
+  "generator_authority_class": "EXACT_FORMAL_16K_CONTINUATION",
+  "generator_revision": "FORMAL_16K_HASH_PINNED_SOURCE_SET",
+  "gpu_used": false,
+  "model_template_type": "RAW_BASE_PROMPT_NO_CHAT_TEMPLATE",
+  "parent_benchmark": "/home/USER/ttt/benchmarks/ruler_16k_standard_13task500_v1",
+  "random_seed_explicit": true,
+  "samples_per_task": 500,
+  "seed": 42,
+  "task_count": 13,
+  "task_order": [
+    "ruler_cwe_16k",
+    "ruler_fwe_16k",
+    "ruler_niah_single_1_16k",
+    "ruler_niah_single_2_16k",
+    "ruler_niah_single_3_16k",
+    "ruler_niah_multikey_1_16k",
+    "ruler_niah_multikey_2_16k",
+    "ruler_niah_multikey_3_16k",
+    "ruler_niah_multivalue_16k",
+    "ruler_niah_multiquery_16k",
+    "ruler_qa_squad_16k",
+    "ruler_qa_hotpotqa_16k",
+    "ruler_vt_16k"
+  ],
+  "tasks": [
+    {
+      "evaluator": "RulerCweEvaluator",
+      "family": "cwe",
+      "kwargs": {
+        "freq_cw": 30,
+        "freq_ucw": 3,
+        "num_cw": 10
+      },
+      "max_new_tokens": 120,
+      "name": "ruler_cwe_16k"
+    },
+    {
+      "evaluator": "RulerFweEvaluator",
+      "family": "fwe",
+      "generation_context_budget": 32462,
+      "generation_context_reserve": 306,
+      "kwargs": {
+        "alpha": 2.0,
+        "coded_wordlen": 6
+      },
+      "max_new_tokens": 50,
+      "name": "ruler_fwe_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 1,
+        "num_needle_q": 1,
+        "num_needle_v": 1,
+        "type_haystack": "repeat",
+        "type_needle_k": "words",
+        "type_needle_v": "numbers"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_single_1_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 1,
+        "num_needle_q": 1,
+        "num_needle_v": 1,
+        "type_haystack": "essay",
+        "type_needle_k": "words",
+        "type_needle_v": "numbers"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_single_2_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 1,
+        "num_needle_q": 1,
+        "num_needle_v": 1,
+        "type_haystack": "essay",
+        "type_needle_k": "words",
+        "type_needle_v": "uuids"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_single_3_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 4,
+        "num_needle_q": 1,
+        "num_needle_v": 1,
+        "type_haystack": "essay",
+        "type_needle_k": "words",
+        "type_needle_v": "numbers"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_multikey_1_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 1,
+        "num_needle_q": 1,
+        "num_needle_v": 1,
+        "type_haystack": "needle",
+        "type_needle_k": "words",
+        "type_needle_v": "numbers"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_multikey_2_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 1,
+        "num_needle_q": 1,
+        "num_needle_v": 1,
+        "type_haystack": "needle",
+        "type_needle_k": "uuids",
+        "type_needle_v": "uuids"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_multikey_3_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 1,
+        "num_needle_q": 1,
+        "num_needle_v": 4,
+        "type_haystack": "essay",
+        "type_needle_k": "words",
+        "type_needle_v": "numbers"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_multivalue_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 1,
+        "num_needle_q": 4,
+        "num_needle_v": 1,
+        "type_haystack": "essay",
+        "type_needle_k": "words",
+        "type_needle_v": "numbers"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_multiquery_16k"
+    },
+    {
+      "evaluator": "RulerQaEvaluator",
+      "family": "qa",
+      "kwargs": {
+        "dataset": "squad",
+        "path": "/root/opencompass_clean/.cache/opencompass/data/ruler/dev-v2.0.json"
+      },
+      "max_new_tokens": 50,
+      "name": "ruler_qa_squad_16k"
+    },
+    {
+      "evaluator": "RulerQaEvaluator",
+      "family": "qa",
+      "kwargs": {
+        "dataset": "hotpotqa",
+        "path": "/root/opencompass_clean/.cache/opencompass/data/ruler/hotpotqa.json"
+      },
+      "max_new_tokens": 50,
+      "name": "ruler_qa_hotpotqa_16k"
+    },
+    {
+      "evaluator": "RulerVtEvaluator",
+      "family": "vt",
+      "kwargs": {
+        "num_chains": 1,
+        "num_hops": 4
+      },
+      "max_new_tokens": 30,
+      "name": "ruler_vt_16k"
+    }
+  ],
+  "tokenizer_json_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "tokenizer_path": "/home/USER/ttt/models/qwen3_1p7b_stage2",
+  "total_samples": 6500
+}

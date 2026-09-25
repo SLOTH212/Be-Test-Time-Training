@@ -1,0 +1,26 @@
+{
+  "authority_sha256": "344795e0c0775265e639923bbff41d28a5a8b78339b3e2d25cd2d4e6e3b04e29",
+  "command": [
+    "/path/to/ttt/envs/ttt_runtime_v1/bin/python",
+    "-B",
+    "/path/to/ttt/bin/qwen3_4b_stage1_gpu45_formal_control_v4_1_pipeline_v1.py",
+    "launch"
+  ],
+  "created_at": 1789108491.9421368,
+  "ended_at": 1789108492.0398934,
+  "launcher_identity": {
+    "boot_id": "326e2e7f-73e6-4f82-a643-09ee601165b5",
+    "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/work/qwen3_4b_stage1_stage2_pipeline_formal_v1/test_contracts.py",
+    "pid": 4112556,
+    "start_ticks": 318773703
+  },
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "observed": {
+    "run_root": "/path/to/ttt/work/qwen3_4b_stage1_stage2_pipeline_formal_v1/tests/1789108489571497439/job1"
+  },
+  "phase": "LAUNCHER_RETURNED",
+  "prior_stage2_roots": [],
+  "returncode": 0,
+  "source_authority_sha256": "7eaf3dbe2b019a969272865b6d8f9ae93dae9d749d39984d9a2db29edfc102ce",
+  "stage": 1
+}

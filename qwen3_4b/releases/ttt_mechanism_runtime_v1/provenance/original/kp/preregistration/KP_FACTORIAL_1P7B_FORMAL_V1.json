@@ -1,0 +1,56 @@
+{
+  "CRITICALITY_LAUNCHED": false,
+  "F11_integrity_target": 167,
+  "K": "PREFIX_ATTENTION_KV_CONTEXT_ALL_ATTENTION_LAYERS_PREBOUNDARY",
+  "OBSERVABILITY_LAUNCHED": false,
+  "P": "TTT_CACHE_OCCUPANCY_AND_UNUSED_LAYER_FORWARD_PATH_IMPLEMENTATION_QUALIFIED",
+  "R2_LAUNCHED": false,
+  "amendment_sha256": "44bfa8f1ef88a5f0d00925852cc2f22af9f1c9c01ff136093953440dd7b2a483",
+  "benchmark_identity": "5d16e3a6963d4c21450f0530af743730b91bf7b2442699e288e10754f77ad0c5",
+  "bootstrap": {
+    "paired_seed": 20260827,
+    "replicates": 20000,
+    "role": "SECONDARY_FORMAL_UNCERTAINTY_ANALYSIS"
+  },
+  "branch_manifest_sha256": "1fe1ffc225a5e67694cbb77a254d59c7554fdc1f3de7cb727020f1df5a8da1b0",
+  "branch_order": "SAMPLE_MAJOR_F00_F10_F01_F11",
+  "cells": {
+    "F00": "Native fast weights + Control K + P0",
+    "F01": "Native fast weights + Control K + P1",
+    "F10": "Native fast weights + Native K + P0",
+    "F11": "Native fast weights + Native K + P1"
+  },
+  "checkpoint_identity": "f4e264ed6f5671f123d6c8a27c69bce3af5ffcba518c9e298398314c6147d9fd",
+  "closure": {
+    "L1": "all recorded first-continuation and first-post-boundary-update tensors torch.equal",
+    "L2": "all complete-continuation final-hidden chunks torch.equal",
+    "L3": "all incomplete-tail tensors torch.equal",
+    "L4": "generation-start logits torch.equal",
+    "L5": "decoded prediction SHA256 equal",
+    "L6": "L1 AND L2 AND L3 AND L4 AND L5",
+    "tolerance": 0
+  },
+  "cohort_sha256": "cfe22a6e042316eedb9f9eec0cbc8fc526a7c6ebee164425d720dd3806bf1c7f",
+  "cpu_affinity": "8-23",
+  "created_at": "2026-09-06T00:04:36+08:00",
+  "effects": {
+    "INTERACTION": "d00-d10-d01+d11",
+    "K_AT_P0": "d00-d10",
+    "K_AT_P1": "d01-d11",
+    "MAIN_K": "mean(K_AT_P0,K_AT_P1)_PER_SAMPLE",
+    "MAIN_P": "mean(P_AT_K0,P_AT_K1)_PER_SAMPLE",
+    "P_AT_K0": "d00-d01",
+    "P_AT_K1": "d10-d11"
+  },
+  "eligibility_sha256": "70c08451da1abc11c489eb119c37c9a53b2bad861395f54bdf640d513a51a306",
+  "expected_branches": 668,
+  "factor_order": "FIRST_BIT_K_SECOND_BIT_P",
+  "fast_weight_parity": "PER_LAYER_CONTIGUOUS_UINT16_RAW_BYTES_SHA256_TOLERANCE_0",
+  "frozen_before_formal_factorial_outcomes": true,
+  "model_identity": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+  "primary_endpoint": "HISTORICAL_GENERATION_START_LOGIT_RELATIVE_L2_TO_NATIVE",
+  "rule_sha256": "84a3b1e3f6215e6ae94a8b394e92d633440567d4fc19a71375e1cb9be9fabc0a",
+  "terminal_reward_role": "SECONDARY",
+  "version": "KP_FACTORIAL_1P7B_FORMAL_V1",
+  "workers": 1
+}

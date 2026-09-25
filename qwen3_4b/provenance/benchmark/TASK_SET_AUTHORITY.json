@@ -1,0 +1,188 @@
+{
+  "parent_manifest_sha256": "5d16e3a6963d4c21450f0530af743730b91bf7b2442699e288e10754f77ad0c5",
+  "samples_per_task": 500,
+  "source": "/home/USER/ttt/benchmarks/ruler_16k_standard_13task500_v1/benchmark_manifest.json",
+  "task_n": 13,
+  "task_order": [
+    "ruler_cwe_16k",
+    "ruler_fwe_16k",
+    "ruler_niah_single_1_16k",
+    "ruler_niah_single_2_16k",
+    "ruler_niah_single_3_16k",
+    "ruler_niah_multikey_1_16k",
+    "ruler_niah_multikey_2_16k",
+    "ruler_niah_multikey_3_16k",
+    "ruler_niah_multivalue_16k",
+    "ruler_niah_multiquery_16k",
+    "ruler_qa_squad_16k",
+    "ruler_qa_hotpotqa_16k",
+    "ruler_vt_16k"
+  ],
+  "tasks": [
+    {
+      "evaluator": "RulerCweEvaluator",
+      "family": "cwe",
+      "kwargs": {
+        "freq_cw": 30,
+        "freq_ucw": 3,
+        "num_cw": 10
+      },
+      "max_new_tokens": 120,
+      "name": "ruler_cwe_16k"
+    },
+    {
+      "evaluator": "RulerFweEvaluator",
+      "family": "fwe",
+      "generation_context_budget": 32462,
+      "generation_context_reserve": 306,
+      "kwargs": {
+        "alpha": 2.0,
+        "coded_wordlen": 6
+      },
+      "max_new_tokens": 50,
+      "name": "ruler_fwe_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 1,
+        "num_needle_q": 1,
+        "num_needle_v": 1,
+        "type_haystack": "repeat",
+        "type_needle_k": "words",
+        "type_needle_v": "numbers"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_single_1_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 1,
+        "num_needle_q": 1,
+        "num_needle_v": 1,
+        "type_haystack": "essay",
+        "type_needle_k": "words",
+        "type_needle_v": "numbers"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_single_2_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 1,
+        "num_needle_q": 1,
+        "num_needle_v": 1,
+        "type_haystack": "essay",
+        "type_needle_k": "words",
+        "type_needle_v": "uuids"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_single_3_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 4,
+        "num_needle_q": 1,
+        "num_needle_v": 1,
+        "type_haystack": "essay",
+        "type_needle_k": "words",
+        "type_needle_v": "numbers"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_multikey_1_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 1,
+        "num_needle_q": 1,
+        "num_needle_v": 1,
+        "type_haystack": "needle",
+        "type_needle_k": "words",
+        "type_needle_v": "numbers"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_multikey_2_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 1,
+        "num_needle_q": 1,
+        "num_needle_v": 1,
+        "type_haystack": "needle",
+        "type_needle_k": "uuids",
+        "type_needle_v": "uuids"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_multikey_3_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 1,
+        "num_needle_q": 1,
+        "num_needle_v": 4,
+        "type_haystack": "essay",
+        "type_needle_k": "words",
+        "type_needle_v": "numbers"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_multivalue_16k"
+    },
+    {
+      "evaluator": "RulerNiahEvaluator",
+      "family": "niah",
+      "kwargs": {
+        "num_needle_k": 1,
+        "num_needle_q": 4,
+        "num_needle_v": 1,
+        "type_haystack": "essay",
+        "type_needle_k": "words",
+        "type_needle_v": "numbers"
+      },
+      "max_new_tokens": 128,
+      "name": "ruler_niah_multiquery_16k"
+    },
+    {
+      "evaluator": "RulerQaEvaluator",
+      "family": "qa",
+      "kwargs": {
+        "dataset": "squad",
+        "path": "/root/opencompass_clean/.cache/opencompass/data/ruler/dev-v2.0.json"
+      },
+      "max_new_tokens": 50,
+      "name": "ruler_qa_squad_16k"
+    },
+    {
+      "evaluator": "RulerQaEvaluator",
+      "family": "qa",
+      "kwargs": {
+        "dataset": "hotpotqa",
+        "path": "/root/opencompass_clean/.cache/opencompass/data/ruler/hotpotqa.json"
+      },
+      "max_new_tokens": 50,
+      "name": "ruler_qa_hotpotqa_16k"
+    },
+    {
+      "evaluator": "RulerVtEvaluator",
+      "family": "vt",
+      "kwargs": {
+        "num_chains": 1,
+        "num_hops": 4
+      },
+      "max_new_tokens": 30,
+      "name": "ruler_vt_16k"
+    }
+  ]
+}

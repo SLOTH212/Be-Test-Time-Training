@@ -1,0 +1,48 @@
+{
+  "A": "/data/qirong/data/USER/work/scaleup_multigpu_32k_gpu23_debug_v1/runs/l4_uninterrupted_v1/checkpoints",
+  "B": "/data/qirong/data/USER/work/scaleup_multigpu_32k_gpu23_debug_v1/runs/l4_exact_a_step1_snapshot/checkpoints",
+  "comparison": "exact_per_rank_local_shard_sha256",
+  "ranks": [
+    {
+      "A": {
+        "model_sha256": "5f7c4314a12b09631c7bbd25e6a1df98abcf2ae7222f92cd0ab34d550eedf270",
+        "optimizer_sha256": "6fc0d192f8f97db0c2a092ba96673796ecd6eb6a2109e7a5a3fd1d4d8454ab86",
+        "optimizer_state_parameter_count": 416,
+        "scheduler_sha256": "46b593844f3068a0334d5a74cba2ccf074bb66c441583568b12f0dad42c40006"
+      },
+      "B": {
+        "model_sha256": "d024c9f2afc0472399f4af6e2f53eaf3a520b8f1d9366f9643c359f8a258783a",
+        "optimizer_sha256": "83cb3609034f832ef4b3d7aec17e1a8e6a738c249390517cbfb4516e05f31b78",
+        "optimizer_state_parameter_count": 416,
+        "scheduler_sha256": "46b593844f3068a0334d5a74cba2ccf074bb66c441583568b12f0dad42c40006"
+      },
+      "model_exact": false,
+      "optimizer_exact": false,
+      "physical_gpu": 2,
+      "progress_equal": true,
+      "rank": 0,
+      "scheduler_exact": true
+    },
+    {
+      "A": {
+        "model_sha256": "8f67cc5c24e6522074da291edd0234432d3de52191858d0eb4b1b72c4afd5c0b",
+        "optimizer_sha256": "addcb61302779f9426f4e681ff8e703d2dc85e9830921556972cc59681b3ed74",
+        "optimizer_state_parameter_count": 416,
+        "scheduler_sha256": "46b593844f3068a0334d5a74cba2ccf074bb66c441583568b12f0dad42c40006"
+      },
+      "B": {
+        "model_sha256": "3258339fb3fc3e00133947654b0924d078c52a46f657d257e304076c645fb8df",
+        "optimizer_sha256": "d4a0147681c9a2c3fe2fc86258cf201ce215c238af8b64991172ac7d05085d62",
+        "optimizer_state_parameter_count": 416,
+        "scheduler_sha256": "46b593844f3068a0334d5a74cba2ccf074bb66c441583568b12f0dad42c40006"
+      },
+      "model_exact": false,
+      "optimizer_exact": false,
+      "physical_gpu": 3,
+      "progress_equal": true,
+      "rank": 1,
+      "scheduler_exact": true
+    }
+  ],
+  "status": "FAIL"
+}

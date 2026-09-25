@@ -1,0 +1,845 @@
+{
+  "context_length": 32768,
+  "cuda_visible_devices": "2,3",
+  "formal_training": false,
+  "fsdp2_root_wrapped": true,
+  "fsdp2_wrapped_blocks": 36,
+  "global_denominator": 65534,
+  "global_loss": 0.006115622489450252,
+  "global_numerator": 400.7812042236328,
+  "l30_forward_execution": "PASS",
+  "optimizer_steps": 0,
+  "ranks": [
+    {
+      "local_denominator": 32767,
+      "local_numerator": 201.58914184570312,
+      "local_rank": 0,
+      "logical_device": "cuda:0",
+      "peak_allocated_bytes": 7910657024,
+      "peak_reserved_bytes": 10001317888,
+      "physical_gpu": 2,
+      "rank": 0,
+      "sample_id": "hit-synthetic-32k-0000",
+      "ttt_trace": {
+        "0": [
+          {
+            "chunk_index": 0,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 1,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 2,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 3,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 4,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 5,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 6,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 7,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          }
+        ],
+        "12": [
+          {
+            "chunk_index": 0,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 1,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 2,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 3,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 4,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 5,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 6,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 7,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          }
+        ],
+        "18": [
+          {
+            "chunk_index": 0,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 1,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 2,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 3,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 4,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 5,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 6,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 7,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          }
+        ],
+        "24": [
+          {
+            "chunk_index": 0,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 1,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 2,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 3,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 4,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 5,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 6,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 7,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          }
+        ],
+        "30": [
+          {
+            "chunk_index": 0,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 1,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 2,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 3,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 4,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 5,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 6,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 7,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          }
+        ],
+        "6": [
+          {
+            "chunk_index": 0,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 1,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 2,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 3,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 4,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 5,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 6,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 7,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          }
+        ]
+      },
+      "wall_seconds": 14.812071959953755
+    },
+    {
+      "local_denominator": 32767,
+      "local_numerator": 199.1920623779297,
+      "local_rank": 1,
+      "logical_device": "cuda:1",
+      "peak_allocated_bytes": 7910657024,
+      "peak_reserved_bytes": 10001317888,
+      "physical_gpu": 3,
+      "rank": 1,
+      "sample_id": "hit-synthetic-32k-0001",
+      "ttt_trace": {
+        "0": [
+          {
+            "chunk_index": 0,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 1,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 2,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 3,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 4,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 5,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 6,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 7,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          }
+        ],
+        "12": [
+          {
+            "chunk_index": 0,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 1,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 2,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 3,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 4,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 5,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 6,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 7,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          }
+        ],
+        "18": [
+          {
+            "chunk_index": 0,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 1,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 2,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 3,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 4,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 5,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 6,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 7,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          }
+        ],
+        "24": [
+          {
+            "chunk_index": 0,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 1,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 2,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 3,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 4,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 5,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 6,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 7,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          }
+        ],
+        "30": [
+          {
+            "chunk_index": 0,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 1,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 2,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 3,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 4,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 5,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 6,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 7,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          }
+        ],
+        "6": [
+          {
+            "chunk_index": 0,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 1,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 2,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 3,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 4,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 5,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 6,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          },
+          {
+            "chunk_index": 7,
+            "post_clip_norm": 0.0,
+            "pre_clip_norm": 0.0,
+            "update_count": 1,
+            "valid_pairs": 4095,
+            "was_clipped": false
+          }
+        ]
+      },
+      "wall_seconds": 14.551266494207084
+    }
+  ],
+  "status": "PASS",
+  "ttt_chunk_size": 4096,
+  "ttt_layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "world_size": 2
+}

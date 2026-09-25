@@ -1,0 +1,104 @@
+{
+  "debug_patch_n": 7,
+  "debug_worktree_git": false,
+  "frozen_vendor_edited": false,
+  "git_commit": "NOT_APPLICABLE_NOT_A_GIT_WORKTREE",
+  "package_authority_superseded_for_hit": false,
+  "patches": [
+    {
+      "file_sha256": {
+        "code/configs/hit_stage1_4b_32k_chunk4k_gpu23_debug_v1.yaml": "788770ba00d22fa5728dc2a61ff1ba7b7ee689f909c25a0fb94a5b5b4bf29cb4",
+        "code/lib/model_factory.py": "824b0e6f87433d6e281c0a1a7719413e2d403dd3e35735db2482e124f0f4de7b",
+        "code/lib/scaleup_debug_adapter.py": "fb7eb5c0c7ede138f2c12c27c52dba790889d5d9272da3cc24377b73b33ddf68"
+      },
+      "files": [
+        "code/lib/model_factory.py",
+        "code/lib/scaleup_debug_adapter.py",
+        "code/configs/hit_stage1_4b_32k_chunk4k_gpu23_debug_v1.yaml"
+      ],
+      "id": "P1",
+      "scientific_semantics": "Requested scale-up configuration only.",
+      "summary": "External debug-only 32K/chunk4K/six-layer adaptation without editing frozen vendor."
+    },
+    {
+      "file_sha256": {
+        "code/workers/distributed_train_worker.py": "f25bfc134da295c0eebb4951c0e78051e328d3cb61072ac09b5e54a10fdbe3a4"
+      },
+      "files": [
+        "code/workers/distributed_train_worker.py"
+      ],
+      "id": "P2",
+      "scientific_semantics": "Restores declared document isolation contract.",
+      "summary": "Propagate and validate Stage1 document boundaries into gated NTP."
+    },
+    {
+      "after": "L3 32K forward/backward PASS",
+      "before": "mixed Tensor/DTensor embedding failure",
+      "file_sha256": {
+        "code/lib/fsdp2_runtime.py": "e24b877da81fd7e340b013ed3d1f67b5b1c387b158534bc4d43047ea91aa256f",
+        "code/workers/distributed_train_worker.py": "f25bfc134da295c0eebb4951c0e78051e328d3cb61072ac09b5e54a10fdbe3a4"
+      },
+      "files": [
+        "code/lib/fsdp2_runtime.py",
+        "code/workers/distributed_train_worker.py"
+      ],
+      "id": "P3",
+      "summary": "Register hidden-only root FSDP forward so root hooks run without materializing 32K vocabulary logits."
+    },
+    {
+      "file_sha256": {
+        "code/lib/distributed_checkpoint.py": "a5977736b57f50f55d7fbae5cd207082e3b5bf69e8e0bd6bd56ba77940975675"
+      },
+      "files": [
+        "code/lib/distributed_checkpoint.py"
+      ],
+      "id": "P4",
+      "scientific_semantics": "Fail-closed resume guard only.",
+      "summary": "Preflight world/mesh/batch metadata before model construction."
+    },
+    {
+      "after": "real DCP resume PASS",
+      "before": "missing ttt_conv optimizer step key",
+      "file_sha256": {
+        "code/lib/distributed_checkpoint.py": "a5977736b57f50f55d7fbae5cd207082e3b5bf69e8e0bd6bd56ba77940975675"
+      },
+      "files": [
+        "code/lib/distributed_checkpoint.py"
+      ],
+      "id": "P5",
+      "summary": "Allow partial optimizer load for legitimate lazy no-gradient state while explicitly requiring every model key."
+    },
+    {
+      "after": "normal barrier and shutdown on both ranks",
+      "before": "post-completion final barrier hang",
+      "file_sha256": {
+        "code/lib/distributed_runtime.py": "6470d6128862de5b8c06a2bf97b99de69dd5c195760bf8073be2cf7ec71225e4",
+        "code/workers/distributed_train_worker.py": "f25bfc134da295c0eebb4951c0e78051e328d3cb61072ac09b5e54a10fdbe3a4"
+      },
+      "files": [
+        "code/lib/distributed_runtime.py",
+        "code/workers/distributed_train_worker.py"
+      ],
+      "id": "P6",
+      "summary": "Bind NCCL process group/barriers to logical device and add bounded collective timeout/exit markers."
+    },
+    {
+      "file_sha256": {
+        "code/tests/hit_dcp_numeric_compare.py": "ea1565b3ce0e829ce3547a18a60be49b4dea0776e4acd94cd0cf047b6be9f320",
+        "code/tests/hit_dcp_state_compare.py": "dd04416098c6bc222154c7d7f8906161f249fc0fed4c90f8c42aba5a3c3d9e96",
+        "code/tests/hit_failure_propagation.py": "2fe1d714ca8145778500504337acbaabf5b0bdd0472cbc80cd4fa137a3346480",
+        "code/workers/distributed_train_worker.py": "f25bfc134da295c0eebb4951c0e78051e328d3cb61072ac09b5e54a10fdbe3a4"
+      },
+      "files": [
+        "code/workers/distributed_train_worker.py",
+        "code/tests/hit_dcp_state_compare.py",
+        "code/tests/hit_dcp_numeric_compare.py",
+        "code/tests/hit_failure_propagation.py"
+      ],
+      "id": "P7",
+      "scientific_semantics": "Instrumentation only.",
+      "summary": "Add debug-only runtime observability and correctness tests."
+    }
+  ],
+  "status": "PASS"
+}

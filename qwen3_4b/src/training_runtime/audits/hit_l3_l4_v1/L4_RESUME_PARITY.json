@@ -1,0 +1,65 @@
+{
+  "comparison": "uninterrupted_step2_vs_resume_from_identical_step1_slot",
+  "model_all_tensors_allclose": true,
+  "model_atol": 1e-05,
+  "model_max_abs": 1.1444091796875e-05,
+  "model_max_relative_rms": 3.2501950648817733e-06,
+  "model_rtol": 0.01,
+  "nondeterminism_control": "L4_REPEAT_RESUME_CONTROL.json",
+  "note": "DCP container bytes are nondeterministic; BF16/CUDA cross-launch numeric variation is calibrated by two resumes from the same immutable slot_A.",
+  "optimizer_global_relative_rms": 1.5586763928351105e-05,
+  "optimizer_global_relative_rms_limit": 2e-05,
+  "optimizer_key_shape_dtype_equal": true,
+  "optimizer_max_abs": 0.0003662109375,
+  "optimizer_max_abs_repeat_resume_control": 0.0003662109375,
+  "optimizer_within_repeat_resume_nondeterminism_baseline": true,
+  "progress_exact": true,
+  "rank_rng_state_file_hashes_exact": true,
+  "runtime_exact": true,
+  "runtime_fields": {
+    "cumulative_tokens": {
+      "A": 131072,
+      "B": 131072,
+      "absolute_difference": 0
+    },
+    "global_mean_loss": {
+      "A": 0.005689304254131205,
+      "B": 0.005689304254131205,
+      "absolute_difference": 0.0
+    },
+    "global_numerator": {
+      "A": 372.8428649902344,
+      "B": 372.8428649902344,
+      "absolute_difference": 0.0
+    },
+    "grad_norm_after_clip": {
+      "A": 1.0,
+      "B": 1.0,
+      "absolute_difference": 0.0
+    },
+    "grad_norm_before_clip": {
+      "A": 2.734375,
+      "B": 2.734375,
+      "absolute_difference": 0.0
+    },
+    "learning_rate": {
+      "A": 5e-06,
+      "B": 5e-06,
+      "absolute_difference": 0.0
+    },
+    "record_cursor": {
+      "A": 4,
+      "B": 4,
+      "absolute_difference": 0
+    },
+    "update_step": {
+      "A": 2,
+      "B": 2,
+      "absolute_difference": 0
+    }
+  },
+  "scheduler_exact": true,
+  "status": "PASS",
+  "strict_container_or_per_element_exact": false,
+  "strict_exact_evidence": "L4_STATE_COMPARE.json and L4_NUMERIC_STATE_COMPARE.json retained with FAIL"
+}

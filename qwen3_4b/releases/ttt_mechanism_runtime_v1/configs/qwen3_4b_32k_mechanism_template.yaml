@@ -1,0 +1,58 @@
+{
+  "classification": "SCALEUP_TEMPLATE_NOT_FORMAL_FROZEN",
+  "model_family": "qwen3",
+  "mechanism": "template",
+  "context_length": 32768,
+  "chunk_size": 4096,
+  "configured_ttt_layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "actions": [
+    "OFF",
+    "L0",
+    "L6",
+    "L12",
+    "L18",
+    "L24",
+    "L30",
+    "ALL"
+  ],
+  "model_path": "MODEL_PATH",
+  "benchmark_root": "BENCHMARK_ROOT",
+  "fixed_results": "FIXED_RESULTS_JSONL",
+  "dynamic_results": "DYNAMIC_RESULTS_JSONL",
+  "run_root": "NEW_RUN_ROOT",
+  "model_identity": "MODEL_IDENTITY",
+  "benchmark_identity": "BENCHMARK_IDENTITY",
+  "future_cohort_frozen": false,
+  "statistics": {
+    "status": "SELECT_AND_FREEZE_EXPERIMENT_SPECIFIC_PROCEDURE",
+    "formal_reference_procedures": {
+      "reverse": {
+        "paired": 20260905,
+        "stratified": 20260906
+      },
+      "reset": {
+        "paired": 20260907,
+        "stratified": 20260908
+      },
+      "deletion": {
+        "paired": 20260909,
+        "stratified": 20260910,
+        "disjoint": 20260911
+      },
+      "kp": {
+        "paired": 20260827
+      },
+      "r2": {
+        "paired": 20260906,
+        "stratified": 20260907
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "checkpoint": {
+    "manifest_sha256": "260bcb7c5020925a15adcb9f166710e14604bc7f538f850984b0ab23fde7031f",
+    "progress": {
+      "accumulation_phase": 0,
+      "cumulative_tokens": 367711057,
+      "dataloader_state": {
+        "canonical_next_position": 14000
+      },
+      "global_valid_tokens": 32864,
+      "input_identity": {
+        "cache_policy_sha256": "fdecd856e2e03859cde4e374736f67fc7a1144724034eca2813d4c1289e85852",
+        "checkpoint_module_sha256": "48fd2a39d06619422d20fda97e79a538725e334e1d405a24f5033759d6ffc608",
+        "config_sha256": "d7180bea369e128635289016568654fb592b0f995474a8532e45d473bb3454db",
+        "data_manifest_sha256": "542f501069c54ec7702152fa341898afb4964043c8b5f8721612767ac5008f6d",
+        "dataset_authority_sha256": "3f74e0fc501bb6dedd0912b35eb9142d73b0ee1888a9b3412fb111930948208f",
+        "gpu45_resource_loader_sha256": "68ac927ae7afc0eaf339a11390bf6467abd91eb33d5c1625e1b33029f029f3d5",
+        "model_identity_sha256": "2397f0674d7d016aba0110b62e859e95566189cb35a5dac37256ab32155b6f6c",
+        "worker_sha256": "b93593c2a176b0ba8ebc72e5422d20f562c905efefbe7286ef070b6fa52ec47c"
+      },
+      "local_valid_tokens": 32767,
+      "rank_assignment_state": {
+        "mapping": "canonical_modulo_with_accumulation_v1",
+        "rank": 0,
+        "world_size": 2
+      },
+      "record_cursor": 14000,
+      "stage": 1,
+      "update_step": 7000
+    },
+    "slot": "slot_A"
+  },
+  "last_logged_step": 7037,
+  "last_logged_tokens": 369400587,
+  "pipeline_supervisor": {
+    "boot_id": "326e2e7f-73e6-4f82-a643-09ee601165b5",
+    "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/bin/qwen3_4b_stage1_stage2_pipeline_formal_v1.py --supervise",
+    "pid": 4128216,
+    "start_ticks": 318906580
+  },
+  "remaining_processes": [],
+  "replay_steps": 37,
+  "replay_tokens": 1689530,
+  "requested_by": "user",
+  "resume_receipt": "/path/to/ttt/runs/qwen3_4b_stage1_stage2_pipeline_formal_v1/RESUME_20260914T034653.json",
+  "resume_requires_explicit_user_request": true,
+  "resume_step": 7000,
+  "resume_tokens": 367711057,
+  "resumed_at": 1789329089.8492587,
+  "stage2_started": false,
+  "status": "RESUMED",
+  "time": 1789317585.8066301,
+  "torchrun": {
+    "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python /path/to/ttt/envs/ttt_runtime_v1/bin/torchrun --standalone --nproc-per-node=2 /path/to/ttt/bin/stage1_runtime_entry_gpu45_pipeline_v1.py --stage 1 --config /path/to/ttt/configs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1.yaml --output-dir /path/to/ttt/runs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1",
+    "pid": 4128851,
+    "start_ticks": 318911149,
+    "state": "S"
+  },
+  "verified_at": 1789317630.8717277,
+  "workers": [
+    {
+      "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -u /path/to/ttt/bin/stage1_runtime_entry_gpu45_pipeline_v1.py --stage 1 --config /path/to/ttt/configs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1.yaml --output-dir /path/to/ttt/runs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1",
+      "pid": 4128874,
+      "start_ticks": 318911335,
+      "state": "S"
+    },
+    {
+      "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -u /path/to/ttt/bin/stage1_runtime_entry_gpu45_pipeline_v1.py --stage 1 --config /path/to/ttt/configs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1.yaml --output-dir /path/to/ttt/runs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1",
+      "pid": 4128875,
+      "start_ticks": 318911335,
+      "state": "S"
+    }
+  ]
+}

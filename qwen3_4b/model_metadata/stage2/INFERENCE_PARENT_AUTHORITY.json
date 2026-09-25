@@ -1,0 +1,34 @@
+{
+  "status": "PASS_EXPORT_PENDING_INFERENCE_LOAD",
+  "DEBUG_ONLY": false,
+  "PAPER_RESULT": null,
+  "source_stage2_authority": "/path/to/ttt/runs/qwen3_4b_stage1_stage2_pipeline_formal_v1/finalization_attempts/stage2_1789734217112572818/STAGE2_RUN_FINAL_AUTHORITY.json",
+  "source_stage2_authority_sha256": "c98e5190e274292ce3ba834059b601d5c943f0910306f1ccd60321d5d864de4e",
+  "source_checkpoint_manifest_sha256": "86d4ef00b40d7dee36c7548682a961173f621581083e297a76eea09260cf3e5b",
+  "model_identity": "Qwen3-4B",
+  "ttt_layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "training_ttt_chunk_size": 4096,
+  "inference_ttt_chunk_size": 4096,
+  "inference_reference": "/path/to/ttt/configs/qwen3_4b_stage2_inference_4k_v1.json",
+  "inference_reference_sha256": "210db096574f2170c2f2194338f51ff767977b9abd2c56a031f60caa1d3617a9",
+  "context_length": 32768,
+  "files": {
+    "added_tokens.json": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+    "state_dict_audit.json": "1e7ed5334002cf810919e3e5cfd615cbb9e616c332b56019ba04efb70d2c19f7",
+    "model.safetensors": "0a46719e9fb4bf66272a4f65a2ab05e0513366044c4c55f2697d8c5472e6599d",
+    "tokenizer_config.json": "67e5a0a11cd35f9c00ee52e0af4cdc0baa75fea0cb5fce7d1beb251b4621d15c",
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "chat_template.jinja": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "config.json": "56ae1e3da2df6e99507cdc7af8e07ca03ccecb6384d88d152ea2ede39a5860bf"
+  }
+}

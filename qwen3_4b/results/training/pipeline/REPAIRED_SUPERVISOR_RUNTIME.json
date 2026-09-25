@@ -1,0 +1,11 @@
+{
+  "changes": [
+    "Move staging root while owner-writable, then freeze published root",
+    "Wait for unchanged Stage2 48000 MiB capacity gate before recording launch intent"
+  ],
+  "created_at": 1789706278.6678648,
+  "frozen_source_authority_sha256": "22b4790a8f820398fdfeb9aefbfa75a6a72bed8621e2fac974558881ddacbbfa",
+  "scientific_configuration_changed": false,
+  "script": "/path/to/ttt/bin/qwen3_4b_pipeline_publication_repair_supervisor_v1.py",
+  "sha256": "20de51caa94fc31d25717b732ca4a75152e3a2e0c26829c387b9adacfb6bbe20"
+}

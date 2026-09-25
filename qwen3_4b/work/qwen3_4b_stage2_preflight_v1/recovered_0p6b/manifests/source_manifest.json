@@ -1,0 +1,166 @@
+{
+  "adapted_source_bundle_sha256": "0e081eb73502f4fab37e5deccd20c6e7df4d75bb7c2a0a8dfe6f70b846dc906c",
+  "authority_root": "/home/USER/ttt_migration/staging_v2_clean",
+  "copied_authority_files": [
+    {
+      "authority": "/home/USER/ttt_migration/staging_v2_clean/root/autodl-tmp/ttt/inplace_ttt_gated_ntp_perf_parity_v1/tools/cloud/formal_train_gated_ntp.py",
+      "copy": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/tools/cloud/formal_train_gated_ntp.py",
+      "exact_copy": true,
+      "sha256": "960465d4c0850345fb998e81b6bf19f2517ecea104aed2946a8b3e31bb416cf3"
+    },
+    {
+      "authority": "/home/USER/ttt_migration/staging_v2_clean/root/autodl-tmp/ttt/inplace_ttt_gated_ntp_perf_parity_v1/hf_models/hf_qwen3/modeling_qwen3.py",
+      "copy": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/hf_models/hf_qwen3/modeling_qwen3.py",
+      "exact_copy": true,
+      "sha256": "e949cef8b01394ff845041dca0c5d72d5e536139c471be5eea130db2a884d0e0"
+    },
+    {
+      "authority": "/home/USER/ttt_migration/staging_v2_clean/root/autodl-tmp/ttt/inplace_ttt_gated_ntp_perf_parity_v1/hf_models/hf_qwen3/ttt_state_core.py",
+      "copy": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/hf_models/hf_qwen3/ttt_state_core.py",
+      "exact_copy": true,
+      "sha256": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e"
+    },
+    {
+      "authority": "/home/USER/ttt_migration/staging_v2_clean/root/opencompass_clean/tools/autodl/v2_full_epoch_ruler_bs2/answer_context_fused_loss.py",
+      "copy": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/loss/answer_context_fused_loss.py",
+      "exact_copy": true,
+      "sha256": "25c686f51693fe881ff9fa1c7f6feaeb9a51fcd6f05a05554c900d8a895adf31"
+    }
+  ],
+  "files": [
+    [
+      "source/loss/answer_context_fused_loss.py",
+      "25c686f51693fe881ff9fa1c7f6feaeb9a51fcd6f05a05554c900d8a895adf31"
+    ],
+    [
+      "source/ntp/configs/formal/gated_ntp_stage1_100m.yaml",
+      "1163dfa291112f573ce9c031a02d1bdfe2652bfaaae2cc52df799226ed99bccc"
+    ],
+    [
+      "source/ntp/configs/formal/gated_ntp_stage2_qa10m.yaml",
+      "d02290f05c2ced778caeefaf522704b1a9d6e92362479cedfef52df7f8a5e777"
+    ],
+    [
+      "source/ntp/hf_models/__init__.py",
+      "cc2c397dab164ab9e92165c834ec0c4a40263b8178abf586b6ce94eb08d9eda8"
+    ],
+    [
+      "source/ntp/hf_models/hf_qwen3/__init__.py",
+      "2ef4fb7b17e59ac651edb16934f6b1e1f210656dde83548861c581c27d684266"
+    ],
+    [
+      "source/ntp/hf_models/hf_qwen3/configuration_qwen3.py",
+      "b3f309ec54094694cfc86a74b66d860193fc4e684b9cc3c0d1d2ed84ca2112fb"
+    ],
+    [
+      "source/ntp/hf_models/hf_qwen3/modeling_qwen3.py",
+      "e949cef8b01394ff845041dca0c5d72d5e536139c471be5eea130db2a884d0e0"
+    ],
+    [
+      "source/ntp/hf_models/hf_qwen3/ttt_state_core.py",
+      "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e"
+    ],
+    [
+      "source/ntp/inference_model/__init__.py",
+      "01fa3318f3f3fc02dd38565672940700f289d7cce790d6f05e04471944b4903f"
+    ],
+    [
+      "source/ntp/inference_model/hf_qwen3/__init__.py",
+      "a38d76873e560e9c034258408e1c67fdfc08f2be846da1937cea1434f6e10e80"
+    ],
+    [
+      "source/ntp/inference_model/hf_qwen3/configuration_qwen3.py",
+      "ebed0379af1075b97222dc4ffdaf0cca2de86311e0715a704c7e148b8365c444"
+    ],
+    [
+      "source/ntp/inference_model/hf_qwen3/modeling_qwen3.py",
+      "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43"
+    ],
+    [
+      "source/ntp/pyproject.toml",
+      "cb42e534814404c1a0377439fe55c1cbf2c1e1d172666d0f555116041d4a8b40"
+    ],
+    [
+      "source/ntp/tests_gated_ntp_cpu.py",
+      "508964b30596be8445426355da2c8aeb8be954d46b9bc94aba7b214f2cda64c6"
+    ],
+    [
+      "source/ntp/tests_static_ttt_test_ttt_state_core.py",
+      "24a8db84592471ebd628fcf9f5d1b397b5f80ba210acb5d6c6b086c1a834b575"
+    ],
+    [
+      "source/ntp/tools/cloud/formal_train_gated_ntp.py",
+      "960465d4c0850345fb998e81b6bf19f2517ecea104aed2946a8b3e31bb416cf3"
+    ],
+    [
+      "source/ntp/tools/cloud/validate_record_vs_gated_ntp.py",
+      "d0f26fc3930f1c3898257f181b654aa72649bbea40128482d9a2fb569e67753d"
+    ],
+    [
+      "lib/common.py",
+      "0b677ccfee793195037891c96d935a8728feb430de64a111db7124f1c6f0ac45"
+    ],
+    [
+      "lib/pipeline_core.py",
+      "f2567cf8ba05c71c3ffc53bb979e487e9dd20828a1e660a8d4136a754047e67f"
+    ],
+    [
+      "lib/real_checkpoint.py",
+      "e3d1762e503d39dbe4c6fe4e66f27892cac76914a0ee7c573dfb783d631da702"
+    ],
+    [
+      "lib/rolling_checkpoint.py",
+      "5c150964947ac9d92cb209328c4cc62b02cee3d208e8f57aac4f67e9862fb3dc"
+    ],
+    [
+      "scripts/audit_and_finalize.py",
+      "20bfa1c2846d2b25ed0148b6f8f4d8b0caeb03d0b43a422196961fd105a3b9c9"
+    ],
+    [
+      "scripts/launch_qwen3_0p6b_replication_v1.sh",
+      "8ac37f141fa02d6718017a674a7deb21a022a8c5a6bed1f8e4fef668373fad8c"
+    ],
+    [
+      "scripts/monitor.py",
+      "678c19e65325248518f0cadf38df95e8c0fe5e494e49ecd5aa32ec204ff14155"
+    ],
+    [
+      "scripts/monitor_qwen3_0p6b_replication_v1.sh",
+      "451fff597926d850f61684295334bafc512af175d447b8cd7e2e96d391f6a86a"
+    ],
+    [
+      "scripts/preflight.py",
+      "7418d2429d1fa227d553a3611cab1bc2594cd4da2b046cf345010d591a7ffbc2"
+    ],
+    [
+      "scripts/prepare_replication.py",
+      "999dd364acb7bc8e5030a6b6bd35dd2494b32fc75d1cf5eee83c5f17f441c551"
+    ],
+    [
+      "scripts/run_qwen3_0p6b_replication_autopilot_v1.sh",
+      "2157705c9f471add9c217613c3cff254c90dd11072a5d4f6ae794e8cb34b2672"
+    ],
+    [
+      "scripts/run_smoke_suite.py",
+      "1bd34a3530314bd2673bf7901c188f026d7ae1f41111d739475ee8e7b5d34039"
+    ],
+    [
+      "scripts/run_static_tests_without_pytest.py",
+      "578ae8473714ae91cf3d2f89d8762a1ee421bf161ecacc7880f2a53def920314"
+    ],
+    [
+      "scripts/status_cli.py",
+      "8245fe7fb883845d5c50abb3e107f54188d99d893bb644b8a44b9908d0cf8661"
+    ],
+    [
+      "scripts/structural_tests.py",
+      "e5094699967faa87fe9b13c529785f2aaeffd6a09ea1e2f440b40ebb8e7e647e"
+    ],
+    [
+      "scripts/train_worker.py",
+      "ee7113f75245fb610f0f80e192f48529db5b18aefa1d523d17089be353cce915"
+    ]
+  ],
+  "reference_ntp_head": "190580a29780030969cd337763098188bce8c88c",
+  "reference_pipeline_head": "6665596be4cccb51387b7cf6a4f15b338f7d103a"
+}

@@ -1,0 +1,33 @@
+{
+  "base_and_mechanism_immutable": true,
+  "base_inference_package_sha256": "65a0d7bd9c8801c92fc30477ab8662d3eb52261612eff2acef0bbeb3edf6ba51",
+  "chunk_size": 4096,
+  "context_length": 32768,
+  "inference_4k_root": "/path/to/ttt/src/inference_runtime_4k_stage2_v1/code",
+  "inference_config": "/path/to/ttt/configs/qwen3_4b_stage2_inference_4k_v1.json",
+  "inference_config_sha256": "210db096574f2170c2f2194338f51ff767977b9abd2c56a031f60caa1d3617a9",
+  "layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "mechanism_package_sha256": "ce9ee7c7066d0413e4fcf90b69543cfa605ac1761af8d849ddb2d61ccd6fb1a8",
+  "mechanism_root": "/path/to/ttt/releases/ttt_mechanism_runtime_v1",
+  "runtime_file_sha256": {
+    "__init__.py": "1371f7275f7754de6d2a40be596e7438b3f9e88fc961183233a5d495c31a669a",
+    "hf_models/hf_qwen3/__init__.py": "479f0a38e97848e93a031b6e61a8f7b0aecd490874bbc2be87c4a2d2589d0f3d",
+    "hf_models/hf_qwen3/ttt_state_core.py": "c158a523a04ad8ab5ab46973c3e69d642b172572d27e97de39b59ce8bfc39aac",
+    "inference_model/hf_qwen3/__init__.py": "a38d76873e560e9c034258408e1c67fdfc08f2be846da1937cea1434f6e10e80",
+    "inference_model/hf_qwen3/configuration_qwen3.py": "ebed0379af1075b97222dc4ffdaf0cca2de86311e0715a704c7e148b8365c444",
+    "inference_model/hf_qwen3/modeling_qwen3.py": "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43",
+    "runtime.py": "875b493e6868ed2c77528eca28b6204cd5c4a7e4147abd42de7576109bcf931c"
+  },
+  "schema": "QWEN3_4B_4K_MECHANISM_INTEGRATION_CONTRACT_V1",
+  "status": "PASS",
+  "runtime_execution_evidence": "/path/to/ttt/work/qwen3_4b_downstream_pipeline_debug_v1/mechanism",
+  "FORMAL_RESET_4B_32K_4K_ELIGIBILITY_STATUS": "ZERO_ELIGIBLE_BY_CHUNK_GEOMETRY",
+  "debug_fixture_resolves_formal_scientific_eligibility": false
+}

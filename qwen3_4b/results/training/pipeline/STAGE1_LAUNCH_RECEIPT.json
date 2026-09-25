@@ -1,0 +1,41 @@
+{
+  "authority_sha256": "344795e0c0775265e639923bbff41d28a5a8b78339b3e2d25cd2d4e6e3b04e29",
+  "command": [
+    "/path/to/ttt/envs/ttt_runtime_v1/bin/python",
+    "-B",
+    "/path/to/ttt/bin/qwen3_4b_stage1_gpu45_formal_control_v4_1_pipeline_v1.py",
+    "launch"
+  ],
+  "created_at": 1789109837.1045523,
+  "ended_at": 1789109850.5555599,
+  "launcher_identity": {
+    "boot_id": "326e2e7f-73e6-4f82-a643-09ee601165b5",
+    "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/bin/qwen3_4b_stage1_gpu45_formal_control_v4_1_pipeline_v1.py launch",
+    "pid": 4128556,
+    "start_ticks": 318908470
+  },
+  "log_sha256": "e3856d368bdfbed9b580537686e474dab02530dada52dd9fbf296b2ac6b5d2ea",
+  "observed": {
+    "ETA": null,
+    "actual_input_tokens": 0,
+    "cursor": 0,
+    "elapsed": null,
+    "expected": {
+      "cumulative_tokens": 989996971,
+      "record_cursor": 38335,
+      "update_step": 19168
+    },
+    "latest_DCP": null,
+    "loss": null,
+    "optimizer_step": 0,
+    "process_identities": [],
+    "run_root": "/path/to/ttt/runs/qwen3_4b_stage1_1b_32k_gpu45_formal_v1",
+    "status": "STOPPED",
+    "throughput": null
+  },
+  "phase": "LAUNCHER_RETURNED",
+  "prior_stage2_roots": [],
+  "returncode": 0,
+  "source_authority_sha256": "22b4790a8f820398fdfeb9aefbfa75a6a72bed8621e2fac974558881ddacbbfa",
+  "stage": 1
+}

@@ -1,0 +1,28 @@
+{
+  "changed": {
+    "fwe_generation_context_budget": [
+      16078,
+      32462
+    ],
+    "max_seq_length": [
+      16384,
+      32768
+    ]
+  },
+  "context_length": 32768,
+  "derived_change_explanation": "FWE preserves the formal 306-token generator reserve; this is length-derived, not a new scientific setting.",
+  "parent_context_length": 16384,
+  "unchanged": [
+    "task set",
+    "task order",
+    "samples per task",
+    "seed",
+    "tokenizer",
+    "template type",
+    "generator source",
+    "prompt semantics",
+    "QA source semantics",
+    "auxiliary data",
+    "generation logic"
+  ]
+}

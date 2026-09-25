@@ -1,0 +1,29 @@
+{
+  "status": "PASS_SOURCE_DERIVED",
+  "historical_config": "/path/to/ttt/work/qwen3_4b_stage2_preflight_v1/recovered_0p6b/configs/stage2_qwen3_0p6b_v1.yaml",
+  "historical_config_sha256": "8886a2b552162d99aaf4ea7ca74f74a322bb26e6b502feef1c2465821f2adbf7",
+  "values": {
+    "outer_lr": 5e-06,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.1,
+    "outer_grad_clip": 1.0,
+    "scheduler": "constant",
+    "optimizer": "AdamW",
+    "precision": "bf16",
+    "ttt_lr": 1.0,
+    "answer_group_weight": 1.0,
+    "context_group_weight": 0.1
+  },
+  "training_inner_clip": null,
+  "inference_delta_clip": 1e-05,
+  "gradient_checkpointing": "nonreentrant",
+  "trainable_policy": "all named parameters trainable; six ttt_conv are unused by frozen NTP forward and expected no gradient",
+  "optimizer_policy": "reinitialize_adamw_from_stage1_model_weights",
+  "scheduler_policy": "reinitialize_constant_scheduler",
+  "model_scale_override_authority": "user requested Qwen3-4B 36layers,context32768,chunk4096,layers[0,6,12,18,24,30],world2",
+  "loss_source_unchanged": true
+}

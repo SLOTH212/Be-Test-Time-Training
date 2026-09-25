@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "python_syntax_files": 331,
+  "sensitive_pattern_scan": "PASS: no common token/private-key patterns or original personal account paths found",
+  "excluded_artifacts": [
+    "model weights",
+    "checkpoints",
+    "dataset records",
+    "benchmark prompts/references",
+    "generated prediction text",
+    "environment binaries"
+  ],
+  "transformations": [
+    "root and account path redaction",
+    "Base prediction text removed",
+    "Dynamic trajectories trimmed",
+    "training logs projected to scalar CSV"
+  ],
+  "scope": "Static export checks only; no training or inference rerun."
+}

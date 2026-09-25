@@ -1,0 +1,23 @@
+{
+  "schema": "INFERENCE_SOURCE_AUTHORITY_V1",
+  "status": "PASS",
+  "formal_fixed_authority": "/home/USER/ttt/runs/formal/fixed7_1p7b_v1/run_20260828T012948+0800",
+  "formal_dynamic_authority": "/home/USER/ttt/runs/formal/dynamic_nonceiling_12task_1p7b_v1/run_20260828T161330+0800",
+  "fixed_config_sha256": "255026285fc1e3b67daf2b5888d36cbac1b66e3682698015fa8908988aaebc5f",
+  "dynamic_config_sha256": "ef5cf628c98250d8355c96fa8809b021387a4cec1e5e57f429214bbf0de128a8",
+  "dynamic_protocol_audit_sha256": "8610c4eccaf6a028e8bd9fa79b0cf96656a5721fba47f70b8fb47b5468c7c85c",
+  "sources": [
+    {"role":"inference Qwen model implementation","original_path":"/home/USER/ttt/code/ntp/inference_model/hf_qwen3/modeling_qwen3.py","packaged_path":"code/inference_model/hf_qwen3/modeling_qwen3.py","sha256":"d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43","authority":"Formal Fixed7 entrypoint import"},
+    {"role":"inference Qwen configuration","original_path":"/home/USER/ttt/code/ntp/inference_model/hf_qwen3/configuration_qwen3.py","packaged_path":"code/inference_model/hf_qwen3/configuration_qwen3.py","sha256":"ebed0379af1075b97222dc4ffdaf0cca2de86311e0715a704c7e148b8365c444","authority":"Formal Fixed7 entrypoint import"},
+    {"role":"TTT state/update core","original_path":"/home/USER/ttt/code/ntp/hf_models/hf_qwen3/ttt_state_core.py","packaged_path":"code/hf_models/hf_qwen3/ttt_state_core.py","sha256":"0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e","authority":"Inference model runtime import"},
+    {"role":"formal Dynamic LB search","original_path":"/home/USER/ttt_phase_c_migrated_v1/ttt_phase_c_migration_20260813/new_host_runtime/execution_copy/code/dynamic_runner.py","packaged_path":"dynamic/formal_dynamic_runner.py","sha256":"293886005cb8f78c943f0affe3e3b383d6de238f4bc825a5aea28a6e6dc66f6e","authority":"Completed Dynamic config and protocol parity audit"},
+    {"role":"formal RULER scorer","original_path":"/home/USER/ttt/code/ruler/tools/common.py","packaged_path":"scorers/common.py","sha256":"cee3f5cb3cad1709f81abe3dc32b364ca97322e7ebd91747a8b119aecb0ce556","authority":"Fixed and Dynamic config/receipts"},
+    {"role":"formal scientific config","original_path":"/home/USER/ttt_phase_c_migrated_v1/ttt_phase_c_migration_20260813/phase_c_run/config/PHASE_C_SCIENTIFIC_CONFIG.json","packaged_path":"provenance/PHASE_C_SCIENTIFIC_CONFIG.json","sha256":"d4cd25c3d6b531c25bd06689369b0da47981f9ce4427cb458e372bd5d21cd451","authority":"Completed Dynamic config"},
+    {"role":"formal Fixed inference entrypoint snapshot","original_path":"/home/USER/ttt/scripts/run_fixed_inference.py","packaged_path":"provenance/formal_run_fixed_inference.py","sha256":"0854079f8e153b748e142dc9be0c3b5da1912ab44902e09ac044ef2a9bab3163","authority":"Fixed FORMAL_CONFIG_MANIFEST.json"},
+    {"role":"formal Fixed resume wrapper snapshot","original_path":"/home/USER/ttt/scripts/run_fixed_mode_resumable_v1.py","packaged_path":"provenance/formal_run_fixed_mode_resumable_v1.py","sha256":"3e02e06fda36310ba4ee856d6684cf2cbe7adda5a674bce9af8043b64deb5020","authority":"Fixed FORMAL_CONFIG_MANIFEST.json"},
+    {"role":"formal Fixed aggregation snapshot","original_path":"/home/USER/ttt/scripts/aggregate_fixed_results.py","packaged_path":"provenance/formal_aggregate_fixed_results.py","sha256":"59bf185dfa27543faee1e38322cc78bce21016a57cb588c8f20086e89049a9ae","authority":"Fixed FORMAL_CONFIG_MANIFEST.json"},
+    {"role":"formal Dynamic aggregation snapshot","original_path":"/home/USER/ttt/scripts/aggregate_dynamic_nonceiling_12task_v1.py","packaged_path":"provenance/formal_aggregate_dynamic_nonceiling_12task_v1.py","sha256":"79ce92ec3ce574cbcfc9cb86b88315453c2c25ec4700664643b526cf33f0941c","authority":"Completed Dynamic outputs"}
+  ],
+  "models_included": false,
+  "benchmarks_included": false
+}
