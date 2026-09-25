@@ -1,0 +1,2102 @@
+[
+  {
+    "source": "src/llama31_ntp_port_v1/README.md",
+    "export": "src/llama31_ntp_port_v1/README.md",
+    "original_sha256": "63a84fb9e733d73ea98f7b8772f76fedf6d5bda6139e8db4dd87a43554590193",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/inference_model/__init__.py",
+    "export": "src/llama31_ntp_port_v1/source/inference_model/__init__.py",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/inference_model/hf_llama/configuration_llama.py",
+    "export": "src/llama31_ntp_port_v1/source/inference_model/hf_llama/configuration_llama.py",
+    "original_sha256": "6d6e929b46d044395acba1bee577c76b50feab536232a5ee30ff81d059a7f735",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/inference_model/hf_llama/__init__.py",
+    "export": "src/llama31_ntp_port_v1/source/inference_model/hf_llama/__init__.py",
+    "original_sha256": "770ba1a3ec706f2918e566531d23224a8ad88b92577f69afaa11069712c45104",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/inference_model/hf_llama/modeling_llama.py",
+    "export": "src/llama31_ntp_port_v1/source/inference_model/hf_llama/modeling_llama.py",
+    "original_sha256": "501c063ebe6ba0bf03d1266a8aa1232fe24c963bc47a2bde25315e683bee83fc",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/inference_model/hf_qwen3/__init__.py",
+    "export": "src/llama31_ntp_port_v1/source/inference_model/hf_qwen3/__init__.py",
+    "original_sha256": "a38d76873e560e9c034258408e1c67fdfc08f2be846da1937cea1434f6e10e80",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/inference_model/hf_qwen3/configuration_qwen3.py",
+    "export": "src/llama31_ntp_port_v1/source/inference_model/hf_qwen3/configuration_qwen3.py",
+    "original_sha256": "ebed0379af1075b97222dc4ffdaf0cca2de86311e0715a704c7e148b8365c444",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/inference_model/hf_qwen3/modeling_qwen3.py",
+    "export": "src/llama31_ntp_port_v1/source/inference_model/hf_qwen3/modeling_qwen3.py",
+    "original_sha256": "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/hf_models/__init__.py",
+    "export": "src/llama31_ntp_port_v1/source/hf_models/__init__.py",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/hf_models/hf_llama/configuration_llama.py",
+    "export": "src/llama31_ntp_port_v1/source/hf_models/hf_llama/configuration_llama.py",
+    "original_sha256": "1c119fe0eb96cda65879857542fd8551b281e4a0c01a6ddb83e1a620f59595a8",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/hf_models/hf_llama/__init__.py",
+    "export": "src/llama31_ntp_port_v1/source/hf_models/hf_llama/__init__.py",
+    "original_sha256": "770ba1a3ec706f2918e566531d23224a8ad88b92577f69afaa11069712c45104",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/hf_models/hf_llama/modeling_llama.py",
+    "export": "src/llama31_ntp_port_v1/source/hf_models/hf_llama/modeling_llama.py",
+    "original_sha256": "e158573f40ad30336ef35ee958f0daec6f8f21af53add090f87125a64293a301",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/hf_models/hf_qwen3/__init__.py",
+    "export": "src/llama31_ntp_port_v1/source/hf_models/hf_qwen3/__init__.py",
+    "original_sha256": "2ef4fb7b17e59ac651edb16934f6b1e1f210656dde83548861c581c27d684266",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/hf_models/hf_qwen3/configuration_qwen3.py",
+    "export": "src/llama31_ntp_port_v1/source/hf_models/hf_qwen3/configuration_qwen3.py",
+    "original_sha256": "b3f309ec54094694cfc86a74b66d860193fc4e684b9cc3c0d1d2ed84ca2112fb",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/hf_models/hf_qwen3/ttt_state_core.py",
+    "export": "src/llama31_ntp_port_v1/source/hf_models/hf_qwen3/ttt_state_core.py",
+    "original_sha256": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/hf_models/hf_qwen3/modeling_qwen3.py",
+    "export": "src/llama31_ntp_port_v1/source/hf_models/hf_qwen3/modeling_qwen3.py",
+    "original_sha256": "e949cef8b01394ff845041dca0c5d72d5e536139c471be5eea130db2a884d0e0",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/ntp_core/__init__.py",
+    "export": "src/llama31_ntp_port_v1/source/ntp_core/__init__.py",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/ntp_core/ttt_state_core.py",
+    "export": "src/llama31_ntp_port_v1/source/ntp_core/ttt_state_core.py",
+    "original_sha256": "77dd9e0ecbd2a7095fefbe1c3a9e49d7f802d26423011eeb2238371f9061375c",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/source/ntp_core/validation.py",
+    "export": "src/llama31_ntp_port_v1/source/ntp_core/validation.py",
+    "original_sha256": "dd2050ee1180082ca33aca4862c3bac78ee2d072860b0e8b75e6c99131ff165f",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/pipeline/pipeline_core.py",
+    "export": "src/llama31_ntp_port_v1/reference/pipeline/pipeline_core.py",
+    "original_sha256": "f2567cf8ba05c71c3ffc53bb979e487e9dd20828a1e660a8d4136a754047e67f",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/pipeline/train_worker.py",
+    "export": "src/llama31_ntp_port_v1/reference/pipeline/train_worker.py",
+    "original_sha256": "ee7113f75245fb610f0f80e192f48529db5b18aefa1d523d17089be353cce915",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/inference_runtime/run_fixed.py",
+    "export": "src/llama31_ntp_port_v1/reference/inference_runtime/run_fixed.py",
+    "original_sha256": "34184a8e34b09294ee3727992cc449c885341594ec29f462f5f4f8aa7f0254a5",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/inference_runtime/formal_dynamic_runner.py",
+    "export": "src/llama31_ntp_port_v1/reference/inference_runtime/formal_dynamic_runner.py",
+    "original_sha256": "293886005cb8f78c943f0affe3e3b383d6de238f4bc825a5aea28a6e6dc66f6e",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/inference_runtime/runtime.py",
+    "export": "src/llama31_ntp_port_v1/reference/inference_runtime/runtime.py",
+    "original_sha256": "875b493e6868ed2c77528eca28b6204cd5c4a7e4147abd42de7576109bcf931c",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/stage2/answer_context_fused_loss.py",
+    "export": "src/llama31_ntp_port_v1/reference/stage2/answer_context_fused_loss.py",
+    "original_sha256": "25c686f51693fe881ff9fa1c7f6feaeb9a51fcd6f05a05554c900d8a895adf31",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/inplace_ttt/README.md",
+    "export": "src/llama31_ntp_port_v1/reference/inplace_ttt/README.md",
+    "original_sha256": "dbf3c84af257e596c2a1d7b197922c522d7c86f42cea3d973653da2b8f83c2fa",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/inplace_ttt/inference_model/hf_llama3/configuration_llama.py",
+    "export": "src/llama31_ntp_port_v1/reference/inplace_ttt/inference_model/hf_llama3/configuration_llama.py",
+    "original_sha256": "13e03dfcc525f809b215a0effae2837c82da612203f40d645b449e740650f8e8",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/inplace_ttt/inference_model/hf_llama3/__init__.py",
+    "export": "src/llama31_ntp_port_v1/reference/inplace_ttt/inference_model/hf_llama3/__init__.py",
+    "original_sha256": "f084e24edbc2bb8cebe74f3ded368d40e1c6a848274f06a8077d09135567a1c9",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/inplace_ttt/inference_model/hf_llama3/modeling_llama.py",
+    "export": "src/llama31_ntp_port_v1/reference/inplace_ttt/inference_model/hf_llama3/modeling_llama.py",
+    "original_sha256": "78e95c6cc3a64d4fc629ca6a9abb135883d1c0a6ca5184a2a0b8283f06802d85",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/inplace_ttt/hf_models/hf_llama/configuration_llama.py",
+    "export": "src/llama31_ntp_port_v1/reference/inplace_ttt/hf_models/hf_llama/configuration_llama.py",
+    "original_sha256": "0dd0b44decf7c922a5388f03f7a13d9074fb29fa086c74c2a7de7730b6b0a672",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/inplace_ttt/hf_models/hf_llama/__init__.py",
+    "export": "src/llama31_ntp_port_v1/reference/inplace_ttt/hf_models/hf_llama/__init__.py",
+    "original_sha256": "25a065fb0547b4a3528d7af0b9b8ae2564b969ad666ca86b7d387b74c1f7d167",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/inplace_ttt/hf_models/hf_llama/modeling_llama.py",
+    "export": "src/llama31_ntp_port_v1/reference/inplace_ttt/hf_models/hf_llama/modeling_llama.py",
+    "original_sha256": "fb1e471283cc18fcd03fda5e2812c5e629c0c3ac1e592aa3b72783c42955be14",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/tests_gated_ntp_cpu.py",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/tests_gated_ntp_cpu.py",
+    "original_sha256": "508964b30596be8445426355da2c8aeb8be954d46b9bc94aba7b214f2cda64c6",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/tests_static_ttt_test_ttt_state_core.py",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/tests_static_ttt_test_ttt_state_core.py",
+    "original_sha256": "24a8db84592471ebd628fcf9f5d1b397b5f80ba210acb5d6c6b086c1a834b575",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/inference_model/__init__.py",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/inference_model/__init__.py",
+    "original_sha256": "01fa3318f3f3fc02dd38565672940700f289d7cce790d6f05e04471944b4903f",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/inference_model/hf_qwen3/__init__.py",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/inference_model/hf_qwen3/__init__.py",
+    "original_sha256": "a38d76873e560e9c034258408e1c67fdfc08f2be846da1937cea1434f6e10e80",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/inference_model/hf_qwen3/configuration_qwen3.py",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/inference_model/hf_qwen3/configuration_qwen3.py",
+    "original_sha256": "ebed0379af1075b97222dc4ffdaf0cca2de86311e0715a704c7e148b8365c444",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/inference_model/hf_qwen3/modeling_qwen3.py",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/inference_model/hf_qwen3/modeling_qwen3.py",
+    "original_sha256": "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/hf_models/__init__.py",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/hf_models/__init__.py",
+    "original_sha256": "cc2c397dab164ab9e92165c834ec0c4a40263b8178abf586b6ce94eb08d9eda8",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/hf_models/hf_qwen3/__init__.py",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/hf_models/hf_qwen3/__init__.py",
+    "original_sha256": "2ef4fb7b17e59ac651edb16934f6b1e1f210656dde83548861c581c27d684266",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/hf_models/hf_qwen3/configuration_qwen3.py",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/hf_models/hf_qwen3/configuration_qwen3.py",
+    "original_sha256": "b3f309ec54094694cfc86a74b66d860193fc4e684b9cc3c0d1d2ed84ca2112fb",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/hf_models/hf_qwen3/ttt_state_core.py",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/hf_models/hf_qwen3/ttt_state_core.py",
+    "original_sha256": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/hf_models/hf_qwen3/modeling_qwen3.py",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/hf_models/hf_qwen3/modeling_qwen3.py",
+    "original_sha256": "e949cef8b01394ff845041dca0c5d72d5e536139c471be5eea130db2a884d0e0",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/configs/formal/gated_ntp_stage2_qa10m.yaml",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/configs/formal/gated_ntp_stage2_qa10m.yaml",
+    "original_sha256": "d02290f05c2ced778caeefaf522704b1a9d6e92362479cedfef52df7f8a5e777",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/configs/formal/gated_ntp_stage1_100m.yaml",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/configs/formal/gated_ntp_stage1_100m.yaml",
+    "original_sha256": "1163dfa291112f573ce9c031a02d1bdfe2652bfaaae2cc52df799226ed99bccc",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/tools/cloud/formal_train_gated_ntp.py",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/tools/cloud/formal_train_gated_ntp.py",
+    "original_sha256": "960465d4c0850345fb998e81b6bf19f2517ecea104aed2946a8b3e31bb416cf3",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/reference/qwen_ntp/tools/cloud/validate_record_vs_gated_ntp.py",
+    "export": "src/llama31_ntp_port_v1/reference/qwen_ntp/tools/cloud/validate_record_vs_gated_ntp.py",
+    "original_sha256": "d0f26fc3930f1c3898257f181b654aa72649bbea40128482d9a2fb569e67753d",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/tests/run_tests.py",
+    "export": "src/llama31_ntp_port_v1/tests/run_tests.py",
+    "original_sha256": "9aa52f2e68c6676c5aba6dd88328aabe39e64ae505a47c28185407b42470c284",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/tests/test_port.py",
+    "export": "src/llama31_ntp_port_v1/tests/test_port.py",
+    "original_sha256": "77dea39dc5582389b8fa89c14c7c7f7276b2d2f811301eeedc07447d9709f0c9",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/tests/test_level0.py",
+    "export": "src/llama31_ntp_port_v1/tests/test_level0.py",
+    "original_sha256": "88b76aa4df20dbaeeafec46e59fb45999d35f1cba6ea45b923c10f7668995f21",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/tests/test_off_parity.py",
+    "export": "src/llama31_ntp_port_v1/tests/test_off_parity.py",
+    "original_sha256": "b898ba3f74f2d3ff06414949339786672fe073289fbace743b2f159c491cfd28",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/configs/llama31_8b_stage1_32k_template.yaml",
+    "export": "src/llama31_ntp_port_v1/configs/llama31_8b_stage1_32k_template.yaml",
+    "original_sha256": "76930c00cff9411bbebd0da07a961987c5d7bf3da43d861c357b4ee5daaadb9b",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/configs/llama31_8b_ruler32k_inference_template.yaml",
+    "export": "src/llama31_ntp_port_v1/configs/llama31_8b_ruler32k_inference_template.yaml",
+    "original_sha256": "f13405b40a30ca6281939d1091563d8c405a11b849241540481941d1754cd904",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/configs/llama31_8b_stage2_32k_template.yaml",
+    "export": "src/llama31_ntp_port_v1/configs/llama31_8b_stage2_32k_template.yaml",
+    "original_sha256": "ddfd989ec34868ab052b90b48b3e0219fa57c7ce4444637663a7757d2d2a69db",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/inference/README.md",
+    "export": "src/llama31_ntp_port_v1/inference/README.md",
+    "original_sha256": "c98fff7bf89edf6959b78b1db8496952746d5e52b09c5076a5751bb0dab528e1",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/adapters/pipeline.py",
+    "export": "src/llama31_ntp_port_v1/adapters/pipeline.py",
+    "original_sha256": "5999b7bb467be4a3c42684452bdea33be14ddccf740fdd707166bb2c8a5a8244",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/adapters/__init__.py",
+    "export": "src/llama31_ntp_port_v1/adapters/__init__.py",
+    "original_sha256": "24ceb2eae6ce5846f9b931b4816f25f045d51e8c86a0f36d3e354a734bb18036",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/adapters/model_family.py",
+    "export": "src/llama31_ntp_port_v1/adapters/model_family.py",
+    "original_sha256": "247b94100507e4bd2096abac09c1822591c7327efe5613bb0c76fa36e6e45d90",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/adapters/inference.py",
+    "export": "src/llama31_ntp_port_v1/adapters/inference.py",
+    "original_sha256": "734912b6912295a3baf64f39f45b5e0d4f23e6824a09a6fab2595f0af065d52f",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/training/README.md",
+    "export": "src/llama31_ntp_port_v1/training/README.md",
+    "original_sha256": "76387f5aeae9e56c62f0da8c031b432cadf6e38c3553fe4a3987e69203b92612",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/provenance/SCIENTIFIC_SEMANTICS_PARITY.json",
+    "export": "src/llama31_ntp_port_v1/provenance/SCIENTIFIC_SEMANTICS_PARITY.json",
+    "original_sha256": "65d9179fdda0a8cf238b36578e160f6954d9fe22d2a0af0a3ebd0b363521acbb",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/provenance/LLAMA_NTP_PORT_AUTHORITY.json",
+    "export": "src/llama31_ntp_port_v1/provenance/LLAMA_NTP_PORT_AUTHORITY.json",
+    "original_sha256": "0cd9a30f4520d00c00065144ab901bfdcdc5446bbd434f1df1d3274fe0d69b8f",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/provenance/package_release.py",
+    "export": "src/llama31_ntp_port_v1/provenance/package_release.py",
+    "original_sha256": "ced011112cc8501399f11398c474c05166d2555fb873d3f24b188de6de1a2e23",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/provenance/FILE_CLASSIFICATION.json",
+    "export": "src/llama31_ntp_port_v1/provenance/FILE_CLASSIFICATION.json",
+    "original_sha256": "26e12de0143f7273564f9412322636902429be5509ce5f620442058b408f8a87",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/provenance/NTP_SCIENTIFIC_CONTRACT.json",
+    "export": "src/llama31_ntp_port_v1/provenance/NTP_SCIENTIFIC_CONTRACT.json",
+    "original_sha256": "098e989f41a19421bfef37a6dcc584a9ba770d9b8bf70f8a2cabf5453c65a605",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/provenance/RELEASE_FILE_MANIFEST.json",
+    "export": "src/llama31_ntp_port_v1/provenance/RELEASE_FILE_MANIFEST.json",
+    "original_sha256": "d3223292cf27249a7d2e4f4fef311af31569d12c1a2a9a30c9ecbf875ba595b7",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/provenance/INPUT_AUTHORITY_FREEZE.json",
+    "export": "src/llama31_ntp_port_v1/provenance/INPUT_AUTHORITY_FREEZE.json",
+    "original_sha256": "5a273ffdccf70a79537cfe76f09b55eab54238c2d1d6649ad9a345700938aed9",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/provenance/ENVIRONMENT.json",
+    "export": "src/llama31_ntp_port_v1/provenance/ENVIRONMENT.json",
+    "original_sha256": "6b2425c8718de7e7e83c251458efadec1da3ee0cf2eb4a05803d7b65df9b5c8d",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/provenance/COMMON_RUNTIME_REFERENCE.json",
+    "export": "src/llama31_ntp_port_v1/provenance/COMMON_RUNTIME_REFERENCE.json",
+    "original_sha256": "1a5df8b5fd78681404d3a03da3d52d12289014509b979d88114bc6bf6ec4e3f6",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/provenance/finalize.py",
+    "export": "src/llama31_ntp_port_v1/provenance/finalize.py",
+    "original_sha256": "98e8848ccb542c378cdfd03c02886348371ece158ece284aa6cb67a0eb0a302c",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/provenance/INPLACE_TTT_LLAMA_REFERENCE.json",
+    "export": "src/llama31_ntp_port_v1/provenance/INPLACE_TTT_LLAMA_REFERENCE.json",
+    "original_sha256": "59d22d94d783e2ec81c00f585e9f0ef129346ce17762381791652742f3808062",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_ntp_port_v1/provenance/derive_sources.py",
+    "export": "src/llama31_ntp_port_v1/provenance/derive_sources.py",
+    "original_sha256": "46ecf79c83f7ecc3fa2f0864d101ed51c4110c91543dc4473c5e4f9b74dfec5b",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/cli.py",
+    "export": "src/llama31_mechanism_runtime_v1/cli.py",
+    "original_sha256": "1fbb6dd111efcae0ab7cdd9418b76453d155fadcf9cabaa6e98f3a3118e98d67",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/worker.py",
+    "export": "src/llama31_mechanism_runtime_v1/worker.py",
+    "original_sha256": "83b3120c8410d799d0521e10bd2902d6b87d438cdec7c5da09cb95fa28c89367",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/formal.py",
+    "export": "src/llama31_mechanism_runtime_v1/formal.py",
+    "original_sha256": "e95bfc5922935517d8ae299fff4b546c3fc2a2abc31ec34be2a92c43cd8468f1",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/test_contracts.py",
+    "export": "src/llama31_mechanism_runtime_v1/test_contracts.py",
+    "original_sha256": "e24028d4492b017d77c452bc4f36d0948b68af271ddb3dce14b11848624af288",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/backend.py",
+    "export": "src/llama31_mechanism_runtime_v1/backend.py",
+    "original_sha256": "cc0d1ba058cf39761a0552bd27c7dd73f165f5d91a3406f1fc7a484398b36b73",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/mechanism.py",
+    "export": "src/llama31_mechanism_runtime_v1/mechanism.py",
+    "original_sha256": "2b7638bcfc8c70e1e2fab5921c955972eea66a0a42e9223f0c80e1a1b1da431f",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/README.md",
+    "export": "src/llama31_mechanism_runtime_v1/README.md",
+    "original_sha256": "48244462470d52fe3ccf287fada60c0112ffb60ed1275f802d53fa637598c323",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/reference/reset_v2.py",
+    "export": "src/llama31_mechanism_runtime_v1/reference/reset_v2.py",
+    "original_sha256": "f98c4a19ed713281f63acf0365013a7840a3156131c59e232e018b10721f7686",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/reference/runtime.py",
+    "export": "src/llama31_mechanism_runtime_v1/reference/runtime.py",
+    "original_sha256": "90d5575947567d3804c05c00dfd00644bd1a6af06b88e05c94b671eec957312e",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/reference/provenance/STATE_RESET_INTERVENTION_CONTRACT.json",
+    "export": "src/llama31_mechanism_runtime_v1/reference/provenance/STATE_RESET_INTERVENTION_CONTRACT.json",
+    "original_sha256": "cdb46377c1f907d9554a0ee012ed26871089651a9202970392d40564c7f73e35",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/reference/provenance/MECHANISM_SOURCE_AUTHORITY.json",
+    "export": "src/llama31_mechanism_runtime_v1/reference/provenance/MECHANISM_SOURCE_AUTHORITY.json",
+    "original_sha256": "3da64fd4f37a829f86381c7acef646a9d9a6425efe4a4970802320c3a7dbfff8",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/reference/provenance/KP_FACTORIAL_CONTRACT.json",
+    "export": "src/llama31_mechanism_runtime_v1/reference/provenance/KP_FACTORIAL_CONTRACT.json",
+    "original_sha256": "982799f90111de7cef4ddae000588ec5c216dd498e01ee43f7d81c8382be19ad",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/reference/provenance/original/reset/screening/scripts/screen_state_reset.py",
+    "export": "src/llama31_mechanism_runtime_v1/reference/provenance/original/reset/screening/scripts/screen_state_reset.py",
+    "original_sha256": "80de6aef44711ab37c6bf064468a2ea5c00fb135659c87c896a3ffd96cf00e79",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/reference/provenance/original/r2/scripts/aggregate_exact_r2.py",
+    "export": "src/llama31_mechanism_runtime_v1/reference/provenance/original/r2/scripts/aggregate_exact_r2.py",
+    "original_sha256": "d8903112012c30577987fcafefa2794e5dea75d821ca74546c0429f9f4848588",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/reference/provenance/original/kp/dependencies/closure_core.py",
+    "export": "src/llama31_mechanism_runtime_v1/reference/provenance/original/kp/dependencies/closure_core.py",
+    "original_sha256": "9fcbb2b1c5928a135b5cc0a673ba386fd402f158d23bfe755896516ba6d04a6f",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/reference/provenance/original/kp/dependencies/factorial_core.py",
+    "export": "src/llama31_mechanism_runtime_v1/reference/provenance/original/kp/dependencies/factorial_core.py",
+    "original_sha256": "3e3bd26eba32a61ef6070420230c19b9af0057b21ee10ce3c003aee4f3bf6ee3",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/configs/debug_trajectory_fixtures.json",
+    "export": "src/llama31_mechanism_runtime_v1/configs/debug_trajectory_fixtures.json",
+    "original_sha256": "0f6eb505c8b2487b14812bf8beff2f1835d4b6f502aa66688fafdb944e08106c",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/configs/llama31_8b_mechanism_runtime_4k_debug_v1.json",
+    "export": "src/llama31_mechanism_runtime_v1/configs/llama31_8b_mechanism_runtime_4k_debug_v1.json",
+    "original_sha256": "c00b7d30836ec6f04afcb76b40dcee87e8bc926557ee16ad83f88696e68e95a7",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/bin/launch_llama31_8b_mechanism_formal_v1.sh",
+    "export": "src/llama31_mechanism_runtime_v1/bin/launch_llama31_8b_mechanism_formal_v1.sh",
+    "original_sha256": "d3ee46a005279d3697e1e90219be0ebd180d424a4ad54a016f44259960c6c01b",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/bin/status_llama31_8b_mechanism_runtime_v1.sh",
+    "export": "src/llama31_mechanism_runtime_v1/bin/status_llama31_8b_mechanism_runtime_v1.sh",
+    "original_sha256": "bf2cd2c0f8f0ae26bd2e8d04f1f1982016a92d600670b47fca58ad16b1efedc9",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/bin/run_llama31_8b_mechanism_smoke_gpu0123_v1.sh",
+    "export": "src/llama31_mechanism_runtime_v1/bin/run_llama31_8b_mechanism_smoke_gpu0123_v1.sh",
+    "original_sha256": "98cd2fc1deb5c8402710c1aba7ced0c93b69a71c2e7a5bc2b89eb2ebd6df9b8f",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/provenance/source_manifest.json",
+    "export": "src/llama31_mechanism_runtime_v1/provenance/source_manifest.json",
+    "original_sha256": "4b8c6001f54f278b5f1dbe9b01b2c7bac7319191feb4fa479a804b38514d17f2",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/provenance/model_identity.json",
+    "export": "src/llama31_mechanism_runtime_v1/provenance/model_identity.json",
+    "original_sha256": "4955fcb1e90d069e8968100827f626203b4f0e2c3e42279da4997f47d35fb0d8",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/provenance/immutable_reference.json",
+    "export": "src/llama31_mechanism_runtime_v1/provenance/immutable_reference.json",
+    "original_sha256": "1abbb6ee8c325816b038069f8e1e42711b07f3853d60b1d239123d354b0acc03",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_mechanism_runtime_v1/provenance/LLAMA_MECHANISM_HARDCODE_AUDIT.json",
+    "export": "src/llama31_mechanism_runtime_v1/provenance/LLAMA_MECHANISM_HARDCODE_AUDIT.json",
+    "original_sha256": "ef7189259692a80f5a8e7f4380bfcebd13d62148dfb341d386c5c2f7947aa91b",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_data_derivation_v1/SOURCE_MANIFEST.json",
+    "export": "src/llama31_data_derivation_v1/SOURCE_MANIFEST.json",
+    "original_sha256": "68f723e745667a38c326c99abec88862056908b449868975804c1837071ab40c",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_data_derivation_v1/independent_audit.py",
+    "export": "src/llama31_data_derivation_v1/independent_audit.py",
+    "original_sha256": "89d13ca24357acbb9899520ea1e7184bb95e42d1b451e29c20fea734420397c0",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_data_derivation_v1/llama31_derive.py",
+    "export": "src/llama31_data_derivation_v1/llama31_derive.py",
+    "original_sha256": "3d8257473f534eddc7f244dea2e2d4e3af05c6b03b3394db24d144c525fbe102",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_fixed8_formal_v1/LAUNCH_VALIDATION.json",
+    "export": "src/llama31_fixed8_formal_v1/LAUNCH_VALIDATION.json",
+    "original_sha256": "7d74a44e54ddd4269540934521e749a6bfcf5748deb7b3af1451e7ac85e0a408",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_fixed8_formal_v1/config_before_hash_order_fix.json",
+    "export": "src/llama31_fixed8_formal_v1/config_before_hash_order_fix.json",
+    "original_sha256": "9443881963ab817a0a9259e4ce00ef91a9e33b00eb96a98231ef36455e59bbbf",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_fixed8_formal_v1/CPU_TESTS_V2.json",
+    "export": "src/llama31_fixed8_formal_v1/CPU_TESTS_V2.json",
+    "original_sha256": "6f1189c94342f4b6cc2c1e9e4fb1bd3bb0d101e5e411ef1be67316f1f37304f8",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_fixed8_formal_v1/LLAMA_BENCHMARK_BINDING.json",
+    "export": "src/llama31_fixed8_formal_v1/LLAMA_BENCHMARK_BINDING.json",
+    "original_sha256": "d86e12fe54262d5c809c87e721bfafa060e2e4e76bf889aee15563519dfd4435",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_fixed8_formal_v1/status.py",
+    "export": "src/llama31_fixed8_formal_v1/status.py",
+    "original_sha256": "f496586de2862a2780b2f5e1029c4c3e6af0b01451959d76e8f0ff67f57d47e7",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_fixed8_formal_v1/runner.py",
+    "export": "src/llama31_fixed8_formal_v1/runner.py",
+    "original_sha256": "c69e98b8e8c1da89d734ce574c72eb4cf62f96182aef620e76805c9fc8d96d9f",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_fixed8_formal_v1/CPU_TESTS.json",
+    "export": "src/llama31_fixed8_formal_v1/CPU_TESTS.json",
+    "original_sha256": "82b4b5e8d01b78c0f8b2c2c0712613f6e82c76d90d13386f82e378b8cda9354a",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_base_ruler32k_v1/CPU_PREFLIGHT.json",
+    "export": "src/llama31_base_ruler32k_v1/CPU_PREFLIGHT.json",
+    "original_sha256": "dad865a2374c937b8b5877c52448883b8be82a9b6a8d58207459b0a8e8cf28fa",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_base_ruler32k_v1/base.py",
+    "export": "src/llama31_base_ruler32k_v1/base.py",
+    "original_sha256": "04064d59427fe38bcd1dafe0ec841c4d59023249aef761add5f4e8790734483f",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_dynamic_v2_no_cwe_v1/dynamic.py",
+    "export": "src/llama31_dynamic_v2_no_cwe_v1/dynamic.py",
+    "original_sha256": "9c769201cc78c9948a23d9dfb39a0d5052f619031631a49fa0852cd6a0743cc0",
+    "transformed": true
+  },
+  {
+    "source": "src/llama31_dynamic_v2_no_cwe_v1/ASSIGNMENTS.json",
+    "export": "src/llama31_dynamic_v2_no_cwe_v1/ASSIGNMENTS.json",
+    "original_sha256": "142ec3ba9132c47b837f190f94f98af46de6a53016c46e22356cd313edea39fd",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_dynamic_v2_no_cwe_v1/COHORT.json",
+    "export": "src/llama31_dynamic_v2_no_cwe_v1/COHORT.json",
+    "original_sha256": "196b4acb992169163de4858fed23a4cbb6b5673728d512573f1c394ce537a1e1",
+    "transformed": false
+  },
+  {
+    "source": "src/llama31_dynamic_v2_no_cwe_v1/CPU_TESTS.json",
+    "export": "src/llama31_dynamic_v2_no_cwe_v1/CPU_TESTS.json",
+    "original_sha256": "9bdaf7e9cf3d8bfc8145e5e56413e40bc84aa7ceb838e8c31ff4364410076987",
+    "transformed": false
+  },
+  {
+    "source": "src/reference_executor_v2_port/adapter.py",
+    "export": "src/reference_executor_v2_port/adapter.py",
+    "original_sha256": "85d7efa3c1ef4c66a8f679ad38e43d180dabc8c1b0e3b77eb37fe073f64a57e8",
+    "transformed": false
+  },
+  {
+    "source": "src/reference_executor_v2_port/v2_functions.py",
+    "export": "src/reference_executor_v2_port/v2_functions.py",
+    "original_sha256": "cc1445acecc276106b2df7306363f066ea3ea87ff2fe6e1682606a7ea50975d4",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/README_HIT_V2.md",
+    "export": "src/training_runtime/README_HIT_V2.md",
+    "original_sha256": "fbf3d39503ee15ef99ba9f6d829b11cbc101fc84071bb9ef592541dd2cb9dc17",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/lib/distributed_runtime.py",
+    "export": "src/training_runtime/code/lib/distributed_runtime.py",
+    "original_sha256": "6470d6128862de5b8c06a2bf97b99de69dd5c195760bf8073be2cf7ec71225e4",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/lib/__init__.py",
+    "export": "src/training_runtime/code/lib/__init__.py",
+    "original_sha256": "88b203425c502852c299826882ce11511661beed22c087f2a9d7ee645faaa800",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/lib/fsdp2_runtime.py",
+    "export": "src/training_runtime/code/lib/fsdp2_runtime.py",
+    "original_sha256": "e24b877da81fd7e340b013ed3d1f67b5b1c387b158534bc4d43047ea91aa256f",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/lib/distributed_checkpoint.py",
+    "export": "src/training_runtime/code/lib/distributed_checkpoint.py",
+    "original_sha256": "48fd2a39d06619422d20fda97e79a538725e334e1d405a24f5033759d6ffc608",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/lib/real_checkpoint.py",
+    "export": "src/training_runtime/code/lib/real_checkpoint.py",
+    "original_sha256": "7eea84b49d9701106f1d289918e5a60309502b60208cd726ebcf77b6fceeb78a",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/lib/model_factory.py",
+    "export": "src/training_runtime/code/lib/model_factory.py",
+    "original_sha256": "824b0e6f87433d6e281c0a1a7719413e2d403dd3e35735db2482e124f0f4de7b",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/lib/distributed_semantics.py",
+    "export": "src/training_runtime/code/lib/distributed_semantics.py",
+    "original_sha256": "76a78a90c69c6aa5a3ed9981130eaf670f6d209f260e051ae4b9bab46135f0a6",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/lib/stage1_closure_checkpoint_v2.py",
+    "export": "src/training_runtime/code/lib/stage1_closure_checkpoint_v2.py",
+    "original_sha256": "56d0883f4d394db54b1c1b322830dc1a6bc360b065b5e1d402c482bd437a7605",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/lib/stage1_sparse_grad_v2.py",
+    "export": "src/training_runtime/code/lib/stage1_sparse_grad_v2.py",
+    "original_sha256": "a1d5b2f40f46e2255de5fc2335417bc5fbd752356ab70d71b3e07f58a7dd8ff7",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/lib/stage2_checkpoint_runtime.py",
+    "export": "src/training_runtime/code/lib/stage2_checkpoint_runtime.py",
+    "original_sha256": "65b7a4bae39411c3dba5a54e9d68d979467973d2c277a50991689b714ebdbdfb",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/lib/pipeline_core.py",
+    "export": "src/training_runtime/code/lib/pipeline_core.py",
+    "original_sha256": "e3e2e0ad243aa38dda892f86b60e3512cec28d5a1c9a3002fc02437482e9d385",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/lib/distributed_grad.py",
+    "export": "src/training_runtime/code/lib/distributed_grad.py",
+    "original_sha256": "329842fecb19d9a1705c7cdca63bbe822123da8a6acdbec127df7b89f9969f37",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/lib/scaleup_debug_adapter.py",
+    "export": "src/training_runtime/code/lib/scaleup_debug_adapter.py",
+    "original_sha256": "fb7eb5c0c7ede138f2c12c27c52dba790889d5d9272da3cc24377b73b33ddf68",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/vendor/ntp_source_190580a/hf_models/__init__.py",
+    "export": "src/training_runtime/code/vendor/ntp_source_190580a/hf_models/__init__.py",
+    "original_sha256": "cc2c397dab164ab9e92165c834ec0c4a40263b8178abf586b6ce94eb08d9eda8",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/vendor/ntp_source_190580a/hf_models/hf_qwen3/__init__.py",
+    "export": "src/training_runtime/code/vendor/ntp_source_190580a/hf_models/hf_qwen3/__init__.py",
+    "original_sha256": "2ef4fb7b17e59ac651edb16934f6b1e1f210656dde83548861c581c27d684266",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/vendor/ntp_source_190580a/hf_models/hf_qwen3/configuration_qwen3.py",
+    "export": "src/training_runtime/code/vendor/ntp_source_190580a/hf_models/hf_qwen3/configuration_qwen3.py",
+    "original_sha256": "b3f309ec54094694cfc86a74b66d860193fc4e684b9cc3c0d1d2ed84ca2112fb",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/vendor/ntp_source_190580a/hf_models/hf_qwen3/ttt_state_core.py",
+    "export": "src/training_runtime/code/vendor/ntp_source_190580a/hf_models/hf_qwen3/ttt_state_core.py",
+    "original_sha256": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/vendor/ntp_source_190580a/hf_models/hf_qwen3/modeling_qwen3.py",
+    "export": "src/training_runtime/code/vendor/ntp_source_190580a/hf_models/hf_qwen3/modeling_qwen3.py",
+    "original_sha256": "e949cef8b01394ff845041dca0c5d72d5e536139c471be5eea130db2a884d0e0",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/vendor/ntp_source_190580a/tools/cloud/formal_train_gated_ntp.py",
+    "export": "src/training_runtime/code/vendor/ntp_source_190580a/tools/cloud/formal_train_gated_ntp.py",
+    "original_sha256": "960465d4c0850345fb998e81b6bf19f2517ecea104aed2946a8b3e31bb416cf3",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/tests/hit_nccl_smoke.py",
+    "export": "src/training_runtime/code/tests/hit_nccl_smoke.py",
+    "original_sha256": "588d854642fd4d892cb79c2590204433b6722d4c53d58bcaad10b2dc9807d0c1",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/tests/run_tests.py",
+    "export": "src/training_runtime/code/tests/run_tests.py",
+    "original_sha256": "eed888ef7c739e05249ba6a8b249b905f25c2bda306e1fb166c99d93a8701d39",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/tests/real_resume_reference.py",
+    "export": "src/training_runtime/code/tests/real_resume_reference.py",
+    "original_sha256": "ec3e66b3eae5e0ef3f6b7da2917925245d732da32a920f8ad0e4a0cd4f0dccf9",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/tests/test_distributed_level0.py",
+    "export": "src/training_runtime/code/tests/test_distributed_level0.py",
+    "original_sha256": "693abc9fa876c6644fa446ff8ae50becdaf8be3763861745b4ff0364dd979080",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/tests/test_distributed_level2.py",
+    "export": "src/training_runtime/code/tests/test_distributed_level2.py",
+    "original_sha256": "6d27d5dd9094e497820d0b3c072cbc32cdd347ddae94fe7684c615941f8f392c",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/tests/hit_model_build_audit.py",
+    "export": "src/training_runtime/code/tests/hit_model_build_audit.py",
+    "original_sha256": "2333f8a2f5804df2f667eb883bec921f5356472a12c973912b27b10a8c796447",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/tests/run_all.sh",
+    "export": "src/training_runtime/code/tests/run_all.sh",
+    "original_sha256": "6a58e949e1a75c08403fbf167b04899e63cecf9d0cb91741378fe295bc640cc7",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/tests/hit_failure_propagation.py",
+    "export": "src/training_runtime/code/tests/hit_failure_propagation.py",
+    "original_sha256": "2fe1d714ca8145778500504337acbaabf5b0bdd0472cbc80cd4fa137a3346480",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/tests/hit_forward_32k.py",
+    "export": "src/training_runtime/code/tests/hit_forward_32k.py",
+    "original_sha256": "48c22333947dc0b0fda38fcd6c3a424fc711a7a76405ff16b33c5cb99d6201d2",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/tests/test_distributed_level1.py",
+    "export": "src/training_runtime/code/tests/test_distributed_level1.py",
+    "original_sha256": "c34bf78e6a0b193f5d8ca7433cc6e3dee1fc652ae3c7a2048cc3201820adc0b3",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/tests/cuda_tailfix_runtime.py",
+    "export": "src/training_runtime/code/tests/cuda_tailfix_runtime.py",
+    "original_sha256": "6a807d085b75ac11e21b2243a53b288ea9224e957169d2495600b7512d6dbcb6",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/tests/generate_hit_stage1_fixture.py",
+    "export": "src/training_runtime/code/tests/generate_hit_stage1_fixture.py",
+    "original_sha256": "63f1906b8a0fe256ad078f9787d70085f5705011a3f3e828d8b1a28f7da245b9",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/tests/hit_dcp_numeric_compare.py",
+    "export": "src/training_runtime/code/tests/hit_dcp_numeric_compare.py",
+    "original_sha256": "4a0223aa1c80c24e9a635bc63b8639b250ea74f12643f432520c7a3249778fbc",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/tests/hit_dcp_state_compare.py",
+    "export": "src/training_runtime/code/tests/hit_dcp_state_compare.py",
+    "original_sha256": "c77b18d218dd9a4e66aa055efca13319e55d1b2284809e14cc1bc7678dd97343",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/configs/eval_off_13k.yaml",
+    "export": "src/training_runtime/code/configs/eval_off_13k.yaml",
+    "original_sha256": "e92d96abfdd21ab4bc6e6f18bf6889234961a34906513f9795a95103435d553a",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/configs/stage2_qa10m.yaml",
+    "export": "src/training_runtime/code/configs/stage2_qa10m.yaml",
+    "original_sha256": "123b3c8840d5c5457a2526713ff6691a284889582d93f3c03c253ffba14e8107",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/configs/stage2_qa_multigpu_v1.yaml",
+    "export": "src/training_runtime/code/configs/stage2_qa_multigpu_v1.yaml",
+    "original_sha256": "5552357b230c1d9dfddec65276aaeadb7518384568ee3064b7cccd60206bea72",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/configs/eval_on_13k.yaml",
+    "export": "src/training_runtime/code/configs/eval_on_13k.yaml",
+    "original_sha256": "db7e4934ae1f55c40e1fcf1e9af572f2f4e53a150a685275fcc5260bdb02be64",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/configs/stage1_300m.yaml",
+    "export": "src/training_runtime/code/configs/stage1_300m.yaml",
+    "original_sha256": "9cb1973419c18e1e378b633dc15194b717cfa5d40f8591c4280f30f4011542da",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/configs/stage1_1b_32k_multigpu_v1.yaml",
+    "export": "src/training_runtime/code/configs/stage1_1b_32k_multigpu_v1.yaml",
+    "original_sha256": "d8b25edd02c51cebaee73694e2963e378daadb3a69e7be59127a285a6af10815",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/configs/eval_common_13k.yaml",
+    "export": "src/training_runtime/code/configs/eval_common_13k.yaml",
+    "original_sha256": "eb553cd0890e67a73d1f7546934dc977acf1193e19014c5a39e4d19c7ad04e48",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/configs/pipeline_runtime.yaml",
+    "export": "src/training_runtime/code/configs/pipeline_runtime.yaml",
+    "original_sha256": "413e17f1c649113cac82f15b73307191a79aadd2d85863b27f4cbcd80d357ae5",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/configs/hit_stage1_4b_32k_chunk4k_gpu23_debug_v1.yaml",
+    "export": "src/training_runtime/code/configs/hit_stage1_4b_32k_chunk4k_gpu23_debug_v1.yaml",
+    "original_sha256": "8e8a2806b4c15904cc137efdf99b572ecaec6eca429463efdd3a0f0d27ef524f",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/run_eval.sh",
+    "export": "src/training_runtime/code/bin/run_eval.sh",
+    "original_sha256": "9424be76d7257d159aae53bf4a54c3e9b22830040c455218503ffeef754c460d",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/launch_stage1_multigpu.sh",
+    "export": "src/training_runtime/code/bin/launch_stage1_multigpu.sh",
+    "original_sha256": "d35a8dc8d9e999102680cb0c28491d827bd92d27e4e011b93d374e38c39f7fd7",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/auto_shutdown.sh",
+    "export": "src/training_runtime/code/bin/auto_shutdown.sh",
+    "original_sha256": "11fcd1ef6c4f6ee50a789af39de009db8289b16403def8f47c209c6432dab356",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/pipelinectl.py",
+    "export": "src/training_runtime/code/bin/pipelinectl.py",
+    "original_sha256": "0eefc12e34c0d7e67fafe7bc51c4ec61288f6918480bcbdd1b331612457e86c5",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/cleanup_rotation_slots.sh",
+    "export": "src/training_runtime/code/bin/cleanup_rotation_slots.sh",
+    "original_sha256": "8a926375066a544c5d3769147cb4008b391992f659816cb51ef90e0ed8ac2bc9",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/run_eval_on_worker.sh",
+    "export": "src/training_runtime/code/bin/run_eval_on_worker.sh",
+    "original_sha256": "7de3fdf881f0190890accc62ab57c430aa7bf6191d14411c9433e9fc0dba5529",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/validate_inference.sh",
+    "export": "src/training_runtime/code/bin/validate_inference.sh",
+    "original_sha256": "1dabe16ca7b8de372aacdf8191d657d6b4dbbd88136f5bdb8dfc02b25003416d",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/status.sh",
+    "export": "src/training_runtime/code/bin/status.sh",
+    "original_sha256": "e7a60af6dd366f7fb12f5e0c22d5c1f369930e7beebe91753251a846f4c1812a",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/run_stage2.sh",
+    "export": "src/training_runtime/code/bin/run_stage2.sh",
+    "original_sha256": "881aaa6c3eb0d6947a7525d092f8871382d58d80880857614ad1d5731ea14f70",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/resume_pipeline.sh",
+    "export": "src/training_runtime/code/bin/resume_pipeline.sh",
+    "original_sha256": "f19694b572134f1a0bb4563484855b692d598ddc499ab0cf23a5d58cd3c12cca",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/generate_reports.py",
+    "export": "src/training_runtime/code/bin/generate_reports.py",
+    "original_sha256": "e6250df44c976e9dd6c15e2d836d38c5c267a59edc023659d673f6a34199e785",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/run_stage1_worker.sh",
+    "export": "src/training_runtime/code/bin/run_stage1_worker.sh",
+    "original_sha256": "327b1f39431c9367966c7f56de9a35078d2b30057ff2948732a6385812a65d97",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/promote_final_artifact.sh",
+    "export": "src/training_runtime/code/bin/promote_final_artifact.sh",
+    "original_sha256": "c63f6bcc1e7bc921f8ea712015aa436aaa90ebe1391be8726eb82f8f8f7628af",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/run_stage1.sh",
+    "export": "src/training_runtime/code/bin/run_stage1.sh",
+    "original_sha256": "b14f698d58b6b745cb3d48c4f6d83a54dff27381eb729e7e16afa3934fba9c45",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/preflight.py",
+    "export": "src/training_runtime/code/bin/preflight.py",
+    "original_sha256": "c4ebdd70bef1717186a37e39e09115170b9782eaa0f5e6ca28ef43019db8438e",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/generate_worker_reports.py",
+    "export": "src/training_runtime/code/bin/generate_worker_reports.py",
+    "original_sha256": "e82f8d86c25af3c7245c9177ce765c0d3a63e8e597fefa4a5af68422bee8e3e9",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/preflight.sh",
+    "export": "src/training_runtime/code/bin/preflight.sh",
+    "original_sha256": "9accbadcd333d17327c26a5d5b6ab1cabcae46088e92e29fc31406202660be4a",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/validate_checkpoint.sh",
+    "export": "src/training_runtime/code/bin/validate_checkpoint.sh",
+    "original_sha256": "f6e28132b88637195f8fe09cb1a1eb1698008cac1afaf16212edfb8f10023aba",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/run_eval_off_worker.sh",
+    "export": "src/training_runtime/code/bin/run_eval_off_worker.sh",
+    "original_sha256": "fc35300ce05240996b470d6b95f01e238e867830c65e9baaa451855f694fa767",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/run_pipeline.sh",
+    "export": "src/training_runtime/code/bin/run_pipeline.sh",
+    "original_sha256": "7ebfe97825a1954e4138cd8dc522f44691af44846f291cc49103322ae184c1e9",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/run_stage2_worker.sh",
+    "export": "src/training_runtime/code/bin/run_stage2_worker.sh",
+    "original_sha256": "7bbc9b77a4fbf2b1b1a5ced5b2f6ae877d0cd89f64db577945b5232859fa4885",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/bin/launch_stage2_multigpu.sh",
+    "export": "src/training_runtime/code/bin/launch_stage2_multigpu.sh",
+    "original_sha256": "f8166ba425193c5c662192d07c580b0ea33fb55d5fa726ed5b9b3196bb212e52",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/workers/eval_worker.py",
+    "export": "src/training_runtime/code/workers/eval_worker.py",
+    "original_sha256": "afca970551993299a02fe9a74cf8b9a30dc5536ef7ccd03a2798f9a3392f67d0",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/code/workers/distributed_stage2_train_worker_v1.py",
+    "export": "src/training_runtime/code/workers/distributed_stage2_train_worker_v1.py",
+    "original_sha256": "68fbb9bc2b963d69600c37e3579c0843577f01267d76dab475823f9dbf0a6a79",
+    "transformed": true
+  },
+  {
+    "source": "src/training_runtime/code/workers/distributed_train_worker.py",
+    "export": "src/training_runtime/code/workers/distributed_train_worker.py",
+    "original_sha256": "b93593c2a176b0ba8ebc72e5422d20f562c905efefbe7286ef070b6fa52ec47c",
+    "transformed": true
+  },
+  {
+    "source": "src/training_runtime/code/workers/train_worker.py",
+    "export": "src/training_runtime/code/workers/train_worker.py",
+    "original_sha256": "9a52c6e59e84b9369a293d0db967c4ab4f3190bb31f758d8ed440b8ba8aeb0bc",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/configs/hit_4b_32k_chunk4k_l30_gpu23_validated_v1.yaml",
+    "export": "src/training_runtime/configs/hit_4b_32k_chunk4k_l30_gpu23_validated_v1.yaml",
+    "original_sha256": "8e8a2806b4c15904cc137efdf99b572ecaec6eca429463efdd3a0f0d27ef524f",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/provenance/MULTIGPU_RUNTIME_AUTHORITY_V2.json",
+    "export": "src/training_runtime/provenance/MULTIGPU_RUNTIME_AUTHORITY_V2.json",
+    "original_sha256": "52141d946c23f63f01c7f75486c4877ed8b5cf70e2e1c08ab3a9c1a6e659058a",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/provenance/HIT_PATCH_MANIFEST.md",
+    "export": "src/training_runtime/provenance/HIT_PATCH_MANIFEST.md",
+    "original_sha256": "ea940350b2ba7c796cd8bd214fee50613971c3412bae514e6ff00904d0ff6a82",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/provenance/HIT_PATCHSET.diff",
+    "export": "src/training_runtime/provenance/HIT_PATCHSET.diff",
+    "original_sha256": "6373d47c2bbc470d97174fbe6e4c0e8a68b1fe112d01e0fecbfd40b553eef8d5",
+    "transformed": true
+  },
+  {
+    "source": "src/training_runtime/provenance/NTP_SOURCE_AUTHORITY.json",
+    "export": "src/training_runtime/provenance/NTP_SOURCE_AUTHORITY.json",
+    "original_sha256": "67f56222d06d294f9af6bb9f972990333c1a3d60ab404d6f4133723e6843a8b6",
+    "transformed": true
+  },
+  {
+    "source": "src/training_runtime/provenance/POST_HISTORY_FIX_CHECKLIST.md",
+    "export": "src/training_runtime/provenance/POST_HISTORY_FIX_CHECKLIST.md",
+    "original_sha256": "6939376edf72293e4f0442736273cd2d0c277592724fec7a5920dba0e3897920",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/provenance/HIT_PATCH_MANIFEST.json",
+    "export": "src/training_runtime/provenance/HIT_PATCH_MANIFEST.json",
+    "original_sha256": "0cee070b3d9faa59c80a3f0ec4c6f3d1f08accce4231ec89916abf95b750bb15",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/provenance/RELEASE_SOURCE_MANIFEST.json",
+    "export": "src/training_runtime/provenance/RELEASE_SOURCE_MANIFEST.json",
+    "original_sha256": "bf9391aa0f43da97d24695e44c76ffebaa726d23b65c42d8c1d2953cf71b399a",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/provenance/RELEASE_SOURCE_SHA256SUMS.txt",
+    "export": "src/training_runtime/provenance/RELEASE_SOURCE_SHA256SUMS.txt",
+    "original_sha256": "a653764e7c2ce2a0cedcdb8d6ccd40acbb8d0c31cd8bbfa33f998c0ba8637af2",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/provenance/ENVIRONMENT_REQUIREMENTS.json",
+    "export": "src/training_runtime/provenance/ENVIRONMENT_REQUIREMENTS.json",
+    "original_sha256": "60df7e8aa44c6728e7108bfd3766806eb7c0a82c3c9ea3d469ec06dfbd0b7d62",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/provenance/RELEASE_SHA256SUMS.txt",
+    "export": "src/training_runtime/provenance/RELEASE_SHA256SUMS.txt",
+    "original_sha256": "8184ba0ebd2773543a6a6b2aaa1cdfd51fd0a8c5e5c308720900334b5b138b75",
+    "transformed": false
+  },
+  {
+    "source": "src/training_runtime/docs/ENVIRONMENT_REQUIREMENTS.md",
+    "export": "src/training_runtime/docs/ENVIRONMENT_REQUIREMENTS.md",
+    "original_sha256": "7c0ab81842f0dc688b947349fa8f58665f36ad63575be4b22e8d258fba9efbb0",
+    "transformed": false
+  },
+  {
+    "source": "src/reset_resolution_v2/candidate.py",
+    "export": "src/reset_resolution_v2/candidate.py",
+    "original_sha256": "f98c4a19ed713281f63acf0365013a7840a3156131c59e232e018b10721f7686",
+    "transformed": false
+  },
+  {
+    "source": "src/reset_resolution_v2/audit.py",
+    "export": "src/reset_resolution_v2/audit.py",
+    "original_sha256": "c5335b2486f95994e8de0569416da7850052bc0e569eea91459bcd2d7ef43dc3",
+    "transformed": true
+  },
+  {
+    "source": "src/reset_resolution_v2/verify.py",
+    "export": "src/reset_resolution_v2/verify.py",
+    "original_sha256": "221aba0d78c9a8910789abf6847cd5aa9442af070a887a159ef6248ccfe68ee5",
+    "transformed": true
+  },
+  {
+    "source": "src/inference_runtime/run_pipeline.py",
+    "export": "src/inference_runtime/run_pipeline.py",
+    "original_sha256": "e75453c5e35d4f8e00c2acd66f0a5ef9f8503b5fd6efe0687bfaf2e8fea4feb3",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/README_INFERENCE_RUNTIME.md",
+    "export": "src/inference_runtime/README_INFERENCE_RUNTIME.md",
+    "original_sha256": "f1e87a3869c22c2305f1f0aff4a3ffc75c17d03823fc5c66336e756112645f68",
+    "transformed": true
+  },
+  {
+    "source": "src/inference_runtime/code/__init__.py",
+    "export": "src/inference_runtime/code/__init__.py",
+    "original_sha256": "1371f7275f7754de6d2a40be596e7438b3f9e88fc961183233a5d495c31a669a",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/code/runtime.py",
+    "export": "src/inference_runtime/code/runtime.py",
+    "original_sha256": "875b493e6868ed2c77528eca28b6204cd5c4a7e4147abd42de7576109bcf931c",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/code/inference_model/hf_qwen3/__init__.py",
+    "export": "src/inference_runtime/code/inference_model/hf_qwen3/__init__.py",
+    "original_sha256": "a38d76873e560e9c034258408e1c67fdfc08f2be846da1937cea1434f6e10e80",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/code/inference_model/hf_qwen3/configuration_qwen3.py",
+    "export": "src/inference_runtime/code/inference_model/hf_qwen3/configuration_qwen3.py",
+    "original_sha256": "ebed0379af1075b97222dc4ffdaf0cca2de86311e0715a704c7e148b8365c444",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/code/inference_model/hf_qwen3/modeling_qwen3.py",
+    "export": "src/inference_runtime/code/inference_model/hf_qwen3/modeling_qwen3.py",
+    "original_sha256": "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/code/hf_models/hf_qwen3/__init__.py",
+    "export": "src/inference_runtime/code/hf_models/hf_qwen3/__init__.py",
+    "original_sha256": "479f0a38e97848e93a031b6e61a8f7b0aecd490874bbc2be87c4a2d2589d0f3d",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/code/hf_models/hf_qwen3/ttt_state_core.py",
+    "export": "src/inference_runtime/code/hf_models/hf_qwen3/ttt_state_core.py",
+    "original_sha256": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/mechanism/README.md",
+    "export": "src/inference_runtime/mechanism/README.md",
+    "original_sha256": "6c71b013646ffc4978688a6d8ec934e4dfa0c64dd4be40e2795bf02f8c63fd8b",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/scorers/common.py",
+    "export": "src/inference_runtime/scorers/common.py",
+    "original_sha256": "f164f93902777772feb86790b49fc151a0872db309362768bcac3790417a1c78",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/tests/level0.py",
+    "export": "src/inference_runtime/tests/level0.py",
+    "original_sha256": "5edb0829dc39bab27c1c125d35bd466478278af15d70a0a7c429b36441bf2886",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/tests/test_static.py",
+    "export": "src/inference_runtime/tests/test_static.py",
+    "original_sha256": "f2445e961d270e2050d6a693a628b466c13c6b39ebe360238910390518cdea96",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/tests/replay_historical.py",
+    "export": "src/inference_runtime/tests/replay_historical.py",
+    "original_sha256": "5c6625a4ae2c6cc3d36ef1a041ffcd8b8910d84633c17680b893a0a9aa50f7de",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/fixed/aggregate_fixed.py",
+    "export": "src/inference_runtime/fixed/aggregate_fixed.py",
+    "original_sha256": "95abeda6d3dd1c5eff410d6608e7378d5347eced4a5986e1bafe1dd4d73134e4",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/fixed/run_fixed.py",
+    "export": "src/inference_runtime/fixed/run_fixed.py",
+    "original_sha256": "34184a8e34b09294ee3727992cc449c885341594ec29f462f5f4f8aa7f0254a5",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/dynamic/formal_dynamic_runner.py",
+    "export": "src/inference_runtime/dynamic/formal_dynamic_runner.py",
+    "original_sha256": "293886005cb8f78c943f0affe3e3b383d6de238f4bc825a5aea28a6e6dc66f6e",
+    "transformed": true
+  },
+  {
+    "source": "src/inference_runtime/dynamic/run_dynamic.py",
+    "export": "src/inference_runtime/dynamic/run_dynamic.py",
+    "original_sha256": "c764a40b3347d018628a40e00d8f048dcb562969580921f79da237e3bf1b2d7d",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/dynamic/aggregate_dynamic.py",
+    "export": "src/inference_runtime/dynamic/aggregate_dynamic.py",
+    "original_sha256": "6d43102c195d9d48d794ca1c73267472b453fc3c26227b8bfe1d003e2f3c31d0",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/provenance/formal_prepare_dynamic_nonceiling_12task_v1.py",
+    "export": "src/inference_runtime/provenance/formal_prepare_dynamic_nonceiling_12task_v1.py",
+    "original_sha256": "b51562fe35b72455b667ebb2e93585afdf074212151ef3e12513d80992da4629",
+    "transformed": true
+  },
+  {
+    "source": "src/inference_runtime/provenance/formal_aggregate_fixed_results.py",
+    "export": "src/inference_runtime/provenance/formal_aggregate_fixed_results.py",
+    "original_sha256": "59bf185dfa27543faee1e38322cc78bce21016a57cb588c8f20086e89049a9ae",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/provenance/INFERENCE_SOURCE_AUTHORITY.json",
+    "export": "src/inference_runtime/provenance/INFERENCE_SOURCE_AUTHORITY.json",
+    "original_sha256": "2b2177d0cb3a4a1e020474dcaa5749751f472e8b7841dafdcd2edca16f06202b",
+    "transformed": true
+  },
+  {
+    "source": "src/inference_runtime/provenance/RELEASE_MANIFEST.json",
+    "export": "src/inference_runtime/provenance/RELEASE_MANIFEST.json",
+    "original_sha256": "a07ac4fce226fcdc2cf561e79466b45f4761b74557e07889819b10f9b48f6fc0",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/provenance/formal_run_fixed_inference.py",
+    "export": "src/inference_runtime/provenance/formal_run_fixed_inference.py",
+    "original_sha256": "0854079f8e153b748e142dc9be0c3b5da1912ab44902e09ac044ef2a9bab3163",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/provenance/PHASE_C_SCIENTIFIC_CONFIG.json",
+    "export": "src/inference_runtime/provenance/PHASE_C_SCIENTIFIC_CONFIG.json",
+    "original_sha256": "d4cd25c3d6b531c25bd06689369b0da47981f9ce4427cb458e372bd5d21cd451",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/provenance/formal_run_fixed_mode_resumable_v1.py",
+    "export": "src/inference_runtime/provenance/formal_run_fixed_mode_resumable_v1.py",
+    "original_sha256": "3e02e06fda36310ba4ee856d6684cf2cbe7adda5a674bce9af8043b64deb5020",
+    "transformed": true
+  },
+  {
+    "source": "src/inference_runtime/provenance/formal_aggregate_dynamic_nonceiling_12task_v1.py",
+    "export": "src/inference_runtime/provenance/formal_aggregate_dynamic_nonceiling_12task_v1.py",
+    "original_sha256": "79ce92ec3ce574cbcfc9cb86b88315453c2c25ec4700664643b526cf33f0941c",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/provenance/INFERENCE_SOURCE_SHA256SUMS.txt",
+    "export": "src/inference_runtime/provenance/INFERENCE_SOURCE_SHA256SUMS.txt",
+    "original_sha256": "1d1f14ea24e9fd69f73de10bd09a6ad19435dd45565e0ed3076be79aa4f02a4b",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/docs/RESULT_SCHEMAS.md",
+    "export": "src/inference_runtime/docs/RESULT_SCHEMAS.md",
+    "original_sha256": "542a0a8f8a1fef2a4836bef92f96ecd940fe5b5b8714fc028f78f3206fb15da0",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime/docs/SCIENTIFIC_SEMANTICS.md",
+    "export": "src/inference_runtime/docs/SCIENTIFIC_SEMANTICS.md",
+    "original_sha256": "68b05ee58bef5ccca6feebe1e57d0bdbbfbadc5d18db8fc49833d5aed1f27c2a",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime_4k_stage2_v1/code/__init__.py",
+    "export": "src/inference_runtime_4k_stage2_v1/code/__init__.py",
+    "original_sha256": "1371f7275f7754de6d2a40be596e7438b3f9e88fc961183233a5d495c31a669a",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime_4k_stage2_v1/code/runtime.py",
+    "export": "src/inference_runtime_4k_stage2_v1/code/runtime.py",
+    "original_sha256": "875b493e6868ed2c77528eca28b6204cd5c4a7e4147abd42de7576109bcf931c",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime_4k_stage2_v1/code/inference_model/hf_qwen3/__init__.py",
+    "export": "src/inference_runtime_4k_stage2_v1/code/inference_model/hf_qwen3/__init__.py",
+    "original_sha256": "a38d76873e560e9c034258408e1c67fdfc08f2be846da1937cea1434f6e10e80",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime_4k_stage2_v1/code/inference_model/hf_qwen3/configuration_qwen3.py",
+    "export": "src/inference_runtime_4k_stage2_v1/code/inference_model/hf_qwen3/configuration_qwen3.py",
+    "original_sha256": "ebed0379af1075b97222dc4ffdaf0cca2de86311e0715a704c7e148b8365c444",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime_4k_stage2_v1/code/inference_model/hf_qwen3/modeling_qwen3.py",
+    "export": "src/inference_runtime_4k_stage2_v1/code/inference_model/hf_qwen3/modeling_qwen3.py",
+    "original_sha256": "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime_4k_stage2_v1/code/hf_models/hf_qwen3/__init__.py",
+    "export": "src/inference_runtime_4k_stage2_v1/code/hf_models/hf_qwen3/__init__.py",
+    "original_sha256": "479f0a38e97848e93a031b6e61a8f7b0aecd490874bbc2be87c4a2d2589d0f3d",
+    "transformed": false
+  },
+  {
+    "source": "src/inference_runtime_4k_stage2_v1/code/hf_models/hf_qwen3/ttt_state_core.py",
+    "export": "src/inference_runtime_4k_stage2_v1/code/hf_models/hf_qwen3/ttt_state_core.py",
+    "original_sha256": "c158a523a04ad8ab5ab46973c3e69d642b172572d27e97de39b59ce8bfc39aac",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/run_pipeline.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/run_pipeline.py",
+    "original_sha256": "e75453c5e35d4f8e00c2acd66f0a5ef9f8503b5fd6efe0687bfaf2e8fea4feb3",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/README_INFERENCE_RUNTIME.md",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/README_INFERENCE_RUNTIME.md",
+    "original_sha256": "f1e87a3869c22c2305f1f0aff4a3ffc75c17d03823fc5c66336e756112645f68",
+    "transformed": true
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/code/__init__.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/code/__init__.py",
+    "original_sha256": "1371f7275f7754de6d2a40be596e7438b3f9e88fc961183233a5d495c31a669a",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/code/runtime.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/code/runtime.py",
+    "original_sha256": "875b493e6868ed2c77528eca28b6204cd5c4a7e4147abd42de7576109bcf931c",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/code/inference_model/hf_qwen3/__init__.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/code/inference_model/hf_qwen3/__init__.py",
+    "original_sha256": "a38d76873e560e9c034258408e1c67fdfc08f2be846da1937cea1434f6e10e80",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/code/inference_model/hf_qwen3/configuration_qwen3.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/code/inference_model/hf_qwen3/configuration_qwen3.py",
+    "original_sha256": "ebed0379af1075b97222dc4ffdaf0cca2de86311e0715a704c7e148b8365c444",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/code/inference_model/hf_qwen3/modeling_qwen3.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/code/inference_model/hf_qwen3/modeling_qwen3.py",
+    "original_sha256": "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/code/hf_models/hf_qwen3/__init__.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/code/hf_models/hf_qwen3/__init__.py",
+    "original_sha256": "479f0a38e97848e93a031b6e61a8f7b0aecd490874bbc2be87c4a2d2589d0f3d",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/code/hf_models/hf_qwen3/ttt_state_core.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/code/hf_models/hf_qwen3/ttt_state_core.py",
+    "original_sha256": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/mechanism/README.md",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/mechanism/README.md",
+    "original_sha256": "6c71b013646ffc4978688a6d8ec934e4dfa0c64dd4be40e2795bf02f8c63fd8b",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/scorers/common.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/scorers/common.py",
+    "original_sha256": "cee3f5cb3cad1709f81abe3dc32b364ca97322e7ebd91747a8b119aecb0ce556",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/tests/level0.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/tests/level0.py",
+    "original_sha256": "24db5a9cab524aea9672e17fb9df781c5527df410006307019d7c7efc8923019",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/tests/test_static.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/tests/test_static.py",
+    "original_sha256": "f2445e961d270e2050d6a693a628b466c13c6b39ebe360238910390518cdea96",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/tests/replay_historical.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/tests/replay_historical.py",
+    "original_sha256": "5c6625a4ae2c6cc3d36ef1a041ffcd8b8910d84633c17680b893a0a9aa50f7de",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/fixed/aggregate_fixed.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/fixed/aggregate_fixed.py",
+    "original_sha256": "95abeda6d3dd1c5eff410d6608e7378d5347eced4a5986e1bafe1dd4d73134e4",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/fixed/run_fixed.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/fixed/run_fixed.py",
+    "original_sha256": "34184a8e34b09294ee3727992cc449c885341594ec29f462f5f4f8aa7f0254a5",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/dynamic/formal_dynamic_runner.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/dynamic/formal_dynamic_runner.py",
+    "original_sha256": "293886005cb8f78c943f0affe3e3b383d6de238f4bc825a5aea28a6e6dc66f6e",
+    "transformed": true
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/dynamic/run_dynamic.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/dynamic/run_dynamic.py",
+    "original_sha256": "c764a40b3347d018628a40e00d8f048dcb562969580921f79da237e3bf1b2d7d",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/dynamic/aggregate_dynamic.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/dynamic/aggregate_dynamic.py",
+    "original_sha256": "6d43102c195d9d48d794ca1c73267472b453fc3c26227b8bfe1d003e2f3c31d0",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/provenance/formal_prepare_dynamic_nonceiling_12task_v1.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/provenance/formal_prepare_dynamic_nonceiling_12task_v1.py",
+    "original_sha256": "b51562fe35b72455b667ebb2e93585afdf074212151ef3e12513d80992da4629",
+    "transformed": true
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/provenance/formal_aggregate_fixed_results.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/provenance/formal_aggregate_fixed_results.py",
+    "original_sha256": "59bf185dfa27543faee1e38322cc78bce21016a57cb588c8f20086e89049a9ae",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/provenance/INFERENCE_SOURCE_AUTHORITY.json",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/provenance/INFERENCE_SOURCE_AUTHORITY.json",
+    "original_sha256": "2b2177d0cb3a4a1e020474dcaa5749751f472e8b7841dafdcd2edca16f06202b",
+    "transformed": true
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/provenance/RELEASE_MANIFEST.json",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/provenance/RELEASE_MANIFEST.json",
+    "original_sha256": "a07ac4fce226fcdc2cf561e79466b45f4761b74557e07889819b10f9b48f6fc0",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/provenance/formal_run_fixed_inference.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/provenance/formal_run_fixed_inference.py",
+    "original_sha256": "0854079f8e153b748e142dc9be0c3b5da1912ab44902e09ac044ef2a9bab3163",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/provenance/PHASE_C_SCIENTIFIC_CONFIG.json",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/provenance/PHASE_C_SCIENTIFIC_CONFIG.json",
+    "original_sha256": "d4cd25c3d6b531c25bd06689369b0da47981f9ce4427cb458e372bd5d21cd451",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/provenance/formal_run_fixed_mode_resumable_v1.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/provenance/formal_run_fixed_mode_resumable_v1.py",
+    "original_sha256": "3e02e06fda36310ba4ee856d6684cf2cbe7adda5a674bce9af8043b64deb5020",
+    "transformed": true
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/provenance/formal_aggregate_dynamic_nonceiling_12task_v1.py",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/provenance/formal_aggregate_dynamic_nonceiling_12task_v1.py",
+    "original_sha256": "79ce92ec3ce574cbcfc9cb86b88315453c2c25ec4700664643b526cf33f0941c",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/provenance/INFERENCE_SOURCE_SHA256SUMS.txt",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/provenance/INFERENCE_SOURCE_SHA256SUMS.txt",
+    "original_sha256": "1d1f14ea24e9fd69f73de10bd09a6ad19435dd45565e0ed3076be79aa4f02a4b",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/docs/RESULT_SCHEMAS.md",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/docs/RESULT_SCHEMAS.md",
+    "original_sha256": "542a0a8f8a1fef2a4836bef92f96ecd940fe5b5b8714fc028f78f3206fb15da0",
+    "transformed": false
+  },
+  {
+    "source": "vendor/frozen/ttt_inference_runtime_v1/docs/SCIENTIFIC_SEMANTICS.md",
+    "export": "vendor/frozen/ttt_inference_runtime_v1/docs/SCIENTIFIC_SEMANTICS.md",
+    "original_sha256": "68b05ee58bef5ccca6feebe1e57d0bdbbfbadc5d18db8fc49833d5aed1f27c2a",
+    "transformed": false
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/pipeline.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/pipeline.py",
+    "original_sha256": "da4f7c2f3d3160ec1918762bde99569e792e0afa5e2c677425a47a1534fd7490",
+    "transformed": false
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/resume_v2.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/resume_v2.py",
+    "original_sha256": "f6789a6fa26f153e6788d1e76b69bef71745ff5a3f79635a52df30f02960cf39",
+    "transformed": false
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/worker_stage1.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/worker_stage1.py",
+    "original_sha256": "99bfe6dc5775b68b25ad8bd5c8a98aa3123559ba48f013d40b568879d84221ba",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/install_recovery_v2.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/install_recovery_v2.py",
+    "original_sha256": "598db738e9b57e54e07cb763a4ecd34323e92c4f4dad0f8f96880ae7604d5b86",
+    "transformed": false
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/checkpoint_io_v2.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/checkpoint_io_v2.py",
+    "original_sha256": "dda9fcfec045005f16b9123a851b1144f75e07161c8dd9259e5bb27a02c5729b",
+    "transformed": false
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/REPORT.md",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/REPORT.md",
+    "original_sha256": "935455aad66dab603f9a649966310064595b38060fcb4a4ffdfaafd43ef84df1",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/freeze.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/freeze.py",
+    "original_sha256": "949d9ecccd819732fcad10f61c4e113d5e22f833c6e975fa5855c27dd79f9b2c",
+    "transformed": false
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/audit.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/audit.py",
+    "original_sha256": "1106516c7ad7dac4ae175af54db8c6c8bd1638ab8683208e569348673b2f4191",
+    "transformed": false
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/test_checkpoint_io_v2.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/test_checkpoint_io_v2.py",
+    "original_sha256": "f971a4d43e6d8da92fd8fb58e4d44805607942585146392c936fe7a4ccc030e7",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/finalizer.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/finalizer.py",
+    "original_sha256": "8e85e0de46bb82eba830cfc24ab06fb5b66b9098bac527dee97ddd861f770dde",
+    "transformed": false
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/worker_stage2.diff",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/worker_stage2.diff",
+    "original_sha256": "cd1081b1ac2c777db7a049f6355286ad48265e8af0d9c6101e19e2d9c20298a0",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/worker_stage1.diff",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/worker_stage1.diff",
+    "original_sha256": "d505869a3d26c0a1da2ed2d130caababf047d2f4f3008dc76a8eff5dd6445d88",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/identity_preflight.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/identity_preflight.py",
+    "original_sha256": "2777cfc941aed7724f89c294eb90a3b22ebe09f6d88b4e079f172af42274e3ba",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/prepare_workers.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/prepare_workers.py",
+    "original_sha256": "92424112f69aba815af807cf402800ebb871f231438692631a91dde429999a96",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/entry.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/entry.py",
+    "original_sha256": "2735dc088947058012365d48b2e799ab8c842b6324fe283b9781ffdf8441fd52",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/data_preflight.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/data_preflight.py",
+    "original_sha256": "dabb60b8304cf5e26e2974d2ce1d6f6cc400c908a92020f97d598d860afa9ca9",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/build.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/build.py",
+    "original_sha256": "f85a6fb2cdce2ae9e5cb7a600da1937e35aa74f89287ada14db830f8fa54787f",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/data_adapter.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/data_adapter.py",
+    "original_sha256": "2b2db19bb89a8e5edda5ad1ccede33901ddefd6e5f609ae0f0768f2ece34d33a",
+    "transformed": false
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/core.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/core.py",
+    "original_sha256": "1439b53bbb594f070c390218d615ee65d82ebd4a0b0d3e524799e2bb5573c8a3",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/report.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/report.py",
+    "original_sha256": "3d180f238ed502f529129601a41a6272b920ef44da1790f9ca7cea74595ff8ca",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/worker_stage2.py",
+    "export": "work/llama31_8b_stage1_stage2_pipeline_formal_v1/worker_stage2.py",
+    "original_sha256": "d30a2467b3c7c87aba5b8625a3fbd818cd0d90527da262554f7f8128497927a5",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage2_gpu01234_formal_v3/pipeline.py",
+    "export": "work/llama31_8b_stage2_gpu01234_formal_v3/pipeline.py",
+    "original_sha256": "cec0e5b20016f4a0de7fa78a5bc7d29d3e3c28d5443052b519be860629a174de",
+    "transformed": false
+  },
+  {
+    "source": "work/llama31_8b_stage2_gpu01234_formal_v3/checkpoint_io_v2.py",
+    "export": "work/llama31_8b_stage2_gpu01234_formal_v3/checkpoint_io_v2.py",
+    "original_sha256": "dda9fcfec045005f16b9123a851b1144f75e07161c8dd9259e5bb27a02c5729b",
+    "transformed": false
+  },
+  {
+    "source": "work/llama31_8b_stage2_gpu01234_formal_v3/sequential_loss.py",
+    "export": "work/llama31_8b_stage2_gpu01234_formal_v3/sequential_loss.py",
+    "original_sha256": "fb57845cf4ecd7084d37e48f1ac5f1791bb9791af89e66d8f9c6abbb2b67fce5",
+    "transformed": false
+  },
+  {
+    "source": "work/llama31_8b_stage2_gpu01234_formal_v3/finalizer.py",
+    "export": "work/llama31_8b_stage2_gpu01234_formal_v3/finalizer.py",
+    "original_sha256": "8e85e0de46bb82eba830cfc24ab06fb5b66b9098bac527dee97ddd861f770dde",
+    "transformed": false
+  },
+  {
+    "source": "work/llama31_8b_stage2_gpu01234_formal_v3/entry.py",
+    "export": "work/llama31_8b_stage2_gpu01234_formal_v3/entry.py",
+    "original_sha256": "a875e22e5aac8e13f09694b0b5db112d1b56c431c1b76ec00517d4b7f4d8d1f2",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage2_gpu01234_formal_v3/data_adapter.py",
+    "export": "work/llama31_8b_stage2_gpu01234_formal_v3/data_adapter.py",
+    "original_sha256": "2b2db19bb89a8e5edda5ad1ccede33901ddefd6e5f609ae0f0768f2ece34d33a",
+    "transformed": false
+  },
+  {
+    "source": "work/llama31_8b_stage2_gpu01234_formal_v3/core.py",
+    "export": "work/llama31_8b_stage2_gpu01234_formal_v3/core.py",
+    "original_sha256": "648ef81dba73967dde9df6e386f6efee8fcd61f7be9c83ed032e1dec0879da7f",
+    "transformed": true
+  },
+  {
+    "source": "work/llama31_8b_stage2_gpu01234_formal_v3/worker_stage2.py",
+    "export": "work/llama31_8b_stage2_gpu01234_formal_v3/worker_stage2.py",
+    "original_sha256": "9db592713f961f2482c8000e6cba0fa2ade074be6a8b9da40503d3e4cc92afdb",
+    "transformed": true
+  },
+  {
+    "source": "configs/llama31_8b_stage1_stage2_pipeline_formal_v1.yaml",
+    "export": "configs/llama31_8b_stage1_stage2_pipeline_formal_v1.yaml",
+    "original_sha256": "0a4066f3043ec4817d9498f8afc17c4a696577a33df817965afb789b95957b00",
+    "transformed": true
+  },
+  {
+    "source": "configs/llama31_8b_ruler32k_fixed8_4k_formal_v1.json",
+    "export": "configs/llama31_8b_ruler32k_fixed8_4k_formal_v1.json",
+    "original_sha256": "d54e4e0fd23ac4f40e436eeff67f3bc8798f16f713758a40ec404506ff38cafa",
+    "transformed": true
+  },
+  {
+    "source": "configs/llama31_8b_ruler32k_fixed8_4k_executor_v2.json",
+    "export": "configs/llama31_8b_ruler32k_fixed8_4k_executor_v2.json",
+    "original_sha256": "9dd3e374770d8931dc070a91100bb2bc33b230943723f2099d87135cd7d1b217",
+    "transformed": true
+  },
+  {
+    "source": "configs/llama31_stage1_500m_32k_derived_v1.yaml",
+    "export": "configs/llama31_stage1_500m_32k_derived_v1.yaml",
+    "original_sha256": "849977095af7de5f1a42a12b27ec3ac21af225318dd393528b6b71b33f00b36d",
+    "transformed": true
+  },
+  {
+    "source": "configs/llama31_dynamic_v2_no_cwe_v1.json",
+    "export": "configs/llama31_dynamic_v2_no_cwe_v1.json",
+    "original_sha256": "ffb74fd5ddf5bb6f2856f74e5ac87c1998ec88d5c92515b61b0a5c1d2977c314",
+    "transformed": true
+  },
+  {
+    "source": "configs/llama31_8b_stage2_15m_32k_gpu0123_formal_v1.yaml",
+    "export": "configs/llama31_8b_stage2_15m_32k_gpu0123_formal_v1.yaml",
+    "original_sha256": "b29b4044f4d8a882695c7bcdd4e251f8b385112ddba4f4dffdb427719114bd7a",
+    "transformed": true
+  },
+  {
+    "source": "configs/llama31_base_ruler32k_v1.json",
+    "export": "configs/llama31_base_ruler32k_v1.json",
+    "original_sha256": "17553969be283efc2814f94a037d85ae2b95647e89eec40d1820336621081112",
+    "transformed": true
+  },
+  {
+    "source": "configs/llama31_8b_stage2_15m_32k_gpu01234_formal_v3.yaml",
+    "export": "configs/llama31_8b_stage2_15m_32k_gpu01234_formal_v3.yaml",
+    "original_sha256": "9fef01e5fe73f797501c78377313817961e31cd0bc122e1cf4356b7632d5113c",
+    "transformed": true
+  },
+  {
+    "source": "configs/llama31_stage2_15m_32k_derived_v1.yaml",
+    "export": "configs/llama31_stage2_15m_32k_derived_v1.yaml",
+    "original_sha256": "2cbcd56171d62616bf141d829d2a20b03f26f24ccea0d94e45999e9525601c8c",
+    "transformed": true
+  },
+  {
+    "source": "configs/llama31_8b_stage2_pipeline_gpu01234_formal_v3.json",
+    "export": "configs/llama31_8b_stage2_pipeline_gpu01234_formal_v3.json",
+    "original_sha256": "b840195c86db762c29639256420d99a6b87ce381f199222954ebb7a439106e2a",
+    "transformed": true
+  },
+  {
+    "source": "configs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1.yaml",
+    "export": "configs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1.yaml",
+    "original_sha256": "26c4ccdfd6674324a77df2a6d3b591fe19b720bb633bb44b3e5c601250410d43",
+    "transformed": true
+  },
+  {
+    "source": "bin/smoke_llama31_8b_inference_4k_gpu0123_v1.sh",
+    "export": "bin/smoke_llama31_8b_inference_4k_gpu0123_v1.sh",
+    "original_sha256": "3aab72abe09ba9dec8ec0f37daaf00fb117b251ce1e0340bba196b9072be1752",
+    "transformed": true
+  },
+  {
+    "source": "bin/stage2_runtime_entry_v1.py",
+    "export": "bin/stage2_runtime_entry_v1.py",
+    "original_sha256": "2516e74106d4ec2113571f9dd1163abefcfacee0a83521edfa18687c35521a3b",
+    "transformed": true
+  },
+  {
+    "source": "bin/launch_llama31_8b_stage1_stage2_pipeline_formal_v1.sh",
+    "export": "bin/launch_llama31_8b_stage1_stage2_pipeline_formal_v1.sh",
+    "original_sha256": "3029dfcd496f645cd82635b0c8d3f459f0f1d7bc637f8980ea11ec85c10efce4",
+    "transformed": true
+  },
+  {
+    "source": "bin/launch_llama31_8b_mechanism_formal_v1.sh",
+    "export": "bin/launch_llama31_8b_mechanism_formal_v1.sh",
+    "original_sha256": "d3ee46a005279d3697e1e90219be0ebd180d424a4ad54a016f44259960c6c01b",
+    "transformed": true
+  },
+  {
+    "source": "bin/resume_llama31_8b_stage1_stage2_pipeline_formal_v2.sh",
+    "export": "bin/resume_llama31_8b_stage1_stage2_pipeline_formal_v2.sh",
+    "original_sha256": "00fa100ce13e08cac7c2dbbd77d77ce1042817aa58315fb1836ed1d00c10a7ab",
+    "transformed": true
+  },
+  {
+    "source": "bin/finalize_llama31_8b_stage2_to_inference_formal_v1.sh",
+    "export": "bin/finalize_llama31_8b_stage2_to_inference_formal_v1.sh",
+    "original_sha256": "aef5ed742e2ebc1e4046239848551b9d95715e85100c1cfbe232bd523a8f9dba",
+    "transformed": true
+  },
+  {
+    "source": "bin/status_llama31_data_build_v1.sh",
+    "export": "bin/status_llama31_data_build_v1.sh",
+    "original_sha256": "b096b4aa7c88bb65448643dba611b64ad4b3a075b0853dfc38e21703f0908f5e",
+    "transformed": true
+  },
+  {
+    "source": "bin/status_llama31_8b_mechanism_runtime_v1.sh",
+    "export": "bin/status_llama31_8b_mechanism_runtime_v1.sh",
+    "original_sha256": "bf2cd2c0f8f0ae26bd2e8d04f1f1982016a92d600670b47fca58ad16b1efedc9",
+    "transformed": true
+  },
+  {
+    "source": "bin/llama31_log_heartbeat_v1.sh",
+    "export": "bin/llama31_log_heartbeat_v1.sh",
+    "original_sha256": "e057bc38a657bee566d082f2d900633f3dea0a1280f22c677b61cbfc34d2f229",
+    "transformed": true
+  },
+  {
+    "source": "bin/llama31_8b_stage1_gpu0123_formal_control_v1.py",
+    "export": "bin/llama31_8b_stage1_gpu0123_formal_control_v1.py",
+    "original_sha256": "7a0637c227a05eba9366e676a5d78c6019aad5f802e664f510fa1f2bf0df3a52",
+    "transformed": true
+  },
+  {
+    "source": "bin/launch_llama31_8b_stage2_gpu01234_formal_v3.sh",
+    "export": "bin/launch_llama31_8b_stage2_gpu01234_formal_v3.sh",
+    "original_sha256": "1294bb02cea28b69b60bf0899a0b9da5353fb587229d0e55facd02778ba5ddcd",
+    "transformed": true
+  },
+  {
+    "source": "bin/build_llama31_derived_data_v1.sh",
+    "export": "bin/build_llama31_derived_data_v1.sh",
+    "original_sha256": "ef61e2b2ad16c6a3640d9bb9a5292c04ffa183888b49d1acb947830e34df62f0",
+    "transformed": true
+  },
+  {
+    "source": "bin/recover_llama31_8b_stage2_gpu01234_formal_v3.sh",
+    "export": "bin/recover_llama31_8b_stage2_gpu01234_formal_v3.sh",
+    "original_sha256": "9a1dc18136b5db3e2a22b6573b27b7ea65a96792d1a370a475a2bb72a9bf799f",
+    "transformed": true
+  },
+  {
+    "source": "bin/smoke_llama31_8b_stage1_32k_gpu0123_v1.sh",
+    "export": "bin/smoke_llama31_8b_stage1_32k_gpu0123_v1.sh",
+    "original_sha256": "846fbb9a5b0af3f4c576476e51b194c93656e565155d989e2b9ed7a44ff8cae2",
+    "transformed": true
+  },
+  {
+    "source": "bin/run_llama31_8b_mechanism_smoke_gpu0123_v1.sh",
+    "export": "bin/run_llama31_8b_mechanism_smoke_gpu0123_v1.sh",
+    "original_sha256": "98cd2fc1deb5c8402710c1aba7ced0c93b69a71c2e7a5bc2b89eb2ebd6df9b8f",
+    "transformed": true
+  },
+  {
+    "source": "bin/llama31_8b_stage1_stage2_pipeline_formal_v1.py",
+    "export": "bin/llama31_8b_stage1_stage2_pipeline_formal_v1.py",
+    "original_sha256": "811da695a56b6106692041fdb8d407b96e0ed10ca8b5386ecb4a7f09574f40dc",
+    "transformed": true
+  },
+  {
+    "source": "bin/status_llama31_8b_stage1_stage2_pipeline_formal_v1.sh",
+    "export": "bin/status_llama31_8b_stage1_stage2_pipeline_formal_v1.sh",
+    "original_sha256": "b36340cc18c5d29d7444ebdeafdcccb7e9203a46cd5371fb4316d5c4b2fc48bb",
+    "transformed": true
+  },
+  {
+    "source": "bin/recover_llama31_8b_stage1_stage2_pipeline_formal_v1.sh",
+    "export": "bin/recover_llama31_8b_stage1_stage2_pipeline_formal_v1.sh",
+    "original_sha256": "54c4a5c24ab3950c7fb5e58d1cfc432e0e2be44d49fe37bfb0c675d2db14597f",
+    "transformed": true
+  },
+  {
+    "source": "bin/launch_llama31_8b_stage2_15m_32k_gpu0123_formal_v1.sh",
+    "export": "bin/launch_llama31_8b_stage2_15m_32k_gpu0123_formal_v1.sh",
+    "original_sha256": "bd61bd9a618a9ce25f6a65bcf82da1681a5ce90db7fdd8bd34a7d134a7a616df",
+    "transformed": true
+  },
+  {
+    "source": "bin/launch_llama31_derived_data_v1.sh",
+    "export": "bin/launch_llama31_derived_data_v1.sh",
+    "original_sha256": "98830b8727fff30f63a5cef9b60d0c0868d12d8333837f1cb8a7201e69d2b64f",
+    "transformed": true
+  },
+  {
+    "source": "bin/status_llama31_8b_stage2_gpu01234_formal_v3.sh",
+    "export": "bin/status_llama31_8b_stage2_gpu01234_formal_v3.sh",
+    "original_sha256": "d7b730a73b4750fe11985e3e8a940a0a7b6495de07196d8478472f1a77a82cc7",
+    "transformed": true
+  },
+  {
+    "source": "bin/finalize_llama31_8b_stage1_to_stage2_formal_v1.sh",
+    "export": "bin/finalize_llama31_8b_stage1_to_stage2_formal_v1.sh",
+    "original_sha256": "3c7b607e3077a45ac42f6763b0d1cc72650a0fea164b8bffb844d53952c0fa42",
+    "transformed": true
+  },
+  {
+    "source": "runs/llama31_base_ruler32k_formal_v1/AGGREGATE.json",
+    "export": "results/base/AGGREGATE.json",
+    "original_sha256": "53a11cd4c519a4a1ba8879a4afa8ef659d7b420fac6d8774841689a7ee38d046",
+    "transformed": true
+  },
+  {
+    "source": "runs/llama31_base_ruler32k_formal_v1/LAUNCH_VALIDATION.json",
+    "export": "results/base/LAUNCH_VALIDATION.json",
+    "original_sha256": "800d96ef728f552d9ce867d88b5f9d71f6c0dcfd4015450eda5d67f2f91cf925",
+    "transformed": false
+  },
+  {
+    "source": "runs/llama31_base_ruler32k_formal_v1/PHASE_STATUS.json",
+    "export": "results/base/PHASE_STATUS.json",
+    "original_sha256": "18b87a7b8a68620c8dd4826d72c4c563d10bce789c31b037d7f6f301fbce2f09",
+    "transformed": false
+  },
+  {
+    "source": "runs/llama31_base_ruler32k_formal_v1/BASE_RULER_FINAL_AUTHORITY.json",
+    "export": "results/base/BASE_RULER_FINAL_AUTHORITY.json",
+    "original_sha256": "b7def3e9f3995d988fc859a6355771d1f6082970ba712af957b6928686652241",
+    "transformed": true
+  },
+  {
+    "source": "runs/llama31_8b_ruler32k_fixed8_4k_formal_v1/AGGREGATE.json",
+    "export": "results/fixed8_v1/AGGREGATE.json",
+    "original_sha256": "05cb1114707b35569221610f7a668a35d9f8b94a84101f4eb862f32ca194da77",
+    "transformed": true
+  },
+  {
+    "source": "runs/llama31_8b_ruler32k_fixed8_4k_formal_v1/FIXED8_FINAL_AUTHORITY.json",
+    "export": "results/fixed8_v1/FIXED8_FINAL_AUTHORITY.json",
+    "original_sha256": "eb3d75589c12fb39acc533b09fb8521e52af9e6b0974eced2a24a5e4668c3af5",
+    "transformed": true
+  },
+  {
+    "source": "runs/llama31_8b_ruler32k_fixed8_4k_formal_v1/PHASE_STATUS.json",
+    "export": "results/fixed8_v1/PHASE_STATUS.json",
+    "original_sha256": "2d1072cd992adf4ae903ed44eed196c62b86c9c7063fea22fdc8ff7e96c6625e",
+    "transformed": false
+  },
+  {
+    "source": "runs/llama31_8b_ruler32k_fixed8_4k_executor_v2/AGGREGATE.json",
+    "export": "results/fixed8_v2/AGGREGATE.json",
+    "original_sha256": "463852280aebc5a22fdb93a51e6864218d24ba677a746854dde75a4dcb3bc824",
+    "transformed": true
+  },
+  {
+    "source": "runs/llama31_8b_ruler32k_fixed8_4k_executor_v2/FIXED8_FINAL_AUTHORITY.json",
+    "export": "results/fixed8_v2/FIXED8_FINAL_AUTHORITY.json",
+    "original_sha256": "46ce168d9f0507d80e527456265247c95351a434bc37382213e0eab5bdf5139e",
+    "transformed": true
+  },
+  {
+    "source": "runs/llama31_8b_ruler32k_fixed8_4k_executor_v2/LAUNCH_VALIDATION.json",
+    "export": "results/fixed8_v2/LAUNCH_VALIDATION.json",
+    "original_sha256": "ceda0e3be617cce9eb14a5466dc2042028d7a190671486123eaf3199fdc83dc2",
+    "transformed": false
+  },
+  {
+    "source": "runs/llama31_8b_ruler32k_fixed8_4k_executor_v2/PHASE_STATUS.json",
+    "export": "results/fixed8_v2/PHASE_STATUS.json",
+    "original_sha256": "a90a8476ef2251d9fd542fe0a27cce221f098a0c6940f6cf345b5eb06166e998",
+    "transformed": false
+  },
+  {
+    "source": "runs/llama31_dynamic_v2_no_cwe_v1/AGGREGATE.json",
+    "export": "results/dynamic_v2_no_cwe/AGGREGATE.json",
+    "original_sha256": "31f2f71884b05bae084aa442985a6478cae50f33411e1b7c507a2ed63a4c9b8e",
+    "transformed": true
+  },
+  {
+    "source": "runs/llama31_dynamic_v2_no_cwe_v1/LAUNCH_VALIDATION.json",
+    "export": "results/dynamic_v2_no_cwe/LAUNCH_VALIDATION.json",
+    "original_sha256": "285a382a05d2f9ebe97c72f855af84f60bff6af9551c3c9908601063f13d8e96",
+    "transformed": false
+  },
+  {
+    "source": "runs/llama31_dynamic_v2_no_cwe_v1/PHASE_STATUS.json",
+    "export": "results/dynamic_v2_no_cwe/PHASE_STATUS.json",
+    "original_sha256": "2b41a3cef1886dce5eb4cfca56e12df4a52d27e991ce5beeeb636f5e47e301b4",
+    "transformed": false
+  },
+  {
+    "source": "runs/llama31_dynamic_v2_no_cwe_v1/DYNAMIC_FINAL_AUTHORITY.json",
+    "export": "results/dynamic_v2_no_cwe/DYNAMIC_FINAL_AUTHORITY.json",
+    "original_sha256": "3bffc9c3ebaa11d74be7d26d996f82bcb6a07c6b4a3e120e23ce0f5468f9507c",
+    "transformed": true
+  },
+  {
+    "source": "models/llama31_8b_stage1_500m_32k_final_v1/STAGE1_FINAL_AUTHORITY.json",
+    "export": "provenance/llama31_8b_stage1_500m_32k_final_v1/STAGE1_FINAL_AUTHORITY.json",
+    "original_sha256": "0bd21b11358c3ffa9b88bf19499ef05b53dfb7a26c9adcb23e525f112343db75",
+    "transformed": true
+  },
+  {
+    "source": "models/llama31_8b_stage2_15m_32k_gpu01234_final_v3/STAGE2_FINAL_AUTHORITY.json",
+    "export": "provenance/llama31_8b_stage2_15m_32k_gpu01234_final_v3/STAGE2_FINAL_AUTHORITY.json",
+    "original_sha256": "e14ef10ff41d5de2fcdbf5e9137e7d88fb7980836ffb25722897715252d66b48",
+    "transformed": true
+  },
+  {
+    "source": "runs/llama31_8b_stage1_stage2_pipeline_formal_v1/PIPELINE_STATE.json",
+    "export": "provenance/training/PIPELINE_STATE.json",
+    "original_sha256": "7636270742df580d6bb4e50b3772a89b45b92ae98a91b10f90ae75f8183fd4ee",
+    "transformed": false
+  },
+  {
+    "source": "runs/llama31_8b_stage1_stage2_pipeline_formal_v1/PIPELINE_HEARTBEAT.json",
+    "export": "provenance/training/PIPELINE_HEARTBEAT.json",
+    "original_sha256": "04c32ea48bee4cd82dc83caef954803e46133f9c01d83378c9d749cea3b24c95",
+    "transformed": true
+  },
+  {
+    "source": "shared/benchmarks/ruler_32k_standard_13task500_v1/authority/RULER_32K_AUTHORITY.json",
+    "export": "provenance/benchmark/RULER_32K_AUTHORITY.json",
+    "original_sha256": "b62966b2754fa0d1cfef2c9aa3cef8d4b2bbae2a664495eb733c2ed5e5a4bebd",
+    "transformed": true
+  },
+  {
+    "source": "shared/benchmarks/ruler_32k_standard_13task500_v1/authority/RULER_32K_GENERATION_CONFIG.json",
+    "export": "provenance/benchmark/RULER_32K_GENERATION_CONFIG.json",
+    "original_sha256": "af7230888101dd8700437cf72f029c4dd6f1f2b613cf52e4aad23df1c03c7e4a",
+    "transformed": true
+  },
+  {
+    "source": "audits/llama_reference_executor_v2_gpu_20260916/results_v2/llama/GPU_ACCEPTANCE.json",
+    "export": "validation/GPU_ACCEPTANCE.json",
+    "original_sha256": "83b74774908fd7973ecc9c0803541802b35fa24cce3917749a9751a039116e5a",
+    "transformed": false
+  }
+]

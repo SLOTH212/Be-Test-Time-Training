@@ -1,0 +1,45 @@
+{
+  "K_C": "Control prefix keys AND values for all attention layers",
+  "K_N": "Native donor prefix keys AND values for all attention layers",
+  "P0": "inject all configured TTT weights, materializing all states; not natural Control occupancy",
+  "P1": "inject native full-sequence used-layer union; other layers use standard non-TTT path",
+  "W_N": "all configured native effective local boundary weights; unused layers retain checkpoint values",
+  "cells": {
+    "F00": [
+      "W_N",
+      "K_C",
+      "P0"
+    ],
+    "F01": [
+      "W_N",
+      "K_C",
+      "P1"
+    ],
+    "F10": [
+      "W_N",
+      "K_N",
+      "P0"
+    ],
+    "F11": [
+      "W_N",
+      "K_N",
+      "P1"
+    ]
+  },
+  "closure_L6": "AND L1,L2,L3,L4,L5; L5 decoded prediction hash equality",
+  "downstream_recomputation": true,
+  "explicit_rng_reset": false,
+  "generation_update_count": 0,
+  "historical_closure_replay_basis": "retained trace comparisons, hashes, branch/source-state records",
+  "prefix_positions": "[0, (boundary-1)*chunk_size)",
+  "prompt_full_replay": true,
+  "raw_tensor_replay_available": false,
+  "schema": "KP_FACTORIAL_CONTRACT_V1",
+  "sources": [
+    "provenance/original/kp/dependencies/closure_core.py",
+    "provenance/original/kp/dependencies/factorial_core.py",
+    "provenance/original/kp/scripts/kp_worker.py"
+  ],
+  "structural_and_reward_replays_separate": true,
+  "trace_scope_caveat": "Only keys retained by native Recorder participate; empty groups use all([])."
+}

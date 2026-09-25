@@ -1,0 +1,357 @@
+{
+  "common_scientific_logic_change": "Only positive configurable chunk-size validation in new ntp_core; all state/update arithmetic byte-identical. Frozen Qwen copies unchanged.",
+  "files": [
+    {
+      "classification": "DOCUMENTATION",
+      "path": "README.md"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "adapters/__init__.py"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "adapters/inference.py"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "adapters/model_family.py"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "adapters/pipeline.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "audits/PREPACKAGE_STATUS.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "audits/QWEN_REGRESSION_GUARD.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "audits/TEST_ISSUES_RESOLVED.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "audits/level0.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "audits/model_availability.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "audits/off_parity.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "audits/off_parity.log"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "audits/port_tests.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "audits/port_tests.log"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "audits/qwen_ntp_cpu.log"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "audits/qwen_static.log"
+    },
+    {
+      "classification": "CONFIG",
+      "path": "configs/llama31_8b_ruler32k_inference_template.yaml"
+    },
+    {
+      "classification": "CONFIG",
+      "path": "configs/llama31_8b_stage1_32k_template.yaml"
+    },
+    {
+      "classification": "CONFIG",
+      "path": "configs/llama31_8b_stage2_32k_template.yaml"
+    },
+    {
+      "classification": "DOCUMENTATION",
+      "path": "inference/README.md"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "provenance/COMMON_RUNTIME_REFERENCE.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "provenance/ENVIRONMENT.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "provenance/INPLACE_TTT_LLAMA_REFERENCE.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "provenance/INPUT_AUTHORITY_FREEZE.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "provenance/LLAMA_NTP_PORT_AUTHORITY.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "provenance/NTP_SCIENTIFIC_CONTRACT.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "provenance/QWEN_NTP_SOURCE_AUTHORITY.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "provenance/SCIENTIFIC_SEMANTICS_PARITY.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "provenance/derive_sources.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "provenance/finalize.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "provenance/package_release.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/inference_runtime/formal_dynamic_runner.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/inference_runtime/run_fixed.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/inference_runtime/runtime.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/inplace_ttt/LICENSE"
+    },
+    {
+      "classification": "DOCUMENTATION",
+      "path": "reference/inplace_ttt/README.md"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/inplace_ttt/hf_models/hf_llama/__init__.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/inplace_ttt/hf_models/hf_llama/configuration_llama.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/inplace_ttt/hf_models/hf_llama/modeling_llama.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/inplace_ttt/inference_model/hf_llama3/__init__.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/inplace_ttt/inference_model/hf_llama3/configuration_llama.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/inplace_ttt/inference_model/hf_llama3/modeling_llama.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/inplace_ttt/pyproject.toml"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/pipeline/pipeline_core.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/pipeline/train_worker.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/configs/formal/gated_ntp_stage1_100m.yaml"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/configs/formal/gated_ntp_stage2_qa10m.yaml"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/hf_models/__init__.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/hf_models/hf_qwen3/__init__.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/hf_models/hf_qwen3/configuration_qwen3.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/hf_models/hf_qwen3/modeling_qwen3.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/hf_models/hf_qwen3/ttt_state_core.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/inference_model/__init__.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/inference_model/hf_qwen3/__init__.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/inference_model/hf_qwen3/configuration_qwen3.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/inference_model/hf_qwen3/modeling_qwen3.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/pyproject.toml"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/tests_gated_ntp_cpu.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/tests_static_ttt_test_ttt_state_core.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/tools/cloud/formal_train_gated_ntp.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/qwen_ntp/tools/cloud/validate_record_vs_gated_ntp.py"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "reference/stage2/answer_context_fused_loss.py"
+    },
+    {
+      "classification": "DOCUMENTATION",
+      "path": "reports/PORT_REPORT.md"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "source/hf_models/__init__.py"
+    },
+    {
+      "classification": "LLAMA_MODEL_GLUE",
+      "path": "source/hf_models/hf_llama/__init__.py"
+    },
+    {
+      "classification": "LLAMA_MODEL_GLUE",
+      "path": "source/hf_models/hf_llama/configuration_llama.py"
+    },
+    {
+      "classification": "LLAMA_MODEL_GLUE",
+      "path": "source/hf_models/hf_llama/modeling_llama.py"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "source/hf_models/hf_qwen3/__init__.py"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "source/hf_models/hf_qwen3/configuration_qwen3.py"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "source/hf_models/hf_qwen3/modeling_qwen3.py"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "source/hf_models/hf_qwen3/ttt_state_core.py"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "source/inference_model/__init__.py"
+    },
+    {
+      "classification": "LLAMA_MODEL_GLUE",
+      "path": "source/inference_model/hf_llama/__init__.py"
+    },
+    {
+      "classification": "LLAMA_MODEL_GLUE",
+      "path": "source/inference_model/hf_llama/configuration_llama.py"
+    },
+    {
+      "classification": "LLAMA_MODEL_GLUE",
+      "path": "source/inference_model/hf_llama/modeling_llama.py"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "source/inference_model/hf_qwen3/__init__.py"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "source/inference_model/hf_qwen3/configuration_qwen3.py"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "source/inference_model/hf_qwen3/modeling_qwen3.py"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "source/ntp_core/__init__.py"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "source/ntp_core/ttt_state_core.py"
+    },
+    {
+      "classification": "SHARED_GENERIC_ADAPTER",
+      "path": "source/ntp_core/validation.py"
+    },
+    {
+      "classification": "TEST",
+      "path": "tests/run_tests.py"
+    },
+    {
+      "classification": "TEST",
+      "path": "tests/test_level0.py"
+    },
+    {
+      "classification": "TEST",
+      "path": "tests/test_off_parity.py"
+    },
+    {
+      "classification": "TEST",
+      "path": "tests/test_port.py"
+    },
+    {
+      "classification": "DOCUMENTATION",
+      "path": "training/README.md"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "provenance/FILE_CLASSIFICATION.json"
+    },
+    {
+      "classification": "PROVENANCE",
+      "path": "provenance/RELEASE_FILE_MANIFEST.json"
+    }
+  ]
+}

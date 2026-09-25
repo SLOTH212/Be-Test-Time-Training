@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "time": 1789481746.2481854,
+  "config_sha256": "17553969be283efc2814f94a037d85ae2b95647e89eec40d1820336621081112",
+  "smoke_samples": 13,
+  "smoke_status": {
+    "status": "COMPLETE",
+    "exit_codes": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "ended": 1789481712.1291926,
+    "config_sha256": "17553969be283efc2814f94a037d85ae2b95647e89eec40d1820336621081112",
+    "smoke": true
+  },
+  "smoke_weight_integrity": [
+    {
+      "status": "PASS",
+      "base_unchanged": true,
+      "samples": 4
+    },
+    {
+      "status": "PASS",
+      "base_unchanged": true,
+      "samples": 3
+    },
+    {
+      "status": "PASS",
+      "base_unchanged": true,
+      "samples": 3
+    },
+    {
+      "status": "PASS",
+      "base_unchanged": true,
+      "samples": 3
+    }
+  ],
+  "smoke_mean_seconds": 11.02421103990995,
+  "smoke_peak_allocated_bytes": 24213322752,
+  "dynamic_status": "PAUSED_BY_USER"
+}

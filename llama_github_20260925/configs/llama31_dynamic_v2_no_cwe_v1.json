@@ -1,0 +1,77 @@
+{
+  "schema": "LLAMA31_DYNAMIC_LB_FORMAL_V1",
+  "actions": [
+    "OFF",
+    "L0",
+    "L6",
+    "L12",
+    "L18",
+    "L24",
+    "L30",
+    "ALL"
+  ],
+  "layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "chunk_size": 4096,
+  "context_length": 32768,
+  "beam": 4,
+  "sweeps": 1,
+  "position_order": "forward",
+  "downstream_recomputation": true,
+  "stored_delta_stitching": false,
+  "excluded_tasks": [
+    "ruler_cwe_16k"
+  ],
+  "task_policy": "12_TASKS_EXCLUDING_CWE",
+  "candidate_count": 570,
+  "cwe_candidates": 0,
+  "population": 6000,
+  "skipped_ceiling": 5430,
+  "physical_gpu_allowlist": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "workers": 4,
+  "fixed_authority": "/path/to/ttt/runs/llama31_8b_ruler32k_fixed8_4k_executor_v2/FIXED8_FINAL_AUTHORITY.json",
+  "fixed_authority_sha256": "46ce168d9f0507d80e527456265247c95351a434bc37382213e0eab5bdf5139e",
+  "fixed_config_sha256": "9dd3e374770d8931dc070a91100bb2bc33b230943723f2099d87135cd7d1b217",
+  "parent_stage2_sha256": "e14ef10ff41d5de2fcdbf5e9137e7d88fb7980836ffb25722897715252d66b48",
+  "model_sha256": "b5a9be7a795bd6940ccc8fe296ab6f636ebd5d89f3c8454f61ef48d630070c7f",
+  "cohort": "/path/to/ttt/src/llama31_dynamic_v2_no_cwe_v1/COHORT.json",
+  "assignments": "/path/to/ttt/src/llama31_dynamic_v2_no_cwe_v1/ASSIGNMENTS.json",
+  "search_reference": "/path/to/ttt/vendor/frozen/ttt_inference_runtime_v1/dynamic/formal_dynamic_runner.py",
+  "smoke_root": "/path/to/ttt/work/llama31_dynamic_v2_no_cwe_smoke_v1",
+  "output_root": "/path/to/ttt/runs/llama31_dynamic_v2_no_cwe_v1",
+  "estimated_worker_hours": [
+    82.83741728862954,
+    83.12205325637427,
+    83.18661235582498,
+    82.82742470141086
+  ],
+  "execution_authorized": true,
+  "bindings": {
+    "/path/to/ttt/vendor/frozen/ttt_inference_runtime_v1/dynamic/formal_dynamic_runner.py": "293886005cb8f78c943f0affe3e3b383d6de238f4bc825a5aea28a6e6dc66f6e",
+    "/path/to/ttt/src/llama31_fixed8_formal_v1/runner.py": "c69e98b8e8c1da89d734ce574c72eb4cf62f96182aef620e76805c9fc8d96d9f",
+    "/path/to/ttt/src/reference_executor_v2_port/adapter.py": "85d7efa3c1ef4c66a8f679ad38e43d180dabc8c1b0e3b77eb37fe073f64a57e8",
+    "/path/to/ttt/src/reference_executor_v2_port/v2_functions.py": "cc1445acecc276106b2df7306363f066ea3ea87ff2fe6e1682606a7ea50975d4",
+    "/path/to/ttt/src/llama31_dynamic_v2_no_cwe_v1/dynamic.py": "9c769201cc78c9948a23d9dfb39a0d5052f619031631a49fa0852cd6a0743cc0",
+    "/path/to/ttt/src/llama31_dynamic_v2_no_cwe_v1/COHORT.json": "196b4acb992169163de4858fed23a4cbb6b5673728d512573f1c394ce537a1e1",
+    "/path/to/ttt/src/llama31_dynamic_v2_no_cwe_v1/ASSIGNMENTS.json": "142ec3ba9132c47b837f190f94f98af46de6a53016c46e22356cd313edea39fd",
+    "/path/to/ttt/runs/llama31_8b_ruler32k_fixed8_4k_executor_v2/FIXED8_FINAL_AUTHORITY.json": "46ce168d9f0507d80e527456265247c95351a434bc37382213e0eab5bdf5139e",
+    "/path/to/ttt/runs/llama31_8b_ruler32k_fixed8_4k_executor_v2/AGGREGATE.json": "463852280aebc5a22fdb93a51e6864218d24ba677a746854dde75a4dcb3bc824"
+  },
+  "executor_version": "V2",
+  "fixed_baseline_status": "READY",
+  "historical_config_reference": "/path/to/ttt/configs/llama31_8b_ruler32k_dynamic_lb_4k_formal_v1.json",
+  "historical_config_sha256": "9b5009d70f00223c7c01248eba4e509a10ed5453ffdcb13731e8b9f6a47277cb",
+  "v2_gpu_acceptance": "/path/to/ttt/audits/llama_reference_executor_v2_gpu_20260916/results_v2/llama/GPU_ACCEPTANCE.json",
+  "v2_gpu_acceptance_sha256": "83b74774908fd7973ecc9c0803541802b35fa24cce3917749a9751a039116e5a"
+}

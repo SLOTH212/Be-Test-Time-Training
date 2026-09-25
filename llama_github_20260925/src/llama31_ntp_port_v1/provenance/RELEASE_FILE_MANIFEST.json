@@ -1,0 +1,441 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "63a84fb9e733d73ea98f7b8772f76fedf6d5bda6139e8db4dd87a43554590193",
+      "size": 4774
+    },
+    {
+      "path": "adapters/__init__.py",
+      "sha256": "24ceb2eae6ce5846f9b931b4816f25f045d51e8c86a0f36d3e354a734bb18036",
+      "size": 58
+    },
+    {
+      "path": "adapters/inference.py",
+      "sha256": "734912b6912295a3baf64f39f45b5e0d4f23e6824a09a6fab2595f0af065d52f",
+      "size": 1466
+    },
+    {
+      "path": "adapters/model_family.py",
+      "sha256": "247b94100507e4bd2096abac09c1822591c7327efe5613bb0c76fa36e6e45d90",
+      "size": 3599
+    },
+    {
+      "path": "adapters/pipeline.py",
+      "sha256": "5999b7bb467be4a3c42684452bdea33be14ddccf740fdd707166bb2c8a5a8244",
+      "size": 933
+    },
+    {
+      "path": "audits/PREPACKAGE_STATUS.json",
+      "sha256": "1e1927cda11014c8c3099d87264a40769a10fed9bfeb41ccd5b1b76817b8d96a",
+      "size": 1769
+    },
+    {
+      "path": "audits/QWEN_REGRESSION_GUARD.json",
+      "sha256": "0c1e8856f6af2e01bb7e856f5b05a1ba13198559e432fcb216b9c680c248f002",
+      "size": 272
+    },
+    {
+      "path": "audits/TEST_ISSUES_RESOLVED.json",
+      "sha256": "7c34ca4f8d5cec5ed6e3463b1b35c4797434f5b10abfc8fcc6f2903f56d95cdb",
+      "size": 617
+    },
+    {
+      "path": "audits/level0.json",
+      "sha256": "79fab9fa5004bf4bd188d43713afb5d93b67908cc52c2d9c69c9561dce5d8e6d",
+      "size": 284
+    },
+    {
+      "path": "audits/model_availability.json",
+      "sha256": "66ec85406c855b9393f864264204ed2b4172b9fb025b0c7852d128489c62bc1c",
+      "size": 702
+    },
+    {
+      "path": "audits/off_parity.json",
+      "sha256": "77e4fa857a318f97d5c1c761601fe24233360ba17d14e7562a94549c14a862ab",
+      "size": 702
+    },
+    {
+      "path": "audits/off_parity.log",
+      "sha256": "62176068f3a1df011aed8f22e73fb7db72da2af67c6d1f0481666e1241de1359",
+      "size": 2235
+    },
+    {
+      "path": "audits/port_tests.json",
+      "sha256": "66b41eeedae45129c444a4d746d575b3899b50ddad015654fe82f68d1685af9e",
+      "size": 1791
+    },
+    {
+      "path": "audits/port_tests.log",
+      "sha256": "1a7fa255f78b9b45dc5d22ca4e50889a261460663bae493ad612225663855099",
+      "size": 1201
+    },
+    {
+      "path": "audits/qwen_ntp_cpu.log",
+      "sha256": "371a518cad8dac2b691ed09d9111ed0f2708a0eb1aa6a5c4fa11dac167b972ce",
+      "size": 1549
+    },
+    {
+      "path": "audits/qwen_static.log",
+      "sha256": "2019917fb481969423c4d6e35e6a6d74dbb14f253b6c208889aeb26cf3d34e77",
+      "size": 27
+    },
+    {
+      "path": "configs/llama31_8b_ruler32k_inference_template.yaml",
+      "sha256": "f13405b40a30ca6281939d1091563d8c405a11b849241540481941d1754cd904",
+      "size": 1091
+    },
+    {
+      "path": "configs/llama31_8b_stage1_32k_template.yaml",
+      "sha256": "76930c00cff9411bbebd0da07a961987c5d7bf3da43d861c357b4ee5daaadb9b",
+      "size": 1061
+    },
+    {
+      "path": "configs/llama31_8b_stage2_32k_template.yaml",
+      "sha256": "ddfd989ec34868ab052b90b48b3e0219fa57c7ce4444637663a7757d2d2a69db",
+      "size": 1337
+    },
+    {
+      "path": "inference/README.md",
+      "sha256": "c98fff7bf89edf6959b78b1db8496952746d5e52b09c5076a5751bb0dab528e1",
+      "size": 234
+    },
+    {
+      "path": "provenance/COMMON_RUNTIME_REFERENCE.json",
+      "sha256": "1a5df8b5fd78681404d3a03da3d52d12289014509b979d88114bc6bf6ec4e3f6",
+      "size": 1879
+    },
+    {
+      "path": "provenance/ENVIRONMENT.json",
+      "sha256": "6b2425c8718de7e7e83c251458efadec1da3ee0cf2eb4a05803d7b65df9b5c8d",
+      "size": 509
+    },
+    {
+      "path": "provenance/FILE_CLASSIFICATION.json",
+      "sha256": "26e12de0143f7273564f9412322636902429be5509ce5f620442058b408f8a87",
+      "size": 9802
+    },
+    {
+      "path": "provenance/INPLACE_TTT_LLAMA_REFERENCE.json",
+      "sha256": "59d22d94d783e2ec81c00f585e9f0ef129346ce17762381791652742f3808062",
+      "size": 3890
+    },
+    {
+      "path": "provenance/INPUT_AUTHORITY_FREEZE.json",
+      "sha256": "5a273ffdccf70a79537cfe76f09b55eab54238c2d1d6649ad9a345700938aed9",
+      "size": 78
+    },
+    {
+      "path": "provenance/LLAMA_NTP_PORT_AUTHORITY.json",
+      "sha256": "0cd9a30f4520d00c00065144ab901bfdcdc5446bbd434f1df1d3274fe0d69b8f",
+      "size": 18249
+    },
+    {
+      "path": "provenance/NTP_SCIENTIFIC_CONTRACT.json",
+      "sha256": "098e989f41a19421bfef37a6dcc584a9ba770d9b8bf70f8a2cabf5453c65a605",
+      "size": 2765
+    },
+    {
+      "path": "provenance/QWEN_NTP_SOURCE_AUTHORITY.json",
+      "sha256": "236840fca5ebcf1888aad3a26b1a4617bd5e44c04d554c223385e5e7f9b7a2f1",
+      "size": 6096
+    },
+    {
+      "path": "provenance/SCIENTIFIC_SEMANTICS_PARITY.json",
+      "sha256": "65d9179fdda0a8cf238b36578e160f6954d9fe22d2a0af0a3ebd0b363521acbb",
+      "size": 1675
+    },
+    {
+      "path": "provenance/derive_sources.py",
+      "sha256": "46ecf79c83f7ecc3fa2f0864d101ed51c4110c91543dc4473c5e4f9b74dfec5b",
+      "size": 6162
+    },
+    {
+      "path": "provenance/finalize.py",
+      "sha256": "98e8848ccb542c378cdfd03c02886348371ece158ece284aa6cb67a0eb0a302c",
+      "size": 8121
+    },
+    {
+      "path": "provenance/package_release.py",
+      "sha256": "ced011112cc8501399f11398c474c05166d2555fb873d3f24b188de6de1a2e23",
+      "size": 4723
+    },
+    {
+      "path": "reference/inference_runtime/formal_dynamic_runner.py",
+      "sha256": "293886005cb8f78c943f0affe3e3b383d6de238f4bc825a5aea28a6e6dc66f6e",
+      "size": 29656
+    },
+    {
+      "path": "reference/inference_runtime/run_fixed.py",
+      "sha256": "34184a8e34b09294ee3727992cc449c885341594ec29f462f5f4f8aa7f0254a5",
+      "size": 5524
+    },
+    {
+      "path": "reference/inference_runtime/runtime.py",
+      "sha256": "875b493e6868ed2c77528eca28b6204cd5c4a7e4147abd42de7576109bcf931c",
+      "size": 6776
+    },
+    {
+      "path": "reference/inplace_ttt/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size": 11358
+    },
+    {
+      "path": "reference/inplace_ttt/README.md",
+      "sha256": "dbf3c84af257e596c2a1d7b197922c522d7c86f42cea3d973653da2b8f83c2fa",
+      "size": 11602
+    },
+    {
+      "path": "reference/inplace_ttt/hf_models/hf_llama/__init__.py",
+      "sha256": "25a065fb0547b4a3528d7af0b9b8ae2564b969ad666ca86b7d387b74c1f7d167",
+      "size": 1094
+    },
+    {
+      "path": "reference/inplace_ttt/hf_models/hf_llama/configuration_llama.py",
+      "sha256": "0dd0b44decf7c922a5388f03f7a13d9074fb29fa086c74c2a7de7730b6b0a672",
+      "size": 12795
+    },
+    {
+      "path": "reference/inplace_ttt/hf_models/hf_llama/modeling_llama.py",
+      "sha256": "fb1e471283cc18fcd03fda5e2812c5e629c0c3ac1e592aa3b72783c42955be14",
+      "size": 28915
+    },
+    {
+      "path": "reference/inplace_ttt/inference_model/hf_llama3/__init__.py",
+      "sha256": "f084e24edbc2bb8cebe74f3ded368d40e1c6a848274f06a8077d09135567a1c9",
+      "size": 965
+    },
+    {
+      "path": "reference/inplace_ttt/inference_model/hf_llama3/configuration_llama.py",
+      "sha256": "13e03dfcc525f809b215a0effae2837c82da612203f40d645b449e740650f8e8",
+      "size": 12819
+    },
+    {
+      "path": "reference/inplace_ttt/inference_model/hf_llama3/modeling_llama.py",
+      "sha256": "78e95c6cc3a64d4fc629ca6a9abb135883d1c0a6ca5184a2a0b8283f06802d85",
+      "size": 28170
+    },
+    {
+      "path": "reference/inplace_ttt/pyproject.toml",
+      "sha256": "cb42e534814404c1a0377439fe55c1cbf2c1e1d172666d0f555116041d4a8b40",
+      "size": 6261
+    },
+    {
+      "path": "reference/pipeline/pipeline_core.py",
+      "sha256": "f2567cf8ba05c71c3ffc53bb979e487e9dd20828a1e660a8d4136a754047e67f",
+      "size": 7646
+    },
+    {
+      "path": "reference/pipeline/train_worker.py",
+      "sha256": "ee7113f75245fb610f0f80e192f48529db5b18aefa1d523d17089be353cce915",
+      "size": 15674
+    },
+    {
+      "path": "reference/qwen_ntp/configs/formal/gated_ntp_stage1_100m.yaml",
+      "sha256": "1163dfa291112f573ce9c031a02d1bdfe2652bfaaae2cc52df799226ed99bccc",
+      "size": 1265
+    },
+    {
+      "path": "reference/qwen_ntp/configs/formal/gated_ntp_stage2_qa10m.yaml",
+      "sha256": "d02290f05c2ced778caeefaf522704b1a9d6e92362479cedfef52df7f8a5e777",
+      "size": 738
+    },
+    {
+      "path": "reference/qwen_ntp/hf_models/__init__.py",
+      "sha256": "cc2c397dab164ab9e92165c834ec0c4a40263b8178abf586b6ce94eb08d9eda8",
+      "size": 672
+    },
+    {
+      "path": "reference/qwen_ntp/hf_models/hf_qwen3/__init__.py",
+      "sha256": "2ef4fb7b17e59ac651edb16934f6b1e1f210656dde83548861c581c27d684266",
+      "size": 1094
+    },
+    {
+      "path": "reference/qwen_ntp/hf_models/hf_qwen3/configuration_qwen3.py",
+      "sha256": "b3f309ec54094694cfc86a74b66d860193fc4e684b9cc3c0d1d2ed84ca2112fb",
+      "size": 15432
+    },
+    {
+      "path": "reference/qwen_ntp/hf_models/hf_qwen3/modeling_qwen3.py",
+      "sha256": "e949cef8b01394ff845041dca0c5d72d5e536139c471be5eea130db2a884d0e0",
+      "size": 31382
+    },
+    {
+      "path": "reference/qwen_ntp/hf_models/hf_qwen3/ttt_state_core.py",
+      "sha256": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e",
+      "size": 6229
+    },
+    {
+      "path": "reference/qwen_ntp/inference_model/__init__.py",
+      "sha256": "01fa3318f3f3fc02dd38565672940700f289d7cce790d6f05e04471944b4903f",
+      "size": 624
+    },
+    {
+      "path": "reference/qwen_ntp/inference_model/hf_qwen3/__init__.py",
+      "sha256": "a38d76873e560e9c034258408e1c67fdfc08f2be846da1937cea1434f6e10e80",
+      "size": 965
+    },
+    {
+      "path": "reference/qwen_ntp/inference_model/hf_qwen3/configuration_qwen3.py",
+      "sha256": "ebed0379af1075b97222dc4ffdaf0cca2de86311e0715a704c7e148b8365c444",
+      "size": 14535
+    },
+    {
+      "path": "reference/qwen_ntp/inference_model/hf_qwen3/modeling_qwen3.py",
+      "sha256": "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43",
+      "size": 31737
+    },
+    {
+      "path": "reference/qwen_ntp/pyproject.toml",
+      "sha256": "cb42e534814404c1a0377439fe55c1cbf2c1e1d172666d0f555116041d4a8b40",
+      "size": 6261
+    },
+    {
+      "path": "reference/qwen_ntp/tests_gated_ntp_cpu.py",
+      "sha256": "508964b30596be8445426355da2c8aeb8be954d46b9bc94aba7b214f2cda64c6",
+      "size": 9358
+    },
+    {
+      "path": "reference/qwen_ntp/tests_static_ttt_test_ttt_state_core.py",
+      "sha256": "24a8db84592471ebd628fcf9f5d1b397b5f80ba210acb5d6c6b086c1a834b575",
+      "size": 4377
+    },
+    {
+      "path": "reference/qwen_ntp/tools/cloud/formal_train_gated_ntp.py",
+      "sha256": "960465d4c0850345fb998e81b6bf19f2517ecea104aed2946a8b3e31bb416cf3",
+      "size": 30705
+    },
+    {
+      "path": "reference/qwen_ntp/tools/cloud/validate_record_vs_gated_ntp.py",
+      "sha256": "d0f26fc3930f1c3898257f181b654aa72649bbea40128482d9a2fb569e67753d",
+      "size": 16587
+    },
+    {
+      "path": "reference/stage2/answer_context_fused_loss.py",
+      "sha256": "25c686f51693fe881ff9fa1c7f6feaeb9a51fcd6f05a05554c900d8a895adf31",
+      "size": 1660
+    },
+    {
+      "path": "reports/PORT_REPORT.md",
+      "sha256": "2f5fefc7f5780654ac8194c4c61f74c13c501772035afbc5b78bd096571b2a8d",
+      "size": 3324
+    },
+    {
+      "path": "source/hf_models/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "source/hf_models/hf_llama/__init__.py",
+      "sha256": "770ba1a3ec706f2918e566531d23224a8ad88b92577f69afaa11069712c45104",
+      "size": 102
+    },
+    {
+      "path": "source/hf_models/hf_llama/configuration_llama.py",
+      "sha256": "1c119fe0eb96cda65879857542fd8551b281e4a0c01a6ddb83e1a620f59595a8",
+      "size": 12814
+    },
+    {
+      "path": "source/hf_models/hf_llama/modeling_llama.py",
+      "sha256": "e158573f40ad30336ef35ee958f0daec6f8f21af53add090f87125a64293a301",
+      "size": 30428
+    },
+    {
+      "path": "source/hf_models/hf_qwen3/__init__.py",
+      "sha256": "2ef4fb7b17e59ac651edb16934f6b1e1f210656dde83548861c581c27d684266",
+      "size": 1094
+    },
+    {
+      "path": "source/hf_models/hf_qwen3/configuration_qwen3.py",
+      "sha256": "b3f309ec54094694cfc86a74b66d860193fc4e684b9cc3c0d1d2ed84ca2112fb",
+      "size": 15432
+    },
+    {
+      "path": "source/hf_models/hf_qwen3/modeling_qwen3.py",
+      "sha256": "e949cef8b01394ff845041dca0c5d72d5e536139c471be5eea130db2a884d0e0",
+      "size": 31382
+    },
+    {
+      "path": "source/hf_models/hf_qwen3/ttt_state_core.py",
+      "sha256": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e",
+      "size": 6229
+    },
+    {
+      "path": "source/inference_model/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "source/inference_model/hf_llama/__init__.py",
+      "sha256": "770ba1a3ec706f2918e566531d23224a8ad88b92577f69afaa11069712c45104",
+      "size": 102
+    },
+    {
+      "path": "source/inference_model/hf_llama/configuration_llama.py",
+      "sha256": "6d6e929b46d044395acba1bee577c76b50feab536232a5ee30ff81d059a7f735",
+      "size": 12837
+    },
+    {
+      "path": "source/inference_model/hf_llama/modeling_llama.py",
+      "sha256": "501c063ebe6ba0bf03d1266a8aa1232fe24c963bc47a2bde25315e683bee83fc",
+      "size": 30096
+    },
+    {
+      "path": "source/inference_model/hf_qwen3/__init__.py",
+      "sha256": "a38d76873e560e9c034258408e1c67fdfc08f2be846da1937cea1434f6e10e80",
+      "size": 965
+    },
+    {
+      "path": "source/inference_model/hf_qwen3/configuration_qwen3.py",
+      "sha256": "ebed0379af1075b97222dc4ffdaf0cca2de86311e0715a704c7e148b8365c444",
+      "size": 14535
+    },
+    {
+      "path": "source/inference_model/hf_qwen3/modeling_qwen3.py",
+      "sha256": "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43",
+      "size": 31737
+    },
+    {
+      "path": "source/ntp_core/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "source/ntp_core/ttt_state_core.py",
+      "sha256": "77dd9e0ecbd2a7095fefbe1c3a9e49d7f802d26423011eeb2238371f9061375c",
+      "size": 6261
+    },
+    {
+      "path": "source/ntp_core/validation.py",
+      "sha256": "dd2050ee1180082ca33aca4862c3bac78ee2d072860b0e8b75e6c99131ff165f",
+      "size": 1564
+    },
+    {
+      "path": "tests/run_tests.py",
+      "sha256": "9aa52f2e68c6676c5aba6dd88328aabe39e64ae505a47c28185407b42470c284",
+      "size": 578
+    },
+    {
+      "path": "tests/test_level0.py",
+      "sha256": "88b76aa4df20dbaeeafec46e59fb45999d35f1cba6ea45b923c10f7668995f21",
+      "size": 3748
+    },
+    {
+      "path": "tests/test_off_parity.py",
+      "sha256": "b898ba3f74f2d3ff06414949339786672fe073289fbace743b2f159c491cfd28",
+      "size": 4481
+    },
+    {
+      "path": "tests/test_port.py",
+      "sha256": "77dea39dc5582389b8fa89c14c7c7f7276b2d2f811301eeedc07447d9709f0c9",
+      "size": 22449
+    },
+    {
+      "path": "training/README.md",
+      "sha256": "76387f5aeae9e56c62f0da8c031b432cadf6e38c3553fe4a3987e69203b92612",
+      "size": 247
+    }
+  ],
+  "package_metadata_external": true,
+  "self_excluded": true
+}

@@ -1,0 +1,174 @@
+{
+  "debug_base_head": "dfe16e97cd6fc37a42d350fd826fe1f9005b67f6",
+  "exact_patchset": "provenance/HIT_PATCHSET.diff",
+  "exact_patchset_sha256": "6373d47c2bbc470d97174fbe6e4c0e8a68b1fe112d01e0fecbfd40b553eef8d5",
+  "hit_patch_n": 7,
+  "non_patch_configuration_delta": {
+    "classification": "SCALEUP_DEBUG_CONFIGURATION",
+    "files": [
+      "code/lib/model_factory.py",
+      "code/lib/scaleup_debug_adapter.py",
+      "code/configs/hit_stage1_4b_32k_chunk4k_gpu23_debug_v1.yaml",
+      "code/tests/generate_hit_stage1_fixture.py"
+    ],
+    "formal_capacity_config_frozen": false,
+    "reason": "Requested 32K, chunk4K, six-layer synthetic validation configuration; generic configs remain unchanged."
+  },
+  "patches": [
+    {
+      "affected_files": [
+        "code/lib/fsdp2_runtime.py",
+        "code/workers/distributed_train_worker.py"
+      ],
+      "classification": "CORRECTNESS_CRITICAL",
+      "exact_diff": "provenance/HIT_PATCHSET.diff; function-scoped hunks named in functions_classes",
+      "functions_classes": [
+        "apply_fsdp2",
+        "_fsdp_hidden_forward",
+        "fused_sum"
+      ],
+      "patch_id": "HIT-P1",
+      "root_cause": "Inner-decoder calls bypassed root FSDP2 hooks, producing mixed Tensor and DTensor execution.",
+      "scientific_semantics_impact": "NONE; preserves the hidden-state objective.",
+      "symptom_before_fix": "32K hidden-only forward could not complete.",
+      "title": "FSDP2 hidden-forward handling",
+      "validation_evidence": [
+        "audits/hit_l3_l4_v1/L3_32K_FORWARD_REPORT.json",
+        "audits/hit_l3_l4_v1/L3_32K_TRAIN_STEP_REPORT.json"
+      ]
+    },
+    {
+      "affected_files": [
+        "code/workers/distributed_train_worker.py"
+      ],
+      "classification": "CORRECTNESS_CRITICAL",
+      "exact_diff": "provenance/HIT_PATCHSET.diff; function-scoped hunks named in functions_classes",
+      "functions_classes": [
+        "stage1_document_boundaries",
+        "fused_sum",
+        "validate_stage1",
+        "main"
+      ],
+      "patch_id": "HIT-P2",
+      "root_cause": "Declared Stage1 document boundaries were not propagated into gated NTP.",
+      "scientific_semantics_impact": "NONE; restores declared document isolation.",
+      "symptom_before_fix": "Packed records could cross document boundaries.",
+      "title": "Stage1 document-boundary handling",
+      "validation_evidence": [
+        "audits/hit_l3_l4_v1/L3_32K_FORWARD_REPORT.json",
+        "audits/hit_l3_l4_v1/L3_32K_TRAIN_STEP_REPORT.json"
+      ]
+    },
+    {
+      "affected_files": [
+        "code/lib/distributed_checkpoint.py",
+        "code/workers/distributed_train_worker.py"
+      ],
+      "classification": "RUNTIME_CORRECTNESS",
+      "exact_diff": "provenance/HIT_PATCHSET.diff; function-scoped hunks named in functions_classes",
+      "functions_classes": [
+        "preflight_checkpoint_metadata",
+        "main"
+      ],
+      "patch_id": "HIT-P3",
+      "root_cause": "Resume compatibility checks occurred after model construction.",
+      "scientific_semantics_impact": "NONE; fail-closed guard only.",
+      "symptom_before_fix": "Incompatible world, mesh, or batch metadata could reach GPU setup.",
+      "title": "DCP metadata preflight",
+      "validation_evidence": [
+        "audits/hit_l3_l4_v1/WORLD_SIZE_FAIL_CLOSED_REPORT.json"
+      ]
+    },
+    {
+      "affected_files": [
+        "code/lib/distributed_checkpoint.py"
+      ],
+      "classification": "CORRECTNESS_CRITICAL",
+      "exact_diff": "provenance/HIT_PATCHSET.diff; function-scoped hunks named in functions_classes",
+      "functions_classes": [
+        "DistributedCheckpointRotation.load"
+      ],
+      "patch_id": "HIT-P4",
+      "root_cause": "Strict DCP load rejected legitimately absent lazy optimizer state.",
+      "scientific_semantics_impact": "NONE; all model keys remain mandatory.",
+      "symptom_before_fix": "Resume failed on missing ttt_conv optimizer state.",
+      "title": "Lazy optimizer-state restore",
+      "validation_evidence": [
+        "audits/hit_l3_l4_v1/DCP_SAVE_REPORT.json",
+        "audits/hit_l3_l4_v1/L4_RESUME_PARITY.json"
+      ]
+    },
+    {
+      "affected_files": [
+        "code/lib/distributed_runtime.py"
+      ],
+      "classification": "RUNTIME_CORRECTNESS",
+      "exact_diff": "provenance/HIT_PATCHSET.diff; function-scoped hunks named in functions_classes",
+      "functions_classes": [
+        "initialize",
+        "barrier"
+      ],
+      "patch_id": "HIT-P5",
+      "root_cause": "Process group and barriers lacked explicit logical CUDA device binding.",
+      "scientific_semantics_impact": "NONE; transport binding only.",
+      "symptom_before_fix": "NCCL device inference could be wrong or hang.",
+      "title": "NCCL device binding",
+      "validation_evidence": [
+        "audits/hit_l3_l4_v1/L3_NCCL_REPORT.json"
+      ]
+    },
+    {
+      "affected_files": [
+        "code/lib/distributed_runtime.py",
+        "code/workers/distributed_train_worker.py"
+      ],
+      "classification": "RUNTIME_CORRECTNESS",
+      "exact_diff": "provenance/HIT_PATCHSET.diff; function-scoped hunks named in functions_classes",
+      "functions_classes": [
+        "initialize",
+        "barrier",
+        "main",
+        "shutdown"
+      ],
+      "patch_id": "HIT-P6",
+      "root_cause": "Collectives were unbounded and final lifecycle lacked explicit rank markers.",
+      "scientific_semantics_impact": "NONE; timeout and lifecycle only.",
+      "symptom_before_fix": "Final barrier or shutdown could hang without auditable rank completion.",
+      "title": "Distributed exit lifecycle",
+      "validation_evidence": [
+        "audits/hit_l3_l4_v1/FAILURE_PROPAGATION_REPORT.json",
+        "audits/hit_l3_l4_v1/COMPLETION_RECEIPT.json"
+      ]
+    },
+    {
+      "affected_files": [
+        "code/workers/distributed_train_worker.py",
+        "code/tests/hit_dcp_numeric_compare.py",
+        "code/tests/hit_dcp_state_compare.py",
+        "code/tests/hit_failure_propagation.py",
+        "code/tests/hit_forward_32k.py",
+        "code/tests/hit_model_build_audit.py",
+        "code/tests/hit_nccl_smoke.py"
+      ],
+      "classification": "AUDIT_ONLY",
+      "exact_diff": "provenance/HIT_PATCHSET.diff; function-scoped hunks named in functions_classes",
+      "functions_classes": [
+        "main audit instrumentation",
+        "HIT audit entrypoints"
+      ],
+      "patch_id": "HIT-P7",
+      "root_cause": "Per-rank loss, memory, L30 gradient and optimizer, parity, and lifecycle evidence was incomplete.",
+      "scientific_semantics_impact": "NONE; instrumentation and tests only.",
+      "symptom_before_fix": "Runtime claims were not independently machine-checkable.",
+      "title": "Runtime audit correctness",
+      "validation_evidence": [
+        "audits/hit_l3_l4_v1/TTT_LAYER_COVERAGE.json",
+        "audits/hit_l3_l4_v1/L3_32K_TRAIN_STEP_REPORT.json",
+        "audits/hit_l3_l4_v1/L4_RESUME_PARITY.json"
+      ]
+    }
+  ],
+  "schema": "hit-patch-manifest-v2",
+  "status": "PASS",
+  "validated_debug_tree_sha256": "982b3d4dd574f5d867edcb21cff2d3556c7ab5b46d97ad093e56377c60aeb02a"
+}

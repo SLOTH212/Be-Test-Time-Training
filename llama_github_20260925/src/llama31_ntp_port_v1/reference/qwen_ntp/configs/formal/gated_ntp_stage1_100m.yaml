@@ -1,0 +1,51 @@
+experiment_name: inplace_ttt_gated_ntp_perf_parity_v1_stage1
+model:
+  base: /root/autodl-tmp/models/Qwen3-1.7B-Base
+  context_length: 16384
+  ttt_layers: [0, 6, 12, 18, 24]
+  fast_weight: mlp.down_proj.weight
+  dtype: bfloat16
+target:
+  type: gated_next_position_hidden
+  projection: true
+  projection_bias: false
+  convolution_used_in_forward: false
+gate:
+  enabled: true
+  scope: per_layer_per_channel
+  shape: [2048]
+  initialization: zero
+pairing:
+  within_chunk_only: true
+  cross_chunk: false
+  cross_record: false
+  cross_document: false
+  document_metadata_required: true
+fast_weight:
+  backend: authoritative_document_chunk_loop
+  chunk_size: 1024
+  update_order: apply_then_update
+  prefix: exclusive
+  ttt_lr: 1.0
+  training_inner_clip: null
+  inference_delta_frobenius_clip: 1.0e-5
+optimizer:
+  type: AdamW
+  fused: true
+  betas: [0.9, 0.95]
+  eps: 1.0e-8
+  lr: 5.0e-6
+  weight_decay: 0.1
+  scheduler: constant
+  outer_grad_clip: 1.0
+data:
+  path: /root/autodl-tmp/data/continual_16k_100m_prolong_v3_canonical_v1/train.jsonl
+  sequential: true
+  document_boundaries_field: metadata.document_boundaries_qwen_json
+  batch_size: 1
+  gradient_accumulation: 1
+  optimizer_steps: 7054
+dynamic_components:
+  router: false
+  signals: false
+  calibration: false

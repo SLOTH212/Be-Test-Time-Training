@@ -1,0 +1,75 @@
+{
+  "DEBUG_ONLY": false,
+  "artifact_class": "STAGE1_FINAL",
+  "base_model": "/path/to/ttt/models/Llama-3.1-8B",
+  "config_sha256": "26c4ccdfd6674324a77df2a6d3b591fe19b720bb633bb44b3e5c601250410d43",
+  "cumulative_tokens": 478374652,
+  "data_authority_sha256": "c6828d7ea25c4d57bb9db4e690f7907a81746703b5c54b47651a5f9d3ea2cc59",
+  "files": {
+    "SHA256SUMS.txt": "f2a3030da269af74727058eb30eb71e3fa599b597566748068ee08b606e4083b",
+    "config.json": "7bc2fad6730b639ff64a24f5237363e2739dea0cdd9319e1e43ddb97c8fdb741",
+    "manifest.json": "bbfafb23be850465c9c782bfb897e4f9c711196b302d4dbfdfaf49d36ed9a145",
+    "model.pt": "5704e8a677c11716dbbfa07b5b848253f0981899887be847277b9c3502ad1a76",
+    "special_tokens_map.json": "462d91939dbc37178aa5a3eae7068d1990ccc92e09f288cc71f42cdf139d69cc",
+    "state_dict_audit.json": "f10ba7e8881b18b305eab455df179d4e85d673f89ba7a49f65d16c9129b35100",
+    "tokenizer.json": "76e48799b099d43365bd24ccd8ecc5aedac831718da780552f03b0a6eb4412aa",
+    "tokenizer_config.json": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a"
+  },
+  "final_dcp": {
+    "config_sha256": "26c4ccdfd6674324a77df2a6d3b591fe19b720bb633bb44b3e5c601250410d43",
+    "manifest_sha256": "67979f4c22c10e60d6fb572306150ebc228297a278f3d2dd02e916cf5dd3aa8a",
+    "progress": {
+      "accumulation_phase": 0,
+      "cumulative_tokens": 478374652,
+      "dataloader_state": {
+        "canonical_next_position": 17015
+      },
+      "global_valid_tokens": 76924,
+      "input_identity": {
+        "config_sha256": "26c4ccdfd6674324a77df2a6d3b591fe19b720bb633bb44b3e5c601250410d43",
+        "cross_data_authority_sha256": "c8ee10b8df71ee70839ebc35d0394a703e84899c32a8d1c56b8a26a207addd49",
+        "data_manifest_sha256": "2e50ec2d24c60536714a26c0a8bc98b6626a49e857256469b50c7bf4d6bdd47e",
+        "dataset_authority_sha256": "c6828d7ea25c4d57bb9db4e690f7907a81746703b5c54b47651a5f9d3ea2cc59",
+        "llama_port_sha256": "3f1ca6c6cee8f8601fd5bfca396a067fe1876cbba3fbabecb273e75e19fd54bc",
+        "model_identity_sha256": "4955fcb1e90d069e8968100827f626203b4f0e2c3e42279da4997f47d35fb0d8",
+        "worker_sha256": "99bfe6dc5775b68b25ad8bd5c8a98aa3123559ba48f013d40b568879d84221ba"
+      },
+      "local_valid_tokens": 29808,
+      "rank_assignment_state": {
+        "mapping": "canonical_modulo_with_accumulation_v1",
+        "rank": 0,
+        "world_size": 4
+      },
+      "record_cursor": 17015,
+      "stage": 1,
+      "update_step": 4254
+    },
+    "run_root": "/path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1",
+    "slot": "/path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1/checkpoints/slot_B"
+  },
+  "final_root": "/path/to/ttt/models/llama31_8b_stage1_500m_32k_final_v1",
+  "immutable": true,
+  "integrity": "PASS",
+  "model_revision": "d04e592bb4f6aa9cfee91e2e20afa771667e1d4b",
+  "optimizer_steps": 4254,
+  "port_sha256": "3f1ca6c6cee8f8601fd5bfca396a067fe1876cbba3fbabecb273e75e19fd54bc",
+  "record_cursor": 17015,
+  "source_authority_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+  "state_audit": {
+    "finite": true,
+    "keys": 309,
+    "parameter_count": 8131072000,
+    "renamed_keys": false,
+    "status": "PASS",
+    "ttt_keys": 18
+  },
+  "total_package_input_tokens": 483225589,
+  "total_package_records": 17200,
+  "train_input_tokens": 478374652,
+  "train_records": 17015,
+  "train_validation_separation_verified": true,
+  "update_step": 4254,
+  "validation_input_tokens": 4850937,
+  "validation_records": 185,
+  "validation_used_for_training": false
+}

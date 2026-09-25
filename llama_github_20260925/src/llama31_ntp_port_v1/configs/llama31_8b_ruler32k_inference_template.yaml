@@ -1,0 +1,48 @@
+{
+  "classification": "SCALEUP_CANDIDATE_CONFIG",
+  "FORMAL_LLAMA_CONFIG_FROZEN": false,
+  "model_family": "llama",
+  "model_path": "MODEL_PATH",
+  "dataset_path": "DATASET_PATH",
+  "run_root": "RUN_ROOT",
+  "context_length": 32768,
+  "chunk_size": 4096,
+  "ttt_layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "fast_weight": "mlp.down_proj.weight",
+  "dtype": "bfloat16",
+  "attn_implementation": "sdpa",
+  "gradient_checkpointing": {
+    "use_reentrant": false
+  },
+  "ttt_lr": 1.0,
+  "ttt_target": "hidden_states",
+  "ttt_target_type": "gated_next_position_hidden",
+  "ttt_proj": true,
+  "ttt_ntp_gate_init": "zero",
+  "training_inner_clip": null,
+  "inference_delta_frobenius_clip": 1e-05,
+  "document_metadata_required": true,
+  "stage": "ruler32k_inference",
+  "benchmark_root": "BENCHMARK_ROOT",
+  "ttt_chunk_size": 4096,
+  "actions": [
+    "OFF",
+    "L0",
+    "L6",
+    "L12",
+    "L18",
+    "L24",
+    "L30",
+    "ALL"
+  ],
+  "generation_ttt_updates": false,
+  "sample_reset": "fresh_KV_and_TTT_cache",
+  "dynamic": "UNCHANGED_COMMON_RUNTIME_STATIC_INTERFACE_ONLY"
+}

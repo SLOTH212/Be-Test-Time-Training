@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "time": 1789330836.4948213,
+  "config_sha256": "d54e4e0fd23ac4f40e436eeff67f3bc8798f16f713758a40ec404506ff38cafa",
+  "parent_authority_sha256": "e14ef10ff41d5de2fcdbf5e9137e7d88fb7980836ffb25722897715252d66b48",
+  "smoke_root": "/path/to/ttt/work/llama31_fixed8_stage2_final_smoke_v2",
+  "smoke_cells": 32,
+  "smoke_status_sha256": "a34bfbaee9e07f8f7b9a2b02b2d7b052c1fd29be30355a7e0519253a81d58f1f",
+  "max_allocated_gib": 24.88298511505127,
+  "max_reserved_gib": 25.396484375,
+  "all_four_strict_loads": true,
+  "full_source_tensor_equality_after_smoke": true,
+  "off_replay_after_all": true,
+  "formal_sample_count": 6500,
+  "formal_cells": 52000,
+  "cwe_included": true
+}

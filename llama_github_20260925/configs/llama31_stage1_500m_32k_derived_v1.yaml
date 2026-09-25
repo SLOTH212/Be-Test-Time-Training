@@ -1,0 +1,15 @@
+dataset_id: llama31_stage1_500m_32k_v1
+parent_dataset_id: PROLONG_DERIVED_1B_32K_QWEN3_STAGE1_V3_STREAMING
+parent_train_nominal: 990000000
+parent_validation_nominal: 10000000
+subset_ratio: 0.5
+target_parent_budget_train: 495000000
+target_parent_budget_validation: 5000000
+context_length: 32768
+selection: deterministic source-stratified parent-order nearest-complete-unit prefix
+tokenizer: /path/to/ttt/models/Llama-3.1-8B
+add_special_tokens: false
+chat_template: false
+workers: 16
+gpu_used: false
+

@@ -1,0 +1,118 @@
+{
+  "history": [
+    {
+      "previous": "PRECHECK",
+      "reason": "Prelaunch gates passed",
+      "source_sha256": "0d8e4e3938dc61a7c8c3d6f6f36009dd9f2b887f1f2dbab7c7361fb5b626391f",
+      "state": "STAGE1_READY",
+      "time": 1789120963.856052
+    },
+    {
+      "previous": "STAGE1_READY",
+      "reason": "Exactly-once trainer manager dispatched",
+      "source_sha256": "0d8e4e3938dc61a7c8c3d6f6f36009dd9f2b887f1f2dbab7c7361fb5b626391f",
+      "state": "STAGE1_RUNNING",
+      "time": 1789120964.006779
+    },
+    {
+      "previous": "STAGE1_RUNNING",
+      "reason": "Stage1 trainer failure: RuntimeError('TRAINER_NONZERO_EXIT')",
+      "source_sha256": "0d8e4e3938dc61a7c8c3d6f6f36009dd9f2b887f1f2dbab7c7361fb5b626391f",
+      "state": "BLOCKED",
+      "time": 1789141032.5684335
+    },
+    {
+      "previous": "BLOCKED",
+      "reason": "Explicit user-authorized resume from validated step500 with checkpoint I/O repair",
+      "source_sha256": "d250c6f0aefc157eec8064788b8c18ffe749ae56d6c78df55c07c706fc1ef13c",
+      "state": "STAGE1_RUNNING",
+      "time": 1789147638.3050578
+    },
+    {
+      "previous": "STAGE1_RUNNING",
+      "reason": "Stage1 trainer failure: RuntimeError('TRAINER_NONZERO_EXIT')",
+      "source_sha256": "d250c6f0aefc157eec8064788b8c18ffe749ae56d6c78df55c07c706fc1ef13c",
+      "state": "BLOCKED",
+      "time": 1789147666.4396844
+    },
+    {
+      "previous": "BLOCKED",
+      "reason": "Explicit user-authorized resume from validated step500 with checkpoint I/O repair",
+      "source_sha256": "e73331f77358213aea496e91a4c969fc283c5af075f580fda0cc304aaabd79ed",
+      "state": "STAGE1_RUNNING",
+      "time": 1789147941.5737402
+    },
+    {
+      "previous": "STAGE1_RUNNING",
+      "reason": "Exact counters and final DCP verified",
+      "source_sha256": "e73331f77358213aea496e91a4c969fc283c5af075f580fda0cc304aaabd79ed",
+      "state": "STAGE1_FINALIZING",
+      "time": 1789298381.3347232
+    },
+    {
+      "previous": "STAGE1_FINALIZING",
+      "reason": "PermissionError(13, 'Permission denied')",
+      "source_sha256": "e73331f77358213aea496e91a4c969fc283c5af075f580fda0cc304aaabd79ed",
+      "state": "BLOCKED",
+      "time": 1789298542.267716
+    },
+    {
+      "previous": "BLOCKED",
+      "reason": "Exact counters and final DCP verified",
+      "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+      "state": "STAGE1_FINALIZING",
+      "time": 1789299979.1395721
+    },
+    {
+      "previous": "STAGE1_FINALIZING",
+      "reason": "Atomic standalone FINAL verified",
+      "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+      "state": "STAGE1_FINAL_FROZEN",
+      "time": 1789300150.600409
+    },
+    {
+      "previous": "STAGE1_FINAL_FROZEN",
+      "reason": "Prelaunch gates passed",
+      "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+      "state": "STAGE2_READY",
+      "time": 1789300166.0553448
+    },
+    {
+      "previous": "STAGE2_READY",
+      "reason": "Exactly-once trainer manager dispatched",
+      "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+      "state": "STAGE2_RUNNING",
+      "time": 1789300181.6642919
+    },
+    {
+      "previous": "STAGE2_RUNNING",
+      "reason": "Stage2 trainer failure: RuntimeError('TRAINER_NONZERO_EXIT')",
+      "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+      "state": "BLOCKED",
+      "time": 1789300449.3575828
+    },
+    {
+      "previous": "BLOCKED",
+      "reason": "Prelaunch gates passed",
+      "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+      "state": "STAGE2_READY",
+      "time": 1789303254.6816394
+    },
+    {
+      "previous": "STAGE2_READY",
+      "reason": "Exactly-once trainer manager dispatched",
+      "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+      "state": "STAGE2_RUNNING",
+      "time": 1789303270.9554727
+    },
+    {
+      "previous": "STAGE2_RUNNING",
+      "reason": "Stage2 trainer failure: RuntimeError('TRAINER_NONZERO_EXIT')",
+      "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+      "state": "BLOCKED",
+      "time": 1789303460.7156804
+    }
+  ],
+  "state": "BLOCKED",
+  "updated": 1789303460.716085
+}

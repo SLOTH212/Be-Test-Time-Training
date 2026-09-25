@@ -1,0 +1,94 @@
+stage: stage1
+train_data: /path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/stage1_train_descriptor.json
+context_length: 32768
+micro_batch_size: 1
+gradient_accumulation: 1
+precision: bf16
+gradient_checkpointing: true
+seed: 42
+ttt_lr: 1.0
+ttt_chunk_size: 4096
+ttt_layers:
+- 0
+- 6
+- 12
+- 18
+- 24
+- 30
+optimizer: AdamW
+outer_lr: 5.0e-06
+betas:
+- 0.9
+- 0.95
+eps: 1.0e-08
+weight_decay: 0.1
+outer_grad_clip: 1.0
+scheduler: constant
+fast_weight: mlp.down_proj.weight
+loader:
+  num_workers: 0
+  prefetch: null
+  pin_memory: false
+  buffering: standard Python file buffering
+  order: frozen shard manifest order; canonical record order; no shuffle
+gradient_checkpointing_use_reentrant: false
+DEBUG_ONLY: false
+PAPER_RESULT: false
+FORMAL: true
+formal_training: true
+config_class: LLAMA31_8B_FORMAL_V1
+physical_gpu_allowlist: 0,1,2,3
+physical_gpus:
+- 0
+- 1
+- 2
+- 3
+world_size: 4
+global_batch_size: 4
+model_base: /path/to/ttt/models/Llama-3.1-8B
+record_cursor_final: 17015
+save_steps:
+- 25
+- 250
+- 500
+- 750
+- 1000
+- 1250
+- 1500
+- 1750
+- 2000
+- 2250
+- 2500
+- 2750
+- 3000
+- 3250
+- 3500
+- 3750
+- 4000
+- 4250
+- 4254
+debug_validation_records: 0
+expected_parameter_count: 8131072000
+expected_num_hidden_layers: 32
+input_identity:
+  worker_sha256: 99bfe6dc5775b68b25ad8bd5c8a98aa3123559ba48f013d40b568879d84221ba
+  dataset_authority_sha256: c6828d7ea25c4d57bb9db4e690f7907a81746703b5c54b47651a5f9d3ea2cc59
+  data_manifest_sha256: 2e50ec2d24c60536714a26c0a8bc98b6626a49e857256469b50c7bf4d6bdd47e
+  model_identity_sha256: 4955fcb1e90d069e8968100827f626203b4f0e2c3e42279da4997f47d35fb0d8
+  cross_data_authority_sha256: c8ee10b8df71ee70839ebc35d0394a703e84899c32a8d1c56b8a26a207addd49
+  llama_port_sha256: 3f1ca6c6cee8f8601fd5bfca396a067fe1876cbba3fbabecb273e75e19fd54bc
+train_tokens: 478374652
+expected_optimizer_steps: 4254
+dataset_file_bindings:
+  /path/to/ttt/datasets/llama31_stage1_500m_32k_v1/authority/DATASET_AUTHORITY.json: c6828d7ea25c4d57bb9db4e690f7907a81746703b5c54b47651a5f9d3ea2cc59
+  /path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/stage1_train_descriptor.json: 2e50ec2d24c60536714a26c0a8bc98b6626a49e857256469b50c7bf4d6bdd47e
+train_records: 17015
+train_input_tokens: 478374652
+validation_records: 185
+validation_input_tokens: 4850937
+total_package_records: 17200
+total_package_input_tokens: 483225589
+optimizer_steps: 4254
+validation_used_for_training: false
+train_validation_separation_verified: true
+validation_data: /path/to/ttt/datasets/llama31_stage1_500m_32k_v1/data/validation

@@ -1,0 +1,47 @@
+{
+  "DEBUG_ONLY": true,
+  "FORMAL_STAGE2_MODEL_USED": false,
+  "PAPER_RESULT": false,
+  "actions": [
+    "OFF",
+    "L0",
+    "L6",
+    "L12",
+    "L18",
+    "L24",
+    "L30",
+    "ALL"
+  ],
+  "apply_then_update": true,
+  "chunk_size": 4096,
+  "configured_ttt_layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "context_length": 32768,
+  "debug_dcp": "/path/to/ttt/work/llama31_8b_compat_smoke_v1/run/train/checkpoints/slot_A/dcp",
+  "delta_clip": 1e-05,
+  "downstream_recomputation": true,
+  "inference_authority": "/path/to/ttt/provenance/LLAMA31_8B_TRAIN_INFERENCE_SMOKE_V1.json",
+  "inference_authority_sha256": "84dab6b19a522e6f7c38e3732210c4d861bb0e231ed204482089b46490876557",
+  "llama_port": "/path/to/ttt/src/llama31_ntp_port_v1",
+  "llama_port_sha256": "3f1ca6c6cee8f8601fd5bfca396a067fe1876cbba3fbabecb273e75e19fd54bc",
+  "model_authority": "/path/to/ttt/src/llama31_mechanism_runtime_v1/provenance/model_identity.json",
+  "model_family": "llama",
+  "model_path": "/path/to/ttt/models/Llama-3.1-8B",
+  "model_revision": "d04e592bb4f6aa9cfee91e2e20afa771667e1d4b",
+  "output_root": "/path/to/ttt/work/llama31_mechanism_runtime_v1/run",
+  "per_sample_reset": true,
+  "physical_gpu_allowlist": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "schema": "LLAMA_MECHANISM_CONFIG_V1",
+  "ttt_lr": 1.0
+}

@@ -1,0 +1,69 @@
+--- /path/to/ttt/work/llama31_8b_compat_smoke_v1/worker.py
++++ /path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/worker_stage1.py
+@@ -177,7 +177,7 @@
+             observed_records = window[-1][0] + 1
+             owned = bool(rows)
+             position, row = rows[0] if owned else window[0]
+-            ids = tokenizer(row["text"], add_special_tokens=False, return_tensors="pt").input_ids.to(context.device)
++            ids = torch.tensor([row["input_ids"]], dtype=torch.long, device=context.device)
+             if ids.shape[1] != int(row["token_count"]): raise RuntimeError("VALIDATION_TOKEN_ALIGNMENT")
+             bounds = stage1_document_boundaries(row, ids.shape[1], ids)
+             value = fused_sum(model, ids, document_boundaries=bounds).detach().double()
+@@ -258,11 +258,9 @@
+         declared_identity = cfg.get("input_identity", {})
+         if declared_identity.get("worker_sha256") != hashlib.sha256(Path(__file__).read_bytes()).hexdigest():
+             raise RuntimeError("CURRENT_WORKER_IDENTITY_MISMATCH")
+-        dataset_root = Path(cfg["train_data"]).parent
+-        for key, relative in (("dataset_authority_sha256", "authority/SYNTHETIC_STAGE1_FIXTURE_AUTHORITY.json"),
+-                              ("data_manifest_sha256", "manifests/FINAL_DATA_FILE_HASHES.jsonl")):
+-            if hashlib.sha256((dataset_root / relative).read_bytes()).hexdigest() != declared_identity.get(key):
+-                raise RuntimeError("CURRENT_DATASET_IDENTITY_MISMATCH")
++        for bound_path,bound_hash in cfg['dataset_file_bindings'].items():
++            if hashlib.sha256(Path(bound_path).read_bytes()).hexdigest()!=bound_hash:
++                raise RuntimeError('CURRENT_DATASET_IDENTITY_MISMATCH')
+         if args.resume_from:
+             if not (Path(args.resume_from) / "latest.json").is_file():
+                 raise RuntimeError("EXPLICIT_RESUME_CHECKPOINT_MISSING")
+@@ -281,7 +279,7 @@
+         )
+         parameter_count = sum(p.numel() for p in model.parameters())
+         if parameter_count != 8131072000 or len(model.model.layers) != 32:
+-            raise RuntimeError("QWEN3_4B_TTT_MODEL_PARAMETER_IDENTITY")
++            raise RuntimeError("LLAMA31_8B_TTT_MODEL_PARAMETER_IDENTITY")
+         mesh = make_device_mesh(context.device.type, context.world_size)
+         inventory = apply_fsdp2(model, mesh=mesh)
+         if inventory.decoder_blocks != 32 or not all(hasattr(block, "set_requires_gradient_sync") for block in model.model.layers):
+@@ -344,7 +342,7 @@
+                 for _, row in rows:
+                     local_sample_ids.append(row.get("sample_id", row.get("id")))
+                     tokenization_started = time.perf_counter()
+-                    ids = tokenizer(row["text"], add_special_tokens=False, return_tensors="pt").input_ids.to(context.device)
++                    ids = torch.tensor([row["input_ids"]], dtype=torch.long, device=context.device)
+                     tokenizer_seconds += time.perf_counter() - tokenization_started
+                     declared = int(row["token_count"] if args.stage == 1 else row["n_tokens"])
+                     if ids.shape[1] != declared or declared > int(cfg["context_length"]):
+@@ -379,7 +377,7 @@
+                     # collectives via a real-record zero contribution, not a new
+                     # sample, token, or TTT state carried across documents.
+                     dummy = window[0][1]
+-                    dummy_ids = tokenizer(dummy["text"], add_special_tokens=False, return_tensors="pt").input_ids.to(context.device)
++                    dummy_ids = torch.tensor([dummy["input_ids"]], dtype=torch.long, device=context.device)
+                     dummy_bounds = stage1_document_boundaries(dummy, int(dummy["token_count"]), dummy_ids)
+                     loss = fused_sum(model, dummy_ids, document_boundaries=dummy_bounds) * 0.0
+                 loss.backward()
+@@ -387,7 +385,7 @@
+             if args.stage == 1:
+                 dist.all_reduce(global_numerator, op=dist.ReduceOp.SUM)
+             global_mean_loss = float(global_numerator.item() / global_context) if args.stage == 1 else None
+-            if args.stage == 1 and not math.isfinite(global_mean_loss):
++            if not math.isfinite(global_mean_loss):
+                 raise RuntimeError("NONFINITE_GLOBAL_LOSS")
+             l30_parameters = [
+                 (name, parameter) for name, parameter in model.named_parameters()
+@@ -546,4 +544,6 @@
+         print(f"RANK_{context.rank}_SHUTDOWN_PASS", flush=True)
+ 
+ 
++from data_adapter import windows, answer_ranges
++
+ if __name__ == "__main__": main()

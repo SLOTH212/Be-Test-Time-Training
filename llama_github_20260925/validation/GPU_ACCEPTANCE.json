@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "family": "Llama-3.1-8B",
+  "checkpoint_class": "STAGE2_FINAL",
+  "binding_sha256": "3ff142ac2438daef1f39542b6fac347bceb5af347ecf00224ecccfabbe982271",
+  "model_sha256": "b5a9be7a795bd6940ccc8fe296ab6f636ebd5d89f3c8454f61ef48d630070c7f",
+  "same_path_repeat": "PASS_EXACT",
+  "zero_write_schedule_invariance": "PASS_EXACT",
+  "future_action_prefix": "PASS_EXACT_HIDDEN_APPLICATIONS_AND_KV",
+  "apply_then_update": "PASS",
+  "nonzero_effective_updates": 8825,
+  "full_chunk_tail_generation_common_path": "PASS",
+  "generation_new_writes": 0,
+  "trajectory_reset": "PASS",
+  "base_parameters_unchanged": true,
+  "fixed_dynamic_bridge": "PASS_OFF_ALL",
+  "trajectories": 10,
+  "formal_dynamic_search_run": false,
+  "training_run": false,
+  "qwen_tested": false,
+  "formal_experiment_ready": false,
+  "note": "Small neutral-input GPU executor gate only; fresh V2 formal baselines/cohort are required before Dynamic search."
+}

@@ -1,0 +1,36 @@
+{
+  "source_authority_sha256": "b62966b2754fa0d1cfef2c9aa3cef8d4b2bbae2a664495eb733c2ed5e5a4bebd",
+  "tokenizer_files_sha256": {
+    "tokenizer.json": "76e48799b099d43365bd24ccd8ecc5aedac831718da780552f03b0a6eb4412aa",
+    "tokenizer_config.json": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a",
+    "special_tokens_map.json": "462d91939dbc37178aa5a3eae7068d1990ccc92e09f288cc71f42cdf139d69cc"
+  },
+  "tokenization": {
+    "add_special_tokens": true,
+    "bos_token_id": 128000,
+    "chat_template": false,
+    "truncation": false,
+    "fix_mistral_regex": false
+  },
+  "raw_content_unchanged": true,
+  "included_tasks": [
+    "ruler_cwe_16k",
+    "ruler_fwe_16k",
+    "ruler_niah_single_1_16k",
+    "ruler_niah_single_2_16k",
+    "ruler_niah_single_3_16k",
+    "ruler_niah_multikey_1_16k",
+    "ruler_niah_multikey_2_16k",
+    "ruler_niah_multikey_3_16k",
+    "ruler_niah_multivalue_16k",
+    "ruler_niah_multiquery_16k",
+    "ruler_qa_squad_16k",
+    "ruler_qa_hotpotqa_16k",
+    "ruler_vt_16k"
+  ],
+  "samples": 6500,
+  "cells": 52000,
+  "length_index_sha256": "2d97d6f46bd6356ecb3a63522aaac5a3593230283b94c8ad81877b61de98428a",
+  "max_prompt_plus_generation_with_bos": 32615,
+  "over_budget": 0
+}

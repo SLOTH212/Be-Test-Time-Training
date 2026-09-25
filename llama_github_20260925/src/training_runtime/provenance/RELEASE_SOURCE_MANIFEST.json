@@ -1,0 +1,463 @@
+{
+  "file_count": 65,
+  "files": [
+    {
+      "executable": true,
+      "path": "code/bin/auto_shutdown.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "b6bc3ab63c1f120b2fc567629d6b1e5cd34caca149a2e94b1c1bbe42c15d801b",
+      "size": 1397
+    },
+    {
+      "executable": true,
+      "path": "code/bin/cleanup_rotation_slots.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "a28934aa7c7c926f2fd42db351263ade156e816ccc427bf6151e90585faa351b",
+      "size": 353
+    },
+    {
+      "executable": true,
+      "path": "code/bin/generate_reports.py",
+      "provenance_class": "LAUNCHER",
+      "sha256": "473cbdd6effe729a80c823da57ec4e402000487d898d393930316ead69f26d4b",
+      "size": 6262
+    },
+    {
+      "executable": true,
+      "path": "code/bin/generate_worker_reports.py",
+      "provenance_class": "LAUNCHER",
+      "sha256": "5065b4a6da3889a5567eb0372dd9fe90b5327564dcd7d4943ab6ac499ceeb7e7",
+      "size": 14795
+    },
+    {
+      "executable": true,
+      "path": "code/bin/launch_stage1_multigpu.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "d35a8dc8d9e999102680cb0c28491d827bd92d27e4e011b93d374e38c39f7fd7",
+      "size": 302
+    },
+    {
+      "executable": true,
+      "path": "code/bin/launch_stage2_multigpu.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "f8166ba425193c5c662192d07c580b0ea33fb55d5fa726ed5b9b3196bb212e52",
+      "size": 360
+    },
+    {
+      "executable": true,
+      "path": "code/bin/pipelinectl.py",
+      "provenance_class": "LAUNCHER",
+      "sha256": "0eefc12e34c0d7e67fafe7bc51c4ec61288f6918480bcbdd1b331612457e86c5",
+      "size": 5900
+    },
+    {
+      "executable": true,
+      "path": "code/bin/preflight.py",
+      "provenance_class": "LAUNCHER",
+      "sha256": "3f4883b6feff93141eb4f487eda7603d9ac1762a5d6980f4c65ca23cd997ff5f",
+      "size": 3020
+    },
+    {
+      "executable": true,
+      "path": "code/bin/preflight.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "1c0e0ba5a7f5c4b79517a0d0e18911b53f93cc85f025655649f786b66dd8ffed",
+      "size": 218
+    },
+    {
+      "executable": true,
+      "path": "code/bin/promote_final_artifact.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "43845a7a80f2d66c0a2044d9e1b965ababe3788c504a1bef1a3aaa5ca77ee41d",
+      "size": 484
+    },
+    {
+      "executable": true,
+      "path": "code/bin/resume_pipeline.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "11231c22efbe20c0f26714842b050e510dc2f26c3c55e26491dee8b64ac17b3f",
+      "size": 178
+    },
+    {
+      "executable": true,
+      "path": "code/bin/run_eval.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "0dfeae10b04b0335a8f371d6e7dcf99e12ea7a07f4f9cf317f5a0779577ff22b",
+      "size": 756
+    },
+    {
+      "executable": true,
+      "path": "code/bin/run_eval_off_worker.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "1721b285c2403a352a174436d4a3cb3cd03ef5941802b8c16d36376995a4ceb7",
+      "size": 279
+    },
+    {
+      "executable": true,
+      "path": "code/bin/run_eval_on_worker.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "e16ee991009e44552acf326da83d21c8e7f8e4dcf9511a7cc23df5d3ac85bd8b",
+      "size": 278
+    },
+    {
+      "executable": true,
+      "path": "code/bin/run_pipeline.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "e355afdc2c831a42efe6456dd2d824a6a1213032ce9157c04f6b78f9cc19826a",
+      "size": 2164
+    },
+    {
+      "executable": true,
+      "path": "code/bin/run_stage1.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "f7ca67aa2670411aebc7b71829f88e7ff4bc922c02f7b2aa210f58d9f504f6f0",
+      "size": 308
+    },
+    {
+      "executable": true,
+      "path": "code/bin/run_stage1_worker.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "f61ebc703b0b4a3d2fc4547ef7411adac045eb9294dec068a58441d04ba7fe96",
+      "size": 279
+    },
+    {
+      "executable": true,
+      "path": "code/bin/run_stage2.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "42dc77c3e93e0d7c0744696fe50e83ed24b1457558e090167be60196f85e199b",
+      "size": 367
+    },
+    {
+      "executable": true,
+      "path": "code/bin/run_stage2_worker.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "74bcbfcc780c6304536ffdab186340e2f38db6d1cb4936936a6babbb9936390f",
+      "size": 279
+    },
+    {
+      "executable": true,
+      "path": "code/bin/status.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "b27e64986abcb021579931fc4af97a3aa725c6f34709e0749012000057457568",
+      "size": 289
+    },
+    {
+      "executable": true,
+      "path": "code/bin/validate_checkpoint.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "ada22958a60b2609590a552bb57f2ac875427d2c02a1ad5b765e2360df0f37c9",
+      "size": 249
+    },
+    {
+      "executable": true,
+      "path": "code/bin/validate_inference.sh",
+      "provenance_class": "LAUNCHER",
+      "sha256": "eb4ff04a1acc05a453bbfb2e90e4c74450332ee7212d324df016d4eb83961783",
+      "size": 239
+    },
+    {
+      "executable": false,
+      "path": "code/configs/eval_common_13k.yaml",
+      "provenance_class": "CONFIG",
+      "sha256": "039b46c092aa703c20200962de32be42a1af8b2d38e3b0a535bc8fca58195e54",
+      "size": 1259
+    },
+    {
+      "executable": false,
+      "path": "code/configs/eval_off_13k.yaml",
+      "provenance_class": "CONFIG",
+      "sha256": "7952d807cf5588ceda1fbdf0308212816184695d9ffbf3d92672df65ec57e68a",
+      "size": 268
+    },
+    {
+      "executable": false,
+      "path": "code/configs/eval_on_13k.yaml",
+      "provenance_class": "CONFIG",
+      "sha256": "ed30f291bbdfbc7249b991034ba3db08cfb6383d38dbcbf14d90a94b324fbbdf",
+      "size": 277
+    },
+    {
+      "executable": false,
+      "path": "code/configs/hit_stage1_4b_32k_chunk4k_gpu23_debug_v1.yaml",
+      "provenance_class": "CONFIG",
+      "sha256": "788770ba00d22fa5728dc2a61ff1ba7b7ee689f909c25a0fb94a5b5b4bf29cb4",
+      "size": 982
+    },
+    {
+      "executable": false,
+      "path": "code/configs/pipeline_runtime.yaml",
+      "provenance_class": "CONFIG",
+      "sha256": "bb8ac3b168ef82d7d4d1c7faba5490eb02869deb87cee329f6a10c169506c33c",
+      "size": 414
+    },
+    {
+      "executable": false,
+      "path": "code/configs/stage1_1b_32k_multigpu_v1.yaml",
+      "provenance_class": "CONFIG",
+      "sha256": "fc3b93736b999692bff27aafeeffa7d4d0fc6633e02583182588b1bcc6170fba",
+      "size": 823
+    },
+    {
+      "executable": false,
+      "path": "code/configs/stage1_300m.yaml",
+      "provenance_class": "CONFIG",
+      "sha256": "ab3a4e610d6c8415437f5f4e9e6a2efb6ff216e8069ea6cd05e4fd293edca399",
+      "size": 865
+    },
+    {
+      "executable": false,
+      "path": "code/configs/stage2_qa10m.yaml",
+      "provenance_class": "CONFIG",
+      "sha256": "57efb9cb964457acad8d13830c9a21fa9806a6fdf50c3408a234da54e528bd34",
+      "size": 1179
+    },
+    {
+      "executable": false,
+      "path": "code/configs/stage2_qa_multigpu_v1.yaml",
+      "provenance_class": "CONFIG",
+      "sha256": "285552df39f5d9bffad00904bd176d9482b17adcd9809419508df276b78113bc",
+      "size": 1036
+    },
+    {
+      "executable": false,
+      "path": "code/lib/__init__.py",
+      "provenance_class": "CORE_LIBRARY",
+      "sha256": "88b203425c502852c299826882ce11511661beed22c087f2a9d7ee645faaa800",
+      "size": 35
+    },
+    {
+      "executable": false,
+      "path": "code/lib/distributed_checkpoint.py",
+      "provenance_class": "CORE_LIBRARY",
+      "sha256": "a5977736b57f50f55d7fbae5cd207082e3b5bf69e8e0bd6bd56ba77940975675",
+      "size": 9375
+    },
+    {
+      "executable": false,
+      "path": "code/lib/distributed_grad.py",
+      "provenance_class": "CORE_LIBRARY",
+      "sha256": "329842fecb19d9a1705c7cdca63bbe822123da8a6acdbec127df7b89f9969f37",
+      "size": 1212
+    },
+    {
+      "executable": false,
+      "path": "code/lib/distributed_runtime.py",
+      "provenance_class": "CORE_LIBRARY",
+      "sha256": "6470d6128862de5b8c06a2bf97b99de69dd5c195760bf8073be2cf7ec71225e4",
+      "size": 2257
+    },
+    {
+      "executable": false,
+      "path": "code/lib/distributed_semantics.py",
+      "provenance_class": "CORE_LIBRARY",
+      "sha256": "76a78a90c69c6aa5a3ed9981130eaf670f6d209f260e051ae4b9bab46135f0a6",
+      "size": 3240
+    },
+    {
+      "executable": false,
+      "path": "code/lib/fsdp2_runtime.py",
+      "provenance_class": "CORE_LIBRARY",
+      "sha256": "e24b877da81fd7e340b013ed3d1f67b5b1c387b158534bc4d43047ea91aa256f",
+      "size": 1853
+    },
+    {
+      "executable": false,
+      "path": "code/lib/model_factory.py",
+      "provenance_class": "CORE_LIBRARY",
+      "sha256": "824b0e6f87433d6e281c0a1a7719413e2d403dd3e35735db2482e124f0f4de7b",
+      "size": 4669
+    },
+    {
+      "executable": false,
+      "path": "code/lib/pipeline_core.py",
+      "provenance_class": "CORE_LIBRARY",
+      "sha256": "8447d9a09f717dce4ba4433bec7eec7076d66f4baadfcd4d9139cb1512ff077d",
+      "size": 7775
+    },
+    {
+      "executable": false,
+      "path": "code/lib/real_checkpoint.py",
+      "provenance_class": "CORE_LIBRARY",
+      "sha256": "7eea84b49d9701106f1d289918e5a60309502b60208cd726ebcf77b6fceeb78a",
+      "size": 5030
+    },
+    {
+      "executable": false,
+      "path": "code/lib/scaleup_debug_adapter.py",
+      "provenance_class": "CORE_LIBRARY",
+      "sha256": "fb7eb5c0c7ede138f2c12c27c52dba790889d5d9272da3cc24377b73b33ddf68",
+      "size": 1431
+    },
+    {
+      "executable": true,
+      "path": "code/tests/cuda_tailfix_runtime.py",
+      "provenance_class": "TEST",
+      "sha256": "6a807d085b75ac11e21b2243a53b288ea9224e957169d2495600b7512d6dbcb6",
+      "size": 3273
+    },
+    {
+      "executable": false,
+      "path": "code/tests/generate_hit_stage1_fixture.py",
+      "provenance_class": "TEST",
+      "sha256": "95f234ffab8d34785a8a0471f1970ce0e09024b630f9886ad1065a810fbbdd87",
+      "size": 3229
+    },
+    {
+      "executable": false,
+      "path": "code/tests/hit_dcp_numeric_compare.py",
+      "provenance_class": "TEST",
+      "sha256": "ea1565b3ce0e829ce3547a18a60be49b4dea0776e4acd94cd0cf047b6be9f320",
+      "size": 7258
+    },
+    {
+      "executable": false,
+      "path": "code/tests/hit_dcp_state_compare.py",
+      "provenance_class": "TEST",
+      "sha256": "dd04416098c6bc222154c7d7f8906161f249fc0fed4c90f8c42aba5a3c3d9e96",
+      "size": 5751
+    },
+    {
+      "executable": false,
+      "path": "code/tests/hit_failure_propagation.py",
+      "provenance_class": "TEST",
+      "sha256": "2fe1d714ca8145778500504337acbaabf5b0bdd0472cbc80cd4fa137a3346480",
+      "size": 1026
+    },
+    {
+      "executable": false,
+      "path": "code/tests/hit_forward_32k.py",
+      "provenance_class": "TEST",
+      "sha256": "34272d61cda670acd09e47dc1aab072449b1c2439bc9071f45af744d30d70e5e",
+      "size": 6731
+    },
+    {
+      "executable": false,
+      "path": "code/tests/hit_model_build_audit.py",
+      "provenance_class": "TEST",
+      "sha256": "001670463bcd1d185a9fb2c1eaac8730921e6d8a20b60a28a3257dc8118cdc35",
+      "size": 7068
+    },
+    {
+      "executable": false,
+      "path": "code/tests/hit_nccl_smoke.py",
+      "provenance_class": "TEST",
+      "sha256": "588d854642fd4d892cb79c2590204433b6722d4c53d58bcaad10b2dc9807d0c1",
+      "size": 2257
+    },
+    {
+      "executable": true,
+      "path": "code/tests/real_resume_reference.py",
+      "provenance_class": "TEST",
+      "sha256": "6724246c7c715fadc2e8e92a5df8b2015dfcc0a105c8b6a3123214e2ff1c57d2",
+      "size": 3923
+    },
+    {
+      "executable": true,
+      "path": "code/tests/run_all.sh",
+      "provenance_class": "TEST",
+      "sha256": "0d1c87a8cb50e17d078710ed0d6a06e449aaff9101dcbca30a4013c11618b847",
+      "size": 250
+    },
+    {
+      "executable": true,
+      "path": "code/tests/run_tests.py",
+      "provenance_class": "TEST",
+      "sha256": "eed888ef7c739e05249ba6a8b249b905f25c2bda306e1fb166c99d93a8701d39",
+      "size": 6665
+    },
+    {
+      "executable": false,
+      "path": "code/tests/test_distributed_level0.py",
+      "provenance_class": "TEST",
+      "sha256": "c1d494df05f8598f8bfedbd7973cf3fa3393962013c05628767e9062020f39ba",
+      "size": 4874
+    },
+    {
+      "executable": false,
+      "path": "code/tests/test_distributed_level1.py",
+      "provenance_class": "TEST",
+      "sha256": "c34bf78e6a0b193f5d8ca7433cc6e3dee1fc652ae3c7a2048cc3201820adc0b3",
+      "size": 5627
+    },
+    {
+      "executable": false,
+      "path": "code/tests/test_distributed_level2.py",
+      "provenance_class": "TEST",
+      "sha256": "6d27d5dd9094e497820d0b3c072cbc32cdd347ddae94fe7684c615941f8f392c",
+      "size": 4900
+    },
+    {
+      "executable": false,
+      "path": "code/vendor/ntp_source_190580a/hf_models/__init__.py",
+      "provenance_class": "FROZEN_NTP_SOURCE",
+      "sha256": "cc2c397dab164ab9e92165c834ec0c4a40263b8178abf586b6ce94eb08d9eda8",
+      "size": 672
+    },
+    {
+      "executable": false,
+      "path": "code/vendor/ntp_source_190580a/hf_models/hf_qwen3/__init__.py",
+      "provenance_class": "FROZEN_NTP_SOURCE",
+      "sha256": "2ef4fb7b17e59ac651edb16934f6b1e1f210656dde83548861c581c27d684266",
+      "size": 1094
+    },
+    {
+      "executable": false,
+      "path": "code/vendor/ntp_source_190580a/hf_models/hf_qwen3/configuration_qwen3.py",
+      "provenance_class": "FROZEN_NTP_SOURCE",
+      "sha256": "b3f309ec54094694cfc86a74b66d860193fc4e684b9cc3c0d1d2ed84ca2112fb",
+      "size": 15432
+    },
+    {
+      "executable": false,
+      "path": "code/vendor/ntp_source_190580a/hf_models/hf_qwen3/modeling_qwen3.py",
+      "provenance_class": "FROZEN_NTP_SOURCE",
+      "sha256": "e949cef8b01394ff845041dca0c5d72d5e536139c471be5eea130db2a884d0e0",
+      "size": 31382
+    },
+    {
+      "executable": false,
+      "path": "code/vendor/ntp_source_190580a/hf_models/hf_qwen3/ttt_state_core.py",
+      "provenance_class": "FROZEN_NTP_SOURCE",
+      "sha256": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e",
+      "size": 6229
+    },
+    {
+      "executable": false,
+      "path": "code/vendor/ntp_source_190580a/tools/cloud/formal_train_gated_ntp.py",
+      "provenance_class": "FROZEN_NTP_SOURCE",
+      "sha256": "960465d4c0850345fb998e81b6bf19f2517ecea104aed2946a8b3e31bb416cf3",
+      "size": 30705
+    },
+    {
+      "executable": true,
+      "path": "code/workers/distributed_train_worker.py",
+      "provenance_class": "WORKER",
+      "sha256": "f25bfc134da295c0eebb4951c0e78051e328d3cb61072ac09b5e54a10fdbe3a4",
+      "size": 20422
+    },
+    {
+      "executable": true,
+      "path": "code/workers/eval_worker.py",
+      "provenance_class": "WORKER",
+      "sha256": "1f7a84eb693644695de40d19d15f305c9dc1bd0509b36ee5782ef9105054461c",
+      "size": 14929
+    },
+    {
+      "executable": true,
+      "path": "code/workers/train_worker.py",
+      "provenance_class": "WORKER",
+      "sha256": "27be8966b306a68bf2c27f156783e0ec8b5bf8ed77a09f7c8695f2e97abb3530",
+      "size": 16271
+    },
+    {
+      "executable": false,
+      "path": "configs/hit_4b_32k_chunk4k_l30_gpu23_validated_v1.yaml",
+      "provenance_class": "CONFIG",
+      "sha256": "788770ba00d22fa5728dc2a61ff1ba7b7ee689f909c25a0fb94a5b5b4bf29cb4",
+      "size": 982
+    }
+  ],
+  "release_id": "scaleup_multigpu_32k_hit_v2",
+  "schema": "release-source-manifest-v2",
+  "scope": "all release source, config, launcher, worker, test, and frozen vendor files; manifest self excluded"
+}

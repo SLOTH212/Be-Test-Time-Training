@@ -1,0 +1,131 @@
+--- /path/to/ttt/src/training_runtime/code/workers/distributed_stage2_train_worker_v1.py
++++ /path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/worker_stage2.py
+@@ -21,7 +21,7 @@
+ import torch.distributed as dist
+ from transformers import AutoTokenizer
+ 
+-ROOT = Path(__file__).resolve().parents[1]
++ROOT = Path('/path/to/ttt/src/training_runtime/code')
+ sys.path.insert(0, str(ROOT))
+ from lib.distributed_checkpoint import (DistributedCheckpointRotation, load_model_only,
+                                         preflight_checkpoint_metadata, save_model_only)
+@@ -118,7 +118,7 @@
+             if input_ids is None:
+                 raise RuntimeError("STAGE1_EOS_GAP_REQUIRES_TOKEN_VERIFICATION")
+             gap = input_ids.reshape(-1)[left[1]:right[0]]
+-            if gap.numel() != 1 or int(gap.item()) != 151643:
++            if gap.numel() != 1 or int(gap.item()) != 128001:
+                 raise RuntimeError("STAGE1_NON_EOS_DOCUMENT_GAP")
+     return bounds
+ 
+@@ -177,7 +177,7 @@
+             observed_records = window[-1][0] + 1
+             owned = bool(rows)
+             position, row = rows[0] if owned else window[0]
+-            ids = tokenizer(row["text"], add_special_tokens=False, return_tensors="pt").input_ids.to(context.device)
++            ids = torch.tensor([row["input_ids"]], dtype=torch.long, device=context.device)
+             if ids.shape[1] != int(row["token_count"]): raise RuntimeError("VALIDATION_TOKEN_ALIGNMENT")
+             bounds = stage1_document_boundaries(row, ids.shape[1], ids)
+             value = fused_sum(model, ids, document_boundaries=bounds).detach().double()
+@@ -218,9 +218,9 @@
+     parser.add_argument("--debug-start-record", type=int, default=0)
+     args = parser.parse_args(); cfg = load_yaml(args.config)
+     # Reject unauthorized visibility before initialize() can create contexts.
+-    if os.environ.get("CUDA_VISIBLE_DEVICES") != "2,3":
++    if os.environ.get("CUDA_VISIBLE_DEVICES") != "0,1,2,3":
+         raise RuntimeError("PREINIT_PHYSICAL_GPU_ALLOWLIST_VIOLATION")
+-    if int(os.environ.get("WORLD_SIZE", "0")) != 2 or int(os.environ.get("LOCAL_RANK", "-1")) not in (0, 1):
++    if int(os.environ.get("WORLD_SIZE", "0")) != 4 or int(os.environ.get("LOCAL_RANK", "-1")) not in (0, 1, 2, 3):
+         raise RuntimeError("PREINIT_TWO_RANK_GPU_CONTRACT")
+     for _path in [args.output_dir, args.resume_from, cfg.get("stage1_model_only_artifact")]:
+         if _path and not Path(_path).resolve().is_relative_to(_CACHE_ROOT):
+@@ -237,7 +237,7 @@
+             raise RuntimeError(
+                 f"WORLD_SIZE_MISMATCH expected={expected_world} actual={context.world_size}"
+             )
+-        allowlist = str(cfg.get("physical_gpu_allowlist", "2,3"))
++        allowlist = str(cfg.get("physical_gpu_allowlist", "0,1,2,3"))
+         if os.environ.get("CUDA_VISIBLE_DEVICES") != allowlist:
+             raise RuntimeError(
+                 f"PHYSICAL_GPU_ALLOWLIST_VIOLATION expected={allowlist} "
+@@ -264,15 +264,9 @@
+         declared_identity = cfg.get("input_identity", {})
+         if declared_identity.get("worker_sha256") != hashlib.sha256(Path(__file__).read_bytes()).hexdigest():
+             raise RuntimeError("CURRENT_WORKER_IDENTITY_MISMATCH")
+-        dataset_root = Path(cfg["train_data"]).parent if args.stage == 1 else Path(cfg["train_data"]).parent.parent
+-        dataset_checks = (("dataset_authority_sha256", "authority/DATASET_AUTHORITY_V3.json"),
+-                          ("data_manifest_sha256", "manifests/FINAL_DATA_FILE_HASHES.jsonl")) if args.stage == 1 else (
+-                          ("dataset_authority_sha256", "authority/STAGE2_DATASET_AUTHORITY.json"),
+-                          ("data_manifest_sha256", "manifests/FINAL_PACKED_RECORDS.jsonl"),
+-                          ("content_order_sha256", "manifests/FINAL_30M_QA_CONTENT_ORDER.jsonl"))
+-        for key, relative in dataset_checks:
+-            if hashlib.sha256((dataset_root / relative).read_bytes()).hexdigest() != declared_identity.get(key):
+-                raise RuntimeError("CURRENT_DATASET_IDENTITY_MISMATCH")
++        for bound_path,bound_hash in cfg['dataset_file_bindings'].items():
++            if hashlib.sha256(Path(bound_path).read_bytes()).hexdigest()!=bound_hash:
++                raise RuntimeError('CURRENT_DATASET_IDENTITY_MISMATCH')
+         if args.resume_from:
+             if not (Path(args.resume_from) / "latest.json").is_file():
+                 raise RuntimeError("EXPLICIT_RESUME_CHECKPOINT_MISSING")
+@@ -290,14 +284,14 @@
+             ttt_chunk=int(cfg["ttt_chunk_size"]),
+         )
+         parameter_count = sum(p.numel() for p in model.parameters())
+-        if parameter_count != 4061881856 or len(model.model.layers) != 36:
+-            raise RuntimeError("QWEN3_4B_TTT_MODEL_PARAMETER_IDENTITY")
++        if parameter_count != 8131072000 or len(model.model.layers) != 32:
++            raise RuntimeError("LLAMA31_8B_TTT_MODEL_PARAMETER_IDENTITY")
+         mesh = make_device_mesh(context.device.type, context.world_size)
+         inventory = apply_fsdp2(model, mesh=mesh)
+-        if inventory.decoder_blocks != 36 or not all(hasattr(block, "set_requires_gradient_sync") for block in model.model.layers):
++        if inventory.decoder_blocks != 32 or not all(hasattr(block, "set_requires_gradient_sync") for block in model.model.layers):
+             raise RuntimeError("FORMAL_FSDP2_OWNERSHIP")
+         if context.is_rank0:
+-            atomic_json(output / "model_build.json", {"parameter_count":parameter_count,"layers":36,
++            atomic_json(output / "model_build.json", {"parameter_count":parameter_count,"layers":32,
+                         "ttt_layers":cfg["ttt_layers"],"fsdp2_blocks":inventory.decoder_blocks})
+         optimizer = torch.optim.AdamW(model.parameters(), lr=float(cfg["outer_lr"]),
+             betas=tuple(cfg["betas"]), eps=float(cfg["eps"]), weight_decay=float(cfg["weight_decay"]),
+@@ -356,7 +350,7 @@
+                 for _, row in rows:
+                     local_sample_ids.append(row.get("sample_id", row.get("id")))
+                     tokenization_started = time.perf_counter()
+-                    ids = tokenizer(row["text"], add_special_tokens=False, return_tensors="pt").input_ids.to(context.device)
++                    ids = torch.tensor([row["input_ids"]], dtype=torch.long, device=context.device)
+                     tokenizer_seconds += time.perf_counter() - tokenization_started
+                     declared = int(row["token_count"] if args.stage == 1 else row["n_tokens"])
+                     if ids.shape[1] != declared or declared > int(cfg["context_length"]):
+@@ -392,7 +386,7 @@
+                     # collectives via a real-record zero contribution, not a new
+                     # sample, token, or TTT state carried across documents.
+                     dummy = window[0][1]
+-                    dummy_ids = tokenizer(dummy["text"], add_special_tokens=False, return_tensors="pt").input_ids.to(context.device)
++                    dummy_ids = torch.tensor([dummy["input_ids"]], dtype=torch.long, device=context.device)
+                     dummy_bounds = (stage1_document_boundaries(dummy, int(dummy["token_count"]), dummy_ids)
+                                     if args.stage == 1 else [(0, int(dummy["n_tokens"]))])
+                     if args.stage == 2:
+@@ -416,7 +410,7 @@
+             global_numerator = local_numerator.clone()
+             dist.all_reduce(global_numerator, op=dist.ReduceOp.SUM)
+             global_mean_loss = float(global_numerator.item() / global_context) if args.stage == 1 else float(global_numerator.item()/context.world_size)
+-            if args.stage == 1 and not math.isfinite(global_mean_loss):
++            if not math.isfinite(global_mean_loss):
+                 raise RuntimeError("NONFINITE_GLOBAL_LOSS")
+             l30_parameters = [
+                 (name, parameter) for name, parameter in model.named_parameters()
+@@ -501,7 +495,7 @@
+                 "rank": context.rank,
+                 "local_rank": context.local_rank,
+                 "logical_device": str(context.device),
+-                "physical_gpu": 2 + context.local_rank,
++                "physical_gpu": context.local_rank,
+                 "sample_ids": local_sample_ids,
+                 "boundary_trace": local_boundary_trace,
+                 "local_tokens": sum(int(row["token_count"] if args.stage == 1 else row["n_tokens"]) for pos,row in window if plan.owner(pos)[2] == context.rank),
+@@ -590,4 +584,6 @@
+         print(f"RANK_{context.rank}_SHUTDOWN_PASS", flush=True)
+ 
+ 
++from data_adapter import windows, answer_ranges
++
+ if __name__ == "__main__": main()

@@ -1,0 +1,376 @@
+{
+  "excluded_components_executed": [],
+  "matches": [
+    {
+      "line": 27,
+      "path": "execution.py",
+      "text": " from inference_model.hf_qwen3.modeling_qwen3 import TTTDynamicCache"
+    },
+    {
+      "line": 28,
+      "path": "execution.py",
+      "text": " from hf_models.hf_qwen3.ttt_state_core import TTTState,TTTStats,ttt_chunk_step,build_chunk_local_ntp_pairs"
+    },
+    {
+      "line": 32,
+      "path": "execution.py",
+      "text": " w=rt.source_functions('provenance/original/kp/scripts/kp_worker.py',['cmp','Recorder','prefix_hashes','first_divergence'],{},chunk=cfg['chunk_size'],integer_overrides={28:len(model.model.layers)})"
+    },
+    {
+      "line": 33,
+      "path": "execution.py",
+      "text": " # Recorder's final-norm layer label is diagnostic only; adapt the historical 28."
+    },
+    {
+      "line": 25,
+      "path": "runtime.py",
+      "text": " if c['model_family']!='qwen3':raise ValueError('MODEL_FAMILY_NOT_SUPPORTED')"
+    },
+    {
+      "line": 27,
+      "path": "runtime.py",
+      "text": " if c['classification']=='FORMAL_HISTORICAL_REFERENCE' and (layers!=[0,6,12,18,24] or c['chunk_size']!=1024 or c['context_length']!=16384):raise ValueError('HISTORICAL_CONFIG_MUTATION')"
+    },
+    {
+      "line": 7,
+      "path": "tests/level0.py",
+      "text": "R=rt.ROOT;L=[0,6,12,18,24];S=L+[30]"
+    },
+    {
+      "line": 50,
+      "path": "tests/level0.py",
+      "text": " cfg=rt.load_config(R/'configs/qwen3_1p7b_reverse_formal_reference.yaml');bad={**cfg,'actions':cfg['actions']+['L30']};rejected(lambda:rt.validate_config(bad));rejected(lambda:rt.actions([0,0]));rejected(lambda:rt.r2_winner([],L),ValueError)"
+    },
+    {
+      "line": 7,
+      "path": "tests/level1.py",
+      "text": "R=rt.ROOT;L=[0,6,12,18,24]"
+    },
+    {
+      "line": 32,
+      "path": "tests/level1.py",
+      "text": " from hf_models.hf_qwen3.ttt_state_core import TTTState,TTTStats,ttt_chunk_step,build_chunk_local_ntp_pairs"
+    },
+    {
+      "line": 12,
+      "path": "tests/test_portable_statistics.py",
+      "text": "  cfg=rt.load_config(R/f'configs/qwen3_1p7b_{file}_formal_reference.yaml');raw=rt.rows(R/f'tests/reference/{name}_scalar_results.jsonl')"
+    },
+    {
+      "line": 19,
+      "path": "tests/test_portable_statistics.py",
+      "text": " cfg=rt.load_config(R/'configs/qwen3_1p7b_selective_deletion_formal_reference.yaml');got=aggregate(rs,'deletion',cfg['statistics']);e=audit['deletion']['summary'];assert got['aggregate_explained_fraction']==e['AGGREGATE_EXPLAINED_FRACTION'] and got['explained_fraction_mean']==e['EXPLAINED_FRACTION_M"
+    },
+    {
+      "line": 20,
+      "path": "tests/test_portable_statistics.py",
+      "text": " rs=[{'sample_id':x['canonical_sample_id'],'task':x['task'],'parent_dynamic_score':x['Dynamic'],'intervention_score':x['R2'],'details':{'r2':{'off_score':x['OFF']}}} for x in rt.rows(R/'tests/reference/r2_scalar_results.jsonl')];cfg=rt.load_config(R/'configs/qwen3_1p7b_exact_r2_formal_reference.yaml"
+    },
+    {
+      "line": 25,
+      "path": "tests/test_portable_statistics.py",
+      "text": " cfg=rt.load_config(R/'configs/qwen3_1p7b_kp_factorial_formal_reference.yaml');got=aggregate(rs,'kp',cfg['statistics']);e=json.loads((R/'tests/reference/expected/kp/aggregates/KP_PRIMARY_FACTORIAL_ANALYSIS.json').read_text())"
+    },
+    {
+      "line": 12,
+      "path": "tests/replay_historical.py",
+      "text": "R=rt.ROOT; A=json.loads((R/'provenance/MECHANISM_SOURCE_AUTHORITY.json').read_text()); L=[0,6,12,18,24]"
+    },
+    {
+      "line": 16,
+      "path": "provenance/original/reset/screening/scripts/screen_state_reset.py",
+      "text": "MODEL = Path(\"/home/USER/ttt/models/qwen3_1p7b_stage2/model.safetensors\")"
+    },
+    {
+      "line": 46,
+      "path": "provenance/original/reset/screening/scripts/screen_state_reset.py",
+      "text": "ACTIONS = [\"OFF\", \"L0\", \"L6\", \"L12\", \"L18\", \"L24\", \"ALL\"]"
+    },
+    {
+      "line": 211,
+      "path": "provenance/original/reset/screening/scripts/screen_state_reset.py",
+      "text": "        {\"field\": \"early-steady definition\", \"status\": \"PROVEN_EXACT\", \"exact_rule\": \"first_switch_position/sequence_length <= 0.25 AND, in sequence[floor(N/2):], the deterministic modal action occupies >= 0.80; action tie-break order OFF,L0,L6,L12,L18,L24,ALL.\", \"evidence\": str(HIST_MORPH_SCRIPT), "
+    },
+    {
+      "line": 16,
+      "path": "provenance/original/reset/scripts/state_reset_worker.py",
+      "text": "LAYERS=[0,6,12,18,24]; ACTIONS=[\"OFF\",\"L0\",\"L6\",\"L12\",\"L18\",\"L24\",\"ALL\"]"
+    },
+    {
+      "line": 13,
+      "path": "provenance/original/reset/dependencies/instrumented_backend.py",
+      "text": "LAYERS = [0, 6, 12, 18, 24]"
+    },
+    {
+      "line": 16,
+      "path": "provenance/original/reset/dependencies/instrumented_backend.py",
+      "text": "    \"L24\": [24], \"ALL\": LAYERS,"
+    },
+    {
+      "line": 41,
+      "path": "provenance/original/reset/dependencies/instrumented_backend.py",
+      "text": "    from hf_models.hf_qwen3.ttt_state_core import TTTState, TTTStats, ttt_chunk_step"
+    },
+    {
+      "line": 16,
+      "path": "provenance/original/reset/dependencies/state_reset_worker.py",
+      "text": "LAYERS=[0,6,12,18,24]; ACTIONS=[\"OFF\",\"L0\",\"L6\",\"L12\",\"L18\",\"L24\",\"ALL\"]"
+    },
+    {
+      "line": 22,
+      "path": "provenance/original/r2/screening/build_static_screening.py",
+      "text": "MODEL = Path(\"/home/USER/ttt/models/qwen3_1p7b_stage2\")"
+    },
+    {
+      "line": 32,
+      "path": "provenance/original/r2/screening/build_static_screening.py",
+      "text": "ACTIONS = [\"OFF\", \"L0\", \"L6\", \"L12\", \"L18\", \"L24\", \"ALL\"]"
+    },
+    {
+      "line": 121,
+      "path": "provenance/original/r2/screening/build_static_screening.py",
+      "text": "# Fixed7 values supply OFF and Sample Best. Validate identities for every cell."
+    },
+    {
+      "line": 291,
+      "path": "provenance/original/r2/screening/build_static_screening.py",
+      "text": "        \"candidate_layers\": [0, 6, 12, 18, 24],"
+    },
+    {
+      "line": 20,
+      "path": "provenance/original/r2/scripts/aggregate_exact_r2.py",
+      "text": "ACTIONS = [\"OFF\", \"L0\", \"L6\", \"L12\", \"L18\", \"L24\", \"ALL\"]"
+    },
+    {
+      "line": 10,
+      "path": "provenance/original/r2/scripts/prepare_exact_r2.py",
+      "text": "MODEL=Path('/home/USER/ttt/models/qwen3_1p7b_stage2')"
+    },
+    {
+      "line": 28,
+      "path": "provenance/original/r2/scripts/prepare_exact_r2.py",
+      "text": "ACTIONS=['OFF','L0','L6','L12','L18','L24','ALL']"
+    },
+    {
+      "line": 28,
+      "path": "provenance/original/r2/scripts/exact_r2_worker.py",
+      "text": "ACTIONS = [\"OFF\", \"L0\", \"L6\", \"L12\", \"L18\", \"L24\", \"ALL\"]"
+    },
+    {
+      "line": 20,
+      "path": "provenance/original/r2/dependencies/aggregate_exact_r2.py",
+      "text": "ACTIONS = [\"OFF\", \"L0\", \"L6\", \"L12\", \"L18\", \"L24\", \"ALL\"]"
+    },
+    {
+      "line": 28,
+      "path": "provenance/original/r2/dependencies/exact_r2_worker.py",
+      "text": "ACTIONS = [\"OFF\", \"L0\", \"L6\", \"L12\", \"L18\", \"L24\", \"ALL\"]"
+    },
+    {
+      "line": 26,
+      "path": "provenance/original/kp/screening/audit/SCREENING_GENERATOR.py",
+      "text": "LAYERS = [0, 6, 12, 18, 24]"
+    },
+    {
+      "line": 27,
+      "path": "provenance/original/kp/screening/audit/SCREENING_GENERATOR.py",
+      "text": "ACTIONS = ['OFF', 'L0', 'L6', 'L12', 'L18', 'L24', 'ALL']"
+    },
+    {
+      "line": 28,
+      "path": "provenance/original/kp/screening/audit/SCREENING_GENERATOR.py",
+      "text": "ACTION_LAYERS = {'OFF': [], 'L0': [0], 'L6': [6], 'L12': [12], 'L18': [18], 'L24': [24], 'ALL': LAYERS}"
+    },
+    {
+      "line": 217,
+      "path": "provenance/original/kp/screening/audit/SCREENING_GENERATOR.py",
+      "text": "    {'FIELD':'FAST_WEIGHT_IDENTITY','STATUS':'PROVEN_EXACT','EXACT_RECOVERED_BEHAVIOR':'SHA256 over contiguous uint16-view tensor bytes for effective weights at L0/L6/L12/L18/L24; exact equality, tolerance 0, checked at boundary.','EXECUTED_SOURCE':str(CLOSURE/'scripts/closure_core.py'),'HASH':sourc"
+    },
+    {
+      "line": 238,
+      "path": "provenance/original/kp/screening/audit/SCREENING_GENERATOR.py",
+      "text": "Same prompt; action schedule `A^tau + B^(T-tau)`; boundary after tau complete 1024-token chunks. It supplies the exact effective fast weights at L0/L6/L12/L18/L24, all-layer Native prefix attention K/V for `[0,tau*1024)`, and Native schedule-used TTT occupancy/materialization. The suffix action B, p"
+    },
+    {
+      "line": 11,
+      "path": "provenance/original/kp/scripts/prepare_kp.py",
+      "text": "LAYERS=[0,6,12,18,24]; AL={'OFF':[],'L0':[0],'L6':[6],'L12':[12],'L18':[18],'L24':[24],'ALL':LAYERS}; CELLS={'F00':(0,0),'F10':(1,0),'F01':(0,1),'F11':(1,1)}"
+    },
+    {
+      "line": 29,
+      "path": "provenance/original/kp/scripts/prepare_kp.py",
+      "text": " checks={'model':sha('/home/USER/ttt/models/qwen3_1p7b_stage2/model.safetensors')==MODEL,'benchmark':sha('/home/USER/ttt/benchmarks/ruler_16k_standard_13task500_v1/benchmark_manifest.json')==BENCH,'rule':sha(rule)==RULE,'eligibility':sha(elig)==ELIG,'dynamic':sha(dyn)==DYN}"
+    },
+    {
+      "line": 65,
+      "path": "provenance/original/kp/scripts/prepare_kp.py",
+      "text": " config={'version':'KP_FACTORIAL_1P7B_FORMAL_V1','run_root':str(RUN),'python':'/home/USER/conda_envs/ttt_phase_c_v1/bin/python','model_root':'/home/USER/ttt/models/qwen3_1p7b_stage2','model_identity':MODEL,'checkpoint_identity':CKPT,'benchmark_root':'/home/USER/ttt/benchmarks/ruler_16k_stan"
+    },
+    {
+      "line": 14,
+      "path": "provenance/original/kp/scripts/kp_worker.py",
+      "text": "LAYERS=[0,6,12,18,24]"
+    },
+    {
+      "line": 15,
+      "path": "provenance/original/kp/scripts/kp_worker.py",
+      "text": "ACTION_LAYERS={'OFF':[],'L0':[0],'L6':[6],'L12':[12],'L18':[18],'L24':[24],'ALL':LAYERS}"
+    },
+    {
+      "line": 134,
+      "path": "provenance/original/kp/scripts/kp_worker.py",
+      "text": "   for j in range(self.start//1024,self.full//1024): self.record(f'complete:{j}:final_hidden',28,'final_complete_chunk_hidden','COMPLETE_CONTINUATION_CHUNK',j+1,o[:,j*1024:(j+1)*1024])"
+    },
+    {
+      "line": 135,
+      "path": "provenance/original/kp/scripts/kp_worker.py",
+      "text": "   if self.n>self.full:self.record('tail:28:final_hidden',28,'final_tail_hidden','INCOMPLETE_PROMPT_TAIL','TAIL',o[:,self.full:self.n])"
+    },
+    {
+      "line": 12,
+      "path": "provenance/original/kp/dependencies/closure_core.py",
+      "text": "from inference_model.hf_qwen3.modeling_qwen3 import TTTDynamicCache"
+    },
+    {
+      "line": 13,
+      "path": "provenance/original/kp/dependencies/closure_core.py",
+      "text": "from hf_models.hf_qwen3.ttt_state_core import TTTState,TTTStats,ttt_chunk_step,build_chunk_local_ntp_pairs"
+    },
+    {
+      "line": 15,
+      "path": "provenance/original/kp/dependencies/closure_core.py",
+      "text": "LAYERS=[0,6,12,18,24]"
+    },
+    {
+      "line": 16,
+      "path": "provenance/original/kp/dependencies/closure_core.py",
+      "text": "ACTIONS=['OFF','L0','L6','L12','L18','L24','ALL']"
+    },
+    {
+      "line": 17,
+      "path": "provenance/original/kp/dependencies/closure_core.py",
+      "text": "ACTION_LAYERS={'OFF':[],'L0':[0],'L6':[6],'L12':[12],'L18':[18],'L24':[24],'ALL':LAYERS}"
+    },
+    {
+      "line": 14,
+      "path": "provenance/original/kp/dependencies/kp_worker.py",
+      "text": "LAYERS=[0,6,12,18,24]"
+    },
+    {
+      "line": 15,
+      "path": "provenance/original/kp/dependencies/kp_worker.py",
+      "text": "ACTION_LAYERS={'OFF':[],'L0':[0],'L6':[6],'L12':[12],'L18':[18],'L24':[24],'ALL':LAYERS}"
+    },
+    {
+      "line": 134,
+      "path": "provenance/original/kp/dependencies/kp_worker.py",
+      "text": "   for j in range(self.start//1024,self.full//1024): self.record(f'complete:{j}:final_hidden',28,'final_complete_chunk_hidden','COMPLETE_CONTINUATION_CHUNK',j+1,o[:,j*1024:(j+1)*1024])"
+    },
+    {
+      "line": 135,
+      "path": "provenance/original/kp/dependencies/kp_worker.py",
+      "text": "   if self.n>self.full:self.record('tail:28:final_hidden',28,'final_tail_hidden','INCOMPLETE_PROMPT_TAIL','TAIL',o[:,self.full:self.n])"
+    },
+    {
+      "line": 21,
+      "path": "provenance/original/reverse/screening/scripts/screening.py",
+      "text": "MODEL_ROOT = Path(\"/home/USER/ttt/models/qwen3_1p7b_stage2\")"
+    },
+    {
+      "line": 32,
+      "path": "provenance/original/reverse/screening/scripts/screening.py",
+      "text": "ACTIONS = [\"OFF\", \"L0\", \"L6\", \"L12\", \"L18\", \"L24\", \"ALL\"]"
+    },
+    {
+      "line": 375,
+      "path": "provenance/original/reverse/screening/scripts/screening.py",
+      "text": "# ----- Fixed7 and Dynamic joins -----"
+    },
+    {
+      "line": 598,
+      "path": "provenance/original/reverse/screening/scripts/screening.py",
+      "text": "The protected model, benchmark, Fixed7, and latest completed matching Dynamic authorities all pass identity and integrity checks. The full 6500-row census and 1435-row sequential parent are complete."
+    },
+    {
+      "line": 15,
+      "path": "provenance/original/reverse/scripts/prepare_exact_reverse.py",
+      "text": "MODEL = Path(\"/home/USER/ttt/models/qwen3_1p7b_stage2\")"
+    },
+    {
+      "line": 27,
+      "path": "provenance/original/reverse/scripts/prepare_exact_reverse.py",
+      "text": "ACTIONS = [\"OFF\", \"L0\", \"L6\", \"L12\", \"L18\", \"L24\", \"ALL\"]"
+    },
+    {
+      "line": 233,
+      "path": "provenance/original/reverse/scripts/prepare_exact_reverse.py",
+      "text": "    \"scientific_semantics\": {\"actions\": ACTIONS, \"layers\": [0, 6, 12, 18, 24], \"context_length\": 16384,"
+    },
+    {
+      "line": 25,
+      "path": "provenance/original/reverse/scripts/exact_reverse_worker.py",
+      "text": "ACTIONS = [\"OFF\", \"L0\", \"L6\", \"L12\", \"L18\", \"L24\", \"ALL\"]"
+    },
+    {
+      "line": 25,
+      "path": "provenance/original/reverse/dependencies/exact_reverse_worker.py",
+      "text": "ACTIONS = [\"OFF\", \"L0\", \"L6\", \"L12\", \"L18\", \"L24\", \"ALL\"]"
+    },
+    {
+      "line": 7,
+      "path": "provenance/original/deletion/scripts/selective_worker.py",
+      "text": "LAYERS=[0,6,12,18,24];ACTIONS=[\"OFF\",\"L0\",\"L6\",\"L12\",\"L18\",\"L24\",\"ALL\"]"
+    },
+    {
+      "line": 62,
+      "path": "provenance/original/deletion/scripts/aggregate_selective.py",
+      "text": " for layer in [0,6,12,18,24]:"
+    },
+    {
+      "line": 13,
+      "path": "provenance/original/deletion/dependencies/instrumented_backend.py",
+      "text": "LAYERS = [0, 6, 12, 18, 24]"
+    },
+    {
+      "line": 16,
+      "path": "provenance/original/deletion/dependencies/instrumented_backend.py",
+      "text": "    \"L24\": [24], \"ALL\": LAYERS,"
+    },
+    {
+      "line": 41,
+      "path": "provenance/original/deletion/dependencies/instrumented_backend.py",
+      "text": "    from hf_models.hf_qwen3.ttt_state_core import TTTState, TTTStats, ttt_chunk_step"
+    },
+    {
+      "line": 7,
+      "path": "provenance/original/deletion/dependencies/selective_worker.py",
+      "text": "LAYERS=[0,6,12,18,24];ACTIONS=[\"OFF\",\"L0\",\"L6\",\"L12\",\"L18\",\"L24\",\"ALL\"]"
+    },
+    {
+      "line": 62,
+      "path": "provenance/original/deletion/dependencies/aggregate_selective.py",
+      "text": " for layer in [0,6,12,18,24]:"
+    },
+    {
+      "line": 27,
+      "path": "provenance/original/deletion/rule_sources/run_selective_ablation.py",
+      "text": "LAYERS = [0, 6, 12, 18, 24]"
+    },
+    {
+      "line": 20,
+      "path": "provenance/original/deletion/rule_sources/finalize_ablation_analysis.py",
+      "text": "LAYERS = [0, 6, 12, 18, 24]"
+    },
+    {
+      "line": 16,
+      "path": "provenance/original/deletion/rule_sources/build_ablation_manifest.py",
+      "text": "LAYERS = [0, 6, 12, 18, 24]"
+    },
+    {
+      "line": 18,
+      "path": "provenance/original/deletion/rule_sources/build_ablation_manifest.py",
+      "text": "                 \"L18\": [18], \"L24\": [24], \"ALL\": LAYERS}"
+    }
+  ],
+  "resolution": "Generic actions/mapping/r2 functions receive six layers. K/P named definitions compile with injected Llama cache and NTP core and chunk=4096. Historical module-level imports/main are not executed. Llama-specific config/schema replace Qwen validators. Reference files remain byte-identical."
+}

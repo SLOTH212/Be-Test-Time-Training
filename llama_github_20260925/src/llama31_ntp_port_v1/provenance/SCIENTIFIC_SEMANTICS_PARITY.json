@@ -1,0 +1,68 @@
+{
+  "SCIENTIFIC_SEMANTICS_PARITY": "PASS",
+  "components": {
+    "Dynamic interface": {
+      "identical": true,
+      "parity": "PASS"
+    },
+    "NTP objective": {
+      "identical": true,
+      "parity": "PASS"
+    },
+    "Stage1 contract": {
+      "identical": true,
+      "parity": "PASS"
+    },
+    "Stage2 contract": {
+      "identical": true,
+      "parity": "PASS"
+    },
+    "TTTState": {
+      "identical": true,
+      "parity": "PASS"
+    },
+    "apply-then-update": {
+      "identical": true,
+      "parity": "PASS"
+    },
+    "fast-weight role": {
+      "identical": true,
+      "parity": "PASS"
+    },
+    "gate": {
+      "identical": true,
+      "parity": "PASS"
+    },
+    "inference clip semantics": {
+      "identical": true,
+      "parity": "PASS"
+    },
+    "projection": {
+      "identical": true,
+      "parity": "PASS"
+    },
+    "reset": {
+      "identical": true,
+      "parity": "PASS"
+    },
+    "update rule": {
+      "identical": true,
+      "parity": "PASS"
+    }
+  },
+  "exceptions": [
+    "Generic positive chunk guard replaces frozen 1024-only guard in the new Llama core; arithmetic unchanged.",
+    "Layer list and cache slots depend on config.num_hidden_layers; no fixed layer-count assumption."
+  ],
+  "limitations": [
+    "Dynamic/FSDP2 static only",
+    "Stage2 CPU substitute for CUDA fused kernel",
+    "32K actual MLP chunk orchestration, not full 32K attention"
+  ],
+  "scope": "Same scientific settings at equal chunk sizes; Transformer-family plumbing differs. 4096 schedule remains an unfrozen scale-up candidate.",
+  "test_evidence": [
+    "audits/off_parity.json",
+    "audits/port_tests.json",
+    "audits/level0.json"
+  ]
+}

@@ -1,0 +1,3116 @@
+{
+  "stage1": {
+    "active": [],
+    "complete": true,
+    "exit": {
+      "ended": 1789298297.600616,
+      "error": null,
+      "exit_code": 0,
+      "manager": {
+        "boot_id": "326e2e7f-73e6-4f82-a643-09ee601165b5",
+        "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/pipeline.py trainer --stage 1 --execute --resume",
+        "pid": 358567,
+        "start_ticks": 322718909
+      },
+      "no_automatic_retry": true
+    },
+    "process": {
+      "command": [
+        "/path/to/ttt/envs/ttt_runtime_v1/bin/torchrun",
+        "--standalone",
+        "--nproc-per-node=4",
+        "--max-restarts=0",
+        "/path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/entry.py",
+        "--stage",
+        "1",
+        "--config",
+        "/path/to/ttt/configs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1.yaml",
+        "--output-dir",
+        "/path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1",
+        "--resume-from",
+        "/path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1/checkpoints"
+      ],
+      "manager": {
+        "boot_id": "326e2e7f-73e6-4f82-a643-09ee601165b5",
+        "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/pipeline.py trainer --stage 1 --execute --resume",
+        "pid": 358567,
+        "start_ticks": 322718909
+      },
+      "source_sha256": "e73331f77358213aea496e91a4c969fc283c5af075f580fda0cc304aaabd79ed",
+      "stage": 1,
+      "started": 1789147943.6116898,
+      "torchrun": {
+        "boot_id": "326e2e7f-73e6-4f82-a643-09ee601165b5",
+        "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python /path/to/ttt/envs/ttt_runtime_v1/bin/torchrun --standalone --nproc-per-node=4 --max-restarts=0 /path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/entry.py --stage 1 --config /path/to/ttt/configs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1.yaml --output-dir /path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1 --resume-from /path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1/checkpoints",
+        "pid": 358680,
+        "start_ticks": 322721056
+      },
+      "workers": [
+        {
+          "boot_id": "326e2e7f-73e6-4f82-a643-09ee601165b5",
+          "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -u /path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/entry.py --stage 1 --config /path/to/ttt/configs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1.yaml --output-dir /path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1 --resume-from /path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1/checkpoints",
+          "pid": 358693,
+          "start_ticks": 322721228
+        },
+        {
+          "boot_id": "326e2e7f-73e6-4f82-a643-09ee601165b5",
+          "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -u /path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/entry.py --stage 1 --config /path/to/ttt/configs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1.yaml --output-dir /path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1 --resume-from /path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1/checkpoints",
+          "pid": 358694,
+          "start_ticks": 322721228
+        },
+        {
+          "boot_id": "326e2e7f-73e6-4f82-a643-09ee601165b5",
+          "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -u /path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/entry.py --stage 1 --config /path/to/ttt/configs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1.yaml --output-dir /path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1 --resume-from /path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1/checkpoints",
+          "pid": 358695,
+          "start_ticks": 322721228
+        },
+        {
+          "boot_id": "326e2e7f-73e6-4f82-a643-09ee601165b5",
+          "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -u /path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/entry.py --stage 1 --config /path/to/ttt/configs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1.yaml --output-dir /path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1 --resume-from /path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1/checkpoints",
+          "pid": 358696,
+          "start_ticks": 322721229
+        }
+      ]
+    },
+    "row": {
+      "accumulation_phase": 0,
+      "checkpoint_seconds": 380.9582716091536,
+      "cumulative_tokens": 478374652,
+      "dataloader_state": {
+        "canonical_next_position": 17015
+      },
+      "global_answer_positions": 0,
+      "global_context_positions": 76924,
+      "global_mean_loss": 1.1158023310751521,
+      "global_numerator": 85831.978515625,
+      "global_valid_tokens": 76924,
+      "grad_norm_after_clip": 1.0,
+      "grad_norm_before_clip": 2.0,
+      "input_identity": {
+        "config_sha256": "26c4ccdfd6674324a77df2a6d3b591fe19b720bb633bb44b3e5c601250410d43",
+        "cross_data_authority_sha256": "c8ee10b8df71ee70839ebc35d0394a703e84899c32a8d1c56b8a26a207addd49",
+        "data_manifest_sha256": "2e50ec2d24c60536714a26c0a8bc98b6626a49e857256469b50c7bf4d6bdd47e",
+        "dataset_authority_sha256": "c6828d7ea25c4d57bb9db4e690f7907a81746703b5c54b47651a5f9d3ea2cc59",
+        "llama_port_sha256": "3f1ca6c6cee8f8601fd5bfca396a067fe1876cbba3fbabecb273e75e19fd54bc",
+        "model_identity_sha256": "4955fcb1e90d069e8968100827f626203b4f0e2c3e42279da4997f47d35fb0d8",
+        "worker_sha256": "99bfe6dc5775b68b25ad8bd5c8a98aa3123559ba48f013d40b568879d84221ba"
+      },
+      "iteration_seconds_excluding_checkpoint": 36.40146296704188,
+      "learning_rate": 5e-06,
+      "local_valid_tokens": 29808,
+      "logged_at_unix": 1789298283.6718547,
+      "rank_assignment_state": {
+        "mapping": "canonical_modulo_with_accumulation_v1",
+        "rank": 0,
+        "world_size": 4
+      },
+      "rank_runtime": [
+        {
+          "boundary_trace": [
+            {
+              "boundaries": [
+                [
+                  0,
+                  302
+                ],
+                [
+                  303,
+                  406
+                ],
+                [
+                  407,
+                  2454
+                ],
+                [
+                  2455,
+                  2720
+                ],
+                [
+                  2721,
+                  3094
+                ],
+                [
+                  3095,
+                  3193
+                ],
+                [
+                  3194,
+                  3340
+                ],
+                [
+                  3341,
+                  4800
+                ],
+                [
+                  4801,
+                  4888
+                ],
+                [
+                  4889,
+                  4949
+                ],
+                [
+                  4950,
+                  5243
+                ],
+                [
+                  5244,
+                  5383
+                ],
+                [
+                  5384,
+                  5511
+                ],
+                [
+                  5512,
+                  6902
+                ],
+                [
+                  6903,
+                  10338
+                ],
+                [
+                  10339,
+                  12746
+                ],
+                [
+                  12747,
+                  13036
+                ],
+                [
+                  13037,
+                  15144
+                ],
+                [
+                  15145,
+                  16053
+                ],
+                [
+                  16054,
+                  16193
+                ],
+                [
+                  16194,
+                  16500
+                ],
+                [
+                  16501,
+                  16866
+                ],
+                [
+                  16867,
+                  17838
+                ],
+                [
+                  17839,
+                  17980
+                ],
+                [
+                  17981,
+                  18537
+                ],
+                [
+                  18538,
+                  18737
+                ],
+                [
+                  18738,
+                  18933
+                ],
+                [
+                  18934,
+                  19073
+                ],
+                [
+                  19074,
+                  19386
+                ],
+                [
+                  19387,
+                  22293
+                ],
+                [
+                  22294,
+                  22775
+                ],
+                [
+                  22776,
+                  24235
+                ],
+                [
+                  24236,
+                  24954
+                ],
+                [
+                  24955,
+                  25049
+                ],
+                [
+                  25050,
+                  25123
+                ],
+                [
+                  25124,
+                  25571
+                ],
+                [
+                  25572,
+                  25743
+                ],
+                [
+                  25744,
+                  25795
+                ],
+                [
+                  25796,
+                  25992
+                ],
+                [
+                  25993,
+                  26757
+                ],
+                [
+                  26758,
+                  27002
+                ],
+                [
+                  27003,
+                  27308
+                ],
+                [
+                  27309,
+                  28508
+                ],
+                [
+                  28509,
+                  29252
+                ],
+                [
+                  29253,
+                  29679
+                ],
+                [
+                  29680,
+                  29809
+                ]
+              ],
+              "layers": {
+                "0": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    301,
+                    102,
+                    2046,
+                    264,
+                    372,
+                    97,
+                    145,
+                    1458,
+                    86,
+                    59,
+                    292,
+                    138,
+                    126,
+                    1389,
+                    3434,
+                    2406,
+                    288,
+                    2106,
+                    907,
+                    138,
+                    305,
+                    364,
+                    970,
+                    140,
+                    555,
+                    198,
+                    194,
+                    138,
+                    311,
+                    2905,
+                    480,
+                    1458,
+                    717,
+                    93,
+                    72,
+                    446,
+                    170,
+                    50,
+                    195,
+                    763,
+                    243,
+                    304,
+                    1198,
+                    742,
+                    425,
+                    128
+                  ]
+                },
+                "12": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    301,
+                    102,
+                    2046,
+                    264,
+                    372,
+                    97,
+                    145,
+                    1458,
+                    86,
+                    59,
+                    292,
+                    138,
+                    126,
+                    1389,
+                    3434,
+                    2406,
+                    288,
+                    2106,
+                    907,
+                    138,
+                    305,
+                    364,
+                    970,
+                    140,
+                    555,
+                    198,
+                    194,
+                    138,
+                    311,
+                    2905,
+                    480,
+                    1458,
+                    717,
+                    93,
+                    72,
+                    446,
+                    170,
+                    50,
+                    195,
+                    763,
+                    243,
+                    304,
+                    1198,
+                    742,
+                    425,
+                    128
+                  ]
+                },
+                "18": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    301,
+                    102,
+                    2046,
+                    264,
+                    372,
+                    97,
+                    145,
+                    1458,
+                    86,
+                    59,
+                    292,
+                    138,
+                    126,
+                    1389,
+                    3434,
+                    2406,
+                    288,
+                    2106,
+                    907,
+                    138,
+                    305,
+                    364,
+                    970,
+                    140,
+                    555,
+                    198,
+                    194,
+                    138,
+                    311,
+                    2905,
+                    480,
+                    1458,
+                    717,
+                    93,
+                    72,
+                    446,
+                    170,
+                    50,
+                    195,
+                    763,
+                    243,
+                    304,
+                    1198,
+                    742,
+                    425,
+                    128
+                  ]
+                },
+                "24": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    301,
+                    102,
+                    2046,
+                    264,
+                    372,
+                    97,
+                    145,
+                    1458,
+                    86,
+                    59,
+                    292,
+                    138,
+                    126,
+                    1389,
+                    3434,
+                    2406,
+                    288,
+                    2106,
+                    907,
+                    138,
+                    305,
+                    364,
+                    970,
+                    140,
+                    555,
+                    198,
+                    194,
+                    138,
+                    311,
+                    2905,
+                    480,
+                    1458,
+                    717,
+                    93,
+                    72,
+                    446,
+                    170,
+                    50,
+                    195,
+                    763,
+                    243,
+                    304,
+                    1198,
+                    742,
+                    425,
+                    128
+                  ]
+                },
+                "30": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    301,
+                    102,
+                    2046,
+                    264,
+                    372,
+                    97,
+                    145,
+                    1458,
+                    86,
+                    59,
+                    292,
+                    138,
+                    126,
+                    1389,
+                    3434,
+                    2406,
+                    288,
+                    2106,
+                    907,
+                    138,
+                    305,
+                    364,
+                    970,
+                    140,
+                    555,
+                    198,
+                    194,
+                    138,
+                    311,
+                    2905,
+                    480,
+                    1458,
+                    717,
+                    93,
+                    72,
+                    446,
+                    170,
+                    50,
+                    195,
+                    763,
+                    243,
+                    304,
+                    1198,
+                    742,
+                    425,
+                    128
+                  ]
+                },
+                "6": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    301,
+                    102,
+                    2046,
+                    264,
+                    372,
+                    97,
+                    145,
+                    1458,
+                    86,
+                    59,
+                    292,
+                    138,
+                    126,
+                    1389,
+                    3434,
+                    2406,
+                    288,
+                    2106,
+                    907,
+                    138,
+                    305,
+                    364,
+                    970,
+                    140,
+                    555,
+                    198,
+                    194,
+                    138,
+                    311,
+                    2905,
+                    480,
+                    1458,
+                    717,
+                    93,
+                    72,
+                    446,
+                    170,
+                    50,
+                    195,
+                    763,
+                    243,
+                    304,
+                    1198,
+                    742,
+                    425,
+                    128
+                  ]
+                }
+              },
+              "sample_id": "data/train/part-00066.jsonl:99"
+            }
+          ],
+          "l30_gradient": {
+            "model.layers.0.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.0.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.0.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.12.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.12.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.12.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.18.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.18.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.18.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.24.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.24.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.24.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.30.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.30.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.30.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.6.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.6.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.6.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            }
+          },
+          "l30_optimizer_state": {
+            "model.layers.0.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.0.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.0.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.12.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.12.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.12.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.18.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.18.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.18.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.24.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.24.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.24.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.30.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.30.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.30.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.6.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.6.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.6.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            }
+          },
+          "loader_wait_seconds": 0.0078077600337564945,
+          "local_numerator": 34249.5390625,
+          "local_rank": 0,
+          "local_tokens": 29809,
+          "logical_device": "cuda:0",
+          "peak_allocated_bytes": 33377031168,
+          "peak_reserved_bytes": 47764733952,
+          "physical_gpu": 0,
+          "rank": 0,
+          "sample_ids": [
+            "data/train/part-00066.jsonl:99"
+          ],
+          "step_seconds": 36.32769991690293,
+          "tokenizer_seconds": 0.0014433050528168678,
+          "weights_finite": true
+        },
+        {
+          "boundary_trace": [
+            {
+              "boundaries": [
+                [
+                  0,
+                  3214
+                ],
+                [
+                  3215,
+                  5463
+                ],
+                [
+                  5464,
+                  5768
+                ],
+                [
+                  5769,
+                  6007
+                ],
+                [
+                  6008,
+                  8219
+                ],
+                [
+                  8220,
+                  8699
+                ],
+                [
+                  8700,
+                  12049
+                ],
+                [
+                  12050,
+                  15615
+                ],
+                [
+                  15616,
+                  15809
+                ],
+                [
+                  15810,
+                  16372
+                ],
+                [
+                  16373,
+                  16950
+                ],
+                [
+                  16951,
+                  19340
+                ],
+                [
+                  19341,
+                  21246
+                ],
+                [
+                  21247,
+                  22109
+                ],
+                [
+                  22110,
+                  22176
+                ],
+                [
+                  22177,
+                  23096
+                ],
+                [
+                  23097,
+                  25651
+                ],
+                [
+                  25652,
+                  25904
+                ],
+                [
+                  25905,
+                  26440
+                ],
+                [
+                  26441,
+                  26521
+                ],
+                [
+                  26522,
+                  26943
+                ],
+                [
+                  26944,
+                  27332
+                ],
+                [
+                  27333,
+                  27688
+                ],
+                [
+                  27689,
+                  27950
+                ],
+                [
+                  27951,
+                  28496
+                ],
+                [
+                  28497,
+                  28680
+                ],
+                [
+                  28681,
+                  30542
+                ],
+                [
+                  30543,
+                  30626
+                ],
+                [
+                  30627,
+                  30736
+                ]
+              ],
+              "layers": {
+                "0": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    3213,
+                    2247,
+                    303,
+                    237,
+                    2210,
+                    478,
+                    3348,
+                    3564,
+                    192,
+                    561,
+                    576,
+                    2388,
+                    1904,
+                    861,
+                    65,
+                    918,
+                    2553,
+                    251,
+                    534,
+                    79,
+                    420,
+                    387,
+                    354,
+                    260,
+                    544,
+                    182,
+                    1860,
+                    82,
+                    108
+                  ]
+                },
+                "12": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    3213,
+                    2247,
+                    303,
+                    237,
+                    2210,
+                    478,
+                    3348,
+                    3564,
+                    192,
+                    561,
+                    576,
+                    2388,
+                    1904,
+                    861,
+                    65,
+                    918,
+                    2553,
+                    251,
+                    534,
+                    79,
+                    420,
+                    387,
+                    354,
+                    260,
+                    544,
+                    182,
+                    1860,
+                    82,
+                    108
+                  ]
+                },
+                "18": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    3213,
+                    2247,
+                    303,
+                    237,
+                    2210,
+                    478,
+                    3348,
+                    3564,
+                    192,
+                    561,
+                    576,
+                    2388,
+                    1904,
+                    861,
+                    65,
+                    918,
+                    2553,
+                    251,
+                    534,
+                    79,
+                    420,
+                    387,
+                    354,
+                    260,
+                    544,
+                    182,
+                    1860,
+                    82,
+                    108
+                  ]
+                },
+                "24": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    3213,
+                    2247,
+                    303,
+                    237,
+                    2210,
+                    478,
+                    3348,
+                    3564,
+                    192,
+                    561,
+                    576,
+                    2388,
+                    1904,
+                    861,
+                    65,
+                    918,
+                    2553,
+                    251,
+                    534,
+                    79,
+                    420,
+                    387,
+                    354,
+                    260,
+                    544,
+                    182,
+                    1860,
+                    82,
+                    108
+                  ]
+                },
+                "30": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    3213,
+                    2247,
+                    303,
+                    237,
+                    2210,
+                    478,
+                    3348,
+                    3564,
+                    192,
+                    561,
+                    576,
+                    2388,
+                    1904,
+                    861,
+                    65,
+                    918,
+                    2553,
+                    251,
+                    534,
+                    79,
+                    420,
+                    387,
+                    354,
+                    260,
+                    544,
+                    182,
+                    1860,
+                    82,
+                    108
+                  ]
+                },
+                "6": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    3213,
+                    2247,
+                    303,
+                    237,
+                    2210,
+                    478,
+                    3348,
+                    3564,
+                    192,
+                    561,
+                    576,
+                    2388,
+                    1904,
+                    861,
+                    65,
+                    918,
+                    2553,
+                    251,
+                    534,
+                    79,
+                    420,
+                    387,
+                    354,
+                    260,
+                    544,
+                    182,
+                    1860,
+                    82,
+                    108
+                  ]
+                }
+              },
+              "sample_id": "data/train/part-00066.jsonl:100"
+            }
+          ],
+          "l30_gradient": {
+            "model.layers.0.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.0.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.0.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.12.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.12.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.12.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.18.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.18.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.18.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.24.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.24.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.24.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.30.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.30.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.30.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.6.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.6.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.6.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            }
+          },
+          "l30_optimizer_state": {
+            "model.layers.0.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.0.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.0.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.12.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.12.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.12.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.18.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.18.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.18.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.24.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.24.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.24.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.30.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.30.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.30.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.6.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.6.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.6.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            }
+          },
+          "loader_wait_seconds": 0.008363122120499611,
+          "local_numerator": 31594.884765625,
+          "local_rank": 1,
+          "local_tokens": 30736,
+          "logical_device": "cuda:1",
+          "peak_allocated_bytes": 33867104768,
+          "peak_reserved_bytes": 47890563072,
+          "physical_gpu": 1,
+          "rank": 1,
+          "sample_ids": [
+            "data/train/part-00066.jsonl:100"
+          ],
+          "step_seconds": 36.32842825399712,
+          "tokenizer_seconds": 0.0015026982873678207,
+          "weights_finite": true
+        },
+        {
+          "boundary_trace": [
+            {
+              "boundaries": [
+                [
+                  0,
+                  2067
+                ],
+                [
+                  2068,
+                  3759
+                ],
+                [
+                  3760,
+                  3854
+                ],
+                [
+                  3855,
+                  5122
+                ],
+                [
+                  5123,
+                  8255
+                ],
+                [
+                  8256,
+                  8301
+                ],
+                [
+                  8302,
+                  8587
+                ],
+                [
+                  8588,
+                  8748
+                ],
+                [
+                  8749,
+                  9325
+                ],
+                [
+                  9326,
+                  10656
+                ],
+                [
+                  10657,
+                  10813
+                ],
+                [
+                  10814,
+                  12660
+                ],
+                [
+                  12661,
+                  12727
+                ],
+                [
+                  12728,
+                  12944
+                ],
+                [
+                  12945,
+                  13032
+                ],
+                [
+                  13033,
+                  13724
+                ],
+                [
+                  13725,
+                  14060
+                ],
+                [
+                  14061,
+                  14276
+                ],
+                [
+                  14277,
+                  15257
+                ],
+                [
+                  15258,
+                  15389
+                ],
+                [
+                  15390,
+                  15548
+                ],
+                [
+                  15549,
+                  15638
+                ],
+                [
+                  15639,
+                  16319
+                ],
+                [
+                  16320,
+                  16382
+                ]
+              ],
+              "layers": {
+                "0": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    2066,
+                    1690,
+                    93,
+                    1266,
+                    3131,
+                    44,
+                    284,
+                    159,
+                    575,
+                    1329,
+                    155,
+                    1845,
+                    65,
+                    215,
+                    86,
+                    690,
+                    334,
+                    214,
+                    979,
+                    130,
+                    157,
+                    88,
+                    679,
+                    61
+                  ]
+                },
+                "12": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    2066,
+                    1690,
+                    93,
+                    1266,
+                    3131,
+                    44,
+                    284,
+                    159,
+                    575,
+                    1329,
+                    155,
+                    1845,
+                    65,
+                    215,
+                    86,
+                    690,
+                    334,
+                    214,
+                    979,
+                    130,
+                    157,
+                    88,
+                    679,
+                    61
+                  ]
+                },
+                "18": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    2066,
+                    1690,
+                    93,
+                    1266,
+                    3131,
+                    44,
+                    284,
+                    159,
+                    575,
+                    1329,
+                    155,
+                    1845,
+                    65,
+                    215,
+                    86,
+                    690,
+                    334,
+                    214,
+                    979,
+                    130,
+                    157,
+                    88,
+                    679,
+                    61
+                  ]
+                },
+                "24": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    2066,
+                    1690,
+                    93,
+                    1266,
+                    3131,
+                    44,
+                    284,
+                    159,
+                    575,
+                    1329,
+                    155,
+                    1845,
+                    65,
+                    215,
+                    86,
+                    690,
+                    334,
+                    214,
+                    979,
+                    130,
+                    157,
+                    88,
+                    679,
+                    61
+                  ]
+                },
+                "30": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    2066,
+                    1690,
+                    93,
+                    1266,
+                    3131,
+                    44,
+                    284,
+                    159,
+                    575,
+                    1329,
+                    155,
+                    1845,
+                    65,
+                    215,
+                    86,
+                    690,
+                    334,
+                    214,
+                    979,
+                    130,
+                    157,
+                    88,
+                    679,
+                    61
+                  ]
+                },
+                "6": {
+                  "chunks_per_document": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ntp_pairs_per_document": [
+                    2066,
+                    1690,
+                    93,
+                    1266,
+                    3131,
+                    44,
+                    284,
+                    159,
+                    575,
+                    1329,
+                    155,
+                    1845,
+                    65,
+                    215,
+                    86,
+                    690,
+                    334,
+                    214,
+                    979,
+                    130,
+                    157,
+                    88,
+                    679,
+                    61
+                  ]
+                }
+              },
+              "sample_id": "data/train/part-00066.jsonl:101"
+            }
+          ],
+          "l30_gradient": {
+            "model.layers.0.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.0.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.0.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.12.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.12.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.12.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.18.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.18.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.18.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.24.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.24.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.24.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.30.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.30.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.30.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.6.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.6.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.6.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            }
+          },
+          "l30_optimizer_state": {
+            "model.layers.0.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.0.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.0.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.12.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.12.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.12.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.18.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.18.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.18.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.24.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.24.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.24.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.30.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.30.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.30.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.6.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.6.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.6.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            }
+          },
+          "loader_wait_seconds": 0.008179828990250826,
+          "local_numerator": 19987.5546875,
+          "local_rank": 2,
+          "local_tokens": 16382,
+          "logical_device": "cuda:2",
+          "peak_allocated_bytes": 26448935424,
+          "peak_reserved_bytes": 47951380480,
+          "physical_gpu": 2,
+          "rank": 2,
+          "sample_ids": [
+            "data/train/part-00066.jsonl:101"
+          ],
+          "step_seconds": 36.32875145273283,
+          "tokenizer_seconds": 0.0008877729997038841,
+          "weights_finite": true
+        },
+        {
+          "boundary_trace": [],
+          "l30_gradient": {
+            "model.layers.0.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.0.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.0.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.12.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.12.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.12.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.18.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.18.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.18.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.24.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.24.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.24.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.30.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.30.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.30.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.6.mlp.ttt_conv.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.6.mlp.ttt_ntp_gate": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            },
+            "model.layers.6.mlp.ttt_proj.weight": {
+              "expected_present": false,
+              "finite": true,
+              "local_norm": 0.0,
+              "present": false,
+              "reason": "conv_unused_or_no_later_chunk_reads_updated_fast_weight"
+            }
+          },
+          "l30_optimizer_state": {
+            "model.layers.0.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.0.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.0.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.12.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.12.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.12.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.18.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.18.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.18.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.24.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.24.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.24.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.30.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.30.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.30.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.6.mlp.ttt_conv.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": []
+            },
+            "model.layers.6.mlp.ttt_ntp_gate": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            },
+            "model.layers.6.mlp.ttt_proj.weight": {
+              "owned": true,
+              "state_expected": false,
+              "state_keys": [
+                "exp_avg",
+                "exp_avg_sq",
+                "step"
+              ]
+            }
+          },
+          "loader_wait_seconds": 0.008194487076252699,
+          "local_numerator": 0.0,
+          "local_rank": 3,
+          "local_tokens": 0,
+          "logical_device": "cuda:3",
+          "peak_allocated_bytes": 33377292288,
+          "peak_reserved_bytes": 48253370368,
+          "physical_gpu": 3,
+          "rank": 3,
+          "sample_ids": [],
+          "step_seconds": 36.32853316515684,
+          "tokenizer_seconds": 0.0,
+          "weights_finite": true
+        }
+      ],
+      "record_cursor": 17015,
+      "stage": 1,
+      "update_step": 4254
+    },
+    "run_root": "/path/to/ttt/runs/llama31_8b_stage1_500m_32k_gpu0123_formal_v1"
+  },
+  "stage2": {
+    "active": [
+      {
+        "boot_id": "326e2e7f-73e6-4f82-a643-09ee601165b5",
+        "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/pipeline.py trainer --stage 2 --execute --parent-authority /path/to/ttt/models/llama31_8b_stage1_500m_32k_final_v1/STAGE1_FINAL_AUTHORITY.json",
+        "pid": 2045231,
+        "start_ticks": 338251846
+      }
+    ],
+    "complete": false,
+    "exit": null,
+    "process": {
+      "manager": {
+        "boot_id": "326e2e7f-73e6-4f82-a643-09ee601165b5",
+        "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/pipeline.py trainer --stage 2 --execute --parent-authority /path/to/ttt/models/llama31_8b_stage1_500m_32k_final_v1/STAGE1_FINAL_AUTHORITY.json",
+        "pid": 2045231,
+        "start_ticks": 338251846
+      },
+      "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+      "stage": 2,
+      "started": 1789303270.9604368
+    },
+    "row": null,
+    "run_root": "/path/to/ttt/runs/llama31_8b_stage2_15m_32k_gpu0123_formal_v1"
+  },
+  "state": {
+    "history": [
+      {
+        "previous": "PRECHECK",
+        "reason": "Prelaunch gates passed",
+        "source_sha256": "0d8e4e3938dc61a7c8c3d6f6f36009dd9f2b887f1f2dbab7c7361fb5b626391f",
+        "state": "STAGE1_READY",
+        "time": 1789120963.856052
+      },
+      {
+        "previous": "STAGE1_READY",
+        "reason": "Exactly-once trainer manager dispatched",
+        "source_sha256": "0d8e4e3938dc61a7c8c3d6f6f36009dd9f2b887f1f2dbab7c7361fb5b626391f",
+        "state": "STAGE1_RUNNING",
+        "time": 1789120964.006779
+      },
+      {
+        "previous": "STAGE1_RUNNING",
+        "reason": "Stage1 trainer failure: RuntimeError('TRAINER_NONZERO_EXIT')",
+        "source_sha256": "0d8e4e3938dc61a7c8c3d6f6f36009dd9f2b887f1f2dbab7c7361fb5b626391f",
+        "state": "BLOCKED",
+        "time": 1789141032.5684335
+      },
+      {
+        "previous": "BLOCKED",
+        "reason": "Explicit user-authorized resume from validated step500 with checkpoint I/O repair",
+        "source_sha256": "d250c6f0aefc157eec8064788b8c18ffe749ae56d6c78df55c07c706fc1ef13c",
+        "state": "STAGE1_RUNNING",
+        "time": 1789147638.3050578
+      },
+      {
+        "previous": "STAGE1_RUNNING",
+        "reason": "Stage1 trainer failure: RuntimeError('TRAINER_NONZERO_EXIT')",
+        "source_sha256": "d250c6f0aefc157eec8064788b8c18ffe749ae56d6c78df55c07c706fc1ef13c",
+        "state": "BLOCKED",
+        "time": 1789147666.4396844
+      },
+      {
+        "previous": "BLOCKED",
+        "reason": "Explicit user-authorized resume from validated step500 with checkpoint I/O repair",
+        "source_sha256": "e73331f77358213aea496e91a4c969fc283c5af075f580fda0cc304aaabd79ed",
+        "state": "STAGE1_RUNNING",
+        "time": 1789147941.5737402
+      },
+      {
+        "previous": "STAGE1_RUNNING",
+        "reason": "Exact counters and final DCP verified",
+        "source_sha256": "e73331f77358213aea496e91a4c969fc283c5af075f580fda0cc304aaabd79ed",
+        "state": "STAGE1_FINALIZING",
+        "time": 1789298381.3347232
+      },
+      {
+        "previous": "STAGE1_FINALIZING",
+        "reason": "PermissionError(13, 'Permission denied')",
+        "source_sha256": "e73331f77358213aea496e91a4c969fc283c5af075f580fda0cc304aaabd79ed",
+        "state": "BLOCKED",
+        "time": 1789298542.267716
+      },
+      {
+        "previous": "BLOCKED",
+        "reason": "Exact counters and final DCP verified",
+        "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+        "state": "STAGE1_FINALIZING",
+        "time": 1789299979.1395721
+      },
+      {
+        "previous": "STAGE1_FINALIZING",
+        "reason": "Atomic standalone FINAL verified",
+        "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+        "state": "STAGE1_FINAL_FROZEN",
+        "time": 1789300150.600409
+      },
+      {
+        "previous": "STAGE1_FINAL_FROZEN",
+        "reason": "Prelaunch gates passed",
+        "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+        "state": "STAGE2_READY",
+        "time": 1789300166.0553448
+      },
+      {
+        "previous": "STAGE2_READY",
+        "reason": "Exactly-once trainer manager dispatched",
+        "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+        "state": "STAGE2_RUNNING",
+        "time": 1789300181.6642919
+      },
+      {
+        "previous": "STAGE2_RUNNING",
+        "reason": "Stage2 trainer failure: RuntimeError('TRAINER_NONZERO_EXIT')",
+        "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+        "state": "BLOCKED",
+        "time": 1789300449.3575828
+      },
+      {
+        "previous": "BLOCKED",
+        "reason": "Prelaunch gates passed",
+        "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+        "state": "STAGE2_READY",
+        "time": 1789303254.6816394
+      },
+      {
+        "previous": "STAGE2_READY",
+        "reason": "Exactly-once trainer manager dispatched",
+        "source_sha256": "149abc4a52547b8c0074d4eaa86a6335a37c030cc8cd540896233b6681cc9370",
+        "state": "STAGE2_RUNNING",
+        "time": 1789303270.9554727
+      }
+    ],
+    "state": "STAGE2_RUNNING",
+    "updated": 1789303270.9557679
+  },
+  "supervisor": {
+    "boot_id": "326e2e7f-73e6-4f82-a643-09ee601165b5",
+    "command": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/work/llama31_8b_stage1_stage2_pipeline_formal_v1/pipeline.py supervise",
+    "pid": 2044705,
+    "start_ticks": 338246896
+  },
+  "time": 1789303271.0390167
+}

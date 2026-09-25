@@ -1,0 +1,48 @@
+{
+  "classification": "SCALEUP_CANDIDATE_CONFIG",
+  "FORMAL_LLAMA_CONFIG_FROZEN": false,
+  "model_family": "llama",
+  "model_path": "MODEL_PATH",
+  "dataset_path": "DATASET_PATH",
+  "run_root": "RUN_ROOT",
+  "context_length": 32768,
+  "chunk_size": 4096,
+  "ttt_layers": [
+    0,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "fast_weight": "mlp.down_proj.weight",
+  "dtype": "bfloat16",
+  "attn_implementation": "sdpa",
+  "gradient_checkpointing": {
+    "use_reentrant": false
+  },
+  "ttt_lr": 1.0,
+  "ttt_target": "hidden_states",
+  "ttt_target_type": "gated_next_position_hidden",
+  "ttt_proj": true,
+  "ttt_ntp_gate_init": "zero",
+  "training_inner_clip": null,
+  "inference_delta_frobenius_clip": 1e-05,
+  "document_metadata_required": true,
+  "stage": "stage1",
+  "optimizer": {
+    "type": "AdamW",
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "lr": 5e-06,
+    "weight_decay": 0.1,
+    "scheduler": "constant",
+    "outer_grad_clip": 1.0,
+    "owner": "unchanged_common_runtime"
+  },
+  "batch_size": 1,
+  "gradient_accumulation": 1
+}

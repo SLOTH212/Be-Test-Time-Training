@@ -1,0 +1,440 @@
+{
+  "authority": "code port only; not formal 8B config",
+  "files": [
+    {
+      "path": "source/hf_models/__init__.py",
+      "role": "source",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "source/hf_models/hf_llama/__init__.py",
+      "role": "source",
+      "sha256": "770ba1a3ec706f2918e566531d23224a8ad88b92577f69afaa11069712c45104",
+      "size": 102
+    },
+    {
+      "path": "source/hf_models/hf_llama/configuration_llama.py",
+      "role": "source",
+      "sha256": "1c119fe0eb96cda65879857542fd8551b281e4a0c01a6ddb83e1a620f59595a8",
+      "size": 12814
+    },
+    {
+      "path": "source/hf_models/hf_llama/modeling_llama.py",
+      "role": "source",
+      "sha256": "e158573f40ad30336ef35ee958f0daec6f8f21af53add090f87125a64293a301",
+      "size": 30428
+    },
+    {
+      "path": "source/hf_models/hf_qwen3/__init__.py",
+      "role": "source",
+      "sha256": "2ef4fb7b17e59ac651edb16934f6b1e1f210656dde83548861c581c27d684266",
+      "size": 1094
+    },
+    {
+      "path": "source/hf_models/hf_qwen3/configuration_qwen3.py",
+      "role": "source",
+      "sha256": "b3f309ec54094694cfc86a74b66d860193fc4e684b9cc3c0d1d2ed84ca2112fb",
+      "size": 15432
+    },
+    {
+      "path": "source/hf_models/hf_qwen3/modeling_qwen3.py",
+      "role": "source",
+      "sha256": "e949cef8b01394ff845041dca0c5d72d5e536139c471be5eea130db2a884d0e0",
+      "size": 31382
+    },
+    {
+      "path": "source/hf_models/hf_qwen3/ttt_state_core.py",
+      "role": "source",
+      "sha256": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e",
+      "size": 6229
+    },
+    {
+      "path": "source/inference_model/__init__.py",
+      "role": "source",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "source/inference_model/hf_llama/__init__.py",
+      "role": "source",
+      "sha256": "770ba1a3ec706f2918e566531d23224a8ad88b92577f69afaa11069712c45104",
+      "size": 102
+    },
+    {
+      "path": "source/inference_model/hf_llama/configuration_llama.py",
+      "role": "source",
+      "sha256": "6d6e929b46d044395acba1bee577c76b50feab536232a5ee30ff81d059a7f735",
+      "size": 12837
+    },
+    {
+      "path": "source/inference_model/hf_llama/modeling_llama.py",
+      "role": "source",
+      "sha256": "501c063ebe6ba0bf03d1266a8aa1232fe24c963bc47a2bde25315e683bee83fc",
+      "size": 30096
+    },
+    {
+      "path": "source/inference_model/hf_qwen3/__init__.py",
+      "role": "source",
+      "sha256": "a38d76873e560e9c034258408e1c67fdfc08f2be846da1937cea1434f6e10e80",
+      "size": 965
+    },
+    {
+      "path": "source/inference_model/hf_qwen3/configuration_qwen3.py",
+      "role": "source",
+      "sha256": "ebed0379af1075b97222dc4ffdaf0cca2de86311e0715a704c7e148b8365c444",
+      "size": 14535
+    },
+    {
+      "path": "source/inference_model/hf_qwen3/modeling_qwen3.py",
+      "role": "source",
+      "sha256": "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43",
+      "size": 31737
+    },
+    {
+      "path": "source/ntp_core/__init__.py",
+      "role": "source",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "source/ntp_core/ttt_state_core.py",
+      "role": "source",
+      "sha256": "77dd9e0ecbd2a7095fefbe1c3a9e49d7f802d26423011eeb2238371f9061375c",
+      "size": 6261
+    },
+    {
+      "path": "source/ntp_core/validation.py",
+      "role": "source",
+      "sha256": "dd2050ee1180082ca33aca4862c3bac78ee2d072860b0e8b75e6c99131ff165f",
+      "size": 1564
+    },
+    {
+      "path": "adapters/__init__.py",
+      "role": "adapters",
+      "sha256": "24ceb2eae6ce5846f9b931b4816f25f045d51e8c86a0f36d3e354a734bb18036",
+      "size": 58
+    },
+    {
+      "path": "adapters/inference.py",
+      "role": "adapters",
+      "sha256": "734912b6912295a3baf64f39f45b5e0d4f23e6824a09a6fab2595f0af065d52f",
+      "size": 1466
+    },
+    {
+      "path": "adapters/model_family.py",
+      "role": "adapters",
+      "sha256": "247b94100507e4bd2096abac09c1822591c7327efe5613bb0c76fa36e6e45d90",
+      "size": 3599
+    },
+    {
+      "path": "adapters/pipeline.py",
+      "role": "adapters",
+      "sha256": "5999b7bb467be4a3c42684452bdea33be14ddccf740fdd707166bb2c8a5a8244",
+      "size": 933
+    },
+    {
+      "path": "configs/llama31_8b_ruler32k_inference_template.yaml",
+      "role": "configs",
+      "sha256": "f13405b40a30ca6281939d1091563d8c405a11b849241540481941d1754cd904",
+      "size": 1091
+    },
+    {
+      "path": "configs/llama31_8b_stage1_32k_template.yaml",
+      "role": "configs",
+      "sha256": "76930c00cff9411bbebd0da07a961987c5d7bf3da43d861c357b4ee5daaadb9b",
+      "size": 1061
+    },
+    {
+      "path": "configs/llama31_8b_stage2_32k_template.yaml",
+      "role": "configs",
+      "sha256": "ddfd989ec34868ab052b90b48b3e0219fa57c7ce4444637663a7757d2d2a69db",
+      "size": 1337
+    },
+    {
+      "path": "tests/run_tests.py",
+      "role": "tests",
+      "sha256": "9aa52f2e68c6676c5aba6dd88328aabe39e64ae505a47c28185407b42470c284",
+      "size": 578
+    },
+    {
+      "path": "tests/test_level0.py",
+      "role": "tests",
+      "sha256": "88b76aa4df20dbaeeafec46e59fb45999d35f1cba6ea45b923c10f7668995f21",
+      "size": 3748
+    },
+    {
+      "path": "tests/test_off_parity.py",
+      "role": "tests",
+      "sha256": "b898ba3f74f2d3ff06414949339786672fe073289fbace743b2f159c491cfd28",
+      "size": 4481
+    },
+    {
+      "path": "tests/test_port.py",
+      "role": "tests",
+      "sha256": "77dea39dc5582389b8fa89c14c7c7f7276b2d2f811301eeedc07447d9709f0c9",
+      "size": 22449
+    }
+  ],
+  "llama_reference": {
+    "commit": "be2324829b0e91c8fd10a74d4b43714fde6676e1",
+    "fast_weight_target": "mlp.down_proj.weight",
+    "files": [
+      {
+        "git_object_verified": true,
+        "path": "/home/USER/ttt_migration/staging_v2_clean/root/autodl-tmp/ttt/In-Place-TTT-official-be232-readonly/LICENSE",
+        "relative_path": "LICENSE",
+        "role": "LLAMA_MODEL_FAMILY_GLUE_ONLY",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size": 11358
+      },
+      {
+        "git_object_verified": true,
+        "path": "/home/USER/ttt_migration/staging_v2_clean/root/autodl-tmp/ttt/In-Place-TTT-official-be232-readonly/README.md",
+        "relative_path": "README.md",
+        "role": "LLAMA_MODEL_FAMILY_GLUE_ONLY",
+        "sha256": "dbf3c84af257e596c2a1d7b197922c522d7c86f42cea3d973653da2b8f83c2fa",
+        "size": 11602
+      },
+      {
+        "git_object_verified": true,
+        "path": "/home/USER/ttt_migration/staging_v2_clean/root/autodl-tmp/ttt/In-Place-TTT-official-be232-readonly/hf_models/hf_llama/__init__.py",
+        "relative_path": "hf_models/hf_llama/__init__.py",
+        "role": "LLAMA_MODEL_FAMILY_GLUE_ONLY",
+        "sha256": "25a065fb0547b4a3528d7af0b9b8ae2564b969ad666ca86b7d387b74c1f7d167",
+        "size": 1094
+      },
+      {
+        "git_object_verified": true,
+        "path": "/home/USER/ttt_migration/staging_v2_clean/root/autodl-tmp/ttt/In-Place-TTT-official-be232-readonly/hf_models/hf_llama/configuration_llama.py",
+        "relative_path": "hf_models/hf_llama/configuration_llama.py",
+        "role": "LLAMA_MODEL_FAMILY_GLUE_ONLY",
+        "sha256": "0dd0b44decf7c922a5388f03f7a13d9074fb29fa086c74c2a7de7730b6b0a672",
+        "size": 12795
+      },
+      {
+        "git_object_verified": true,
+        "path": "/home/USER/ttt_migration/staging_v2_clean/root/autodl-tmp/ttt/In-Place-TTT-official-be232-readonly/hf_models/hf_llama/modeling_llama.py",
+        "relative_path": "hf_models/hf_llama/modeling_llama.py",
+        "role": "LLAMA_MODEL_FAMILY_GLUE_ONLY",
+        "sha256": "fb1e471283cc18fcd03fda5e2812c5e629c0c3ac1e592aa3b72783c42955be14",
+        "size": 28915
+      },
+      {
+        "git_object_verified": true,
+        "path": "/home/USER/ttt_migration/staging_v2_clean/root/autodl-tmp/ttt/In-Place-TTT-official-be232-readonly/inference_model/hf_llama3/__init__.py",
+        "relative_path": "inference_model/hf_llama3/__init__.py",
+        "role": "LLAMA_MODEL_FAMILY_GLUE_ONLY",
+        "sha256": "f084e24edbc2bb8cebe74f3ded368d40e1c6a848274f06a8077d09135567a1c9",
+        "size": 965
+      },
+      {
+        "git_object_verified": true,
+        "path": "/home/USER/ttt_migration/staging_v2_clean/root/autodl-tmp/ttt/In-Place-TTT-official-be232-readonly/inference_model/hf_llama3/configuration_llama.py",
+        "relative_path": "inference_model/hf_llama3/configuration_llama.py",
+        "role": "LLAMA_MODEL_FAMILY_GLUE_ONLY",
+        "sha256": "13e03dfcc525f809b215a0effae2837c82da612203f40d645b449e740650f8e8",
+        "size": 12819
+      },
+      {
+        "git_object_verified": true,
+        "path": "/home/USER/ttt_migration/staging_v2_clean/root/autodl-tmp/ttt/In-Place-TTT-official-be232-readonly/inference_model/hf_llama3/modeling_llama.py",
+        "relative_path": "inference_model/hf_llama3/modeling_llama.py",
+        "role": "LLAMA_MODEL_FAMILY_GLUE_ONLY",
+        "sha256": "78e95c6cc3a64d4fc629ca6a9abb135883d1c0a6ca5184a2a0b8283f06802d85",
+        "size": 28170
+      },
+      {
+        "git_object_verified": true,
+        "path": "/home/USER/ttt_migration/staging_v2_clean/root/autodl-tmp/ttt/In-Place-TTT-official-be232-readonly/pyproject.toml",
+        "relative_path": "pyproject.toml",
+        "role": "LLAMA_MODEL_FAMILY_GLUE_ONLY",
+        "sha256": "cb42e534814404c1a0377439fe55c1cbf2c1e1d172666d0f555116041d4a8b40",
+        "size": 6261
+      }
+    ],
+    "root": "/home/USER/ttt_migration/staging_v2_clean/root/autodl-tmp/ttt/In-Place-TTT-official-be232-readonly",
+    "status": "PASS"
+  },
+  "package_verification": "external package/PACKAGE_VERIFICATION.json is final release gate",
+  "parity": "provenance/SCIENTIFIC_SEMANTICS_PARITY.json",
+  "qwen_authority": {
+    "expected_hashes": {
+      "hf_models/hf_qwen3/modeling_qwen3.py": "e949cef8b01394ff845041dca0c5d72d5e536139c471be5eea130db2a884d0e0",
+      "inference_model/hf_qwen3/modeling_qwen3.py": "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43",
+      "tools/cloud/formal_train_gated_ntp.py": "960465d4c0850345fb998e81b6bf19f2517ecea104aed2946a8b3e31bb416cf3"
+    },
+    "files": [
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/configs/formal/gated_ntp_stage1_100m.yaml",
+        "relative_path": "configs/formal/gated_ntp_stage1_100m.yaml",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "1163dfa291112f573ce9c031a02d1bdfe2652bfaaae2cc52df799226ed99bccc",
+        "size": 1265
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/configs/formal/gated_ntp_stage2_qa10m.yaml",
+        "relative_path": "configs/formal/gated_ntp_stage2_qa10m.yaml",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "d02290f05c2ced778caeefaf522704b1a9d6e92362479cedfef52df7f8a5e777",
+        "size": 738
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/hf_models/__init__.py",
+        "relative_path": "hf_models/__init__.py",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "cc2c397dab164ab9e92165c834ec0c4a40263b8178abf586b6ce94eb08d9eda8",
+        "size": 672
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/hf_models/hf_qwen3/__init__.py",
+        "relative_path": "hf_models/hf_qwen3/__init__.py",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "2ef4fb7b17e59ac651edb16934f6b1e1f210656dde83548861c581c27d684266",
+        "size": 1094
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/hf_models/hf_qwen3/configuration_qwen3.py",
+        "relative_path": "hf_models/hf_qwen3/configuration_qwen3.py",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "b3f309ec54094694cfc86a74b66d860193fc4e684b9cc3c0d1d2ed84ca2112fb",
+        "size": 15432
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/hf_models/hf_qwen3/modeling_qwen3.py",
+        "relative_path": "hf_models/hf_qwen3/modeling_qwen3.py",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "e949cef8b01394ff845041dca0c5d72d5e536139c471be5eea130db2a884d0e0",
+        "size": 31382
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/hf_models/hf_qwen3/ttt_state_core.py",
+        "relative_path": "hf_models/hf_qwen3/ttt_state_core.py",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e",
+        "size": 6229
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/inference_model/__init__.py",
+        "relative_path": "inference_model/__init__.py",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "01fa3318f3f3fc02dd38565672940700f289d7cce790d6f05e04471944b4903f",
+        "size": 624
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/inference_model/hf_qwen3/__init__.py",
+        "relative_path": "inference_model/hf_qwen3/__init__.py",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "a38d76873e560e9c034258408e1c67fdfc08f2be846da1937cea1434f6e10e80",
+        "size": 965
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/inference_model/hf_qwen3/configuration_qwen3.py",
+        "relative_path": "inference_model/hf_qwen3/configuration_qwen3.py",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "ebed0379af1075b97222dc4ffdaf0cca2de86311e0715a704c7e148b8365c444",
+        "size": 14535
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/inference_model/hf_qwen3/modeling_qwen3.py",
+        "relative_path": "inference_model/hf_qwen3/modeling_qwen3.py",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "d34faaaf0738f0bd87a188449ee99aff24b8a3d4e5d9adb320a250c00d558c43",
+        "size": 31737
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/pyproject.toml",
+        "relative_path": "pyproject.toml",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "cb42e534814404c1a0377439fe55c1cbf2c1e1d172666d0f555116041d4a8b40",
+        "size": 6261
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/tests_gated_ntp_cpu.py",
+        "relative_path": "tests_gated_ntp_cpu.py",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "508964b30596be8445426355da2c8aeb8be954d46b9bc94aba7b214f2cda64c6",
+        "size": 9358
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/tests_static_ttt_test_ttt_state_core.py",
+        "relative_path": "tests_static_ttt_test_ttt_state_core.py",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "24a8db84592471ebd628fcf9f5d1b397b5f80ba210acb5d6c6b086c1a834b575",
+        "size": 4377
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/tools/cloud/formal_train_gated_ntp.py",
+        "relative_path": "tools/cloud/formal_train_gated_ntp.py",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "960465d4c0850345fb998e81b6bf19f2517ecea104aed2946a8b3e31bb416cf3",
+        "size": 30705
+      },
+      {
+        "path": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp/tools/cloud/validate_record_vs_gated_ntp.py",
+        "relative_path": "tools/cloud/validate_record_vs_gated_ntp.py",
+        "role": "CURRENT_NTP_SCIENTIFIC_AUTHORITY",
+        "sha256": "d0f26fc3930f1c3898257f181b654aa72649bbea40128482d9a2fb569e67753d",
+        "size": 16587
+      }
+    ],
+    "manifest_training_hash_recovered_from": "/home/USER/ttt/qwen3_0p6b_replication_v1/manifests/source_manifest.json",
+    "reference_ntp": "190580a29780030969cd337763098188bce8c88c",
+    "reference_pipeline": "6665596be4cccb51387b7cf6a4f15b338f7d103a",
+    "root": "/home/USER/ttt/qwen3_0p6b_replication_v1/source/ntp",
+    "status": "PASS"
+  },
+  "scientific_contract": "provenance/NTP_SCIENTIFIC_CONTRACT.json",
+  "test_results": {
+    "APPLY_THEN_UPDATE_PARITY": "PASS",
+    "CANDIDATE_TTT_LAYERS": [
+      0,
+      6,
+      12,
+      18,
+      24,
+      30
+    ],
+    "CROSS_SAMPLE_STATE_LEAKAGE_N": 0,
+    "FORMAL_INFERENCE_EXECUTED": false,
+    "FORMAL_LLAMA_CONFIG_FROZEN": false,
+    "GENERATION_UPDATE_SEMANTICS_PARITY": "PASS",
+    "HIT_USED": false,
+    "INPUT_AUTHORITY_FREEZE": "PASS",
+    "LLAMA31_8B_LOCAL_MODEL_AVAILABLE": false,
+    "LLAMA_32K_CHUNK4K_STATIC_RUNTIME_TEST": "PASS",
+    "LLAMA_BOUNDARY_SEMANTICS": "PASS",
+    "LLAMA_CACHE_COMPATIBILITY": "PASS",
+    "LLAMA_DYNAMIC_INTERFACE_STATIC_TEST": "PASS",
+    "LLAMA_FAST_WEIGHT_TARGET": "mlp.down_proj.weight",
+    "LLAMA_FSDP2_STATIC_COMPATIBILITY": "PASS",
+    "LLAMA_GRADIENT_CHECKPOINTING_STATUS": "PASS",
+    "LLAMA_INFERENCE_CLIP_PARITY": "PASS",
+    "LLAMA_INFERENCE_OFF_PARITY": "PASS",
+    "LLAMA_NTP_UPDATE_ORACLE": "PASS",
+    "LLAMA_OFF_MODEL_PARITY": "PASS",
+    "LLAMA_PORT_LEVEL0": "PASS",
+    "LLAMA_PORT_LEVEL1": "PASS",
+    "LLAMA_PORT_LEVEL2": "PASS",
+    "LLAMA_REFERENCE_AUTHORITY": "PASS",
+    "LLAMA_SCALEUP_ACTION_SET_TEST": "PASS",
+    "LLAMA_STAGE1_INTERFACE_STATUS": "PASS",
+    "LLAMA_STAGE2_INTERFACE_STATUS": "PASS",
+    "LLAMA_STATE_DICT_ROUNDTRIP": "PASS",
+    "LLAMA_TRAINING_GRADIENT_FLOW": "PASS",
+    "MODEL_FAMILY_CONFIG_VALIDATION": "PASS",
+    "QWEN_REGRESSION_GUARD": "PASS",
+    "QWEN_SOURCE_UNCHANGED": true,
+    "REAL_LLAMA31_8B_SMOKE": "DEFERRED_MODEL_ABSENT",
+    "REMOTE_HOST": "neuroii",
+    "REMOTE_ROOT": "/home/USER/ttt",
+    "REMOTE_TRANSFER_EXECUTED": false,
+    "REMOTE_USER": "zonghan",
+    "SCIENTIFIC_PIPELINE_RECIPE_CHANGED": false,
+    "SCIENTIFIC_SEMANTICS_PARITY": "PASS",
+    "STAGE2_LOSS_MODEL_FAMILY_AGNOSTIC": "PASS",
+    "TINY_FIXTURE_BACKWARD_EXECUTED": true,
+    "TRAINING_EXECUTED": false,
+    "WORK_ROOT": "/home/USER/ttt/work/llama31_ntp_port_v1"
+  }
+}

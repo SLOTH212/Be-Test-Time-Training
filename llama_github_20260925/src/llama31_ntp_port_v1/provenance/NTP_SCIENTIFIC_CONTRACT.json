@@ -1,0 +1,51 @@
+{
+  "TTTState": "functional dataclass with weight tensor; current + delta; no parameter mutation",
+  "attention": "sdpa",
+  "auxiliary_scalar_loss": false,
+  "convolution_forward_used": false,
+  "document_reset": "fast weight reset per explicit [start,end) boundary; attention behavior unchanged",
+  "dtype": "bfloat16",
+  "evidence": [
+    "reference/qwen_ntp/tools/cloud/formal_train_gated_ntp.py:build",
+    "reference/qwen_ntp/hf_models/hf_qwen3/ttt_state_core.py:ttt_chunk_step,run_document,run_sequence_with_boundaries",
+    "reference/qwen_ntp/hf_models/hf_qwen3/modeling_qwen3.py:Qwen3MLP,Qwen3DecoderLayer",
+    "reference/qwen_ntp/inference_model/hf_qwen3/modeling_qwen3.py:Qwen3MLP,Qwen3DecoderLayer,Qwen3Model",
+    "reference/stage2/answer_context_fused_loss.py:single_decoder_fused_answer_context"
+  ],
+  "fast_weight": "mlp.down_proj.weight",
+  "formula": "delta[e,i] = lr * sum_valid_pairs_t h[t,i] * (context[t+1,d] * gate[d]) * projection[d,e]",
+  "frozen_qwen_chunk_size": 1024,
+  "gate": "per-layer per-hidden-channel raw parameter, exact zero init; no sigmoid",
+  "generation": "cache_position.numel()==1 and cache_position[0]>0: no update, use prompt-derived weight; clear tails",
+  "gradient_checkpointing": {
+    "use_reentrant": false
+  },
+  "inference_clip_formula": "delta * min(1, tau / max(norm(delta.float()), finfo(float32).tiny)); scale cast to delta.dtype",
+  "inference_delta_frobenius_clip": 1e-05,
+  "inference_tail": "only complete prompt chunks update; tail uses current weight and is retained in cache until continuation",
+  "llama_chunk_size": "positive configurable integer; 4096 is SCALEUP_CANDIDATE_CONFIG",
+  "operation_order": "apply current W to chunk then compute update for following chunk",
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "lr": 5e-06,
+    "outer_grad_clip": 1.0,
+    "owner": "unchanged common runtime",
+    "scheduler": "constant",
+    "type": "AdamW",
+    "weight_decay": 0.1
+  },
+  "projection": "bias-free HxH ttt_proj; target row vector right-multiplies stored projection.weight",
+  "sample_reset": "discard entire KV/TTT cache; base model weight unchanged",
+  "stage1": "all base and NTP parameters remain requires_grad=True; unused Conv has no gradient; causal LM loss",
+  "stage2": "strict Stage1 model-only weights into fresh model; optimizer/runtime owned outside port; mean_answer_ce + 0.1*mean_context_ce",
+  "status": "PASS",
+  "target": "post_attention_layernorm contextual hidden state at next position within the same document-local chunk",
+  "target_type": "gated_next_position_hidden",
+  "training_inner_clip": null,
+  "training_tail": "partial chunk computes valid adjacent-pair update; final state discarded at document end",
+  "ttt_lr": 1.0
+}

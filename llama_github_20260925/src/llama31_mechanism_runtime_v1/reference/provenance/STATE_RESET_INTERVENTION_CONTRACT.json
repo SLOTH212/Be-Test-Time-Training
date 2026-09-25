@@ -1,0 +1,16 @@
+{
+  "action_sequence_changed": false,
+  "base_parameter_mutation": false,
+  "boundary": "one-based first chunk of terminal equal-action run",
+  "downstream_recomputation": true,
+  "execution_qualification": "Layer-major prompt forward; no globally synchronized KV/prefix rollback. Existing execution context continues. Unused layers are implicitly at base.",
+  "explicit_kv_invalidation_or_copy": false,
+  "generation_change": false,
+  "layers": "configured_ttt_layers; historical [0,6,12,18,24]",
+  "mutation": "local TTTState.weight := checkpoint mlp.down_proj.weight before boundary chunk",
+  "prior_chunk_replay": false,
+  "prompt_restart": false,
+  "rng_reset": false,
+  "schema": "STATE_RESET_INTERVENTION_CONTRACT_V1",
+  "source": "provenance/original/reset/dependencies/instrumented_backend.py"
+}

@@ -1,0 +1,1396 @@
+--- a/code/configs/hit_stage1_4b_32k_chunk4k_gpu23_debug_v1.yaml
++++ b/code/configs/hit_stage1_4b_32k_chunk4k_gpu23_debug_v1.yaml
+@@ -0,0 +1,39 @@
++stage: stage1
++config_class: HIT_SCALEUP_DEBUG_CONFIG_V1
++debug_copy_class: HIT_DEBUG_ONLY_NOT_FORMAL
++capacity_parameters_frozen: false
++formal_training: false
++synthetic_data_only: true
++physical_gpu_allowlist: "2,3"
++world_size: 2
++model_base: /home/USER/data/zonghan/models/Qwen3-4B-Base
++train_data: /home/USER/data/zonghan/work/scaleup_multigpu_32k_gpu23_debug_v1/fixtures/stage1_32k_debug.jsonl
++validation_data: /home/USER/data/zonghan/work/scaleup_multigpu_32k_gpu23_debug_v1/fixtures/stage1_32k_debug.jsonl
++validation_records: 4
++record_cursor_final: 4
++train_tokens: 131072
++context_length: 32768
++global_batch_size: 2
++micro_batch_size: 1
++gradient_accumulation: 1
++precision: bf16
++gradient_checkpointing: true
++seed: 42
++ttt_lr: 1.0
++ttt_chunk_size: 4096
++ttt_layers:
++  - 0
++  - 6
++  - 12
++  - 18
++  - 24
++  - 30
++optimizer: AdamW
++outer_lr: 5.0e-6
++betas: [0.9, 0.95]
++eps: 1.0e-8
++weight_decay: 0.1
++outer_grad_clip: 1.0
++scheduler: constant
++save_steps: [1, 2]
++stage1_model_only_artifact: null
+--- a/code/lib/distributed_checkpoint.py
++++ b/code/lib/distributed_checkpoint.py
+@@ -57,6 +57,25 @@
+         for block in iter(lambda: handle.read(1 << 20), b""):
+             h.update(block)
+     return h.hexdigest()
++
++
++def preflight_checkpoint_metadata(root, world_size: int, mesh_shape, batch_metadata: dict):
++    """Fail closed on resume metadata before model construction or GPU training."""
++    root = Path(root)
++    latest_path = root / "latest.json"
++    if not latest_path.is_file():
++        return None
++    latest = json.loads(latest_path.read_text())
++    slot = root / latest["slot"]
++    manifest_path = slot / "manifest.json"
++    manifest = json.loads(manifest_path.read_text())
++    if _digest(manifest_path) != latest["manifest_sha256"] or not manifest.get("complete"):
++        raise RuntimeError("DCP_MANIFEST_INVALID")
++    if manifest["world_size"] != int(world_size) or manifest["mesh_shape"] != list(mesh_shape):
++        raise RuntimeError("RESUME_WORLD_SIZE_OR_MESH_MISMATCH")
++    if manifest["batch_metadata"] != dict(batch_metadata):
++        raise RuntimeError("RESUME_BATCH_METADATA_MISMATCH")
++    return manifest
+ 
+ 
+ class DistributedCheckpointRotation:
+@@ -133,8 +152,15 @@
+         options = StateDictOptions(strict=False)
+         model_state, optimizer_state = get_state_dict(model, optimizer, options=options)
+         state = {"model": model_state, "optimizer": optimizer_state}
+-        dcp.load(state, checkpoint_id=slot / "dcp")
+-        set_state_dict(model, optimizer, model_state_dict=state["model"],
++        reader = dcp.FileSystemReader(slot / "dcp")
++        checkpoint_keys = set(reader.read_metadata().state_dict_metadata)
++        expected_model_keys = {f"model.{name}" for name in model_state}
++        missing_model_keys = sorted(expected_model_keys - checkpoint_keys)
++        if missing_model_keys:
++            raise RuntimeError(f"DCP_MODEL_STATE_KEYS_MISSING {missing_model_keys[:8]}")
++        planner = dcp.DefaultLoadPlanner(allow_partial_load=True)
++        dcp.load(state, storage_reader=reader, planner=planner)
++        set_state_dict(model, optimizer, model_state_dict=state["model"],
+                        optim_state_dict=state["optimizer"], options=options)
+         rank_state = torch.load(slot / f"rank_{_rank():05d}.pt", map_location="cpu", weights_only=False)
+         if scheduler is not None:
+--- a/code/lib/distributed_runtime.py
++++ b/code/lib/distributed_runtime.py
+@@ -1,5 +1,6 @@
+ """Minimal torchrun process lifecycle with rank-zero side-effect ownership."""
+ from dataclasses import dataclass
++from datetime import timedelta
+ import os
+ from pathlib import Path
+ from typing import Optional
+@@ -31,7 +32,10 @@
+     if use_cuda:
+         torch.cuda.set_device(device)
+     if world_size > 1 and not dist.is_initialized():
+-        dist.init_process_group(backend=backend, rank=rank, world_size=world_size)
++        kwargs = {"backend": backend, "rank": rank, "world_size": world_size,
++                  "timeout": timedelta(minutes=5)}
++        if use_cuda: kwargs["device_id"] = device
++        dist.init_process_group(**kwargs)
+     return DistributedContext(rank, local_rank, world_size, device, backend)
+ 
+ 
+@@ -43,7 +47,10 @@
+ 
+ def barrier() -> None:
+     if dist.is_available() and dist.is_initialized():
+-        dist.barrier()
++        if torch.cuda.is_available():
++            dist.barrier(device_ids=[torch.cuda.current_device()])
++        else:
++            dist.barrier()
+ 
+ 
+ def any_rank_failed(local_failed: bool, device: torch.device) -> bool:
+--- a/code/lib/fsdp2_runtime.py
++++ b/code/lib/fsdp2_runtime.py
+@@ -1,5 +1,6 @@
+ """Composable FSDP2 policy for the recovered Qwen3 authority."""
+ from dataclasses import dataclass
++from types import MethodType
+ from typing import Callable, Optional
+ 
+ import torch
+@@ -15,17 +16,29 @@
+ 
+ def apply_fsdp2(model, mesh=None, fully_shard_impl: Optional[Callable] = None) -> FSDP2Inventory:
+     if fully_shard_impl is None:
+-        from torch.distributed.fsdp import MixedPrecisionPolicy, fully_shard
++        from torch.distributed.fsdp import (
++            MixedPrecisionPolicy,
++            fully_shard,
++            register_fsdp_forward_method,
++        )
+         policy = MixedPrecisionPolicy(param_dtype=torch.bfloat16, reduce_dtype=torch.float32)
+         fully_shard_impl = fully_shard
+     else:
+         policy = {"param_dtype": torch.bfloat16, "reduce_dtype": torch.float32}
++        register_fsdp_forward_method = None
+     layers = getattr(getattr(model, "model", None), "layers", None)
+     if layers is None or len(layers) == 0:
+         raise RuntimeError("FSDP2_DECODER_BLOCK_DISCOVERY_FAILED")
+     for block in layers:
+         fully_shard_impl(block, mesh=mesh, mp_policy=policy)
+     fully_shard_impl(model, mesh=mesh, mp_policy=policy)
++    if register_fsdp_forward_method is not None:
++        def _fsdp_hidden_forward(self, *args, **kwargs):
++            """Run the decoder through root FSDP hooks without materializing logits."""
++            return self.model(*args, **kwargs)
++
++        model._fsdp_hidden_forward = MethodType(_fsdp_hidden_forward, model)
++        register_fsdp_forward_method(model, "_fsdp_hidden_forward")
+     return FSDP2Inventory(len(layers), True, "bf16", "fp32")
+ 
+ 
+--- a/code/lib/model_factory.py
++++ b/code/lib/model_factory.py
+@@ -9,6 +9,8 @@
+ 
+ import torch
+ 
++from .scaleup_debug_adapter import enable_debug_chunk_size
++
+ ROOT = Path(__file__).resolve().parents[1]
+ VENDOR = ROOT / "vendor" / "ntp_source_190580a"
+ EXPECTED = {
+@@ -19,7 +21,7 @@
+     "hf_models/hf_qwen3/modeling_qwen3.py": "e949cef8b01394ff845041dca0c5d72d5e536139c471be5eea130db2a884d0e0",
+     "hf_models/hf_qwen3/ttt_state_core.py": "0328e9fe792c918d6d741f58ade9729161a13bac053b16997f96d7b67064158e",
+ }
+-TTT_LAYERS = [0, 6, 12, 18, 24]
++DEFAULT_TTT_LAYERS = [0, 6, 12, 18, 24]
+ 
+ 
+ def _sha(path: Path) -> str:
+@@ -37,10 +39,19 @@
+         raise RuntimeError(f"RECOVERED_SOURCE_BUNDLE_HASH_MISMATCH {bad}")
+ 
+ 
+-def apply_ntp_contract(config, train_clip_none: bool = True):
++def apply_ntp_contract(config, train_clip_none: bool = True, ttt_layers=None, ttt_chunk: int = 1024):
++    layers = list(DEFAULT_TTT_LAYERS if ttt_layers is None else ttt_layers)
++    if not layers or len(layers) != len(set(layers)):
++        raise ValueError("TTT_LAYER_SET_EMPTY_OR_DUPLICATED")
++    if any(not isinstance(layer, int) or layer < 0 or layer >= int(config.num_hidden_layers) for layer in layers):
++        raise ValueError(
++            f"TTT_LAYER_INDEX_OUT_OF_RANGE layers={layers} num_hidden_layers={config.num_hidden_layers}"
++        )
++    if int(ttt_chunk) <= 0:
++        raise ValueError("TTT_CHUNK_MUST_BE_POSITIVE")
+     values = {
+-        "ttt_mode": True, "ttt_layers": TTT_LAYERS, "ttt_proj": True,
+-        "ttt_lr": 1.0, "ttt_chunk": 1024, "ttt_target": "hidden_states",
++        "ttt_mode": True, "ttt_layers": layers, "ttt_proj": True,
++        "ttt_lr": 1.0, "ttt_chunk": int(ttt_chunk), "ttt_target": "hidden_states",
+         "ttt_target_type": "gated_next_position_hidden", "ttt_ntp_gate": True,
+         "ttt_ntp_gate_init": "zero", "ttt_ntp_within_chunk_only": True,
+         "ttt_ntp_cross_chunk": False, "ttt_ntp_cross_record": False,
+@@ -65,9 +76,16 @@
+     return Qwen3Config, Qwen3ForCausalLM
+ 
+ 
+-def build_pretrained(path, device: torch.device, train_clip_none: bool = True):
++def build_pretrained(path, device: torch.device, train_clip_none: bool = True,
++                     ttt_layers=None, ttt_chunk: int = 1024):
+     Qwen3Config, Qwen3ForCausalLM = _classes()
+-    config = apply_ntp_contract(Qwen3Config.from_pretrained(path, local_files_only=True), train_clip_none)
++    enable_debug_chunk_size(ttt_chunk)
++    config = apply_ntp_contract(
++        Qwen3Config.from_pretrained(path, local_files_only=True),
++        train_clip_none,
++        ttt_layers=ttt_layers,
++        ttt_chunk=ttt_chunk,
++    )
+     model = Qwen3ForCausalLM.from_pretrained(
+         path, config=config, dtype=torch.bfloat16,
+         attn_implementation="sdpa", local_files_only=True,
+--- a/code/lib/scaleup_debug_adapter.py
++++ b/code/lib/scaleup_debug_adapter.py
+@@ -0,0 +1,38 @@
++"""HIT-only scale-up adapters around the byte-frozen NTP authority."""
++from functools import wraps
++
++FROZEN_CHUNK_SIZE = 1024
++HIT_DEBUG_CHUNK_SIZE = 4096
++
++
++def enable_debug_chunk_size(chunk_size: int) -> None:
++    """Permit exactly the audited HIT debug chunk size without editing vendor code."""
++    chunk_size = int(chunk_size)
++    if chunk_size == FROZEN_CHUNK_SIZE:
++        return
++    if chunk_size != HIT_DEBUG_CHUNK_SIZE:
++        raise ValueError(
++            f"HIT_DEBUG_CHUNK_SIZE_NOT_AUTHORIZED requested={chunk_size} "
++            f"allowed={HIT_DEBUG_CHUNK_SIZE}"
++        )
++    from hf_models.hf_qwen3 import ttt_state_core as core
++    installed = getattr(core, "_hit_debug_chunk_override", None)
++    if installed is not None:
++        if installed != chunk_size:
++            raise RuntimeError("CONFLICTING_HIT_DEBUG_CHUNK_OVERRIDE")
++        return
++    original = core.run_document
++
++    @wraps(original)
++    def debug_run_document(*args, **kwargs):
++        runtime_chunk = int(kwargs.get("chunk_size", FROZEN_CHUNK_SIZE))
++        if runtime_chunk != HIT_DEBUG_CHUNK_SIZE:
++            raise ValueError(
++                f"HIT_DEBUG_RUNTIME_CHUNK_MISMATCH expected={HIT_DEBUG_CHUNK_SIZE} "
++                f"actual={runtime_chunk}"
++            )
++        kwargs["allow_test_override"] = True
++        return original(*args, **kwargs)
++
++    core.run_document = debug_run_document
++    core._hit_debug_chunk_override = chunk_size
+--- a/code/tests/generate_hit_stage1_fixture.py
++++ b/code/tests/generate_hit_stage1_fixture.py
+@@ -0,0 +1,89 @@
++#!/usr/bin/env python3
++"""Generate four deterministic, exact-32K Stage1 records with real Qwen tokenization."""
++import hashlib
++import json
++from pathlib import Path
++
++from transformers import AutoTokenizer
++
++ROOT = Path(__file__).resolve().parents[2]
++MODEL = Path("/home/USER/data/zonghan/models/Qwen3-4B-Base")
++OUTPUT = ROOT / "fixtures/stage1_32k_debug.jsonl"
++MANIFEST = ROOT / "audits/hit_l3_l4_v1/SYNTHETIC_FIXTURE_MANIFEST.json"
++CONTEXT = 32768
++RECORDS = 4
++
++
++def digest(path):
++    value = hashlib.sha256()
++    with path.open("rb") as handle:
++        for block in iter(lambda: handle.read(1 << 20), b""):
++            value.update(block)
++    return value.hexdigest()
++
++
++def exact_record(tokenizer, index):
++    line = (
++        f"HIT synthetic Stage1 record {index:02d}; deterministic gated NTP debug fixture. "
++        "No formal corpus content is present.\n"
++    )
++    source = line * 20000
++    encoded = tokenizer(source, add_special_tokens=False).input_ids
++    if len(encoded) < CONTEXT:
++        raise RuntimeError("SYNTHETIC_SOURCE_TOO_SHORT")
++    target_ids = encoded[: CONTEXT - 1] + [int(tokenizer.eos_token_id)]
++    text = tokenizer.decode(
++        target_ids, skip_special_tokens=False, clean_up_tokenization_spaces=False
++    )
++    roundtrip = tokenizer(text, add_special_tokens=False).input_ids
++    if roundtrip != target_ids or len(roundtrip) != CONTEXT:
++        raise RuntimeError(
++            f"TOKENIZER_ROUNDTRIP_FAILED record={index} "
++            f"expected={CONTEXT} actual={len(roundtrip)}"
++        )
++    return {
++        "sample_id": f"hit-synthetic-32k-{index:04d}",
++        "text": text,
++        "token_count": CONTEXT,
++        "document_boundaries_qwen_json": json.dumps([[0, CONTEXT]]),
++        "metadata": {
++            "document_boundaries_qwen_json": json.dumps([[0, CONTEXT]]),
++            "synthetic": True,
++            "formal_data": False,
++            "eos_token_id": int(tokenizer.eos_token_id),
++        },
++    }
++
++
++def main():
++    tokenizer = AutoTokenizer.from_pretrained(MODEL, local_files_only=True)
++    if tokenizer.eos_token_id is None:
++        raise RuntimeError("TOKENIZER_EOS_MISSING")
++    rows = [exact_record(tokenizer, index) for index in range(RECORDS)]
++    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
++    with OUTPUT.open("w", encoding="utf-8") as handle:
++        for row in rows:
++            handle.write(json.dumps(row, ensure_ascii=False) + "\n")
++    manifest = {
++        "status": "PASS",
++        "synthetic_data_only": True,
++        "formal_stage1_dataset_used": False,
++        "path": str(OUTPUT),
++        "sha256": digest(OUTPUT),
++        "record_count": len(rows),
++        "record_ids": [row["sample_id"] for row in rows],
++        "token_count_each": CONTEXT,
++        "total_logical_tokens": CONTEXT * len(rows),
++        "eos_token_id": int(tokenizer.eos_token_id),
++        "document_boundaries_each": [[0, CONTEXT]],
++        "schema_fields": sorted(rows[0]),
++        "tokenizer_path": str(MODEL),
++        "tokenizer_local_files_only": True,
++    }
++    MANIFEST.parent.mkdir(parents=True, exist_ok=True)
++    MANIFEST.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
++    print(json.dumps(manifest, sort_keys=True))
++
++
++if __name__ == "__main__":
++    main()
+--- a/code/tests/hit_dcp_numeric_compare.py
++++ b/code/tests/hit_dcp_numeric_compare.py
+@@ -0,0 +1,162 @@
++#!/usr/bin/env python3
++"""Numerically compare two real two-rank DCP checkpoints tensor by tensor."""
++import hashlib
++import json
++import os
++import sys
++from pathlib import Path
++
++if os.environ.get("CUDA_VISIBLE_DEVICES") != "2,3":
++    raise RuntimeError("PHYSICAL_GPU_ALLOWLIST_VIOLATION")
++
++import torch
++import torch.distributed as dist
++
++ROOT = Path(__file__).resolve().parents[2]
++CODE = ROOT / "code"
++sys.path.insert(0, str(CODE))
++from lib.distributed_checkpoint import DistributedCheckpointRotation
++from lib.distributed_runtime import barrier, initialize, shutdown
++from lib.fsdp2_runtime import apply_fsdp2, make_device_mesh
++from lib.model_factory import build_pretrained
++
++MODEL_PATH = Path("/home/USER/data/zonghan/models/Qwen3-4B-Base")
++A_ROOT = ROOT / "runs/l4_uninterrupted_v1/checkpoints"
++B_ROOT = ROOT / "runs/l4_exact_a_step1_snapshot/checkpoints"
++AUDIT = ROOT / "audits/hit_l3_l4_v1/L4_NUMERIC_STATE_COMPARE.json"
++TTT_LAYERS = [0, 6, 12, 18, 24, 30]
++BATCH = {"global_batch_size": 2, "micro_batch_size": 1, "gradient_accumulation": 1}
++
++
++def local_cpu(value):
++    value = value.to_local() if hasattr(value, "to_local") else value
++    return value.detach().cpu().clone().contiguous()
++
++
++def tensor_sha256(value):
++    value = value.reshape(-1).view(torch.uint8)
++    return hashlib.sha256(value.numpy().tobytes()).hexdigest()
++
++
++def capture(model, optimizer):
++    named = sorted(model.named_parameters(), key=lambda item: item[0])
++    model_state = {name: local_cpu(parameter) for name, parameter in named}
++    parameter_names = {id(parameter): name for name, parameter in named}
++    optimizer_state = {}
++    for parameter, state in optimizer.state.items():
++        name = parameter_names[id(parameter)]
++        for key, value in state.items():
++            if torch.is_tensor(value) or hasattr(value, "to_local"):
++                optimizer_state[f"{name}.{key}"] = local_cpu(value)
++    return model_state, optimizer_state
++
++
++def current_maps(model, optimizer):
++    named = sorted(model.named_parameters(), key=lambda item: item[0])
++    model_state = {name: parameter for name, parameter in named}
++    parameter_names = {id(parameter): name for name, parameter in named}
++    optimizer_state = {}
++    for parameter, state in optimizer.state.items():
++        name = parameter_names[id(parameter)]
++        for key, value in state.items():
++            if torch.is_tensor(value) or hasattr(value, "to_local"):
++                optimizer_state[f"{name}.{key}"] = value
++    return model_state, optimizer_state
++
++
++def compare(reference, current, rtol, atol):
++    if set(reference) != set(current):
++        return {"key_sets_equal": False, "missing": sorted(set(reference) - set(current))[:8],
++                "extra": sorted(set(current) - set(reference))[:8], "allclose": False}
++    exact_count = allclose_count = 0
++    max_abs = sum_sq_diff = sum_sq_reference = 0.0
++    total_numel = 0
++    worst_key = None
++    digest_reference = hashlib.sha256()
++    digest_current = hashlib.sha256()
++    for name in sorted(reference):
++        left = reference[name]
++        right = local_cpu(current[name])
++        if left.shape != right.shape or left.dtype != right.dtype:
++            return {"key_sets_equal": True, "shape_dtype_equal": False,
++                    "mismatch_key": name, "allclose": False}
++        digest_reference.update(name.encode()); digest_reference.update(tensor_sha256(left).encode())
++        digest_current.update(name.encode()); digest_current.update(tensor_sha256(right).encode())
++        exact = torch.equal(left, right)
++        close = torch.allclose(left, right, rtol=rtol, atol=atol, equal_nan=False)
++        exact_count += int(exact); allclose_count += int(close)
++        difference = left.float() - right.float()
++        item_max = float(difference.abs().max().item()) if difference.numel() else 0.0
++        if item_max > max_abs:
++            max_abs = item_max; worst_key = name
++        sum_sq_diff += float(difference.double().pow(2).sum().item())
++        sum_sq_reference += float(left.double().pow(2).sum().item())
++        total_numel += left.numel()
++    rms_diff = (sum_sq_diff / max(1, total_numel)) ** 0.5
++    reference_rms = (sum_sq_reference / max(1, total_numel)) ** 0.5
++    return {
++        "key_sets_equal": True,
++        "shape_dtype_equal": True,
++        "tensor_count": len(reference),
++        "exact_tensor_count": exact_count,
++        "allclose_tensor_count": allclose_count,
++        "allclose": allclose_count == len(reference),
++        "rtol": rtol,
++        "atol": atol,
++        "max_abs": max_abs,
++        "worst_key": worst_key,
++        "rms_diff": rms_diff,
++        "reference_rms": reference_rms,
++        "relative_rms": rms_diff / max(reference_rms, 1e-30),
++        "canonical_sha256_A": digest_reference.hexdigest(),
++        "canonical_sha256_B": digest_current.hexdigest(),
++    }
++
++
++def main():
++    context = initialize()
++    try:
++        torch.manual_seed(42 + context.rank); torch.cuda.manual_seed_all(42 + context.rank)
++        model, _ = build_pretrained(MODEL_PATH, context.device, train_clip_none=True,
++                                    ttt_layers=TTT_LAYERS, ttt_chunk=4096)
++        apply_fsdp2(model, mesh=make_device_mesh(context.device.type, context.world_size))
++        optimizer = torch.optim.AdamW(model.parameters(), lr=5.0e-6, betas=(0.9, 0.95),
++                                      eps=1.0e-8, weight_decay=0.1, fused=True)
++        scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda _: 1.0)
++        progress_a = DistributedCheckpointRotation(A_ROOT, 2, [2], BATCH).load(
++            model, optimizer, scheduler)
++        model_a, optimizer_a = capture(model, optimizer)
++        scheduler_a = json.dumps(scheduler.state_dict(), sort_keys=True, default=str)
++        progress_b = DistributedCheckpointRotation(B_ROOT, 2, [2], BATCH).load(
++            model, optimizer, scheduler)
++        model_b, optimizer_b = current_maps(model, optimizer)
++        model_comparison = compare(model_a, model_b, rtol=1.0e-2, atol=1.0e-5)
++        optimizer_comparison = compare(optimizer_a, optimizer_b, rtol=1.0e-2, atol=1.0e-6)
++        local = {
++            "rank": context.rank,
++            "physical_gpu": 2 + context.local_rank,
++            "model": model_comparison,
++            "optimizer": optimizer_comparison,
++            "scheduler_exact": scheduler_a == json.dumps(
++                scheduler.state_dict(), sort_keys=True, default=str),
++            "progress_equal": progress_a == progress_b,
++        }
++        gathered = [None] * context.world_size
++        dist.all_gather_object(gathered, local)
++        passed = all(item["model"]["allclose"] and item["optimizer"]["allclose"]
++                     and item["scheduler_exact"] and item["progress_equal"]
++                     for item in gathered)
++        if context.rank == 0:
++            report = {"status": "PASS" if passed else "FAIL",
++                      "comparison": "per_tensor_numeric_local_shards", "ranks": gathered}
++            AUDIT.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
++            print(json.dumps(report, sort_keys=True), flush=True)
++        if not passed:
++            raise RuntimeError("L4_NUMERIC_STATE_MISMATCH")
++        barrier()
++    finally:
++        shutdown()
++
++
++if __name__ == "__main__":
++    main()
+--- a/code/tests/hit_dcp_state_compare.py
++++ b/code/tests/hit_dcp_state_compare.py
+@@ -0,0 +1,140 @@
++#!/usr/bin/env python3
++"""Compare two real two-rank DCP checkpoints without executing a train step."""
++import hashlib
++import json
++import os
++import sys
++from pathlib import Path
++
++if os.environ.get("CUDA_VISIBLE_DEVICES") != "2,3":
++    raise RuntimeError("PHYSICAL_GPU_ALLOWLIST_VIOLATION")
++
++import torch
++import torch.distributed as dist
++
++ROOT = Path(__file__).resolve().parents[2]
++CODE = ROOT / "code"
++sys.path.insert(0, str(CODE))
++from lib.distributed_checkpoint import DistributedCheckpointRotation
++from lib.distributed_runtime import barrier, initialize, shutdown
++from lib.fsdp2_runtime import apply_fsdp2, make_device_mesh
++from lib.model_factory import build_pretrained
++
++MODEL_PATH = Path("/home/USER/data/zonghan/models/Qwen3-4B-Base")
++A_ROOT = ROOT / "runs/l4_uninterrupted_v1/checkpoints"
++B_ROOT = ROOT / "runs/l4_exact_a_step1_snapshot/checkpoints"
++AUDIT = ROOT / "audits/hit_l3_l4_v1/L4_STATE_COMPARE.json"
++TTT_LAYERS = [0, 6, 12, 18, 24, 30]
++BATCH = {"global_batch_size": 2, "micro_batch_size": 1, "gradient_accumulation": 1}
++
++
++def update_tensor(digest, name, value):
++    local = value.to_local() if hasattr(value, "to_local") else value
++    local = local.detach().contiguous()
++    digest.update(name.encode())
++    digest.update(str(local.dtype).encode())
++    digest.update(str(tuple(local.shape)).encode())
++    digest.update(local.reshape(-1).view(torch.uint8).cpu().numpy().tobytes())
++
++
++def state_digests(model, optimizer, scheduler):
++    model_digest = hashlib.sha256()
++    named_parameters = sorted(model.named_parameters(), key=lambda item: item[0])
++    for name, parameter in named_parameters:
++        update_tensor(model_digest, name, parameter)
++
++    optimizer_digest = hashlib.sha256()
++    parameter_names = {id(parameter): name for name, parameter in named_parameters}
++    for parameter, state in sorted(
++        optimizer.state.items(), key=lambda item: parameter_names[id(item[0])]
++    ):
++        parameter_name = parameter_names[id(parameter)]
++        for key, value in sorted(state.items()):
++            item_name = f"{parameter_name}.{key}"
++            if torch.is_tensor(value) or hasattr(value, "to_local"):
++                update_tensor(optimizer_digest, item_name, value)
++            else:
++                optimizer_digest.update(item_name.encode())
++                optimizer_digest.update(repr(value).encode())
++    for index, group in enumerate(optimizer.param_groups):
++        optimizer_digest.update(f"group.{index}".encode())
++        optimizer_digest.update(json.dumps(
++            {key: value for key, value in group.items() if key != "params"},
++            sort_keys=True, default=str,
++        ).encode())
++        optimizer_digest.update(json.dumps(
++            [parameter_names[id(parameter)] for parameter in group["params"]]
++        ).encode())
++    scheduler_digest = hashlib.sha256(
++        json.dumps(scheduler.state_dict(), sort_keys=True, default=str).encode()
++    ).hexdigest()
++    return {
++        "model_sha256": model_digest.hexdigest(),
++        "optimizer_sha256": optimizer_digest.hexdigest(),
++        "scheduler_sha256": scheduler_digest,
++        "optimizer_state_parameter_count": len(optimizer.state),
++    }
++
++
++def main():
++    context = initialize()
++    try:
++        if context.world_size != 2 or torch.cuda.device_count() != 2:
++            raise RuntimeError("TWO_GPU_RUNTIME_CONTRACT")
++        torch.manual_seed(42 + context.rank)
++        torch.cuda.manual_seed_all(42 + context.rank)
++        model, _ = build_pretrained(
++            MODEL_PATH, context.device, train_clip_none=True,
++            ttt_layers=TTT_LAYERS, ttt_chunk=4096,
++        )
++        mesh = make_device_mesh(context.device.type, context.world_size)
++        apply_fsdp2(model, mesh=mesh)
++        optimizer = torch.optim.AdamW(
++            model.parameters(), lr=5.0e-6, betas=(0.9, 0.95), eps=1.0e-8,
++            weight_decay=0.1, fused=True,
++        )
++        scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda _: 1.0)
++
++        a_rotation = DistributedCheckpointRotation(A_ROOT, 2, [2], BATCH)
++        progress_a = a_rotation.load(model, optimizer, scheduler)
++        digest_a = state_digests(model, optimizer, scheduler)
++
++        b_rotation = DistributedCheckpointRotation(B_ROOT, 2, [2], BATCH)
++        progress_b = b_rotation.load(model, optimizer, scheduler)
++        digest_b = state_digests(model, optimizer, scheduler)
++        local = {
++            "rank": context.rank,
++            "physical_gpu": 2 + context.local_rank,
++            "A": digest_a,
++            "B": digest_b,
++            "model_exact": digest_a["model_sha256"] == digest_b["model_sha256"],
++            "optimizer_exact": digest_a["optimizer_sha256"] == digest_b["optimizer_sha256"],
++            "scheduler_exact": digest_a["scheduler_sha256"] == digest_b["scheduler_sha256"],
++            "progress_equal": progress_a == progress_b,
++        }
++        gathered = [None] * context.world_size
++        dist.all_gather_object(gathered, local)
++        passed = all(
++            item["model_exact"] and item["optimizer_exact"]
++            and item["scheduler_exact"] and item["progress_equal"]
++            for item in gathered
++        )
++        if context.rank == 0:
++            report = {
++                "status": "PASS" if passed else "FAIL",
++                "comparison": "exact_per_rank_local_shard_sha256",
++                "A": str(A_ROOT),
++                "B": str(B_ROOT),
++                "ranks": gathered,
++            }
++            AUDIT.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
++            print(json.dumps(report, sort_keys=True), flush=True)
++        if not passed:
++            raise RuntimeError("L4_STATE_DIGEST_MISMATCH")
++        barrier()
++    finally:
++        shutdown()
++
++
++if __name__ == "__main__":
++    main()
+--- a/code/tests/hit_failure_propagation.py
++++ b/code/tests/hit_failure_propagation.py
+@@ -0,0 +1,35 @@
++#!/usr/bin/env python3
++"""Controlled one-rank failure propagation smoke; no model or training work."""
++import os
++import sys
++from pathlib import Path
++
++if os.environ.get("CUDA_VISIBLE_DEVICES") != "2,3":
++    raise RuntimeError("PHYSICAL_GPU_ALLOWLIST_VIOLATION")
++
++import torch
++import torch.distributed as dist
++
++ROOT = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(ROOT))
++from lib.distributed_runtime import barrier, initialize, shutdown
++
++
++def main():
++    context = initialize()
++    if context.world_size != 2 or torch.cuda.device_count() != 2:
++        raise RuntimeError("TWO_GPU_RUNTIME_CONTRACT")
++    barrier()
++    if context.rank == 0:
++        print("INJECTED_RANK0_FAILURE", flush=True)
++        raise RuntimeError("CONTROLLED_FAILURE_PROPAGATION_TEST")
++    print("RANK1_WAITING_FOR_COLLECTIVE", flush=True)
++    try:
++        dist.barrier(device_ids=[torch.cuda.current_device()])
++        print("RANK1_PROGRESS_AFTER_FAILURE", flush=True)
++    finally:
++        shutdown()
++
++
++if __name__ == "__main__":
++    main()
+--- a/code/tests/hit_forward_32k.py
++++ b/code/tests/hit_forward_32k.py
+@@ -0,0 +1,168 @@
++#!/usr/bin/env python3
++"""Two-GPU FSDP2 forward-only validation on exact 32K synthetic Stage1 records."""
++import json
++import math
++import os
++import sys
++import time
++from pathlib import Path
++
++if os.environ.get("CUDA_VISIBLE_DEVICES") != "2,3":
++    raise RuntimeError("PHYSICAL_GPU_ALLOWLIST_VIOLATION")
++
++import torch
++import torch.distributed as dist
++from transformers import AutoTokenizer
++
++ROOT = Path(__file__).resolve().parents[2]
++CODE = ROOT / "code"
++sys.path.insert(0, str(CODE))
++from lib.distributed_runtime import initialize, shutdown
++from lib.fsdp2_runtime import apply_fsdp2, make_device_mesh
++from lib.model_factory import build_pretrained
++from workers.distributed_train_worker import fused_sum, stage1_document_boundaries
++
++MODEL_PATH = Path("/home/USER/data/zonghan/models/Qwen3-4B-Base")
++FIXTURE = ROOT / "fixtures/stage1_32k_debug.jsonl"
++AUDIT = ROOT / "audits/hit_l3_l4_v1"
++TTT_LAYERS = [0, 6, 12, 18, 24, 30]
++CONTEXT = 32768
++CHUNK = 4096
++
++
++def flatten_stats(value):
++    return [item for document in value for item in document]
++
++
++def main():
++    context = initialize()
++    try:
++        if context.world_size != 2 or torch.cuda.device_count() != 2:
++            raise RuntimeError("TWO_GPU_RUNTIME_CONTRACT")
++        torch.manual_seed(42)
++        torch.cuda.manual_seed_all(42)
++        model, config = build_pretrained(
++            MODEL_PATH, context.device, train_clip_none=True,
++            ttt_layers=TTT_LAYERS, ttt_chunk=CHUNK,
++        )
++        mesh = make_device_mesh(context.device.type, context.world_size)
++        inventory = apply_fsdp2(model, mesh=mesh)
++        tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH, local_files_only=True)
++        rows = [json.loads(line) for line in FIXTURE.read_text().splitlines()]
++        row = rows[context.rank]
++        ids = tokenizer(
++            row["text"], add_special_tokens=False, return_tensors="pt"
++        ).input_ids.to(context.device)
++        if ids.shape != (1, CONTEXT) or int(row["token_count"]) != CONTEXT:
++            raise RuntimeError(f"FORWARD_TOKEN_ALIGNMENT shape={tuple(ids.shape)}")
++        bounds = stage1_document_boundaries(row, CONTEXT)
++        model.eval()
++        torch.cuda.empty_cache()
++        torch.cuda.reset_peak_memory_stats()
++        torch.cuda.synchronize()
++        started = time.perf_counter()
++        with torch.no_grad():
++            local_numerator = fused_sum(
++                model, ids, document_boundaries=bounds
++            ).detach().double()
++        torch.cuda.synchronize()
++        elapsed = time.perf_counter() - started
++        pair = torch.stack((
++            local_numerator,
++            torch.tensor(float(CONTEXT - 1), dtype=torch.float64, device=context.device),
++        ))
++        dist.all_reduce(pair, op=dist.ReduceOp.SUM)
++        global_loss = float((pair[0] / pair[1]).item())
++        if not math.isfinite(global_loss):
++            raise RuntimeError("NONFINITE_FORWARD_LOSS")
++        traces = {}
++        for index in TTT_LAYERS:
++            mlp = model.model.layers[index].mlp
++            if not hasattr(mlp, "last_ttt_stats"):
++                raise RuntimeError(f"TTT_FORWARD_NOT_EXECUTED layer={index}")
++            stats = flatten_stats(mlp.last_ttt_stats)
++            traces[str(index)] = [
++                {
++                    "chunk_index": chunk_index,
++                    "update_count": stat.update_count,
++                    "valid_pairs": stat.valid_tokens,
++                    "pre_clip_norm": stat.pre_clip_norm,
++                    "post_clip_norm": stat.post_clip_norm,
++                    "was_clipped": stat.was_clipped,
++                }
++                for chunk_index, stat in enumerate(stats)
++            ]
++            if len(stats) != 8 or any(stat.update_count != 1 for stat in stats):
++                raise RuntimeError(f"TTT_CHUNK_TRACE_MISMATCH layer={index}")
++        local = {
++            "rank": context.rank,
++            "local_rank": context.local_rank,
++            "logical_device": str(context.device),
++            "physical_gpu": 2 + context.local_rank,
++            "sample_id": row["sample_id"],
++            "local_numerator": float(local_numerator.item()),
++            "local_denominator": CONTEXT - 1,
++            "wall_seconds": elapsed,
++            "peak_allocated_bytes": torch.cuda.max_memory_allocated(),
++            "peak_reserved_bytes": torch.cuda.max_memory_reserved(),
++            "ttt_trace": traces,
++        }
++        gathered = [None] * context.world_size
++        dist.all_gather_object(gathered, local)
++        if context.is_rank0:
++            report = {
++                "status": "PASS",
++                "world_size": context.world_size,
++                "cuda_visible_devices": "2,3",
++                "context_length": CONTEXT,
++                "ttt_chunk_size": CHUNK,
++                "ttt_layers": TTT_LAYERS,
++                "fsdp2_wrapped_blocks": inventory.decoder_blocks,
++                "fsdp2_root_wrapped": inventory.root_wrapped,
++                "global_numerator": float(pair[0].item()),
++                "global_denominator": int(pair[1].item()),
++                "global_loss": global_loss,
++                "ranks": gathered,
++                "l30_forward_execution": "PASS",
++                "formal_training": False,
++                "optimizer_steps": 0,
++            }
++            AUDIT.mkdir(parents=True, exist_ok=True)
++            (AUDIT / "L3_32K_FORWARD_REPORT.json").write_text(
++                json.dumps(report, indent=2, sort_keys=True) + "\n"
++            )
++            chunk_report = {
++                "status": "RUNTIME_PASS",
++                "context_length": CONTEXT,
++                "chunk_size": CHUNK,
++                "chunk_count": 8,
++                "tail_tokens": 0,
++                "apply_then_update": True,
++                "ttt_layers": TTT_LAYERS,
++                "rank0_trace": gathered[0]["ttt_trace"],
++            }
++            (AUDIT / "CHUNK_TRACE.json").write_text(
++                json.dumps(chunk_report, indent=2, sort_keys=True) + "\n"
++            )
++            print(json.dumps({
++                "status": "PASS",
++                "global_loss": global_loss,
++                "global_denominator": int(pair[1].item()),
++                "rank_memory": [
++                    {
++                        "physical_gpu": item["physical_gpu"],
++                        "peak_allocated_bytes": item["peak_allocated_bytes"],
++                        "peak_reserved_bytes": item["peak_reserved_bytes"],
++                        "wall_seconds": item["wall_seconds"],
++                    }
++                    for item in gathered
++                ],
++                "l30_forward_execution": "PASS",
++            }, sort_keys=True))
++        dist.barrier()
++    finally:
++        shutdown()
++
++
++if __name__ == "__main__":
++    main()
+--- a/code/tests/hit_model_build_audit.py
++++ b/code/tests/hit_model_build_audit.py
+@@ -0,0 +1,166 @@
++#!/usr/bin/env python3
++"""Build Qwen3-4B, inventory HIT TTT layers, apply FSDP2, and stop before forward."""
++import json
++import os
++import sys
++import time
++from pathlib import Path
++
++if os.environ.get("CUDA_VISIBLE_DEVICES") != "2,3":
++    raise RuntimeError("PHYSICAL_GPU_ALLOWLIST_VIOLATION")
++
++import torch
++import torch.distributed as dist
++
++ROOT = Path(__file__).resolve().parents[2]
++CODE = ROOT / "code"
++sys.path.insert(0, str(CODE))
++from lib.distributed_runtime import initialize, shutdown
++from lib.fsdp2_runtime import apply_fsdp2, make_device_mesh
++from lib.model_factory import build_pretrained
++
++MODEL_PATH = Path("/home/USER/data/zonghan/models/Qwen3-4B-Base")
++AUDIT = ROOT / "audits/hit_l3_l4_v1"
++TTT_LAYERS = [0, 6, 12, 18, 24, 30]
++
++
++def module_inventory(model):
++    result = {}
++    for index in TTT_LAYERS:
++        mlp = model.model.layers[index].mlp
++        present = {
++            "ttt_proj": getattr(mlp, "ttt_proj", None) is not None,
++            "ttt_ntp_gate": hasattr(mlp, "ttt_ntp_gate"),
++            "ttt_conv": hasattr(mlp, "ttt_conv"),
++            "down_proj": hasattr(mlp, "down_proj"),
++            "ttt_chunk": getattr(mlp, "ttt_chunk", None),
++            "forward_stats_present": hasattr(mlp, "last_ttt_stats"),
++        }
++        result[str(index)] = present
++    return result
++
++
++def main():
++    context = initialize()
++    try:
++        if context.world_size != 2 or torch.cuda.device_count() != 2:
++            raise RuntimeError("TWO_GPU_RUNTIME_CONTRACT")
++        torch.manual_seed(42)
++        torch.cuda.manual_seed_all(42)
++        torch.cuda.reset_peak_memory_stats()
++        started = time.perf_counter()
++        model, config = build_pretrained(
++            MODEL_PATH,
++            context.device,
++            train_clip_none=True,
++            ttt_layers=TTT_LAYERS,
++            ttt_chunk=4096,
++        )
++        torch.cuda.synchronize()
++        build_seconds = time.perf_counter() - started
++        pre = module_inventory(model)
++        total_parameters = sum(parameter.numel() for parameter in model.parameters())
++        trainable_parameters = sum(
++            parameter.numel() for parameter in model.parameters() if parameter.requires_grad
++        )
++        decoder_ids = [id(block) for block in model.model.layers]
++        if len(decoder_ids) != int(config.num_hidden_layers) or len(set(decoder_ids)) != len(decoder_ids):
++            raise RuntimeError("DECODER_BLOCK_INVENTORY_MISMATCH")
++        if any(not all(values[key] for key in ("ttt_proj", "ttt_ntp_gate", "ttt_conv", "down_proj"))
++               or values["ttt_chunk"] != 4096 for values in pre.values()):
++            raise RuntimeError("TTT_MODULE_INVENTORY_MISMATCH")
++        mesh = make_device_mesh(context.device.type, context.world_size)
++        fsdp = apply_fsdp2(model, mesh=mesh)
++        post = module_inventory(model)
++        blocks_wrapped = [
++            hasattr(block, "set_requires_gradient_sync") for block in model.model.layers
++        ]
++        root_wrapped = hasattr(model, "set_requires_gradient_sync")
++        if not root_wrapped or not all(blocks_wrapped):
++            raise RuntimeError("FSDP2_RUNTIME_WRAP_MISSING")
++        optimizer = torch.optim.AdamW(
++            model.parameters(), lr=5.0e-6, betas=(0.9, 0.95),
++            eps=1.0e-8, weight_decay=0.1, fused=True,
++        )
++        optimizer_ids = {
++            id(parameter)
++            for group in optimizer.param_groups
++            for parameter in group["params"]
++        }
++        l30 = {
++            name: {
++                "shape": list(parameter.shape),
++                "requires_grad": parameter.requires_grad,
++                "optimizer_owned": id(parameter) in optimizer_ids,
++            }
++            for name, parameter in model.model.layers[30].mlp.named_parameters()
++            if name.startswith(("ttt_proj", "ttt_ntp_gate", "ttt_conv"))
++        }
++        if not l30 or not all(item["requires_grad"] and item["optimizer_owned"] for item in l30.values()):
++            raise RuntimeError("L30_OPTIMIZER_PARAMETER_COVERAGE")
++        local = {
++            "rank": context.rank,
++            "local_rank": context.local_rank,
++            "logical_device": str(context.device),
++            "physical_gpu": 2 + context.local_rank,
++            "peak_allocated_bytes": torch.cuda.max_memory_allocated(),
++            "peak_reserved_bytes": torch.cuda.max_memory_reserved(),
++            "build_seconds": build_seconds,
++        }
++        gathered = [None] * context.world_size
++        dist.all_gather_object(gathered, local)
++        if context.is_rank0:
++            model_report = {
++                "status": "PASS",
++                "path": str(MODEL_PATH),
++                "architecture": config.architectures,
++                "hidden_size": config.hidden_size,
++                "intermediate_size": config.intermediate_size,
++                "num_attention_heads": config.num_attention_heads,
++                "num_key_value_heads": config.num_key_value_heads,
++                "num_hidden_layers": config.num_hidden_layers,
++                "vocab_size": config.vocab_size,
++                "dtype_metadata": str(config.torch_dtype),
++                "total_parameter_count": total_parameters,
++                "trainable_parameter_count": trainable_parameters,
++                "ttt_layer_set": TTT_LAYERS,
++                "l30_validation": "PASS",
++            }
++            coverage = {
++                "status": "BUILD_AND_FSDP_PARAMETER_PASS_FORWARD_BACKWARD_PENDING",
++                "requested_layers": TTT_LAYERS,
++                "pre_fsdp": pre,
++                "post_fsdp": post,
++                "l30_parameters": l30,
++                "l30_ttt_parameter_coverage": "PARAMETER_AND_OPTIMIZER_PASS_RUNTIME_FORWARD_BACKWARD_PENDING",
++            }
++            fsdp_report = {
++                "status": "BUILD_WRAP_PASS_FORWARD_BACKWARD_PENDING",
++                "wrapped_block_n": fsdp.decoder_blocks,
++                "expected_block_n": config.num_hidden_layers,
++                "all_decoder_blocks_wrapped": all(blocks_wrapped),
++                "each_decoder_block_unique": len(set(decoder_ids)) == len(decoder_ids),
++                "root_wrapped": root_wrapped,
++                "optimizer_constructed_after_wrapping": True,
++                "mixed_precision": fsdp.mixed_precision,
++                "reduce_precision": fsdp.reduce_precision,
++                "ranks": gathered,
++            }
++            AUDIT.mkdir(parents=True, exist_ok=True)
++            (AUDIT / "MODEL_CONFIG_AUDIT.json").write_text(
++                json.dumps(model_report, indent=2, sort_keys=True) + "\n"
++            )
++            (AUDIT / "TTT_LAYER_COVERAGE.json").write_text(
++                json.dumps(coverage, indent=2, sort_keys=True) + "\n"
++            )
++            (AUDIT / "FSDP2_RUNTIME_AUDIT.json").write_text(
++                json.dumps(fsdp_report, indent=2, sort_keys=True) + "\n"
++            )
++            print(json.dumps({"model": model_report, "fsdp": fsdp_report, "coverage": coverage}, sort_keys=True))
++        dist.barrier()
++    finally:
++        shutdown()
++
++
++if __name__ == "__main__":
++    main()
+--- a/code/tests/hit_nccl_smoke.py
++++ b/code/tests/hit_nccl_smoke.py
+@@ -0,0 +1,67 @@
++#!/usr/bin/env python3
++"""Strict two-rank NCCL smoke for physical GPUs 2 and 3 only."""
++import json
++import os
++import socket
++from pathlib import Path
++
++if os.environ.get("CUDA_VISIBLE_DEVICES") != "2,3":
++    raise RuntimeError(
++        f"PHYSICAL_GPU_ALLOWLIST_VIOLATION expected=2,3 actual={os.environ.get('CUDA_VISIBLE_DEVICES')}"
++    )
++
++import torch
++import torch.distributed as dist
++
++ROOT = Path(__file__).resolve().parents[2]
++REPORT = ROOT / "audits/hit_l3_l4_v1/L3_NCCL_REPORT.json"
++
++
++def main():
++    rank = int(os.environ["RANK"])
++    local_rank = int(os.environ["LOCAL_RANK"])
++    world_size = int(os.environ["WORLD_SIZE"])
++    if world_size != 2 or torch.cuda.device_count() != 2:
++        raise RuntimeError(
++            f"TWO_GPU_CONTRACT world_size={world_size} visible={torch.cuda.device_count()}"
++        )
++    torch.cuda.set_device(local_rank)
++    dist.init_process_group("nccl")
++    value = torch.tensor(float(rank + 1), device=f"cuda:{local_rank}")
++    dist.all_reduce(value, op=dist.ReduceOp.SUM)
++    if float(value.item()) != 3.0:
++        raise RuntimeError(f"ALL_REDUCE_MISMATCH value={value.item()}")
++    dist.barrier()
++    props = torch.cuda.get_device_properties(local_rank)
++    local = {
++        "rank": rank,
++        "local_rank": local_rank,
++        "logical_device": f"cuda:{local_rank}",
++        "physical_gpu": 2 + local_rank,
++        "device_name": props.name,
++        "all_reduce_value": float(value.item()),
++        "barrier": "PASS",
++    }
++    gathered = [None] * world_size
++    dist.all_gather_object(gathered, local)
++    if rank == 0:
++        report = {
++            "status": "PASS",
++            "hostname": socket.gethostname(),
++            "backend": dist.get_backend(),
++            "world_size": world_size,
++            "cuda_visible_devices": os.environ["CUDA_VISIBLE_DEVICES"],
++            "physical_gpu_allowlist": [2, 3],
++            "unauthorized_gpu_used": False,
++            "ranks": gathered,
++            "collective": "PASS",
++        }
++        REPORT.parent.mkdir(parents=True, exist_ok=True)
++        REPORT.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
++        print(json.dumps(report, sort_keys=True))
++    dist.barrier()
++    dist.destroy_process_group()
++
++
++if __name__ == "__main__":
++    main()
+--- a/code/workers/distributed_train_worker.py
++++ b/code/workers/distributed_train_worker.py
+@@ -2,8 +2,11 @@
+ """Selective FSDP2 restoration. This does not replace the audited 1-GPU worker."""
+ import argparse
+ import json
++import math
++import os
+ import random
+ import sys
++import time
+ from pathlib import Path
+ 
+ import numpy as np
+@@ -14,7 +17,7 @@
+ ROOT = Path(__file__).resolve().parents[1]
+ sys.path.insert(0, str(ROOT))
+ from lib.distributed_checkpoint import (DistributedCheckpointRotation, load_model_only,
+-                                        save_model_only)
++                                        preflight_checkpoint_metadata, save_model_only)
+ from lib.distributed_grad import clip_grad_norm_fsdp2
+ from lib.distributed_runtime import barrier, initialize, rank0_mkdir, shutdown
+ from lib.distributed_semantics import BatchPlan, assert_batch_equation, differentiable_empty_step
+@@ -75,13 +78,34 @@
+     return tuple(int(x) for x in counts.tolist())
+ 
+ 
+-def fused_sum(model, ids, selected=None):
++def stage1_document_boundaries(row, token_count):
++    raw = row.get("document_boundaries_qwen_json")
++    if raw is None:
++        raw = row.get("metadata", {}).get("document_boundaries_qwen_json")
++    if raw is None:
++        raw = [[0, token_count]]
++    bounds = json.loads(raw) if isinstance(raw, str) else raw
++    bounds = [(int(start), int(stop)) for start, stop in bounds]
++    if not bounds or any(not 0 <= start < stop <= token_count for start, stop in bounds):
++        raise RuntimeError("STAGE1_DOCUMENT_BOUNDARY_INVALID")
++    if bounds[0][0] != 0 or bounds[-1][1] != token_count:
++        raise RuntimeError("STAGE1_DOCUMENT_BOUNDARY_COVERAGE")
++    if any(left[1] != right[0] for left, right in zip(bounds, bounds[1:])):
++        raise RuntimeError("STAGE1_DOCUMENT_BOUNDARY_GAP_OR_OVERLAP")
++    return bounds
++
++
++def fused_sum(model, ids, selected=None, document_boundaries=None):
+     try:
+         from liger_kernel.transformers.fused_linear_cross_entropy import LigerFusedLinearCrossEntropyLoss
+     except ImportError as error:
+         raise RuntimeError("LIGER_FUSED_LOSS_REQUIRED_FOR_32K_TRAINING") from error
+-    hidden = model.model(input_ids=ids, attention_mask=torch.ones_like(ids), use_cache=False,
+-                         return_dict=True, document_boundaries=[(0, ids.shape[1])]).last_hidden_state[:, :-1]
++    boundaries = document_boundaries or [(0, ids.shape[1])]
++    hidden_forward = getattr(model, "_fsdp_hidden_forward", model.model)
++    hidden = hidden_forward(
++        input_ids=ids, attention_mask=torch.ones_like(ids), use_cache=False,
++        return_dict=True, document_boundaries=boundaries,
++    ).last_hidden_state[:, :-1]
+     labels = ids[:, 1:]
+     if selected is not None:
+         hidden = hidden[:, selected, :]; labels = labels[:, selected]
+@@ -100,7 +124,9 @@
+             row = json.loads(line)
+             ids = tokenizer(row["text"], add_special_tokens=False, return_tensors="pt").input_ids.to(context.device)
+             if ids.shape[1] != int(row["token_count"]): raise RuntimeError("VALIDATION_TOKEN_ALIGNMENT")
+-            numerator += fused_sum(model, ids).detach().double(); denominator += ids.shape[1] - 1
++            bounds = stage1_document_boundaries(row, ids.shape[1])
++            numerator += fused_sum(model, ids, document_boundaries=bounds).detach().double()
++            denominator += ids.shape[1] - 1
+     pair = torch.stack((numerator, torch.tensor(float(denominator), device=context.device, dtype=torch.float64)))
+     if dist.is_initialized(): dist.all_reduce(pair)
+     model.train()
+@@ -118,12 +144,40 @@
+     parser.add_argument("--max-records", type=int)
+     args = parser.parse_args(); cfg = load_yaml(args.config); context = initialize()
+     try:
++        expected_world = int(cfg.get("world_size", context.world_size))
++        if context.world_size != expected_world:
++            raise RuntimeError(
++                f"WORLD_SIZE_MISMATCH expected={expected_world} actual={context.world_size}"
++            )
++        allowlist = str(cfg.get("physical_gpu_allowlist", "2,3"))
++        if os.environ.get("CUDA_VISIBLE_DEVICES") != allowlist:
++            raise RuntimeError(
++                f"PHYSICAL_GPU_ALLOWLIST_VIOLATION expected={allowlist} "
++                f"actual={os.environ.get('CUDA_VISIBLE_DEVICES')}"
++            )
++        if context.device.type != "cuda" or torch.cuda.device_count() != expected_world:
++            raise RuntimeError(
++                f"CUDA_VISIBLE_DEVICE_COUNT_MISMATCH expected={expected_world} "
++                f"actual={torch.cuda.device_count()}"
++            )
+         seed_rank(int(cfg.get("seed", 42)), context.rank)
+         plan = BatchPlan(context.world_size, int(cfg["micro_batch_size"]), int(cfg["gradient_accumulation"]))
+         assert_batch_equation(int(cfg["global_batch_size"]), plan.micro_batch, plan.dp_size,
+                               plan.gradient_accumulation)
+         output = Path(args.output_dir); rank0_mkdir(context, output)
+-        model, _ = build_pretrained(cfg["model_base"], context.device, train_clip_none=True)
++        batch_metadata = {"global_batch_size": plan.global_batch, "micro_batch_size": plan.micro_batch,
++                          "gradient_accumulation": plan.gradient_accumulation}
++        if args.resume_from:
++            preflight_checkpoint_metadata(
++                args.resume_from, context.world_size, [context.world_size], batch_metadata
++            )
++        model, _ = build_pretrained(
++            cfg["model_base"],
++            context.device,
++            train_clip_none=True,
++            ttt_layers=list(cfg["ttt_layers"]),
++            ttt_chunk=int(cfg["ttt_chunk_size"]),
++        )
+         mesh = make_device_mesh(context.device.type, context.world_size)
+         inventory = apply_fsdp2(model, mesh=mesh)
+         optimizer = torch.optim.AdamW(model.parameters(), lr=float(cfg["outer_lr"]),
+@@ -131,8 +185,6 @@
+             fused=context.device.type == "cuda")
+         scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda _: 1.0)
+         checkpoint_root = Path(args.resume_from) if args.resume_from else output / "checkpoints"
+-        batch_metadata = {"global_batch_size": plan.global_batch, "micro_batch_size": plan.micro_batch,
+-                          "gradient_accumulation": plan.gradient_accumulation}
+         rotation = DistributedCheckpointRotation(checkpoint_root, context.world_size,
+                                                   [context.world_size], batch_metadata)
+         resumed = rotation.load(model, optimizer, scheduler)
+@@ -149,6 +201,12 @@
+         tokenizer = AutoTokenizer.from_pretrained(cfg["model_base"], local_files_only=True)
+         ranges = answer_ranges(cfg["answer_mask_sidecar"]) if args.stage == 2 else None
+         for window in windows(Path(cfg["train_data"]), cursor, stop, plan.global_batch):
++            torch.cuda.synchronize()
++            torch.cuda.reset_peak_memory_stats()
++            torch.cuda.synchronize()
++            step_started = time.perf_counter()
++            local_numerator = torch.zeros((), dtype=torch.float64, device=context.device)
++            local_sample_ids = []
+             global_answer, global_context, window_tokens = count_window(
+                 window, plan, context.rank, args.stage, ranges, context.device)
+             optimizer.zero_grad(set_to_none=True)
+@@ -158,12 +216,18 @@
+                 rows = local_rows(window, plan, context.rank, slot)
+                 loss = None
+                 for _, row in rows:
++                    local_sample_ids.append(row.get("sample_id", row.get("id")))
+                     ids = tokenizer(row["text"], add_special_tokens=False, return_tensors="pt").input_ids.to(context.device)
+                     declared = int(row["token_count"] if args.stage == 1 else row["n_tokens"])
+                     if ids.shape[1] != declared or declared > int(cfg["context_length"]):
+                         raise RuntimeError("TOKEN_ALIGNMENT_ERROR")
+                     if args.stage == 1:
+-                        term = fused_sum(model, ids) * (context.world_size / global_context)
++                        bounds = stage1_document_boundaries(row, declared)
++                        raw_numerator = fused_sum(model, ids, document_boundaries=bounds)
++                        local_numerator += raw_numerator.detach().double()
++                        term = raw_numerator * (
++                            context.world_size / global_context
++                        )
+                     else:
+                         a, c = masks_for(row, ranges); a = a.to(context.device); c = c.to(context.device)
+                         term = fused_sum(model, ids, a) * (context.world_size / global_answer)
+@@ -171,8 +235,93 @@
+                     loss = term if loss is None else loss + term
+                 if loss is None: loss = differentiable_empty_step(model.parameters(), context.device)
+                 loss.backward()
++            global_numerator = local_numerator.clone()
++            if args.stage == 1:
++                dist.all_reduce(global_numerator, op=dist.ReduceOp.SUM)
++            global_mean_loss = float(global_numerator.item() / global_context) if args.stage == 1 else None
++            if args.stage == 1 and not math.isfinite(global_mean_loss):
++                raise RuntimeError("NONFINITE_GLOBAL_LOSS")
++            l30_parameters = [
++                (name, parameter) for name, parameter in model.named_parameters()
++                if ".layers.30.mlp.ttt_" in name
++            ]
++            if not l30_parameters:
++                raise RuntimeError("L30_TTT_PARAMETERS_MISSING_AFTER_FSDP2")
++            l30_gradient = {}
++            for name, parameter in l30_parameters:
++                grad = parameter.grad
++                expects_gradient = not name.endswith("ttt_conv.weight")
++                if grad is None:
++                    if expects_gradient:
++                        raise RuntimeError(f"L30_TTT_GRADIENT_MISSING {name}")
++                    l30_gradient[name] = {
++                        "present": False,
++                        "expected_present": False,
++                        "finite": True,
++                        "local_norm": 0.0,
++                        "reason": "gated_next_position_hidden_does_not_read_conv_kernel",
++                    }
++                    continue
++                local_grad = grad.to_local() if hasattr(grad, "to_local") else grad
++                grad_finite = bool(torch.isfinite(local_grad).all().item())
++                if not grad_finite:
++                    raise RuntimeError(f"L30_TTT_GRADIENT_NONFINITE {name}")
++                l30_gradient[name] = {
++                    "present": True,
++                    "expected_present": expects_gradient,
++                    "finite": True,
++                    "local_norm": float(torch.linalg.vector_norm(local_grad.float()).item()),
++                }
+             grad_norm = clip_grad_norm_fsdp2(model.parameters(), float(cfg["outer_grad_clip"]))
++            grad_clip = float(cfg["outer_grad_clip"])
++            clipped_grad_norm = min(grad_norm, grad_clip)
+             optimizer.step(); scheduler.step(); update_step += 1
++            torch.cuda.synchronize()
++            step_seconds = time.perf_counter() - step_started
++            peak_allocated_bytes = torch.cuda.max_memory_allocated()
++            peak_reserved_bytes = torch.cuda.max_memory_reserved()
++            optimizer_parameter_ids = {
++                id(parameter) for group in optimizer.param_groups for parameter in group["params"]
++            }
++            l30_optimizer_state = {}
++            for name, parameter in l30_parameters:
++                owned = id(parameter) in optimizer_parameter_ids
++                if not owned:
++                    raise RuntimeError(f"L30_OPTIMIZER_OWNERSHIP_MISSING {name}")
++                state = optimizer.state.get(parameter, {})
++                expects_state = l30_gradient[name]["present"]
++                state_keys = sorted(state.keys())
++                if expects_state and not {"step", "exp_avg", "exp_avg_sq"}.issubset(state):
++                    raise RuntimeError(f"L30_OPTIMIZER_STATE_MISSING {name}")
++                l30_optimizer_state[name] = {
++                    "owned": owned,
++                    "state_expected": expects_state,
++                    "state_keys": state_keys,
++                }
++            weights_finite = True
++            for parameter in model.parameters():
++                local_parameter = parameter.to_local() if hasattr(parameter, "to_local") else parameter
++                if not bool(torch.isfinite(local_parameter).all().item()):
++                    weights_finite = False
++                    break
++            if not weights_finite:
++                raise RuntimeError("NONFINITE_MODEL_WEIGHT_AFTER_STEP")
++            local_runtime = {
++                "rank": context.rank,
++                "local_rank": context.local_rank,
++                "logical_device": str(context.device),
++                "physical_gpu": 2 + context.local_rank,
++                "sample_ids": local_sample_ids,
++                "local_numerator": float(local_numerator.item()),
++                "step_seconds": step_seconds,
++                "peak_allocated_bytes": peak_allocated_bytes,
++                "peak_reserved_bytes": peak_reserved_bytes,
++                "l30_gradient": l30_gradient,
++                "l30_optimizer_state": l30_optimizer_state,
++                "weights_finite": weights_finite,
++            }
++            gathered_runtime = [None] * context.world_size
++            dist.all_gather_object(gathered_runtime, local_runtime)
+             cursor = window[-1][0] + 1; cumulative_tokens += window_tokens
+             local_valid = sum(int(row["token_count"] if args.stage == 1 else row["n_tokens"]) - 1
+                               for position, row in window if plan.owner(position)[2] == context.rank)
+@@ -189,8 +338,18 @@
+                 rotation.save(model, optimizer, progress, scheduler)
+             if context.is_rank0:
+                 with (output / "training.jsonl").open("a", encoding="utf-8") as handle:
+-                    handle.write(json.dumps({**progress, "global_answer_positions": global_answer,
+-                        "global_context_positions": global_context, "grad_norm_before_clip": grad_norm}) + "\n")
++                    record = {
++                        **progress,
++                        "global_answer_positions": global_answer,
++                        "global_context_positions": global_context,
++                        "global_numerator": float(global_numerator.item()),
++                        "global_mean_loss": global_mean_loss,
++                        "grad_norm_before_clip": grad_norm,
++                        "grad_norm_after_clip": clipped_grad_norm,
++                        "learning_rate": scheduler.get_last_lr()[0],
++                        "rank_runtime": gathered_runtime,
++                    }
++                    handle.write(json.dumps(record, sort_keys=True) + "\n")
+         if cursor != stop: raise RuntimeError("CURSOR_STOP_MISMATCH")
+         if args.stage == 1 and cursor == final_cursor and cfg.get("stage1_model_only_artifact"):
+             validation = validate_stage1(model, tokenizer, cfg["validation_data"],
+@@ -204,9 +363,12 @@
+             atomic_json(output / "complete.json", {"complete": True, "stage": args.stage,
+                 "record_cursor": cursor, "cumulative_tokens": cumulative_tokens,
+                 "fsdp2_wrapped_blocks": inventory.decoder_blocks})
++        if context.is_rank0: print("FINAL_BARRIER_ENTER", flush=True)
+         barrier()
++        if context.is_rank0: print("FINAL_BARRIER_PASS", flush=True)
+     finally:
+         shutdown()
++        print(f"RANK_{context.rank}_SHUTDOWN_PASS", flush=True)
+ 
+ 
+ if __name__ == "__main__": main()

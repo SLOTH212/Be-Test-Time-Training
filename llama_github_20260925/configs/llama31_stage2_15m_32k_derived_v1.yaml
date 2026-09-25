@@ -1,0 +1,14 @@
+dataset_id: llama31_stage2_15m_32k_v1
+parent_dataset_id: QA_REPLAY_30M_32K_QWEN3_STAGE2_V2
+parent_nominal: 30000000
+subset_ratio: 0.5
+target_parent_budget: 15000000
+context_length: 32768
+selection: deterministic source-stratified parent-order nearest-complete-unit prefix
+answer_mask: recompute from exact answer character spans after Llama tokenization
+tokenizer: /path/to/ttt/models/Llama-3.1-8B
+add_special_tokens: false
+chat_template: false
+workers: 16
+gpu_used: false
+

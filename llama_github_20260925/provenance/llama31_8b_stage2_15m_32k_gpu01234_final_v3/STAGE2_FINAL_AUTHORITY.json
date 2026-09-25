@@ -1,0 +1,73 @@
+{
+  "DEBUG_ONLY": false,
+  "artifact_class": "STAGE2_FINAL",
+  "base_model": "/path/to/ttt/models/Llama-3.1-8B",
+  "config_sha256": "9fef01e5fe73f797501c78377313817961e31cd0bc122e1cf4356b7632d5113c",
+  "cumulative_answer_positions": 97619,
+  "cumulative_context_positions": 14292464,
+  "cumulative_tokens": 14390540,
+  "data_authority_sha256": "49b373aab6a276fd1d9630a37c5c472dd48ae18e47a42b1d2256e78649a3c678",
+  "files": {
+    "SHA256SUMS.txt": "9c1b7152ef297631c9119d53738b91b8f13afcd9ee8dd5e4d3d5e7f7c4d2a550",
+    "config.json": "328543fba6f4db326c49367c5513caf0e8951099a614b5a3d4b024c1809864a0",
+    "model.safetensors": "b5a9be7a795bd6940ccc8fe296ab6f636ebd5d89f3c8454f61ef48d630070c7f",
+    "special_tokens_map.json": "462d91939dbc37178aa5a3eae7068d1990ccc92e09f288cc71f42cdf139d69cc",
+    "state_dict_audit.json": "f10ba7e8881b18b305eab455df179d4e85d673f89ba7a49f65d16c9129b35100",
+    "tokenizer.json": "76e48799b099d43365bd24ccd8ecc5aedac831718da780552f03b0a6eb4412aa",
+    "tokenizer_config.json": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a"
+  },
+  "final_dcp": {
+    "config_sha256": "9fef01e5fe73f797501c78377313817961e31cd0bc122e1cf4356b7632d5113c",
+    "manifest_sha256": "8b9832a2a63a15170baa93e76e6df3a9bef5b8c78d8534cdccecfa82745282bb",
+    "progress": {
+      "accumulation_phase": 0,
+      "cumulative_answer_positions": 97619,
+      "cumulative_context_positions": 14292464,
+      "cumulative_tokens": 14390540,
+      "dataloader_state": {
+        "canonical_next_position": 457
+      },
+      "global_valid_tokens": 65050,
+      "input_identity": {
+        "config_sha256": "9fef01e5fe73f797501c78377313817961e31cd0bc122e1cf4356b7632d5113c",
+        "cross_data_authority_sha256": "c8ee10b8df71ee70839ebc35d0394a703e84899c32a8d1c56b8a26a207addd49",
+        "data_manifest_sha256": "6e4d7a950d5c9b4e9f91dc0b5fe0567015d864cc9ed5b3fe920fb279df06d9ea",
+        "dataset_authority_sha256": "49b373aab6a276fd1d9630a37c5c472dd48ae18e47a42b1d2256e78649a3c678",
+        "llama_port_sha256": "3f1ca6c6cee8f8601fd5bfca396a067fe1876cbba3fbabecb273e75e19fd54bc",
+        "model_identity_sha256": "4955fcb1e90d069e8968100827f626203b4f0e2c3e42279da4997f47d35fb0d8",
+        "worker_sha256": "9db592713f961f2482c8000e6cba0fa2ade074be6a8b9da40503d3e4cc92afdb"
+      },
+      "local_valid_tokens": 32706,
+      "rank_assignment_state": {
+        "mapping": "canonical_modulo_with_accumulation_v1",
+        "rank": 0,
+        "world_size": 5
+      },
+      "record_cursor": 457,
+      "stage": 2,
+      "update_step": 92
+    },
+    "run_root": "/path/to/ttt/runs/llama31_8b_stage2_15m_32k_gpu01234_formal_v3",
+    "slot": "/path/to/ttt/runs/llama31_8b_stage2_15m_32k_gpu01234_formal_v3/checkpoints/slot_A"
+  },
+  "final_root": "/path/to/ttt/models/llama31_8b_stage2_15m_32k_gpu01234_final_v3",
+  "immutable": true,
+  "inference_ready": "PASS",
+  "integrity": "PASS",
+  "model_revision": "d04e592bb4f6aa9cfee91e2e20afa771667e1d4b",
+  "port_sha256": "3f1ca6c6cee8f8601fd5bfca396a067fe1876cbba3fbabecb273e75e19fd54bc",
+  "qa_targets": 19397,
+  "record_cursor": 457,
+  "source_authority_sha256": "666898c85ff8c5234392f118b36755a0bb2fcbad2e77fdebca38f5e2e20d102e",
+  "stage1_final_authority_sha256": "0bd21b11358c3ffa9b88bf19499ef05b53dfb7a26c9adcb23e525f112343db75",
+  "state_audit": {
+    "finite": true,
+    "keys": 309,
+    "parameter_count": 8131072000,
+    "renamed_keys": false,
+    "status": "PASS",
+    "ttt_keys": 18
+  },
+  "supervised_answer_tokens": 97619,
+  "update_step": 92
+}
