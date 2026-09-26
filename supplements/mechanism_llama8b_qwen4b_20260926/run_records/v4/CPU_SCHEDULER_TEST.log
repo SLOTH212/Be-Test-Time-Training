@@ -1,0 +1,22 @@
+test_bad_checkpoint_rejected (__main__.Scheduler.test_bad_checkpoint_rejected) ... Process ForkProcess-1:
+Traceback (most recent call last):
+  File "/path/to/ttt/envs/ttt_runtime_v1/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/path/to/ttt/envs/ttt_runtime_v1/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/path/to/ttt/work/mechanism_v4_8gpu_20260926/test_scheduler.py", line 26, in run_worker
+    r.worker('test',gpu)
+  File "/path/to/ttt/work/mechanism_v4_8gpu_20260926/run.py", line 156, in worker
+    saved=read(checkpoint);assert saved['task']==t and saved['job_sha256']==sha(S/'JOB.json'),'PARTIAL_IDENTITY'
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: PARTIAL_IDENTITY
+ok
+test_candidate_validation_and_tie_break (__main__.Scheduler.test_candidate_validation_and_tie_break) ... ok
+test_competing_workers_execute_once (__main__.Scheduler.test_competing_workers_execute_once) ... ok
+test_kill_recovery_preserves_committed_prefix (__main__.Scheduler.test_kill_recovery_preserves_committed_prefix) ... ok
+test_sparse_import_prefix_and_complete_skip (__main__.Scheduler.test_sparse_import_prefix_and_complete_skip) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.086s
+
+OK

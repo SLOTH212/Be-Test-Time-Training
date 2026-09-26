@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/path/to/ttt/work/mechanism_v2_7gpu_20260926/run.py", line 255, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/path/to/ttt/work/mechanism_v2_7gpu_20260926/run.py", line 251, in main
+    elif a.mode=='manager':manager(a.smoke)
+                           ^^^^^^^^^^^^^^^^
+  File "/path/to/ttt/work/mechanism_v2_7gpu_20260926/run.py", line 229, in manager
+    ps=[spawn(label,gpu,0,True) for label,gpu in [('llama8b',1),('qwen4b',4)]];codes=[p.wait() for p in ps];atomic(O/'SMOKE_STATUS.json',dict(status='PASS' if codes==[0,0] else 'FAILED',codes=codes));assert codes==[0,0];return
+                                                                                                                                                                                                               ^^^^^^^^^^^^
+AssertionError

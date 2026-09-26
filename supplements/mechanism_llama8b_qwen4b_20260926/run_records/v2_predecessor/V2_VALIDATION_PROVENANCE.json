@@ -1,0 +1,15 @@
+{
+  "job_sha256": "2dfa23f8022e9000a9cb2f77a4b54e4e9129f8b086e72de0797488f0a9ae820b",
+  "v2_functions_sha256": "cc1445acecc276106b2df7306363f066ea3ea87ff2fe6e1682606a7ea50975d4",
+  "historical_gpu_acceptance": [
+    {
+      "path": "/path/to/ttt/audits/llama_reference_executor_v2_gpu_20260916/results_v2/llama/GPU_ACCEPTANCE.json",
+      "sha256": "83b74774908fd7973ecc9c0803541802b35fa24cce3917749a9751a039116e5a"
+    },
+    {
+      "path": "/path/to/ttt/audits/qwen3_4b_v2_gpu_20260918/results/qwen/GPU_ACCEPTANCE.json",
+      "sha256": "dc29abdf8c63cee45adab59fd0c1e95fc6d0bb387d98484d126ada14e2627f50"
+    }
+  ],
+  "scope": "Historical V2 numerical-path tests; new boundary reset/KV interventions validated by current SMOKE.json, not inferred from historical fresh-cache reset."
+}

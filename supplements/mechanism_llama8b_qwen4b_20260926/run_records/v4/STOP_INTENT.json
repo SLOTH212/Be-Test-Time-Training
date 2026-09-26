@@ -1,0 +1,54 @@
+{
+  "identities": [
+    {
+      "pid": 433022,
+      "cmdline": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/work/mechanism_v2_7gpu_20260926/run.py manager ",
+      "start_ticks": "3387230",
+      "uid": 1041
+    },
+    {
+      "pid": 433454,
+      "cmdline": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/work/mechanism_v2_7gpu_20260926/run.py worker --model llama8b --gpu 0 --slot 0 ",
+      "start_ticks": "3389797",
+      "uid": 1041
+    },
+    {
+      "pid": 433455,
+      "cmdline": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/work/mechanism_v2_7gpu_20260926/run.py worker --model llama8b --gpu 1 --slot 1 ",
+      "start_ticks": "3389797",
+      "uid": 1041
+    },
+    {
+      "pid": 433456,
+      "cmdline": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/work/mechanism_v2_7gpu_20260926/run.py worker --model llama8b --gpu 2 --slot 2 ",
+      "start_ticks": "3389797",
+      "uid": 1041
+    },
+    {
+      "pid": 433457,
+      "cmdline": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/work/mechanism_v2_7gpu_20260926/run.py worker --model llama8b --gpu 3 --slot 3 ",
+      "start_ticks": "3389797",
+      "uid": 1041
+    },
+    {
+      "pid": 433458,
+      "cmdline": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/work/mechanism_v2_7gpu_20260926/run.py worker --model llama8b --gpu 4 --slot 4 ",
+      "start_ticks": "3389798",
+      "uid": 1041
+    },
+    {
+      "pid": 433459,
+      "cmdline": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/work/mechanism_v2_7gpu_20260926/run.py worker --model llama8b --gpu 6 --slot 5 ",
+      "start_ticks": "3389798",
+      "uid": 1041
+    },
+    {
+      "pid": 433460,
+      "cmdline": "/path/to/ttt/envs/ttt_runtime_v1/bin/python -B /path/to/ttt/work/mechanism_v2_7gpu_20260926/run.py worker --model llama8b --gpu 7 --slot 6 ",
+      "start_ticks": "3389798",
+      "uid": 1041
+    }
+  ],
+  "time": 1790365798.6459975,
+  "reason": "User-authorized eight GPU migration; new KV and historical Selective; preserve committed results"
+}

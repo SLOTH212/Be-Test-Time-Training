@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "method": "AST extract original runtime.deletion_plan and original terminal_run_boundary/category/first_real_layer; supply six-layer action mapping; frozen4K parent screen outside original deletion_plan",
+  "exhaustive_nonconstant_trajectories": 4648,
+  "actual_cohort_samples": 124,
+  "counts": {
+    "llama8b": {
+      "samples": 39,
+      "eligible": 29,
+      "selective_branches": 64,
+      "sham_branches": 22
+    },
+    "qwen4b": {
+      "samples": 85,
+      "eligible": 62,
+      "selective_branches": 117,
+      "sham_branches": 51
+    }
+  },
+  "remote_reference_root": "/path/to/ttt/releases/ttt_mechanism_runtime_v1",
+  "remote_reference_sha256": {
+    "runtime.py": "90d5575947567d3804c05c00dfd00644bd1a6af06b88e05c94b671eec957312e",
+    "provenance/original/deletion/screening/manifests/SELECTIVE_DELETION_RULE_V1.json": "c82ea5f5c94b68ee3df5ec238faff2423ff9b25dd530ab8f34cfb92aafb3a800",
+    "provenance/original/deletion/rule_sources/build_ablation_manifest.py": "90a2b6c0de856e4199706c105d634ef12cdaa4244886268c4ee5abf109460b91",
+    "provenance/original/deletion/scripts/selective_worker.py": "4ad5c8769097a8baffeda9ef0f1baac4ae3b76ef9ab5bc56b7c2b96f4fa1dc10"
+  },
+  "supplement_sha256": "0f89cb9d323582164fa5455a828754c00c28163c8eb335447d4facb174eb69aa",
+  "gpu_validation": "NOT_RUN"
+}

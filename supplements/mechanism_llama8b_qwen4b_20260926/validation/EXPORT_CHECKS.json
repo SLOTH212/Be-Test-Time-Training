@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "scope": "Static export checks only; no model, training or inference was rerun. No offline result checker is included in this package.",
+  "source": {
+    "job": "work/mechanism_v4_8gpu_20260926",
+    "run": "runs/mechanism_v4_8gpu_20260926",
+    "predecessor": [
+      "work/mechanism_v2_7gpu_20260926",
+      "runs/mechanism_v2_7gpu_20260926"
+    ],
+    "job_sha256": "b3d5ee6fbed1a2227fe193ac9aca3ca0d3c9ef9a4b1935dccb40e576e0ae91fd"
+  },
+  "server_export": {
+    "files": 158,
+    "bytes": 17341850,
+    "tarball_sha256": "c86ad180e8307d79f354a44a1b465a0b9749e7a2f02343c32e00b5f82cc90567",
+    "transfer_sha256_verified": true
+  },
+  "dependency_binding_check": "PASS: all 32 dependency files and every copied job file with a JOB.json binding matched the bound SHA256 before redaction (SOURCE_MANIFEST.json job_binding_match).",
+  "sensitive_pattern_scan": {
+    "server_patterns": [
+      "account name",
+      "host names",
+      "private IPv4",
+      "HF/GitHub tokens",
+      "private keys",
+      "cloud paths",
+      "other-user services",
+      "unredacted /home paths"
+    ],
+    "server_result": "One match: the historical cloud path \"autodl-tmp\" in the frozen vendor scorer code/dependencies/vendor/frozen/ttt_inference_runtime_v1/scorers/common.py, the same frozen file already published under qwen3_4b/ and llama_github_20260925/.",
+    "local_patterns": [
+      "GPU UUIDs",
+      "e-mail addresses",
+      "Windows user paths",
+      "account and host names"
+    ],
+    "local_result": "No matches."
+  },
+  "transformations": [
+    "Server root and account paths redacted (/path/to/ttt, /home/USER, USER).",
+    "Per-layer hash dictionaries (suffix_trace, final_hashes, boundary_before_hashes, boundary_after_hashes, donor, checkpoint_hashes) replaced by the canonical SHA256 of the original value.",
+    "All R2 candidate records projected to results/<model>/r2_candidates.csv.",
+    "Original task receipts indexed by SHA256 in results/<model>/task_receipts_index.json.",
+    "SMOKE.json files larger than 1 MB trimmed with the same digest rule."
+  ],
+  "excluded_artifacts": [
+    "model weights, checkpoints and tokenizer assets",
+    "benchmark prompts and references",
+    "generated text",
+    "raw task receipts, FINAL.json, AGGREGATE.json, imported predecessor files and partial progress (SHA256 in provenance)",
+    "lock files",
+    "V3 cancelled smoke",
+    "environment binaries and credentials"
+  ]
+}

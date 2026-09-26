@@ -1,0 +1,334 @@
+{
+  "checked_at": "2026-09-26 15:25:56 +0800",
+  "status": {
+    "time": "2026-09-26 15:25:56 +0800",
+    "models": {
+      "llama8b": {
+        "sample_complete": 39,
+        "sample_total": 39,
+        "tasks_complete": {
+          "baseline": 39,
+          "selective": 39,
+          "r2": 425
+        },
+        "tasks_total": {
+          "baseline": 39,
+          "selective": 39,
+          "r2": 425
+        },
+        "r2_complete": 12992,
+        "r2_total": 12992,
+        "kv_closure_pass": 30,
+        "selective_eligible_complete": 29,
+        "sham_complete": 22,
+        "workers": [
+          {
+            "task": {
+              "id": "ruler_vt_16k_0402__r320",
+              "kind": "r2",
+              "sample_id": "ruler_vt_16k:0402",
+              "start": 320,
+              "end": 336
+            },
+            "gpu": 6,
+            "pid": 570184,
+            "time": 1790374451.014187,
+            "phase": "committed",
+            "age_seconds": 33105.9
+          },
+          {
+            "task": {
+              "id": "ruler_vt_16k_0402__r96",
+              "kind": "r2",
+              "sample_id": "ruler_vt_16k:0402",
+              "start": 96,
+              "end": 128
+            },
+            "gpu": 4,
+            "pid": 570182,
+            "time": 1790374317.9757757,
+            "phase": "committed",
+            "age_seconds": 33239.0
+          },
+          {
+            "task": {
+              "id": "ruler_vt_16k_0402__r160",
+              "kind": "r2",
+              "sample_id": "ruler_vt_16k:0402",
+              "start": 160,
+              "end": 192
+            },
+            "gpu": 0,
+            "pid": 570178,
+            "time": 1790374396.0260334,
+            "phase": "committed",
+            "age_seconds": 33160.9
+          },
+          {
+            "task": {
+              "id": "ruler_vt_16k_0402__r192",
+              "kind": "r2",
+              "sample_id": "ruler_vt_16k:0402",
+              "start": 192,
+              "end": 224
+            },
+            "gpu": 1,
+            "pid": 570179,
+            "time": 1790374406.9365933,
+            "phase": "committed",
+            "age_seconds": 33150.0
+          },
+          {
+            "task": {
+              "id": "ruler_vt_16k_0402__r256",
+              "kind": "r2",
+              "sample_id": "ruler_vt_16k:0402",
+              "start": 256,
+              "end": 288
+            },
+            "gpu": 7,
+            "pid": 570185,
+            "time": 1790374468.9505436,
+            "phase": "committed",
+            "age_seconds": 33088.0
+          },
+          {
+            "task": {
+              "id": "ruler_vt_16k_0402__r288",
+              "kind": "r2",
+              "sample_id": "ruler_vt_16k:0402",
+              "start": 288,
+              "end": 320
+            },
+            "gpu": 2,
+            "pid": 570180,
+            "time": 1790374534.811208,
+            "phase": "committed",
+            "age_seconds": 33022.1
+          },
+          {
+            "task": {
+              "id": "ruler_vt_16k_0402__r128",
+              "kind": "r2",
+              "sample_id": "ruler_vt_16k:0402",
+              "start": 128,
+              "end": 160
+            },
+            "gpu": 5,
+            "pid": 570183,
+            "time": 1790374360.669859,
+            "phase": "committed",
+            "age_seconds": 33196.3
+          },
+          {
+            "task": {
+              "id": "ruler_vt_16k_0402__r224",
+              "kind": "r2",
+              "sample_id": "ruler_vt_16k:0402",
+              "start": 224,
+              "end": 256
+            },
+            "gpu": 3,
+            "pid": 570181,
+            "time": 1790374443.3839896,
+            "phase": "committed",
+            "age_seconds": 33113.6
+          }
+        ]
+      },
+      "qwen4b": {
+        "sample_complete": 81,
+        "sample_total": 85,
+        "tasks_complete": {
+          "baseline": 82,
+          "selective": 82,
+          "r2": 893
+        },
+        "tasks_total": {
+          "baseline": 85,
+          "selective": 85,
+          "r2": 935
+        },
+        "r2_complete": 27400,
+        "r2_total": 28560,
+        "kv_closure_pass": 66,
+        "selective_eligible_complete": 59,
+        "sham_complete": 48,
+        "workers": [
+          {
+            "task": {
+              "id": "ruler_niah_multikey_1_16k_0239__r160",
+              "kind": "r2",
+              "sample_id": "ruler_niah_multikey_1_16k:0239",
+              "start": 160,
+              "end": 192
+            },
+            "gpu": 6,
+            "pid": 679999,
+            "time": 1790407555.890558,
+            "phase": "r2",
+            "completed": 24,
+            "total": 32,
+            "seconds": 11.414370059967041,
+            "age_seconds": 2.0
+          },
+          {
+            "task": {
+              "id": "ruler_niah_multikey_1_16k_0239__r96",
+              "kind": "r2",
+              "sample_id": "ruler_niah_multikey_1_16k:0239",
+              "start": 96,
+              "end": 128
+            },
+            "gpu": 4,
+            "pid": 679997,
+            "time": 1790407520.6910186,
+            "phase": "r2",
+            "completed": 24,
+            "total": 32,
+            "seconds": 11.25621509552002,
+            "age_seconds": 37.2
+          },
+          {
+            "task": {
+              "id": "ruler_niah_multikey_1_16k_0239__r192",
+              "kind": "r2",
+              "sample_id": "ruler_niah_multikey_1_16k:0239",
+              "start": 192,
+              "end": 224
+            },
+            "gpu": 0,
+            "pid": 679993,
+            "time": 1790407472.1200466,
+            "phase": "r2",
+            "completed": 16,
+            "total": 32,
+            "seconds": 11.417608499526978,
+            "age_seconds": 85.7
+          },
+          {
+            "task": {
+              "id": "ruler_niah_multikey_1_16k_0239__r224",
+              "kind": "r2",
+              "sample_id": "ruler_niah_multikey_1_16k:0239",
+              "start": 224,
+              "end": 256
+            },
+            "gpu": 1,
+            "pid": 679994,
+            "time": 1790407491.8834162,
+            "phase": "r2",
+            "completed": 8,
+            "total": 32,
+            "seconds": 11.4184889793396,
+            "age_seconds": 66.0
+          },
+          {
+            "task": {
+              "id": "ruler_niah_multikey_1_16k_0239__r288",
+              "kind": "r2",
+              "sample_id": "ruler_niah_multikey_1_16k:0239",
+              "start": 288,
+              "end": 320
+            },
+            "gpu": 7,
+            "pid": 680000,
+            "time": 1790407549.0914135,
+            "phase": "r2",
+            "age_seconds": 8.8
+          },
+          {
+            "task": {
+              "id": "ruler_niah_multikey_1_16k_0239__r256",
+              "kind": "r2",
+              "sample_id": "ruler_niah_multikey_1_16k:0239",
+              "start": 256,
+              "end": 288
+            },
+            "gpu": 2,
+            "pid": 679995,
+            "time": 1790407539.9809291,
+            "phase": "r2",
+            "age_seconds": 17.9
+          },
+          {
+            "task": {
+              "id": "ruler_niah_multikey_1_16k_0239__r64",
+              "kind": "r2",
+              "sample_id": "ruler_niah_multikey_1_16k:0239",
+              "start": 64,
+              "end": 96
+            },
+            "gpu": 5,
+            "pid": 679998,
+            "time": 1790407504.4916148,
+            "phase": "r2",
+            "completed": 24,
+            "total": 32,
+            "seconds": 11.206756353378296,
+            "age_seconds": 53.4
+          },
+          {
+            "task": {
+              "id": "ruler_niah_multikey_1_16k_0239__r128",
+              "kind": "r2",
+              "sample_id": "ruler_niah_multikey_1_16k:0239",
+              "start": 128,
+              "end": 160
+            },
+            "gpu": 3,
+            "pid": 679996,
+            "time": 1790407524.7645662,
+            "phase": "r2",
+            "completed": 24,
+            "total": 32,
+            "seconds": 11.286672115325928,
+            "age_seconds": 33.1
+          }
+        ]
+      }
+    },
+    "PHASE_STATUS": {
+      "status": "RUNNING",
+      "manager_pid": 570153,
+      "gpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "started": 1790365827.9530907,
+      "job_sha256": "b3d5ee6fbed1a2227fe193ac9aca3ca0d3c9ef9a4b1935dccb40e576e0ae91fd"
+    },
+    "SMOKE_STATUS": {
+      "status": "PASS",
+      "job_sha256": "b3d5ee6fbed1a2227fe193ac9aca3ca0d3c9ef9a4b1935dccb40e576e0ae91fd"
+    },
+    "LAUNCH": {
+      "pid": 570153,
+      "source": "/path/to/ttt/work/mechanism_v4_8gpu_20260926",
+      "output": "/path/to/ttt/runs/mechanism_v4_8gpu_20260926",
+      "job_sha256": "b3d5ee6fbed1a2227fe193ac9aca3ca0d3c9ef9a4b1935dccb40e576e0ae91fd",
+      "gpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "time": 1790365802.2937448
+    }
+  },
+  "errors": [],
+  "notification": "suppressed: routine progress since recent manual update; all eight workers active, no errors or phase change",
+  "estimated_completion_window": "2026-09-26 16:00-16:30 Asia/Shanghai",
+  "recent_r2_candidates_per_hour": 3127,
+  "remaining_r2_candidates": 1160
+}

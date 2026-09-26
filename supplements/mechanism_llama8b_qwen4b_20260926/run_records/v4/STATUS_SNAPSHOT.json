@@ -1,0 +1,223 @@
+{
+  "time": "2026-09-26 03:53:21 +0800",
+  "models": {
+    "llama8b": {
+      "sample_complete": 1,
+      "sample_total": 39,
+      "tasks_complete": {
+        "baseline": 25,
+        "r2": 226,
+        "selective": 2
+      },
+      "tasks_total": {
+        "baseline": 39,
+        "selective": 39,
+        "r2": 425
+      },
+      "r2_complete": 7128,
+      "r2_total": 12992,
+      "kv_closure_pass": 20,
+      "selective_eligible_complete": 0,
+      "sham_complete": 0,
+      "workers": [
+        {
+          "task": {
+            "id": "ruler_fwe_16k_0240__r128",
+            "kind": "r2",
+            "sample_id": "ruler_fwe_16k:0240",
+            "start": 128,
+            "end": 160
+          },
+          "gpu": 6,
+          "pid": 570184,
+          "time": 1790365955.328668,
+          "phase": "r2",
+          "completed": 8,
+          "total": 32,
+          "seconds": 7.346998929977417,
+          "age_seconds": 46.2
+        },
+        {
+          "task": {
+            "id": "ruler_fwe_16k_0240__r96",
+            "kind": "r2",
+            "sample_id": "ruler_fwe_16k:0240",
+            "start": 96,
+            "end": 128
+          },
+          "gpu": 4,
+          "pid": 570182,
+          "time": 1790365982.302908,
+          "phase": "r2",
+          "completed": 16,
+          "total": 32,
+          "seconds": 6.908167123794556,
+          "age_seconds": 19.3
+        },
+        {
+          "task": {
+            "id": "ruler_fwe_16k_0240__r0",
+            "kind": "r2",
+            "sample_id": "ruler_fwe_16k:0240",
+            "start": 0,
+            "end": 32
+          },
+          "gpu": 0,
+          "pid": 570178,
+          "time": 1790365981.45817,
+          "phase": "r2",
+          "completed": 16,
+          "total": 32,
+          "seconds": 6.976974010467529,
+          "age_seconds": 20.1
+        },
+        {
+          "task": {
+            "id": "ruler_fwe_16k_0087__selective",
+            "kind": "selective",
+            "sample_id": "ruler_fwe_16k:0087",
+            "plan": {
+              "eligible": true,
+              "parent_reset_eligible": true,
+              "tau": 1,
+              "boundary_chunk_1based": 2,
+              "prefix_written_layers": [
+                6
+              ],
+              "selected_component_layers": [
+                6
+              ],
+              "all_prefix": false,
+              "sham_layer": 0,
+              "transition_category": "SINGLE_LAYER_DISJOINT",
+              "exclusion_reason": null
+            }
+          },
+          "gpu": 1,
+          "pid": 570179,
+          "time": 1790365866.959667,
+          "phase": "selective",
+          "age_seconds": 134.6
+        },
+        {
+          "task": {
+            "id": "ruler_fwe_16k_0240__r160",
+            "kind": "r2",
+            "sample_id": "ruler_fwe_16k:0240",
+            "start": 160,
+            "end": 192
+          },
+          "gpu": 7,
+          "pid": 570185,
+          "time": 1790365955.3029852,
+          "phase": "r2",
+          "completed": 8,
+          "total": 32,
+          "seconds": 6.971733331680298,
+          "age_seconds": 46.3
+        },
+        {
+          "task": {
+            "id": "ruler_fwe_16k_0240__r32",
+            "kind": "r2",
+            "sample_id": "ruler_fwe_16k:0240",
+            "start": 32,
+            "end": 64
+          },
+          "gpu": 2,
+          "pid": 570180,
+          "time": 1790365982.247688,
+          "phase": "r2",
+          "completed": 16,
+          "total": 32,
+          "seconds": 6.987415552139282,
+          "age_seconds": 19.3
+        },
+        {
+          "task": {
+            "id": "ruler_fwe_16k_0240__r192",
+            "kind": "r2",
+            "sample_id": "ruler_fwe_16k:0240",
+            "start": 192,
+            "end": 224
+          },
+          "gpu": 5,
+          "pid": 570183,
+          "time": 1790365953.0431802,
+          "phase": "r2",
+          "age_seconds": 48.5
+        },
+        {
+          "task": {
+            "id": "ruler_fwe_16k_0240__r64",
+            "kind": "r2",
+            "sample_id": "ruler_fwe_16k:0240",
+            "start": 64,
+            "end": 96
+          },
+          "gpu": 3,
+          "pid": 570181,
+          "time": 1790365982.4483085,
+          "phase": "r2",
+          "completed": 16,
+          "total": 32,
+          "seconds": 6.936804294586182,
+          "age_seconds": 19.1
+        }
+      ]
+    },
+    "qwen4b": {
+      "sample_complete": 0,
+      "sample_total": 85,
+      "tasks_complete": {},
+      "tasks_total": {
+        "baseline": 85,
+        "selective": 85,
+        "r2": 935
+      },
+      "r2_complete": 0,
+      "r2_total": 28560,
+      "kv_closure_pass": 0,
+      "selective_eligible_complete": 0,
+      "sham_complete": 0,
+      "workers": []
+    }
+  },
+  "PHASE_STATUS": {
+    "status": "RUNNING",
+    "manager_pid": 570153,
+    "gpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "started": 1790365827.9530907,
+    "job_sha256": "b3d5ee6fbed1a2227fe193ac9aca3ca0d3c9ef9a4b1935dccb40e576e0ae91fd"
+  },
+  "SMOKE_STATUS": {
+    "status": "PASS",
+    "job_sha256": "b3d5ee6fbed1a2227fe193ac9aca3ca0d3c9ef9a4b1935dccb40e576e0ae91fd"
+  },
+  "LAUNCH": {
+    "pid": 570153,
+    "source": "/path/to/ttt/work/mechanism_v4_8gpu_20260926",
+    "output": "/path/to/ttt/runs/mechanism_v4_8gpu_20260926",
+    "job_sha256": "b3d5ee6fbed1a2227fe193ac9aca3ca0d3c9ef9a4b1935dccb40e576e0ae91fd",
+    "gpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "time": 1790365802.2937448
+  }
+}

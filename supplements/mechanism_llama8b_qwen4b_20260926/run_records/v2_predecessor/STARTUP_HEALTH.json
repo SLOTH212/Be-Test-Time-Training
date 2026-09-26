@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "time": 1790355158.5901923,
+  "manager_pid": 433022,
+  "formal_workers_loaded": [
+    {
+      "pid": 433457,
+      "physical_gpu": 3,
+      "base_hash": "50fa9480844835449fa78acedd43a7858e7b6b5a1fc02b364d2ffde786550201",
+      "time": 1790355093.385043,
+      "smoke": false
+    },
+    {
+      "pid": 433455,
+      "physical_gpu": 1,
+      "base_hash": "50fa9480844835449fa78acedd43a7858e7b6b5a1fc02b364d2ffde786550201",
+      "time": 1790355092.220518,
+      "smoke": false
+    },
+    {
+      "pid": 433456,
+      "physical_gpu": 2,
+      "base_hash": "50fa9480844835449fa78acedd43a7858e7b6b5a1fc02b364d2ffde786550201",
+      "time": 1790355093.0329068,
+      "smoke": false
+    },
+    {
+      "pid": 433460,
+      "physical_gpu": 7,
+      "base_hash": "50fa9480844835449fa78acedd43a7858e7b6b5a1fc02b364d2ffde786550201",
+      "time": 1790355092.1290994,
+      "smoke": false
+    },
+    {
+      "pid": 433454,
+      "physical_gpu": 0,
+      "base_hash": "50fa9480844835449fa78acedd43a7858e7b6b5a1fc02b364d2ffde786550201",
+      "time": 1790355093.3753302,
+      "smoke": false
+    },
+    {
+      "pid": 433458,
+      "physical_gpu": 4,
+      "base_hash": "50fa9480844835449fa78acedd43a7858e7b6b5a1fc02b364d2ffde786550201",
+      "time": 1790355093.3470252,
+      "smoke": false
+    },
+    {
+      "pid": 433459,
+      "physical_gpu": 6,
+      "base_hash": "50fa9480844835449fa78acedd43a7858e7b6b5a1fc02b364d2ffde786550201",
+      "time": 1790355092.4156249,
+      "smoke": false
+    }
+  ],
+  "progress": [
+    {
+      "sample": "ruler_niah_multiquery_16k:0364",
+      "phase": "mechanisms",
+      "gpu": 7,
+      "time": 1790355092.1294556
+    },
+    {
+      "sample": "ruler_fwe_16k:0476",
+      "phase": "mechanisms",
+      "gpu": 4,
+      "time": 1790355093.3473847
+    },
+    {
+      "sample": "ruler_fwe_16k:0087",
+      "phase": "mechanisms",
+      "gpu": 0,
+      "time": 1790355093.3757555
+    },
+    {
+      "sample": "ruler_fwe_16k:0112",
+      "phase": "mechanisms",
+      "gpu": 1,
+      "time": 1790355092.220872
+    },
+    {
+      "sample": "ruler_fwe_16k:0367",
+      "phase": "mechanisms",
+      "gpu": 2,
+      "time": 1790355093.0332625
+    },
+    {
+      "sample": "ruler_niah_multikey_1_16k:0132",
+      "phase": "mechanisms",
+      "gpu": 6,
+      "time": 1790355092.4159517
+    },
+    {
+      "sample": "ruler_fwe_16k:0417",
+      "phase": "mechanisms",
+      "gpu": 3,
+      "time": 1790355093.3853853
+    }
+  ],
+  "smoke_both_pass": true
+}

@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "finished_at": "2026-09-26 15:51:57 +0800",
+  "verified_at": "2026-09-26 15:53:59 +0800",
+  "job_sha256": "b3d5ee6fbed1a2227fe193ac9aca3ca0d3c9ef9a4b1935dccb40e576e0ae91fd",
+  "models": {
+    "llama8b": {
+      "samples": 39,
+      "r2_candidates": 12992,
+      "native": 100.0,
+      "sample_best": 40.76923076923077,
+      "r2": 96.58119658119658,
+      "r2_dynamic_ties": 37,
+      "kv_samples": 30,
+      "kv_k0": 99.33333333333333,
+      "kv_k1": 100.0,
+      "kv_delta": 0.6666666666666665,
+      "selective_samples": 29,
+      "selective_effect": 50.7375478927203,
+      "selective_branches": 64,
+      "sham_samples": 22
+    },
+    "qwen4b": {
+      "samples": 85,
+      "r2_candidates": 28560,
+      "native": 97.01960784313725,
+      "sample_best": 37.13725490196079,
+      "r2": 93.50980392156862,
+      "r2_dynamic_ties": 79,
+      "kv_samples": 69,
+      "kv_k0": 88.55072463768116,
+      "kv_k1": 96.32850241545894,
+      "kv_delta": 7.777777777777778,
+      "selective_samples": 62,
+      "selective_effect": 52.54032258064516,
+      "selective_branches": 117,
+      "sham_samples": 51
+    }
+  }
+}
