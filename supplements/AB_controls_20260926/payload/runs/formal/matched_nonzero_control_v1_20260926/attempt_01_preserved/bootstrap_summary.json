@@ -1,0 +1,45 @@
+{
+  "status": "BLOCKED",
+  "completed_n": 72,
+  "expected_n": 157,
+  "checks": {
+    "A1": true,
+    "A2": true,
+    "A3": true,
+    "A4": true,
+    "A5": true,
+    "A6": true,
+    "A7": true,
+    "A8": true,
+    "A9": true,
+    "A10": true,
+    "A11": true,
+    "A12": true
+  },
+  "errors": [],
+  "source_integrity": true,
+  "A1_frozen_historical": {
+    "n": 157,
+    "native_percent": 93.24840764331209,
+    "condition_percent": 54.30785562632695,
+    "native_minus_condition_pp": 38.94055201698513,
+    "CI95": [
+      35.167728237791934,
+      42.579883227176204
+    ],
+    "lower": 135,
+    "equal": 22,
+    "higher": 0
+  },
+  "statistical_unit": "example",
+  "bootstrap_seed": 20260921,
+  "bootstrap_replicates": 20000,
+  "comparison_tolerance_score": 1e-12,
+  "magnitude": {
+    "n": 720,
+    "median_relative_error": 0.0007695449832482151,
+    "mean_relative_error": 0.0011606327611395492,
+    "max_relative_error": 0.009553358746205706,
+    "matched_within_1pct_fraction": 1.0
+  }
+}

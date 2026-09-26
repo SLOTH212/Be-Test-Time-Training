@@ -1,0 +1,54 @@
+{
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 20260921,
+  "calibration": {
+    "closest_fallback": true,
+    "grid": [
+      "0",
+      "1",
+      "alpha_clip*2**j j=-16..16"
+    ],
+    "max_trial_evaluations": 59,
+    "native_reference": "trueNative same sample/layer/chunk scalar represented norm only",
+    "refine_rounds": 12,
+    "scale_location": "raw BF16 before unchanged clip",
+    "target_relative_error": 0.01,
+    "zero_native": "alpha0 exactzero"
+  },
+  "checkpoint_sha256": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+  "chunk": 1024,
+  "comparison_tolerance": 1e-12,
+  "cpu_sets": [
+    "8-15",
+    "16-23"
+  ],
+  "expected_cohort_n": 170,
+  "historical_root": "/home/zonghan/ttt/runs/formal/mechanism_old1k_v2_20260921",
+  "layers": [
+    0,
+    6,
+    12,
+    18,
+    24
+  ],
+  "model_path": "/home/zonghan/ttt/models/qwen3_1p7b_stage2",
+  "permutation": "SHA256 local CPU generator; rejection128 derangement; cyclicshift1 fallback",
+  "reporting": "execution/protocol correctness distinct from strict1percent attainment; no unqualified magnitude-controlled inference if matching fails",
+  "seeds": [
+    20260926,
+    20260927,
+    20260928,
+    20260929,
+    20260930
+  ],
+  "smoke_ids": [
+    "ruler_fwe_16k:0010",
+    "ruler_fwe_16k:0088",
+    "ruler_fwe_16k:0108",
+    "ruler_fwe_16k:0227",
+    "ruler_fwe_16k:0242"
+  ],
+  "version": "WITHIN_CHUNK_TARGET_ALIGNMENT_V1",
+  "write_count_native": 3760,
+  "write_count_per_condition": 18800
+}

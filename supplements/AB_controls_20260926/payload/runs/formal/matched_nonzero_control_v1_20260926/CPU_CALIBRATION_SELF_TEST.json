@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "checks": [
+    "cpu_bf16_magnitude",
+    "exact_repeat",
+    "global_rng_unchanged",
+    "seed_changes_direction",
+    "nonzero",
+    "zero_target_blocks"
+  ],
+  "diagnostics": {
+    "algorithm_version": "gaussian_bf16_scalar_bracket_binary_v1",
+    "sample_id": "self-test",
+    "layer": 6,
+    "seed": 20260926,
+    "subseed": 8447428485525237315,
+    "seed_payload_sha256": "753b4b73813f6e43a41962d9b87cd9711ca92cc986c0029406ba4d0497b34f4e",
+    "shape": [
+      256,
+      256
+    ],
+    "device": "cpu",
+    "execution_dtype": "bfloat16",
+    "norm_dtype": "float32",
+    "requested_norm": 0.5142055749893188,
+    "target_norm": 0.5142055749893188,
+    "initial_proposed_norm": 0.5142055749893188,
+    "initial_realized_norm": 0.5158790349960327,
+    "initial_relative_norm_error": 0.003254457143426787,
+    "calibrated_alpha": 0.5121969594620168,
+    "calibrated_proposed_norm": 0.5121971426379237,
+    "realized_norm": 0.5139432549476624,
+    "relative_norm_error": 0.0005101462419226845,
+    "calibration_iterations": 9,
+    "bracket_steps": 0,
+    "binary_steps": 8,
+    "bracketed": true,
+    "max_bracket_steps": 24,
+    "max_binary_steps": 32,
+    "search_relative_tolerance": 0.001,
+    "matched_within_1pct": true,
+    "represented_nonzero": true,
+    "reward_used": false
+  }
+}

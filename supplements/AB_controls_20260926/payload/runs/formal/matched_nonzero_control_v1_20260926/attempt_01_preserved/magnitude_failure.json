@@ -1,0 +1,39 @@
+{
+  "diagnostics": {
+    "algorithm_version": "gaussian_bf16_scalar_bracket_binary_v1",
+    "binary_steps": 32,
+    "bracket_steps": 7,
+    "bracketed": true,
+    "calibrated_alpha": 1.45246270397692e-05,
+    "calibrated_proposed_norm": 1.4524626174033965e-05,
+    "calibration_iterations": 40,
+    "device": "cuda:0",
+    "execution_dtype": "bfloat16",
+    "initial_proposed_norm": 1.317986857429787e-07,
+    "initial_realized_norm": 2.9103830456733704e-11,
+    "initial_relative_norm_error": 0.9997791796610667,
+    "layer": 18,
+    "matched_within_1pct": false,
+    "max_binary_steps": 32,
+    "max_bracket_steps": 24,
+    "norm_dtype": "float32",
+    "realized_norm": 1.3025255896081944e-07,
+    "relative_norm_error": 0.01173097268340272,
+    "represented_nonzero": true,
+    "requested_norm": 1.317986857429787e-07,
+    "reward_used": false,
+    "sample_id": "ruler_qa_squad_16k:0161",
+    "search_relative_tolerance": 0.001,
+    "seed": 20260930,
+    "seed_payload_sha256": "428301c13a8886fab49e6b8cd307083c045ffd968c0a69c0fc4aaff61a762052",
+    "shape": [
+      2048,
+      6144
+    ],
+    "subseed": 4792676357874681594,
+    "target_norm": 1.317986857429787e-07
+  },
+  "layer": 18,
+  "sample_id": "ruler_qa_squad_16k:0161",
+  "seed": 20260930
+}

@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "completed_n": 157,
+  "expected_n": 157,
+  "checks": {
+    "A1": true,
+    "A2": true,
+    "A3": true,
+    "A4": true,
+    "A5": true,
+    "A6": true,
+    "A7": true,
+    "A8": true,
+    "A9": true,
+    "A10": true,
+    "A11": true,
+    "A12": true
+  },
+  "errors": [],
+  "source_integrity": true,
+  "final_integrity": true,
+  "protocol_closest_fallback_validated": true,
+  "strict_within_1pct": false,
+  "magnitude_notes": [
+    "Magnitude mismatch: ruler_qa_squad_16k:0161"
+  ],
+  "closest_exceptions": [
+    {
+      "sample_id": "ruler_qa_squad_16k:0161",
+      "layer": 18,
+      "seed": 20260930,
+      "relative_norm_error": 0.01173097268340272,
+      "closest_fallback_validated": true
+    }
+  ],
+  "A1_frozen_historical": {
+    "n": 157,
+    "native_percent": 93.24840764331209,
+    "condition_percent": 54.30785562632695,
+    "native_minus_condition_pp": 38.94055201698513,
+    "CI95": [
+      35.167728237791934,
+      42.579883227176204
+    ],
+    "lower": 135,
+    "equal": 22,
+    "higher": 0
+  },
+  "statistical_unit": "example",
+  "bootstrap_seed": 20260921,
+  "bootstrap_replicates": 20000,
+  "comparison_tolerance_score": 1e-12,
+  "A2_native_minus_random": {
+    "n": 157,
+    "mean_pp": 34.39872611464968,
+    "CI95": [
+      31.500636942675158,
+      37.24506369426751
+    ],
+    "left_lower": 0,
+    "equal": 8,
+    "left_higher": 149
+  },
+  "A3_random_minus_deletion": {
+    "n": 157,
+    "mean_pp": 4.541825902335457,
+    "CI95": [
+      1.6708704883227177,
+      7.347388535031845
+    ],
+    "left_lower": 32,
+    "equal": 51,
+    "left_higher": 74
+  },
+  "means_percent": {
+    "native_score": 93.24840764331209,
+    "deletion_score": 54.30785562632695,
+    "random_score": 58.84968152866242
+  },
+  "magnitude": {
+    "n": 1745,
+    "median_relative_error": 0.0007475710967875704,
+    "mean_relative_error": 0.0011004353466931725,
+    "max_relative_error": 0.01173097268340272,
+    "matched_within_1pct_fraction": 0.9994269340974212
+  }
+}

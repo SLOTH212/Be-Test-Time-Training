@@ -1,0 +1,32 @@
+{
+  "version": "V2_MECHANISM_NO_P_V1",
+  "counts": {
+    "parent": 170,
+    "reset": 165,
+    "nontrivial_reset": 157,
+    "deletion": 157,
+    "K": 165,
+    "r2_candidates": 97356
+  },
+  "model_sha256": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+  "model_path": "/home/zonghan/ttt/models/qwen3_1p7b_stage2",
+  "chunk": 1024,
+  "seed": 20260921,
+  "source_protocol_sha256": "b004b78c600d12f2660cbc2b92e6d252f019df941b509c644d271b8ffebee50a",
+  "parent": "all170 current V2 Dynamic > own V2 Fixed; no mechanism outcomes used",
+  "reverse": "reverse complete chunk action sequence; clean replay",
+  "reset": "early steady: first switched chunk one-based / T <= .25; modal fraction last half >= .8; reset all5 at last switch before chunk",
+  "deletion": "early steady with written prefix; ALL anywhere in prefix: each5 leave-one-out, average; else first nonOFF layer; sham lowest unwritten layer",
+  "K": "OFF prefix control; inject native boundary fast weights at all5 layers; K0 control prefixKV; K1 native prefixKV all attention layers; same suffix; all5 paths materialized always",
+  "P": "omitted: historical unused-layer path/cache occupancy contrast incompatible with unified V2; all5 materialized invariant audited",
+  "closure": "hash equality first-continuation attention/MLP/residual tensors, final continuation hidden, prompt logits, prediction; not claim historical complete L1-L6 coverage",
+  "R2": "exactly one switch, A!=B, tau1..T-1; enumerate42*(T-1); ties score, earliest tau, action order, hash; no constants included",
+  "reuse": "R2 may reuse exact schedule from current same-model same-V2 search with sourcehash and sampled replay validation; never old executor results",
+  "cpu_sets": [
+    "8-15",
+    "16-23"
+  ],
+  "automatic_monitoring": false,
+  "bootstrap_seed": 20260921,
+  "bootstrap_replicates": 20000
+}

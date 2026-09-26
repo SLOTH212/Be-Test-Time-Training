@@ -1,0 +1,55 @@
+{
+  "A1_frozen": {
+    "CI95": [
+      35.167728237791934,
+      42.579883227176204
+    ],
+    "condition_percent": 54.30785562632695,
+    "equal": 22,
+    "higher": 0,
+    "lower": 135,
+    "n": 157,
+    "native_minus_condition_pp": 38.94055201698513,
+    "native_percent": 93.24840764331209
+  },
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 20260921,
+  "branch_manifest_sha256": "f40521af154a2e6b5880b6717bfa2e3af499862779e6db52b55afe3ba34def3b",
+  "branch_n": 349,
+  "calibration_max_binary_steps": 32,
+  "calibration_max_bracket_steps": 24,
+  "calibration_max_evaluations": 57,
+  "calibration_relative_tolerance": 0.01,
+  "calibration_search_relative_tolerance": 0.001,
+  "checkpoint_sha256": "ca51ee90d20ee09efbe0b31dd21bf9faa70275508316d1ba7cb1387ee4f0725f",
+  "chunk": 1024,
+  "cohort_manifest_sha256": "85bec3fe8f2a4c9d187a5a64cf413369cb5e43fc34fb94b559ce358be98a8a48",
+  "comparison_tolerance": 1e-12,
+  "cpu_sets": [
+    "8-15",
+    "16-23"
+  ],
+  "execution": "native sequence clean full replay; existing target-only boundary inject; transparent prefix KV hash observer",
+  "expected_cohort_n": 157,
+  "historical_hash_manifest_sha256": "05957eeedf43bf29ae942e8d0a2c65cdbb2de43c92cf7df859b340df9a89a717",
+  "historical_root": "/home/zonghan/ttt/runs/formal/mechanism_old1k_v2_20260921",
+  "model_path": "/home/zonghan/ttt/models/qwen3_1p7b_stage2",
+  "random_direction": "local SHA256-derived generator; FP32 isotropic Gaussian; scalar BF16 calibration; no reward access",
+  "random_evaluation_n": 1745,
+  "reward_blind_construction_reviewed": true,
+  "seeds": [
+    20260926,
+    20260927,
+    20260928,
+    20260929,
+    20260930
+  ],
+  "smoke_ids": [
+    "ruler_fwe_16k:0010",
+    "ruler_fwe_16k:0088",
+    "ruler_fwe_16k:0108",
+    "ruler_fwe_16k:0227",
+    "ruler_fwe_16k:0242"
+  ],
+  "version": "MAGNITUDE_MATCHED_NONZERO_CONTROL_V1"
+}
